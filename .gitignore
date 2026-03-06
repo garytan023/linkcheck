@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# Virtual envs / local tooling
+.venv/
+.venv*/
+.claude/
+
+# Build artifacts
+build/
+build_*/
+dist/
+*.spec.bak
+
+# Browser/runtime bundles
+browsers/
+
+# Logs / runtime outputs
+logs_v4/
+output/
+output_*/
+output_v*/
+output_v*_fixed/
+screenshots/
+uploads/
+
+# Local app data / profiles
+xhs_*_profile/
+test_xhs_profile/
+
+# Large binary/report files
+*.rar
+*.zip
+*.7z
+*.xlsx
+*.xls
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.pdf
+
+# Node dependencies in embedded tools
+**/node_modules/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+
+# Secrets / local configs
+feishu_config.json
+*_storage.json
+temp_config.json

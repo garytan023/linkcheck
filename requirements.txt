@@ -1,0 +1,18 @@
+# 小红书链接监测工具 - Python 依赖
+
+# Web 框架
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+
+# 原有依赖
+openpyxl>=3.1.0
+Pillow>=10.0.0
+playwright>=1.40.0
+requests>=2.31.0
+
+# 数据验证
+pydantic>=2.5.0
+
+# WebSocket
+websockets>=12.0

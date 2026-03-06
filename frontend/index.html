@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小红书链接监测工具 Pro</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            /* Apple-inspired Color Palette */
+            --bg-primary: #f5f5f7;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f9f9fb;
+            --text-primary: #1d1d1f;
+            --text-secondary: #6e6e73;
+            --text-tertiary: #86868b;
+            --accent-blue: #0071e3;
+            --accent-blue-hover: #0077ed;
+            --accent-green: #34c759;
+            --accent-orange: #ff9500;
+            --accent-red: #ff3b30;
+            --border-light: #e5e5e7;
+            --border-subtle: #d2d2d7;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.12);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 18px;
+            --radius-xl: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Noise texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.015;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* Ambient gradient background */
+        .ambient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .ambient-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 70%;
+            height: 70%;
+            background: radial-gradient(circle, rgba(0,113,227,0.08) 0%, transparent 70%);
+            filter: blur(100px);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .ambient-bg::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(circle, rgba(52,199,89,0.06) 0%, transparent 70%);
+            filter: blur(80px);
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(5deg); }
+            66% { transform: translate(-20px, 20px) rotate(-5deg); }
+        }
+
+        /* Connection status indicator */
+        .connection-status {
+            position: fixed;
+            top: 70px;
+            right: 20px;
+            z-index: 99;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .connection-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--text-tertiary);
+        }
+
+        .connection-dot.connected {
+            background: var(--accent-green);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .connection-dot.connecting {
+            background: var(--accent-orange);
+            animation: pulse 1s ease-in-out infinite;
+        }
+
+        .connection-dot.disconnected {
+            background: var(--accent-red);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 17px;
+            color: var(--text-primary);
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent-blue), #5ac8fa);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-btn {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            outline: none;
+        }
+
+        .header-btn.primary {
+            background: var(--accent-blue);
+            color: white;
+        }
+
+        .header-btn.primary:hover {
+            background: var(--accent-blue-hover);
+        }
+
+        .header-btn.secondary {
+            background: transparent;
+            color: var(--text-secondary);
+        }
+
+        .header-btn.secondary:hover {
+            color: var(--text-primary);
+        }
+
+        /* Main Container */
+        .main-container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 32px 40px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 0 80px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(0, 113, 227, 0.1);
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--accent-blue);
+            margin-bottom: 24px;
+        }
+
+        .hero-badge-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .stat-card:nth-child(1) { animation-delay: 0.1s; }
+        .stat-card:nth-child(2) { animation-delay: 0.15s; }
+        .stat-card:nth-child(3) { animation-delay: 0.2s; }
+        .stat-card:nth-child(4) { animation-delay: 0.25s; }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .stat-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        .stat-icon.blue { background: rgba(0,113,227,0.1); }
+        .stat-icon.green { background: rgba(52,199,89,0.1); }
+        .stat-icon.orange { background: rgba(255,149,0,0.1); }
+        .stat-icon.red { background: rgba(255,59,48,0.1); }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 24px;
+            align-items: start;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-title {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        /* Upload Area */
+        .upload-area {
+            border: 2px dashed var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 40px 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: var(--bg-tertiary);
+        }
+
+        .upload-area:hover {
+            border-color: var(--accent-blue);
+            background: rgba(0,113,227,0.03);
+        }
+
+        .upload-area.dragover {
+            border-color: var(--accent-blue);
+            background: rgba(0,113,227,0.05);
+        }
+
+        .upload-icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, rgba(0,113,227,0.1), rgba(90,200,250,0.1));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .upload-text {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .upload-hint {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* File Preview */
+        .file-preview {
+            display: none;
+            margin-top: 16px;
+            padding: 16px;
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-md);
+        }
+
+        .file-preview.active {
+            display: block;
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .file-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #34c759, #30d158);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .file-details {
+            flex: 1;
+        }
+
+        .file-name {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .file-size {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .file-remove {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(255,59,48,0.1);
+            color: var(--accent-red);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .file-remove:hover {
+            background: var(--accent-red);
+            color: white;
+        }
+
+        /* Settings Section */
+        .settings-section {
+            margin-top: 24px;
+        }
+
+        .settings-group {
+            margin-bottom: 24px;
+        }
+
+        .settings-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .settings-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        /* Toggle Switch */
+        .toggle-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+        }
+
+        .toggle-label {
+            font-size: 15px;
+        }
+
+        .toggle-hint {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        .toggle {
+            position: relative;
+            width: 51px;
+            height: 31px;
+            background: var(--border-subtle);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .toggle.active {
+            background: var(--accent-green);
+        }
+
+        .toggle::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 27px;
+            height: 27px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .toggle.active::after {
+            transform: translateX(20px);
+        }
+
+        /* Input */
+        .input-group {
+            margin-bottom: 16px;
+        }
+
+        .input-label {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            font-size: 15px;
+            font-family: inherit;
+            background: var(--bg-tertiary);
+            transition: all 0.2s ease;
+        }
+
+        .input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            background: var(--bg-secondary);
+        }
+
+        .input-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .input-row .input {
+            flex: 1;
+        }
+
+        .input-button {
+            padding: 10px 14px;
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .input-button:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        /* Slider */
+        .slider-group {
+            margin-bottom: 16px;
+        }
+
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .slider-label {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .slider-value {
+            font-size: 13px;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+
+        .slider {
+            width: 100%;
+            height: 4px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: var(--border-subtle);
+            border-radius: 2px;
+            outline: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .slider::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+        }
+
+        /* Main Content Area */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* Progress Card */
+        .progress-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            padding: 24px;
+        }
+
+        .progress-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .progress-title {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .progress-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--text-tertiary);
+        }
+
+        .status-dot.active {
+            background: var(--accent-green);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .status-dot.processing {
+            background: var(--accent-orange);
+            animation: pulse 1s ease-in-out infinite;
+        }
+
+        .progress-bar-container {
+            height: 8px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-blue), #5ac8fa);
+            border-radius: 4px;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Control Buttons */
+        .control-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            outline: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--accent-blue);
+            color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: var(--accent-blue-hover);
+        }
+
+        .btn-primary:disabled {
+            background: var(--border-subtle);
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary:hover:not(:disabled) {
+            background: var(--border-light);
+        }
+
+        .btn-danger {
+            background: rgba(255,59,48,0.1);
+            color: var(--accent-red);
+        }
+
+        .btn-danger:hover:not(:disabled) {
+            background: var(--accent-red);
+            color: white;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Log Panel */
+        .log-panel {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .log-header {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .log-title {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .log-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .log-btn {
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            background: var(--bg-tertiary);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .log-btn:hover {
+            background: var(--border-light);
+        }
+
+        .log-content {
+            height: 300px;
+            overflow-y: auto;
+            padding: 16px 24px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            background: #1d1d1f;
+            color: #f5f5f7;
+        }
+
+        .log-entry {
+            margin-bottom: 4px;
+            animation: fadeInLeft 0.3s ease;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .log-time {
+            color: #86868b;
+        }
+
+        .log-info { color: #5ac8fa; }
+        .log-success { color: #34c759; }
+        .log-warning { color: #ff9500; }
+        .log-error { color: #ff3b30; }
+
+        /* Links Table */
+        .links-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .links-table th {
+            text-align: left;
+            padding: 12px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .links-table td {
+            padding: 16px;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .links-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .links-table tr:hover td {
+            background: var(--bg-tertiary);
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .status-badge.pending {
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+        }
+
+        .status-badge.success {
+            background: rgba(52,199,89,0.15);
+            color: var(--accent-green);
+        }
+
+        .status-badge.error {
+            background: rgba(255,59,48,0.15);
+            color: var(--accent-red);
+        }
+
+        .status-badge.processing {
+            background: rgba(255,149,0,0.15);
+            color: var(--accent-orange);
+        }
+
+        /* Feishu Card */
+        .feishu-card {
+            background: linear-gradient(135deg, #1e39e8 0%, #2c5bf1 100%);
+            color: white;
+        }
+
+        .feishu-card .card-title {
+            color: white;
+        }
+
+        .feishu-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        .feishu-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #fb4242;
+        }
+
+        .feishu-dot.connected {
+            background: #34c759;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-subtle);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-tertiary);
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 24px;
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        .empty-state-text {
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        /* Toast Notification */
+        .toast-container {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .toast {
+            padding: 16px 20px;
+            background: white;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            animation: toastIn 0.3s ease;
+            max-width: 350px;
+        }
+
+        @keyframes toastIn {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .toast.success { border-left: 4px solid var(--accent-green); }
+        .toast.error { border-left: 4px solid var(--accent-red); }
+        .toast.warning { border-left: 4px solid var(--accent-orange); }
+        .toast.info { border-left: 4px solid var(--accent-blue); }
+
+        .toast-icon {
+            font-size: 18px;
+        }
+
+        .toast-message {
+            font-size: 14px;
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-bg"></div>
+
+    <!-- Connection Status -->
+    <div class="connection-status">
+        <span class="connection-dot connecting" id="connectionDot"></span>
+        <span id="connectionText">连接中...</span>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">📊</div>
+                <span>小红书监测 Pro</span>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn secondary" onclick="exportSettings()">导出配置</button>
+                <button class="header-btn primary" onclick="showHelp()">帮助</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                <span id="serverStatus">v4.0 Ultimate</span>
+            </div>
+            <h1>智能链接监测</h1>
+            <p>自动化采集小红书数据，支持反爬检测、飞书同步、Excel 导出</p>
+        </section>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon blue">📋</div>
+                <div class="stat-value" id="totalLinks">0</div>
+                <div class="stat-label">总链接数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon green">✅</div>
+                <div class="stat-value" id="successCount">0</div>
+                <div class="stat-label">成功采集</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon orange">⏳</div>
+                <div class="stat-value" id="pendingCount">0</div>
+                <div class="stat-label">待处理</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon red">⚠️</div>
+                <div class="stat-value" id="errorCount">0</div>
+                <div class="stat-label">失败数</div>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Left Sidebar -->
+            <aside>
+                <!-- Upload Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">CSV 文件</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="upload-area" id="uploadArea" onclick="document.getElementById('fileInput').click()">
+                            <div class="upload-icon">📁</div>
+                            <div class="upload-text">点击或拖拽上传 CSV</div>
+                            <div class="upload-hint">支持包含"链接"列的 CSV 文件</div>
+                        </div>
+                        <input type="file" id="fileInput" accept=".csv" style="display: none" onchange="handleFileSelect(event)">
+
+                        <div class="file-preview" id="filePreview">
+                            <div class="file-info">
+                                <div class="file-icon">CSV</div>
+                                <div class="file-details">
+                                    <div class="file-name" id="fileName">-</div>
+                                    <div class="file-size" id="fileSize">-</div>
+                                </div>
+                                <button class="file-remove" onclick="clearFile()">✕</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Card -->
+                <div class="card" style="margin-top: 24px">
+                    <div class="card-header">
+                        <span class="card-title">配置选项</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="settings-section">
+                            <div class="settings-group">
+                                <div class="settings-label">反爬设置</div>
+
+                                <div class="toggle-row">
+                                    <div>
+                                        <div class="toggle-label">启用反爬检测</div>
+                                        <div class="toggle-hint">自动检测并处理反爬机制</div>
+                                    </div>
+                                    <div class="toggle active" data-setting="enable_anti_detection" onclick="toggleSetting(this)"></div>
+                                </div>
+
+                                <div class="toggle-row">
+                                    <div>
+                                        <div class="toggle-label">随机延迟</div>
+                                        <div class="toggle-hint">链接间随机延迟 1.5-3.5 秒</div>
+                                    </div>
+                                    <div class="toggle active" data-setting="random_delay" onclick="toggleSetting(this)"></div>
+                                </div>
+                            </div>
+
+                            <div class="settings-group">
+                                <div class="settings-label">性能设置</div>
+
+                                <div class="slider-group">
+                                    <div class="slider-header">
+                                        <span class="slider-label">并发下载数</span>
+                                        <span class="slider-value" id="concurrentValue">3</span>
+                                    </div>
+                                    <input type="range" class="slider" min="1" max="10" value="3" id="concurrentSlider" oninput="updateSliderValue('concurrent')">
+                                </div>
+
+                                <div class="slider-group">
+                                    <div class="slider-header">
+                                        <span class="slider-label">下载超时 (秒)</span>
+                                        <span class="slider-value" id="timeoutValue">30</span>
+                                    </div>
+                                    <input type="range" class="slider" min="10" max="60" value="30" id="timeoutSlider" oninput="updateSliderValue('timeout')">
+                                </div>
+                            </div>
+
+                            <div class="settings-group">
+                                <div class="settings-label">输出设置</div>
+                                <div class="input-group">
+                                    <label class="input-label">下载保存目录</label>
+                                    <div class="input-row">
+                                        <input type="text" class="input" id="outputDir" value="./output_v4" placeholder="./output_v4">
+                                        <button class="input-button" type="button" onclick="selectOutputDir()">选择</button>
+                                    </div>
+                                    <div class="toggle-hint">可输入本地路径或点击选择目录</div>
+                                </div>
+                            </div>
+
+                            <div class="settings-group">
+                                <div class="settings-label">登录设置</div>
+                                <div class="input-group">
+                                    <label class="input-label">登录等待时间 (秒)</label>
+                                    <input type="number" class="input" id="loginWaitTime" value="60" min="30" max="300">
+                                </div>
+                                <div class="input-group">
+                                    <label class="input-label">重试次数</label>
+                                    <input type="number" class="input" id="loginRetries" value="3" min="1" max="10">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feishu Card -->
+                <div class="card feishu-card" style="margin-top: 24px">
+                    <div class="card-header" style="border-bottom-color: rgba(255,255,255,0.15)">
+                        <span class="card-title">飞书同步</span>
+                        <div class="feishu-status">
+                            <span class="feishu-dot" id="feishuDot"></span>
+                            <span id="feishuStatus">未连接</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <label class="input-label" style="color: rgba(255,255,255,0.8)">App ID</label>
+                            <input type="text" class="input" id="feishuAppId" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white" placeholder="cli_xxxxxxxxx">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label" style="color: rgba(255,255,255,0.8)">App Secret</label>
+                            <input type="password" class="input" id="feishuAppSecret" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white" placeholder="••••••••">
+                        </div>
+                        <button class="btn" style="width: 100%; justify-content: center; background: rgba(255,255,255,0.2); color: white; margin-top: 12px" onclick="testFeishuConnection()">
+                            测试连接
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Progress Card -->
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <span class="progress-title">采集进度</span>
+                        <div class="progress-status">
+                            <span class="status-dot" id="statusDot"></span>
+                            <span id="statusText">等待开始</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <div class="progress-info">
+                        <span id="progressCurrent">0</span>
+                        <span>/ <span id="progressTotal">0</span> 个链接</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                </div>
+
+                <!-- Control Buttons -->
+                <div class="control-buttons">
+                    <button class="btn btn-primary" id="startBtn" onclick="startMonitoring()" disabled>
+                        <span>▶</span> 开始采集
+                    </button>
+                    <button class="btn btn-secondary" id="pauseBtn" onclick="pauseMonitoring()" disabled>
+                        <span>⏸</span> 暂停
+                    </button>
+                    <button class="btn btn-danger" id="stopBtn" onclick="stopMonitoring()" disabled>
+                        <span>⏹</span> 停止
+                    </button>
+                    <button class="btn btn-secondary" onclick="exportResults()">
+                        <span>📤</span> 导出结果
+                    </button>
+                </div>
+
+                <!-- Log Panel -->
+                <div class="log-panel">
+                    <div class="log-header">
+                        <span class="log-title">运行日志</span>
+                        <div class="log-actions">
+                            <button class="log-btn" onclick="clearLogs()">清空</button>
+                            <button class="log-btn" onclick="copyLogs()">复制</button>
+                        </div>
+                    </div>
+                    <div class="log-content" id="logContent">
+                        <div class="log-entry"><span class="log-time">[00:00:00]</span> <span class="log-info">系统初始化完成</span></div>
+                        <div class="log-entry"><span class="log-time">[00:00:00]</span> <span class="log-success">欢迎使用小红书链接监测工具 v4.0</span></div>
+                        <div class="log-entry"><span class="log-time">[00:00:00]</span> <span class="log-info">正在连接服务器...</span></div>
+                    </div>
+                </div>
+
+                <!-- Results Table -->
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">采集结果</span>
+                    </div>
+                    <div class="card-body" style="padding: 0;">
+                        <table class="links-table">
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>产品</th>
+                                    <th>链接</th>
+                                    <th>标题</th>
+                                    <th>点赞</th>
+                                    <th>收藏</th>
+                                    <th>状态</th>
+                                </tr>
+                            </thead>
+                            <tbody id="resultsTable">
+                                <tr>
+                                    <td colspan="7" style="text-align: center; padding: 60px 24px;">
+                                        <div class="empty-state">
+                                            <div class="empty-state-icon">📭</div>
+                                            <div class="empty-state-text">暂无数据，请先上传 CSV 文件并开始采集</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            小红书链接监测工具 v4.0 Ultimate | 基于 Playwright 构建 | 支持飞书多维表格同步
+        </footer>
+    </main>
+
+    <script>
+        // ============================================================================
+        // API Configuration
+        // ============================================================================
+        const API_BASE_URL = 'http://localhost:8000';
+        const WS_URL = 'ws://localhost:8000/ws';
+
+        // ============================================================================
+        // Global State
+        // ============================================================================
+        let uploadedFile = null;
+        let csvData = [];
+        let uploadedFilePath = null;
+        let ws = null;
+        let reconnectInterval = null;
+        let serverStatus = null;
+        let currentConfig = null;
+        let configHydrated = false;
+
+        const state = {
+            status: 'idle',  // idle, running, paused, completed
+            stats: {
+                total_links: 0,
+                processed_links: 0,
+                success_count: 0,
+                failed_count: 0
+            },
+            results: [],
+            logs: []
+        };
+
+        const settings = {
+            enable_anti_detection: true,
+            random_delay: true,
+            concurrent_downloads: 3,
+            download_timeout: 30,
+            login_wait_time: 60,
+            login_retries: 3,
+            output_dir: './output_v4'
+        };
+
+        // ============================================================================
+        // WebSocket Connection
+        // ============================================================================
+        function connectWebSocket() {
+            updateConnectionStatus('connecting');
+
+            ws = new WebSocket(WS_URL);
+
+            ws.onopen = () => {
+                updateConnectionStatus('connected');
+                addLog('info', '已连接到服务器');
+                clearInterval(reconnectInterval);
+                reconnectInterval = null;
+            };
+
+            ws.onmessage = (event) => {
+                const data = JSON.parse(event.data);
+                handleMessage(data);
+            };
+
+            ws.onclose = () => {
+                updateConnectionStatus('disconnected');
+                addLog('warning', '与服务器的连接已断开');
+
+                if (!reconnectInterval) {
+                    reconnectInterval = setInterval(() => {
+                        addLog('info', '尝试重新连接...');
+                        connectWebSocket();
+                    }, 5000);
+                }
+            };
+
+            ws.onerror = (error) => {
+                console.error('WebSocket error:', error);
+            };
+        }
+
+        function handleMessage(data) {
+            switch (data.type) {
+                case 'connected':
+                    addLog('success', data.data.message);
+                    break;
+
+                case 'status':
+                    updateServerStatus(data.data);
+                    break;
+
+                case 'progress':
+                    updateProgress(data.data);
+                    break;
+
+                case 'logs':
+                    appendLogs(data.data.logs);
+                    break;
+
+                case 'results':
+                    updateResultsTable(data.data.results);
+                    break;
+
+                case 'pong':
+                    // Heartbeat response
+                    break;
+            }
+        }
+
+        function sendWebSocketMessage(message) {
+            if (ws && ws.readyState === WebSocket.OPEN) {
+                ws.send(JSON.stringify(message));
+            }
+        }
+
+        function updateConnectionStatus(status) {
+            const dot = document.getElementById('connectionDot');
+            const text = document.getElementById('connectionText');
+
+            dot.className = 'connection-dot ' + status;
+
+            switch (status) {
+                case 'connected':
+                    text.textContent = '已连接';
+                    break;
+                case 'connecting':
+                    text.textContent = '连接中...';
+                    break;
+                case 'disconnected':
+                    text.textContent = '已断开';
+                    break;
+            }
+        }
+
+        // ============================================================================
+        // API Calls
+        // ============================================================================
+        async function apiCall(endpoint, method = 'GET', data = null) {
+            const options = {
+                method,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            };
+
+            if (data) {
+                options.body = JSON.stringify(data);
+            }
+
+            const response = await fetch(`${API_BASE_URL}${endpoint}`, options);
+
+            if (!response.ok) {
+                throw new Error(`API Error: ${response.status} ${response.statusText}`);
+            }
+
+            return await response.json();
+        }
+
+        async function uploadFile(file) {
+            const formData = new FormData();
+            formData.append('file', file);
+
+            const response = await fetch(`${API_BASE_URL}/api/upload`, {
+                method: 'POST',
+                body: formData
+            });
+
+            if (!response.ok) {
+                throw new Error(`Upload failed: ${response.status}`);
+            }
+
+            return await response.json();
+        }
+
+        async function startMonitoring() {
+            try {
+                await applySettings();
+            } catch (error) {
+                addLog('error', `配置更新失败: ${error.message}`);
+                showToast(`配置更新失败: ${error.message}`, 'error');
+                return;
+            }
+
+            try {
+                const result = await apiCall('/api/start', 'POST');
+                if (result.success) {
+                    updateButtons('running');
+                    addLog('info', `任务已启动，ID: ${result.task_id}`);
+                    showToast('采集任务已启动', 'success');
+                }
+            } catch (error) {
+                addLog('error', `启动失败: ${error.message}`);
+                showToast(`启动任务失败: ${error.message}`, 'error');
+            }
+        }
+
+        async function pauseMonitoring() {
+            try {
+                const result = await apiCall('/api/pause', 'POST');
+                if (result.success) {
+                    if (result.action === 'paused') {
+                        updateButtons('paused');
+                        addLog('warning', '任务已暂停');
+                        showToast('任务已暂停', 'info');
+                    } else {
+                        updateButtons('running');
+                        addLog('info', '任务继续');
+                        showToast('任务继续', 'success');
+                    }
+                }
+            } catch (error) {
+                addLog('error', `操作失败: ${error.message}`);
+            }
+        }
+
+        async function stopMonitoring() {
+            try {
+                const result = await apiCall('/api/stop', 'POST');
+                if (result.success) {
+                    updateButtons('idle');
+                    addLog('warning', '正在停止任务...');
+                    showToast('任务停止中...', 'warning');
+                }
+            } catch (error) {
+                addLog('error', `停止失败: ${error.message}`);
+            }
+        }
+
+        async function resetMonitor() {
+            try {
+                await apiCall('/api/reset', 'POST');
+                updateButtons('idle');
+                addLog('info', '状态已重置');
+            } catch (error) {
+                addLog('error', `重置失败: ${error.message}`);
+            }
+        }
+
+        async function exportResults() {
+            try {
+                await applySettings();
+            } catch (error) {
+                addLog('error', `配置更新失败: ${error.message}`);
+                showToast(`配置更新失败: ${error.message}`, 'error');
+                return;
+            }
+
+            try {
+                const result = await apiCall('/api/export', 'POST');
+                if (result.success) {
+                    addLog('success', `结果已导出: ${result.filename}`);
+                    showToast('结果导出成功', 'success');
+                }
+            } catch (error) {
+                addLog('error', `导出失败: ${error.message}`);
+                showToast(`导出失败: ${error.message}`, 'error');
+            }
+        }
+
+        async function testFeishuConnection() {
+            try {
+                const result = await apiCall('/api/feishu/test', 'GET');
+                if (result.success) {
+                    addLog('success', '飞书连接测试成功');
+                    document.getElementById('feishuDot').classList.add('connected');
+                    document.getElementById('feishuStatus').textContent = '已连接';
+                    showToast('飞书连接成功', 'success');
+                } else {
+                    throw new Error(result.message);
+                }
+            } catch (error) {
+                addLog('error', `飞书连接测试失败: ${error.message}`);
+                showToast('飞书连接失败', 'error');
+            }
+        }
+
+        // ============================================================================
+        // UI Updates
+        // ============================================================================
+        function updateServerStatus(data) {
+            serverStatus = data;
+            state.status = data.status;
+            state.stats = data.stats;
+            if (data.config) {
+                currentConfig = data.config;
+                if (!configHydrated) {
+                    hydrateConfig(data.config);
+                    configHydrated = true;
+                }
+            }
+
+            updateStatsDisplay();
+            updateButtons(data.status);
+            updateStatusDot(data.status);
+        }
+
+        function updateProgress(data) {
+            state.stats.processed_links = data.processed;
+            state.stats.success_count = data.success;
+            state.stats.failed_count = data.failed;
+
+            document.getElementById('progressBar').style.width = data.percent + '%';
+            document.getElementById('progressCurrent').textContent = data.processed;
+            document.getElementById('progressPercent').textContent = data.percent + '%';
+
+            updateStatsDisplay();
+        }
+
+        function updateStatsDisplay() {
+            document.getElementById('totalLinks').textContent = state.stats.total_links || 0;
+            document.getElementById('successCount').textContent = state.stats.success_count || 0;
+            document.getElementById('errorCount').textContent = state.stats.failed_count || 0;
+
+            const pending = (state.stats.total_links || 0) - (state.stats.processed_links || 0);
+            document.getElementById('pendingCount').textContent = pending;
+        }
+
+        function updateStatusDot(status) {
+            const dot = document.getElementById('statusDot');
+            const text = document.getElementById('statusText');
+
+            dot.className = 'status-dot';
+
+            switch (status) {
+                case 'running':
+                    dot.classList.add('processing');
+                    text.textContent = '采集中...';
+                    break;
+                case 'paused':
+                    text.textContent = '已暂停';
+                    break;
+                case 'completed':
+                    dot.classList.add('active');
+                    text.textContent = '已完成';
+                    break;
+                default:
+                    text.textContent = '等待开始';
+            }
+        }
+
+        function updateButtons(status) {
+            const startBtn = document.getElementById('startBtn');
+            const pauseBtn = document.getElementById('pauseBtn');
+            const stopBtn = document.getElementById('stopBtn');
+
+            switch (status) {
+                case 'running':
+                    startBtn.disabled = true;
+                    pauseBtn.disabled = false;
+                    stopBtn.disabled = false;
+                    pauseBtn.innerHTML = '<span>⏸</span> 暂停';
+                    break;
+                case 'paused':
+                    startBtn.disabled = true;
+                    pauseBtn.disabled = false;
+                    stopBtn.disabled = false;
+                    pauseBtn.innerHTML = '<span>▶</span> 继续';
+                    break;
+                default:
+                    startBtn.disabled = csvData.length === 0;
+                    pauseBtn.disabled = true;
+                    stopBtn.disabled = true;
+                    pauseBtn.innerHTML = '<span>⏸</span> 暂停';
+            }
+        }
+
+        function updateResultsTable(results) {
+            state.results = results;
+            const tbody = document.getElementById('resultsTable');
+
+            if (!results || results.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="7" style="text-align: center; padding: 60px 24px;">
+                            <div class="empty-state">
+                                <div class="empty-state-icon">📭</div>
+                                <div class="empty-state-text">暂无数据，请先上传 CSV 文件并开始采集</div>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tbody.innerHTML = results.map(item => {
+                let statusClass = 'pending';
+                let statusText = '待处理';
+
+                if (item.采集状态 === '成功') {
+                    statusClass = 'success';
+                    statusText = '成功';
+                } else if (item.采集状态 === '失败') {
+                    statusClass = 'error';
+                    statusText = '失败';
+                }
+
+                return `
+                    <tr>
+                        <td>${item.序号 || '-'}</td>
+                        <td>${item.产品 || '-'}</td>
+                        <td style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.链接 || '-'}</td>
+                        <td style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.标题 || '-'}</td>
+                        <td>${item.点赞数 || '-'}</td>
+                        <td>${item.收藏数 || '-'}</td>
+                        <td><span class="status-badge ${statusClass}">${statusText}</span></td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        // ============================================================================
+        // File Handling
+        // ============================================================================
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                uploadCSVFile(file);
+            }
+        }
+
+        async function uploadCSVFile(file) {
+            uploadedFile = file;
+
+            document.getElementById('fileName').textContent = file.name;
+            document.getElementById('fileSize').textContent = formatFileSize(file.size);
+            document.getElementById('filePreview').classList.add('active');
+
+            addLog('info', `正在上传文件: ${file.name}`);
+
+            try {
+                const result = await uploadFile(file);
+
+                if (result.success) {
+                    uploadedFilePath = result.file_path;
+                    csvData = result.links || [];
+
+                    state.stats.total_links = result.total_links;
+                    state.stats.processed_links = 0;
+                    state.stats.success_count = 0;
+                    state.stats.failed_count = 0;
+
+                    updateStatsDisplay();
+                    updateButtons('idle');
+
+                    document.getElementById('progressTotal').textContent = result.total_links;
+                    document.getElementById('startBtn').disabled = false;
+
+                    addLog('success', `文件已加载，共 ${result.total_links} 个链接`);
+
+                    // Populate table with pending status
+                    updateResultsTable(csvData.map(link => ({
+                        ...link,
+                        采集状态: 'pending',
+                        序号: link.序号,
+                        产品: link.产品,
+                        链接: link.链接
+                    })));
+
+                    showToast('CSV 文件上传成功', 'success');
+                }
+            } catch (error) {
+                addLog('error', `文件上传失败: ${error.message}`);
+                showToast('文件上传失败', 'error');
+                clearFile();
+            }
+        }
+
+        function clearFile() {
+            uploadedFile = null;
+            csvData = [];
+            uploadedFilePath = null;
+            document.getElementById('fileInput').value = '';
+            document.getElementById('filePreview').classList.remove('active');
+
+            resetMonitor();
+            updateStatsDisplay();
+            updateResultsTable([]);
+
+            addLog('info', '文件已清除');
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+        }
+
+        // ============================================================================
+        // Settings
+        // ============================================================================
+        function toggleSetting(element) {
+            element.classList.toggle('active');
+            const setting = element.dataset.setting;
+            settings[setting] = element.classList.contains('active');
+        }
+
+        function updateSliderValue(type) {
+            if (type === 'concurrent') {
+                const value = document.getElementById('concurrentSlider').value;
+                document.getElementById('concurrentValue').textContent = value;
+                settings.concurrent_downloads = parseInt(value);
+            } else if (type === 'timeout') {
+                const value = document.getElementById('timeoutSlider').value;
+                document.getElementById('timeoutValue').textContent = value;
+                settings.download_timeout = parseInt(value);
+            }
+        }
+
+        function setToggleState(setting, enabled) {
+            const element = document.querySelector(`.toggle[data-setting="${setting}"]`);
+            if (!element) return;
+            element.classList.toggle('active', Boolean(enabled));
+            settings[setting] = Boolean(enabled);
+        }
+
+        function hydrateConfig(config) {
+            if (!config) return;
+
+            if (typeof config.enable_anti_detection === 'boolean') {
+                setToggleState('enable_anti_detection', config.enable_anti_detection);
+            }
+
+            if (typeof config.concurrent_downloads === 'number') {
+                const concurrent = config.concurrent_downloads;
+                document.getElementById('concurrentSlider').value = concurrent;
+                document.getElementById('concurrentValue').textContent = concurrent;
+                settings.concurrent_downloads = concurrent;
+            }
+
+            if (typeof config.download_timeout === 'number') {
+                const timeout = config.download_timeout;
+                document.getElementById('timeoutSlider').value = timeout;
+                document.getElementById('timeoutValue').textContent = timeout;
+                settings.download_timeout = timeout;
+            }
+
+            if (typeof config.login_wait_time === 'number') {
+                document.getElementById('loginWaitTime').value = config.login_wait_time;
+                settings.login_wait_time = config.login_wait_time;
+            }
+
+            if (typeof config.login_retries === 'number') {
+                document.getElementById('loginRetries').value = config.login_retries;
+                settings.login_retries = config.login_retries;
+            }
+
+            if (typeof config.output_dir === 'string' && config.output_dir) {
+                document.getElementById('outputDir').value = config.output_dir;
+                settings.output_dir = config.output_dir;
+            }
+
+            if (config.feishu_app_id) {
+                document.getElementById('feishuAppId').value = config.feishu_app_id;
+            }
+
+            if (config.feishu_app_secret) {
+                document.getElementById('feishuAppSecret').value = config.feishu_app_secret;
+            }
+        }
+
+        function syncSettingsFromInputs() {
+            const waitTime = parseInt(document.getElementById('loginWaitTime').value, 10);
+            const retries = parseInt(document.getElementById('loginRetries').value, 10);
+            const outputDir = document.getElementById('outputDir').value.trim();
+
+            settings.login_wait_time = Number.isFinite(waitTime) ? waitTime : settings.login_wait_time;
+            settings.login_retries = Number.isFinite(retries) ? retries : settings.login_retries;
+            settings.output_dir = outputDir || settings.output_dir || './output_v4';
+        }
+
+        async function getCurrentConfig() {
+            if (currentConfig) return currentConfig;
+            try {
+                const status = await apiCall('/api/status', 'GET');
+                if (status && status.config) {
+                    currentConfig = status.config;
+                }
+            } catch (error) {
+                addLog('warning', `读取配置失败: ${error.message}`);
+            }
+            return currentConfig || {};
+        }
+
+        async function applySettings() {
+            syncSettingsFromInputs();
+            const baseConfig = await getCurrentConfig();
+            const config = {
+                ...baseConfig,
+                output_dir: settings.output_dir,
+                concurrent_downloads: settings.concurrent_downloads,
+                download_timeout: settings.download_timeout,
+                login_wait_time: settings.login_wait_time,
+                login_retries: settings.login_retries,
+                enable_anti_detection: settings.enable_anti_detection,
+                feishu_app_id: document.getElementById('feishuAppId').value.trim(),
+                feishu_app_secret: document.getElementById('feishuAppSecret').value.trim()
+            };
+
+            config.enable_feishu_sync = Boolean(config.feishu_app_id || config.feishu_app_secret);
+
+            await apiCall('/api/config', 'POST', config);
+        }
+
+        async function selectOutputDir() {
+            try {
+                const result = await apiCall('/api/select-output-dir', 'GET');
+                if (!result.success || !result.path) {
+                    throw new Error(result.message || '选择目录失败');
+                }
+
+                document.getElementById('outputDir').value = result.path;
+                settings.output_dir = result.path;
+                addLog('info', `输出目录: ${result.path}`);
+                showToast('已选择输出目录', 'success');
+            } catch (error) {
+                showToast(`选择目录失败: ${error.message}`, 'error');
+            }
+        }
+
+        // ============================================================================
+        // Logging
+        // ============================================================================
+        function addLog(level, message) {
+            const logContent = document.getElementById('logContent');
+            const now = new Date();
+            const time = `[${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}]`;
+
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            entry.innerHTML = `<span class="log-time">${time}</span> <span class="log-${level}">${message}</span>`;
+
+            logContent.appendChild(entry);
+            logContent.scrollTop = logContent.scrollHeight;
+
+            // Keep only last 100 entries
+            while (logContent.children.length > 100) {
+                logContent.removeChild(logContent.firstChild);
+            }
+        }
+
+        function appendLogs(logs) {
+            if (!logs || logs.length === 0) return;
+
+            logs.forEach(log => {
+                const logContent = document.getElementById('logContent');
+                const entry = document.createElement('div');
+                entry.className = 'log-entry';
+                entry.innerHTML = `<span class="log-time">[${log.timestamp}]</span> <span class="log-${log.level}">${log.message}</span>`;
+                logContent.appendChild(entry);
+            });
+
+            document.getElementById('logContent').scrollTop = document.getElementById('logContent').scrollHeight;
+        }
+
+        function clearLogs() {
+            document.getElementById('logContent').innerHTML = '';
+            addLog('info', '日志已清空');
+        }
+
+        function copyLogs() {
+            const logContent = document.getElementById('logContent').innerText;
+            navigator.clipboard.writeText(logContent).then(() => {
+                showToast('日志已复制到剪贴板', 'success');
+            });
+        }
+
+        // ============================================================================
+        // Toast Notifications
+        // ============================================================================
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+
+            const icons = {
+                success: '✓',
+                error: '✕',
+                warning: '⚠',
+                info: 'ℹ'
+            };
+
+            toast.innerHTML = `
+                <span class="toast-icon">${icons[type]}</span>
+                <span class="toast-message">${message}</span>
+            `;
+
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateX(100%)';
+                setTimeout(() => container.removeChild(toast), 300);
+            }, 3000);
+        }
+
+        // ============================================================================
+        // Drag and Drop
+        // ============================================================================
+        const uploadArea = document.getElementById('uploadArea');
+
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            if (file && file.name.endsWith('.csv')) {
+                uploadCSVFile(file);
+            } else {
+                showToast('请上传 CSV 文件', 'error');
+            }
+        });
+
+        // ============================================================================
+        // Utility Functions
+        // ============================================================================
+        function exportSettings() {
+            syncSettingsFromInputs();
+            const config = {
+                ...settings,
+                feishu_app_id: document.getElementById('feishuAppId').value,
+                feishu_app_secret: document.getElementById('feishuAppSecret').value
+            };
+
+            // Download as JSON
+            const blob = new Blob([JSON.stringify(config, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'monitor_config.json';
+            a.click();
+            URL.revokeObjectURL(url);
+
+            showToast('配置已导出', 'success');
+        }
+
+        function showHelp() {
+            alert('小红书链接监测工具 v4.0\n\n功能说明:\n1. 上传包含链接的CSV文件\n2. 配置反爬和性能参数\n3. 点击"开始采集"启动任务\n4. 支持飞书同步和Excel导出\n\n技术栈:\n- 后端: FastAPI + WebSocket\n- 前端: 原生 JavaScript\n- 浏览器: Playwright');
+        }
+
+        // ============================================================================
+        // Initialize
+        // ============================================================================
+        document.addEventListener('DOMContentLoaded', () => {
+            // Connect to WebSocket
+            connectWebSocket();
+
+            const outputDirInput = document.getElementById('outputDir');
+            outputDirInput.addEventListener('input', () => {
+                settings.output_dir = outputDirInput.value.trim();
+            });
+            document.getElementById('loginWaitTime').addEventListener('change', syncSettingsFromInputs);
+            document.getElementById('loginRetries').addEventListener('change', syncSettingsFromInputs);
+            syncSettingsFromInputs();
+
+            // Start heartbeat
+            setInterval(() => {
+                sendWebSocketMessage({ type: 'ping' });
+            }, 30000);
+
+            // Periodically request status update
+            setInterval(() => {
+                sendWebSocketMessage({ type: 'get_status' });
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

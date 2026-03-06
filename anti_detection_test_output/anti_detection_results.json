@@ -1,0 +1,28 @@
+[
+  {
+    "序号": "1",
+    "产品": "反爬测试1",
+    "链接": "https://www.xiaohongshu.com/explore/692811cc000000001e006d13?xsec_token=MBGdcp6gGoTlB-7svr3dQr4qOAEnHa0xBEzNoG6mFWbfw=&xsec_source=pc_pgyexport",
+    "笔记ID": "692811cc000000001e006d13",
+    "采集状态": "成功",
+    "错误信息": "",
+    "HTTP状态": 200,
+    "截屏文件": "anti_detection_test_output\\screenshots\\反爬测试1_1_screenshot.png",
+    "反爬检测": "未触发",
+    "检测时间": "2025-12-17 12:47:26",
+    "处理时间": 11.2
+  },
+  {
+    "序号": "2",
+    "产品": "反爬测试2",
+    "链接": "https://www.xiaohongshu.com/explore/69295e50000000001e03857b?xsec_token=MBCx2jcO9iY-8NghibyISIfYqUOIPdmUZ9CIBYiL2SF40=&xsec_source=pc_pgyexport",
+    "笔记ID": "69295e50000000001e03857b",
+    "采集状态": "失败",
+    "错误信息": "触发反爬虫机制且无法处理",
+    "HTTP状态": "",
+    "截屏文件": "",
+    "反爬检测": "触发",
+    "检测时间": "2025-12-17 12:47:41",
+    "处理时间": 123.0
+  }
+]

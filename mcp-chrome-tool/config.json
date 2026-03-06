@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "mcp-chrome-tool": {
+      "command": "node",
+      "args": ["server.js"],
+      "env": {
+        "PRIMARY_API_KEY": "key"
+      }
+    }
+  }
+}
