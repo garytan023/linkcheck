@@ -6,6 +6,7 @@
 import os
 import subprocess
 import sys
+import time
 from datetime import datetime
 
 
@@ -84,10 +85,25 @@ def build_exe():
     print("[提示] 这一步会花几分钟时间。")
     print()
 
+    build_start_ts = time.time()
     run_command(cmd)
 
-    exe_path = os.path.join(dist_dir, f"{exe_name}.exe")
-    size_mb = os.path.getsize(exe_path) / (1024 * 1024) if os.path.exists(exe_path) else None
+    # 兼容 Windows(.exe) 与 Linux/macOS(无扩展名) 输出，并优先选择本次新生成的产物
+    output_candidates = [
+        os.path.join(dist_dir, f"{exe_name}.exe"),
+        os.path.join(dist_dir, exe_name),
+    ]
+    fresh_outputs = [
+        p for p in output_candidates
+        if os.path.exists(p) and os.path.getmtime(p) >= (build_start_ts - 2)
+    ]
+    if fresh_outputs:
+        output_path = max(fresh_outputs, key=os.path.getmtime)
+    else:
+        default_name = f"{exe_name}.exe" if os.name == "nt" else exe_name
+        output_path = os.path.join(dist_dir, default_name)
+
+    size_mb = os.path.getsize(output_path) / (1024 * 1024) if os.path.exists(output_path) else None
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     print()
@@ -95,9 +111,12 @@ def build_exe():
     print("[成功] Ultimate v4 打包完成")
     print("=" * 60)
     print(f"[时间] {timestamp}")
-    print(f"[输出] {exe_path}")
+    print(f"[输出] {output_path}")
     if size_mb:
         print(f"[大小] {size_mb:.2f} MB")
+    if os.name != "nt":
+        print("[注意] 当前是非 Windows 环境，生成的是本机可执行文件（不是 .exe）")
+        print("       如需 Windows .exe，请在 Windows 命令行里运行 打包EXE.bat")
     print()
     print("[使用提示]")
     print(" 1. dist 目录下的 EXE 已内置 Playwright 浏览器")

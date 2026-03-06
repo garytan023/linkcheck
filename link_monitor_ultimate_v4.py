@@ -5488,7 +5488,6 @@ class UltimateMonitorV3GUI:
             # 2. URL解码和重编码处理
             try:
                 from urllib.parse import unquote, quote, urlparse, urlunparse
-                import re
 
                 # 解码URL中的特殊字符（避免双重编码）
                 decoded_url = unquote(normalized_url)
