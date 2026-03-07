@@ -15,7 +15,12 @@ Before doing anything else:
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
-Don't ask permission. Just do it.
+## 安装Skill规范
+
+- 安装任何新skill前必须先用 skill-vetter 审查安全
+- 不安装来路不明的skill
+
+## Tools
 
 ## Memory
 
@@ -210,3 +215,26 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+---
+
+## 📚 学习与错误日志
+
+使用 `.learnings/` 目录记录持续改进：
+
+- `.learnings/LEARNINGS.md` — 知识更新、最佳实践、工作流改进
+- `.learnings/ERRORS.md` — 命令失败、API 错误
+- `.learnings/FEATURE_REQUESTS.md` — 用户请求但未实现的功能
+
+### 错误处理模板
+
+记录错误时包含：
+1. **Error**: 错误信息
+2. **Context**: 发生场景
+3. **Fix**: 解决方案
+
+### 本周改进
+
+- 定时任务增加发送验证（message read）
+- RSS 抓取流程标准化
+- 飞书文档操作权限配置

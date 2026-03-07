@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1772540274444
+    },
+    "playwright-scraper-skill": {
+      "version": "1.2.0",
+      "installedAt": 1772540277248
+    },
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1772540527037
+    },
+    "self-improvement": {
+      "version": "1.0.0",
+      "installedAt": 1772540886704
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1772541085208
+    },
+    "anthropic": {
+      "version": "1.0.0",
+      "installedAt": 1772547370812
+    },
+    "skill-creator": {
+      "version": "0.1.0",
+      "installedAt": 1772547636078
+    },
+    "gogcli": {
+      "version": "1.0.0",
+      "installedAt": 1772556401836
+    },
+    "superpower": {
+      "version": "1.0.0",
+      "installedAt": 1772673644754
+    },
+    "ddg-web-search": {
+      "version": "1.0.0",
+      "installedAt": 1772724379330
+    },
+    "openclaw-tavily-search": {
+      "version": "0.1.0",
+      "installedAt": 1772725161226
+    },
+    "proactive-agent-skill": {
+      "version": "1.0.0",
+      "installedAt": 1772725761829
+    },
+    "agent-memory": {
+      "version": "1.0.0",
+      "installedAt": 1772725827695
+    },
+    "openclaw-skill-vetter": {
+      "version": "1.0.0",
+      "installedAt": 1772725868879
+    },
+    "coding": {
+      "version": "1.0.3",
+      "installedAt": 1772726235567
+    },
+    "microsoft-excel": {
+      "version": "1.0.3",
+      "installedAt": 1772726366569
+    },
+    "data-analysis": {
+      "version": "1.0.0",
+      "installedAt": 1772726387193
+    },
+    "meta-ads-manager": {
+      "version": "1.0.0",
+      "installedAt": 1772726978356
+    },
+    "tiktok-ads": {
+      "version": "1.0.0",
+      "installedAt": 1772727011220
+    },
+    "faster-whisper-transcribe": {
+      "version": "1.0.0",
+      "installedAt": 1772860189215
+    },
+    "nano-banana-pro": {
+      "version": "1.0.1",
+      "installedAt": 1772863158286
+    },
+    "openai-image-gen": {
+      "version": "1.0.1",
+      "installedAt": 1772863208664
+    },
+    "qwen-image": {
+      "version": "1.0.0",
+      "installedAt": 1772863235933
+    },
+    "openai-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1772863663592
+    },
+    "memory-tiering": {
+      "version": "1.0.0",
+      "installedAt": 1772865138818
+    },
+    "memory-setup": {
+      "version": "1.0.0",
+      "installedAt": 1772865161353
+    },
+    "notion": {
+      "version": "1.0.0",
+      "installedAt": 1772865478396
+    }
+  }
+}
