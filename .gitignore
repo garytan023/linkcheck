@@ -57,3 +57,11 @@ Thumbs.db
 feishu_config.json
 *_storage.json
 temp_config.json
+知识库/
+*.zip
+*.mp4
+*.mov
+*.avi
+__pycache__/
+.venv/
+node_modules/
