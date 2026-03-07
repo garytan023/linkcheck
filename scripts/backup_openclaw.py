@@ -52,6 +52,11 @@ def main():
         log(f"Git commit error: {stderr}")
         return
     
+    # Pull first (in case remote has changes)
+    rc, stdout, stderr = run_cmd("git pull origin main --rebase", cwd=WORKSPACE)
+    if rc != 0 and "up to date" not in stderr.lower():
+        log(f"Git pull warning: {stderr}")
+    
     # Push
     rc, stdout, stderr = run_cmd("git push origin main", cwd=WORKSPACE)
     if rc != 0:
