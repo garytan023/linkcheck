@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东商品体检报告</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .card { background: white; border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+        h1 { color: #333; font-size: 28px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        h2 { color: #666; font-size: 18px; margin: 20px 0 15px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+        .score-big { font-size: 72px; font-weight: 800; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .score-label { font-size: 18px; color: #666; }
+        .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .info-item { background: #f8f9fa; padding: 16px; border-radius: 12px; transition: transform 0.2s; }
+        .info-item:hover { transform: translateY(-2px); }
+        .info-label { color: #999; font-size: 12px; margin-bottom: 4px; }
+        .info-value { color: #333; font-size: 16px; font-weight: 600; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .badge-good { background: #d4edda; color: #155724; }
+        .badge-warn { background: #fff3cd; color: #856404; }
+        .badge-bad { background: #f8d7da; color: #721c24; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { padding: 14px 12px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #f8f9fa; font-weight: 600; color: #666; font-size: 14px; }
+        .score-cell { font-weight: 700; font-size: 18px; }
+        .good { color: #28a745; }
+        .warn { color: #ffc107; }
+        .bad { color: #dc3545; }
+        .fix-list { list-style: none; }
+        .fix-list li { padding: 12px 16px; margin-bottom: 10px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #667eea; }
+        .fix-high { border-left-color: #dc3545; }
+        .fix-mid { border-left-color: #ffc107; }
+        .footer { text-align: center; color: #999; font-size: 12px; margin-top: 20px; }
+        .total-badge { display: inline-block; padding: 8px 20px; border-radius: 30px; font-size: 14px; font-weight: 600; }
+        .total-good { background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); color: #155724; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🎯 京东商品体检报告</h1>
+            
+            <h2>商品信息</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">商品ID</div>
+                    <div class="info-value">100304875518</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">店铺</div>
+                    <div class="info-value">adidas阿迪达斯京东自营旗舰店</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">商品名称</div>
+                    <div class="info-value">adidas阿迪达斯SUPERSTAR II经典贝壳头板鞋男女</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">价格</div>
+                    <div class="info-value">¥468</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">好评率</div>
+                    <div class="info-value">100% <span class="badge badge-good">优秀</span></div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">评价数</div>
+                    <div class="info-value">62条</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">主图</div>
+                    <div class="info-value">8张 + 视频 ✅</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">SKU</div>
+                    <div class="info-value">5色 x 8码 (40个)</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">店铺DSR</div>
+                    <div class="info-value">描述4.8 / 服务4.8 / 物流4.8</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">问大家</div>
+                    <div class="info-value badge badge-bad">暂无</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card" style="text-align: center;">
+            <div class="score-label">体检总分</div>
+            <div class="score-big">83</div>
+            <div class="total-badge total-good">🟢 优秀</div>
+        </div>
+        
+        <div class="card">
+            <h2>📊 维度评分</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>维度</th>
+                        <th>得分</th>
+                        <th>状态</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>主图质量</td><td class="score-cell good">100</td><td><span class="badge badge-good">优秀</span></td></tr>
+                    <tr><td>主图视频</td><td class="score-cell good">100</td><td><span class="badge badge-good">优秀</span></td></tr>
+                    <tr><td>SKU完整性</td><td class="score-cell good">100</td><td><span class="badge badge-good">优秀</span></td></tr>
+                    <tr><td>好评率</td><td class="score-cell good">100</td><td><span class="badge badge-good">优秀</span></td></tr>
+                    <tr><td>店铺DSR</td><td class="score-cell good">100</td><td><span class="badge badge-good">优秀</span></td></tr>
+                    <tr><td>库存状态</td><td class="score-cell good">100</td><td><span class="badge badge-good">优秀</span></td></tr>
+                    <tr><td>属性标签</td><td class="score-cell good">80</td><td><span class="badge badge-good">优秀</span></td></tr>
+                    <tr><td>标题关键词</td><td class="score-cell good">80</td><td><span class="badge badge-good">优秀</span></td></tr>
+                    <tr><td>买家秀</td><td class="score-cell good">80</td><td><span class="badge badge-good">优秀</span></td></tr>
+                    <tr><td>评论内容</td><td class="score-cell good">80</td><td><span class="badge badge-good">优秀</span></td></tr>
+                    <tr><td>价格区间</td><td class="score-cell good">80</td><td><span class="badge badge-good">优秀</span></td></tr>
+                    <tr><td>问大家</td><td class="score-cell bad">0</td><td><span class="badge badge-bad">需改进</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>🔧 修复建议</h2>
+            <ul class="fix-list">
+                <li class="fix-mid">
+                    <strong>🟡 添加「问大家」内容</strong><br>
+                    <small>当前得分：0 | 暂无问答内容，建议商家添加常见问题解答</small>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            体检时间：2026-03-16 22:24:38<br>
+            由 拉小码 AI 生成（Browser Relay 模式）
+        </div>
+    </div>
+</body>
+</html>
