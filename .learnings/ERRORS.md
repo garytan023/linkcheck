@@ -77,3 +77,18 @@ error: failed to push some refs
 
 ### Fix
 在飞书开放平台申请 `drive:file` 等权限并发布新版本
+
+---
+
+### [ERR-20260318-01] 每日日记 cron 写入错误目录
+
+**Severity**: high
+
+### Error
+日记实际写入 `~/.openclaw/workspace-assitant/memory/`，主 workspace 中缺失对应日记文件
+
+### Context
+每日日记定时任务使用了错误路径，且 Feishu delivery 未带明确目标，导致“看起来跑了”，但主工作区没落盘、通知也可能失败
+
+### Fix
+把路径改为 `/Users/garytan/.openclaw/workspace-dev/memory/$(date +%Y-%m-%d).md`，并为 Feishu delivery 补上明确 `to`
