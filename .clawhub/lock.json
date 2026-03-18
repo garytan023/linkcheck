@@ -108,6 +108,34 @@
     "notion": {
       "version": "1.0.0",
       "installedAt": 1772865478396
+    },
+    "web-search-exa": {
+      "version": "1.0.1",
+      "installedAt": 1772873631648
+    },
+    "skill-vetter": {
+      "version": "1.0.0",
+      "installedAt": 1773214742960
+    },
+    "self-improving": {
+      "version": "1.2.10",
+      "installedAt": 1773214758380
+    },
+    "daily-digest": {
+      "version": "1.0.0",
+      "installedAt": 1773214762362
+    },
+    "tavily-search": {
+      "version": "1.0.0",
+      "installedAt": 1773214765355
+    },
+    "tencent-ads-assistant": {
+      "version": "1.0.4",
+      "installedAt": 1773672092993
+    },
+    "ima-skills": {
+      "version": "1.0.2",
+      "installedAt": 1773806181419
     }
   }
 }
