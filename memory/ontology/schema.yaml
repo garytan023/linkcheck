@@ -40,6 +40,16 @@ types:
   Topic:
     required:
     - name
+  RoleTag:
+    required:
+    - name
+  PriorityTag:
+    required:
+    - name
+  SummaryNote:
+    required:
+    - title
+    - content
 relations:
   has_owner:
     from_types:
@@ -109,3 +119,18 @@ relations:
     - Project
     - System
     cardinality: many_to_many
+  tagged_as:
+    from_types:
+    - Session
+    - Agent
+    - Account
+    to_types:
+    - RoleTag
+    - PriorityTag
+    cardinality: many_to_many
+  summarized_by:
+    from_types:
+    - Session
+    to_types:
+    - SummaryNote
+    cardinality: one_to_many
