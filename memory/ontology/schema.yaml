@@ -1,0 +1,55 @@
+types:
+  Person:
+    required:
+    - name
+  Agent:
+    required:
+    - name
+    - role
+  System:
+    required:
+    - name
+    - purpose
+  Project:
+    required:
+    - name
+    - status
+  Task:
+    required:
+    - title
+    - status
+  Preference:
+    required:
+    - key
+    - value
+relations:
+  has_owner:
+    from_types:
+    - Project
+    - Task
+    to_types:
+    - Person
+    - Agent
+    cardinality: many_to_one
+  supports:
+    from_types:
+    - Agent
+    - System
+    to_types:
+    - Project
+    - Task
+    - System
+    cardinality: many_to_many
+  prefers:
+    from_types:
+    - Person
+    to_types:
+    - Preference
+    cardinality: one_to_many
+  works_on:
+    from_types:
+    - Agent
+    to_types:
+    - Project
+    - Task
+    cardinality: many_to_many
