@@ -37,6 +37,9 @@ types:
   Document:
     required:
     - title
+  Topic:
+    required:
+    - name
 relations:
   has_owner:
     from_types:
@@ -96,4 +99,13 @@ relations:
     - Project
     - System
     - Rule
+    cardinality: many_to_many
+  about:
+    from_types:
+    - Session
+    - Document
+    to_types:
+    - Topic
+    - Project
+    - System
     cardinality: many_to_many
