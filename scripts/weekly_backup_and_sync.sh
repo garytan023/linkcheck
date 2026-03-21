@@ -5,6 +5,8 @@ SRC="/Users/garytan/.openclaw/workspace-dev"
 MIRROR="$HOME/.openclaw/openclaw-text-backup"
 BACKUP_SCRIPT="$SRC/skills/openclaw-backup/scripts/backup.sh"
 REPO_URL="https://github.com/garytan023/openclaw-text-backup.git"
+BACKUP_DIR="$HOME/openclaw-backups"
+KEEP_BACKUPS=4
 STAMP=$(date '+%Y-%m-%d %H:%M:%S %Z')
 
 log() {
@@ -15,6 +17,18 @@ log "Starting weekly OpenClaw backup + GitHub text sync"
 
 # 1) Full local backup
 bash "$BACKUP_SCRIPT"
+
+# 1.5) Keep only the most recent N weekly backups
+if [ -d "$BACKUP_DIR" ]; then
+  backup_count=$(find "$BACKUP_DIR" -maxdepth 1 -type f -name 'openclaw-*.tar.gz' | wc -l | tr -d ' ')
+  if [ "$backup_count" -gt "$KEEP_BACKUPS" ]; then
+    find "$BACKUP_DIR" -maxdepth 1 -type f -name 'openclaw-*.tar.gz' | sort -r | tail -n +$((KEEP_BACKUPS + 1)) | while read -r old_file; do
+      [ -n "$old_file" ] || continue
+      rm -f "$old_file"
+      echo "Removed old backup: $(basename "$old_file")"
+    done
+  fi
+fi
 
 # 2) Prepare mirror repo
 mkdir -p "$MIRROR"
