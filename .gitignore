@@ -65,3 +65,4 @@ temp_config.json
 __pycache__/
 .venv/
 node_modules/
+知识库/
