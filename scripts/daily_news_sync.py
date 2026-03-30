@@ -12,10 +12,15 @@ import json
 import os
 from datetime import datetime, timedelta
 
-NOTION_KEY = os.environ.get("NOTION_KEY", "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")
+NOTION_KEY = os.environ.get("NOTION_KEY", "")
 NOTION_PAGE_ID = "31cdb0fc-025f-8141-b46a-fcd7976c3537"
-DISCORD_WEBHOOK = os.environ.get("DISCORD_WEBHOOK", "https://discord.com/api/v10/channels/1478997781187268608/messages")
-DISCORD_BOT_TOKEN = "MTQ3ODYyNzQ2MDA1OTg5MzgwMA.G58onz.HeaPzMqdNXbiItnJFPK5uoIQwNpOYaJb4eOjo8"
+DISCORD_WEBHOOK = os.environ.get("DISCORD_WEBHOOK", "")
+DISCORD_BOT_TOKEN = os.environ.get("DISCORD_BOT_TOKEN", "")
+
+# 验证必要环境变量
+_missing = [k for k, v in {"NOTION_KEY": NOTION_KEY, "DISCORD_WEBHOOK": DISCORD_WEBHOOK, "DISCORD_BOT_TOKEN": DISCORD_BOT_TOKEN}.items() if not v]
+if _missing:
+    raise EnvironmentError(f"缺少环境变量: {', '.join(_missing)}，请在运行前设置")
 
 RSS_SERVER = "http://8.138.40.155:9001/feed"
 OPML_FILE = "/Users/garytan/.openclaw/workspace-dev/data/wechat_rss_subscriptions.opml"
