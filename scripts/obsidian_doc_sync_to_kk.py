@@ -5,7 +5,6 @@ import csv
 import hashlib
 import json
 import re
-import shutil
 from datetime import datetime
 from pathlib import Path
 
@@ -114,8 +113,38 @@ def collect_files(path_arg: str | None, since_hours: int, limit: int):
     return sorted(files, key=lambda p: p.stat().st_mtime, reverse=True)[:limit]
 
 
+def write_reference_stub(target: Path, src: Path, src_id: str | None, digest: str, summary: str):
+    target.parent.mkdir(parents=True, exist_ok=True)
+    rel = src.relative_to(DOC_ROOT) if DOC_ROOT in src.parents else Path(src.name)
+    title = src.stem
+    lines = [
+        '---',
+        f'title: "{title}"',
+        'type: obsidian-source-reference',
+        f'obsidian_source_path: "{src}"',
+        f'obsidian_relative_path: "{rel}"',
+        f'content_hash: "{digest}"',
+        f'updated_at: "{datetime.fromtimestamp(src.stat().st_mtime).isoformat()}"',
+    ]
+    if src_id:
+        lines.append(f'source_id: "{src_id}"')
+    lines += [
+        '---',
+        '',
+        f'# {title}',
+        '',
+        f'- 原文路径: `{src}`',
+        f'- 相对路径: `{rel}`',
+        f'- 摘要: {summary}',
+        '',
+        '> 这是引用型 source stub，不复制正文。编译时应回读原始 Obsidian 文档。',
+        ''
+    ]
+    target.write_text('\n'.join(lines), encoding='utf-8')
+
+
 def main():
-    ap = argparse.ArgumentParser(description='Sync Obsidian docs to karpathy-pkm raw/inbox and create manifests.')
+    ap = argparse.ArgumentParser(description='Register Obsidian docs into karpathy-pkm as referenced sources, without copying full content.')
     ap.add_argument('--since-hours', type=int, default=24)
     ap.add_argument('--limit', type=int, default=200)
     ap.add_argument('--path', help='指定单个文件或目录同步')
@@ -138,41 +167,42 @@ def main():
             continue
         digest = sha256_file(base)
         rel = base.relative_to(DOC_ROOT) if DOC_ROOT in base.parents else Path(base.name)
-        raw_dest = RAW_ROOT / rel
-        inbox_dest = INBOX_ROOT / rel
-        raw_dest.parent.mkdir(parents=True, exist_ok=True)
-        inbox_dest.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(base, raw_dest)
-        shutil.copy2(base, inbox_dest)
-        if digest in existing:
-            updated += 1
-            continue
-        src_id = next_src_id()
-        source_copy = WORKSPACE / 'sources' / f'{base.stem}_{src_id}.md'
-        source_copy.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(base, source_copy)
-        manifest = {
-            'id': src_id,
-            'title': base.stem,
-            'type': 'other',
-            'source_url': None,
-            'date_ingested': datetime.now().strftime('%Y-%m-%d'),
-            'date_published': None,
-            'file_path': str(source_copy.relative_to(WORKSPACE)),
-            'content_hash': digest,
-            'summary': summarize_markdown(base),
-            'compiled_summary': None,
-            'concepts': [],
-            'entities': [],
-            'tags': ['obsidian', 'document-sync'],
-        }
-        (MANIFEST_DIR / f'{src_id}.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
-        append_source_index(manifest)
-        existing[digest] = manifest
-        created += 1
+        summary = summarize_markdown(base)
 
-    log(f'Obsidian 文档同步：扫描 {len(files)} 个文档，新增 manifest {created}，已存在内容 {updated}')
-    print(json.dumps({'ok': True, 'scanned': len(files), 'created': created, 'updated_existing': updated, 'raw_root': str(RAW_ROOT), 'inbox_root': str(INBOX_ROOT)}, ensure_ascii=False))
+        if digest in existing:
+            manifest = existing[digest]
+            src_id = manifest.get('id')
+            updated += 1
+        else:
+            src_id = next_src_id()
+            manifest = {
+                'id': src_id,
+                'title': base.stem,
+                'type': 'other',
+                'source_url': None,
+                'date_ingested': datetime.now().strftime('%Y-%m-%d'),
+                'date_published': None,
+                'file_path': f'obsidian://{base}',
+                'source_path': str(base),
+                'content_hash': digest,
+                'summary': summary,
+                'compiled_summary': None,
+                'concepts': [],
+                'entities': [],
+                'tags': ['obsidian', 'document-sync', 'reference-only'],
+            }
+            (MANIFEST_DIR / f'{src_id}.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
+            append_source_index(manifest)
+            existing[digest] = manifest
+            created += 1
+
+        raw_stub = RAW_ROOT / rel
+        inbox_stub = INBOX_ROOT / rel
+        write_reference_stub(raw_stub, base, src_id, digest, summary)
+        write_reference_stub(inbox_stub, base, src_id, digest, summary)
+
+    log(f'Obsidian 文档引用同步：扫描 {len(files)} 个文档，新增 manifest {created}，已存在内容 {updated}')
+    print(json.dumps({'ok': True, 'scanned': len(files), 'created': created, 'updated_existing': updated, 'mode': 'reference-only', 'raw_root': str(RAW_ROOT), 'inbox_root': str(INBOX_ROOT)}, ensure_ascii=False))
 
 
 if __name__ == '__main__':
