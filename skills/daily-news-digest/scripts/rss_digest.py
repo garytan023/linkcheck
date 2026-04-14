@@ -11,16 +11,23 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import defaultdict
-import re, html, os
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+import re, html, os, json
 
 OPML_FILE = os.path.expanduser('~/.openclaw/workspace-dev/data/wechat_rss_subscriptions.opml')
 TIMEOUT = 12
+DEDUP_DAYS = 7
+STATE_DIR = os.path.expanduser('~/.openclaw/workspace-dev/state')
+CHECKPOINT_FILE = os.path.join(STATE_DIR, 'rss_digest_checkpoint.json')
+DEDUP_HISTORY_FILE = os.path.join(STATE_DIR, 'rss_digest_dedup_history.json')
 CST = timezone(timedelta(hours=8))
 YESTERDAY = datetime.now(CST) - timedelta(days=1)
 YD_STR = YESTERDAY.strftime('%Y-%m-%d')
 YD_SHORT = YESTERDAY.strftime('%m-%d')
 OUTPUT_FILE = os.path.expanduser(f'~/.openclaw/workspace-dev/output/rss_daily_{YD_STR}.md')
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+os.makedirs(STATE_DIR, exist_ok=True)
 ATOM_NS = 'http://www.w3.org/2005/Atom'
 CONTENT_NS = 'http://purl.org/rss/1.0/modules/content/'
 
@@ -51,6 +58,77 @@ SOURCE_PLATFORM_MAP = {
     # 百度
     "百度营销观": "百度",
 }
+
+_session = None
+
+
+def get_session():
+    global _session
+    if _session is None:
+        s = requests.Session()
+        retry = Retry(
+            total=2,
+            connect=2,
+            read=2,
+            backoff_factor=0.8,
+            status_forcelist=[429, 500, 502, 503, 504],
+            allowed_methods=["GET"]
+        )
+        adapter = HTTPAdapter(max_retries=retry, pool_connections=20, pool_maxsize=20)
+        s.mount('http://', adapter)
+        s.mount('https://', adapter)
+        s.headers.update({'User-Agent': 'rss-digest/5.0'})
+        _session = s
+    return _session
+
+
+def load_dedup_history():
+    if not os.path.exists(DEDUP_HISTORY_FILE):
+        return []
+    try:
+        with open(DEDUP_HISTORY_FILE, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            return data
+        return data.get('items', []) if isinstance(data, dict) else []
+    except Exception as e:
+        print(f"[WARN] load dedup history failed: {e}")
+        return []
+
+
+def save_dedup_history(history_items):
+    cutoff = (datetime.now(CST) - timedelta(days=DEDUP_DAYS)).date()
+    kept = []
+    for item in history_items:
+        try:
+            item_date = datetime.strptime(item.get('date', ''), '%Y-%m-%d').date()
+            if item_date >= cutoff:
+                kept.append(item)
+        except Exception:
+            continue
+
+    payload = {
+        'days': DEDUP_DAYS,
+        'updated_at': datetime.now(CST).isoformat(),
+        'items': kept,
+    }
+    with open(DEDUP_HISTORY_FILE, 'w', encoding='utf-8') as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+
+
+def save_checkpoint(stage, total_feeds=0, completed_feeds=0, stats=None, item_count=0):
+    payload = {
+        'date': YD_STR,
+        'stage': stage,
+        'total_feeds': total_feeds,
+        'completed_feeds': completed_feeds,
+        'stats': stats or {},
+        'item_count': item_count,
+        'saved_at': datetime.now(CST).isoformat(),
+    }
+    with open(CHECKPOINT_FILE, 'w', encoding='utf-8') as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
+
 
 def tag(local):
     return f'{{{ATOM_NS}}}{local}'
@@ -145,8 +223,11 @@ def title_fp(title):
 
 def parse_feed(feed_url, feed_title):
     try:
-        r = requests.get(feed_url, timeout=TIMEOUT)
+        r = get_session().get(feed_url, timeout=(4, TIMEOUT))
         r.encoding = 'utf-8'
+        if r.status_code != 200:
+            print(f"[WARN] {feed_title} status={r.status_code} url={feed_url}")
+            return []
         root = ET.fromstring(r.text)
         items = []
         for entry in root.findall('.//' + tag('entry')):
@@ -162,7 +243,8 @@ def parse_feed(feed_url, feed_title):
                 continue
             items.append({'title': title, 'link': link, 'pub': pub, 'source': feed_title, 'content': content})
         return items
-    except:
+    except Exception as e:
+        print(f"[ERR] {feed_title} err={type(e).__name__}: {e}")
         return []
 
 def extract_plain_text(html_content):
@@ -231,18 +313,28 @@ print(f"  共 {len(feeds)} 个 RSS 源")
 print("Step 2: 并行抓取 feeds...")
 all_items = []
 seen_fp = set()
+stats = {'ok': 0, 'empty': 0, 'failed': 0}
+save_checkpoint(stage='fetching', total_feeds=len(feeds), completed_feeds=0, stats=stats, item_count=0)
 
 with ThreadPoolExecutor(max_workers=10) as ex:
     futures = {ex.submit(parse_feed, url, title): (url, title) for url, title in feeds}
     for i, future in enumerate(as_completed(futures)):
+        url, title = futures[future]
         try:
-            for item in future.result():
+            feed_items = future.result()
+            if not feed_items:
+                stats['empty'] += 1
+            else:
+                stats['ok'] += 1
+            for item in feed_items:
                 fp = title_fp(item['title'])
                 if fp and fp not in seen_fp and not is_noise(item['title']):
                     seen_fp.add(fp)
                     all_items.append(item)
-        except:
-            pass
+        except Exception as e:
+            stats['failed'] += 1
+            print(f"[ERR] {title} future err={type(e).__name__}: {e}")
+        save_checkpoint(stage='fetching', total_feeds=len(feeds), completed_feeds=i + 1, stats=stats, item_count=len(all_items))
         if (i+1) % 10 == 0:
             print(f"  {i+1}/{len(feeds)}")
 
@@ -273,6 +365,43 @@ for it in recent:
 recent = deduped
 print(f"  排他分类+去重后: {len(recent)} 条")
 
+# 跨天历史去重
+history_items = load_dedup_history()
+seen_links_hist = set()
+seen_titles_hist = set()
+seen_fp_hist = set()
+for hist in history_items:
+    link = (hist.get('link') or '').strip()
+    title = (hist.get('title') or '').strip()
+    fp = hist.get('fingerprint') or title_fp(title)
+    if link:
+        seen_links_hist.add(link)
+    if title:
+        seen_titles_hist.add(title)
+    if fp:
+        seen_fp_hist.add(fp)
+
+cross_day_dropped = 0
+cross_day_recent = []
+for it in recent:
+    link = (it.get('link') or '').strip()
+    title = (it.get('title') or '').strip()
+    fp = title_fp(title)
+    if (link and link in seen_links_hist) or (title and title in seen_titles_hist) or (fp and fp in seen_fp_hist):
+        cross_day_dropped += 1
+        continue
+    cross_day_recent.append(it)
+    if link:
+        seen_links_hist.add(link)
+    if title:
+        seen_titles_hist.add(title)
+    if fp:
+        seen_fp_hist.add(fp)
+
+recent = cross_day_recent
+print(f"  跨{DEDUP_DAYS}天去重后: {len(recent)} 条 (过滤 {cross_day_dropped} 条)")
+save_checkpoint(stage='deduped', total_feeds=len(feeds), completed_feeds=len(feeds), stats=stats, item_count=len(recent))
+
 # 按分类分组，分类内按分数降序，每分类最多8条
 by_cat = defaultdict(list)
 for it in recent:
@@ -291,7 +420,7 @@ for cat in CAT_ORDER:
 # 生成 Markdown
 lines = [
     f'# 每日资讯精选 | {YD_STR}（昨日）\n',
-    f"\n> 共抓取 **{len(all_items)}** 条 \\| 昨日去重 **{len(all_items)}** 条 \\| 排他分类 **{len(recent)}** 条\n",
+    f"\n> 共抓取 **{len(all_items)}** 条 \\| 当日去重后 **{len(recent)}** 条 \\| 跨{DEDUP_DAYS}天过滤 **{cross_day_dropped}** 条\n",
     "> 评分：营销洞察/案例(0-3) + 媒介投放(0-2) + 电商运营(0-2) + AI营销(0-2) + 内容质量(0-1)\n",
     "> 注：微信 RSS 不暴露阅读量等指标；若有数据均为文章正文中显式提及\n",
     "\n---\n",
@@ -332,7 +461,7 @@ for cat in CAT_ORDER:
             parts = [f"{k}：{v}" for k, v in eng.items()]
             eng_str = ' | ' + ' '.join(parts)
         lines.append(f"### [{it['title']}]({it['link']})")
-        lines.append(f"\n来源：{it['source']} \| {pub_str} \| 评分：**{it['score']}/10**{eng_str}\n")
+        lines.append(f"\n来源：{it['source']} \\| {pub_str} \\| 评分：**{it['score']}/10**{eng_str}\n")
         sent = first_sentence(it['text'])
         if sent:
             lines.append(f"\n> {sent}\n")
@@ -341,6 +470,20 @@ for cat in CAT_ORDER:
 output = '\n'.join(lines)
 with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
     f.write(output)
+
+sent_history = history_items + [
+    {
+        'date': YD_STR,
+        'title': it.get('title', ''),
+        'link': it.get('link', ''),
+        'fingerprint': title_fp(it.get('title', '')),
+        'cat': it.get('cat', ''),
+        'source': it.get('source', ''),
+    }
+    for it, _ in capped
+]
+save_dedup_history(sent_history)
+save_checkpoint(stage='done', total_feeds=len(feeds), completed_feeds=len(feeds), stats=stats, item_count=len(capped))
 
 size = os.path.getsize(OUTPUT_FILE)
 qualified_total = len(capped)
