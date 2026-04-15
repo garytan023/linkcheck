@@ -1,0 +1,179 @@
+{
+  "logId": "c3c8c13c-1643-4f3e-904d-554898a93bec",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "header",
+              "block_content": "京东又好又便宜",
+              "block_bbox": [
+                2626,
+                36,
+                2816,
+                134
+              ],
+              "block_id": 0,
+              "block_order": null,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  2626.0,
+                  36.0
+                ],
+                [
+                  2816.0,
+                  36.0
+                ],
+                [
+                  2816.0,
+                  134.0
+                ],
+                [
+                  2626.0,
+                  134.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "2026年京东站外合约\n京东全域通招商方案",
+              "block_bbox": [
+                626,
+                594,
+                2234,
+                972
+              ],
+              "block_id": 1,
+              "block_order": 1,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  626.0,
+                  594.0
+                ],
+                [
+                  2234.0,
+                  594.0
+                ],
+                [
+                  2234.0,
+                  972.0
+                ],
+                [
+                  626.0,
+                  972.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.41079261898994446,
+                "coordinate": [
+                  2626,
+                  36,
+                  2816,
+                  134
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2626.0,
+                    36.0
+                  ],
+                  [
+                    2816.0,
+                    36.0
+                  ],
+                  [
+                    2816.0,
+                    134.0
+                  ],
+                  [
+                    2626.0,
+                    134.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9182690382003784,
+                "coordinate": [
+                  626,
+                  594,
+                  2234,
+                  972
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    626.0,
+                    594.0
+                  ],
+                  [
+                    2234.0,
+                    594.0
+                  ],
+                  [
+                    2234.0,
+                    972.0
+                  ],
+                  [
+                    626.0,
+                    972.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## 2026年京东站外合约 京东全域通招商方案",
+          "images": {}
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//27d9c3ac-be0e-4b5f-b3ed-bfa14f662b1f/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A36%3A56Z%2F-1%2F%2F79c7692fb0e33ae51a2915d0fd65249c69d954f8ad83581b81d5fefb9ab93c96"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//27d9c3ac-be0e-4b5f-b3ed-bfa14f662b1f/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A36%3A57Z%2F-1%2F%2F9fdbaa3f4ba346f01af60c0a0b0d9efedf1adcd74864e1a83c98479022ed5518"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//27d9c3ac-be0e-4b5f-b3ed-bfa14f662b1f/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A36%3A57Z%2F-1%2F%2F96244001fa68c46df10ea4cbaba44adb8cb611ad4676418c87c0182a6a464d9c"
+    ]
+  }
+}

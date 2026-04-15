@@ -54,6 +54,10 @@ def main():
         "--api-key", "-k",
         help="Gemini API key (overrides GEMINI_API_KEY env var)"
     )
+    parser.add_argument(
+        "--base-url",
+        help="Custom base URL for the API (e.g., https://hk.12ai.org)"
+    )
 
     args = parser.parse_args()
 
@@ -72,7 +76,13 @@ def main():
     from PIL import Image as PILImage
 
     # Initialise client
-    client = genai.Client(api_key=api_key)
+    if args.base_url:
+        client = genai.Client(
+            api_key=api_key,
+            http_options=types.HttpOptions(base_url=args.base_url)
+        )
+    else:
+        client = genai.Client(api_key=api_key)
 
     # Set up output path
     output_path = Path(args.filename)

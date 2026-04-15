@@ -1,0 +1,486 @@
+{
+  "logId": "12413ebb-d242-41ac-b221-df79638d951d",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "paragraph_title",
+              "block_content": "作品信息",
+              "block_bbox": [
+                137,
+                130,
+                434,
+                213
+              ],
+              "block_id": 0,
+              "block_order": 1,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  137.0,
+                  130.0
+                ],
+                [
+                  434.0,
+                  130.0
+                ],
+                [
+                  434.0,
+                  213.0
+                ],
+                [
+                  137.0,
+                  213.0
+                ]
+              ]
+            },
+            {
+              "block_label": "header_image",
+              "block_content": "",
+              "block_bbox": [
+                2685,
+                49,
+                2838,
+                227
+              ],
+              "block_id": 1,
+              "block_order": null,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  2685.0,
+                  49.0
+                ],
+                [
+                  2838.0,
+                  49.0
+                ],
+                [
+                  2838.0,
+                  227.0
+                ],
+                [
+                  2685.0,
+                  227.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "品牌客户：",
+              "block_bbox": [
+                203,
+                589,
+                525,
+                670
+              ],
+              "block_id": 2,
+              "block_order": 2,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  203.0,
+                  589.0
+                ],
+                [
+                  525.0,
+                  589.0
+                ],
+                [
+                  525.0,
+                  670.0
+                ],
+                [
+                  203.0,
+                  670.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "伊利",
+              "block_bbox": [
+                202,
+                708,
+                420,
+                796
+              ],
+              "block_id": 3,
+              "block_order": 3,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  202.0,
+                  716.0
+                ],
+                [
+                  419.0,
+                  716.0
+                ],
+                [
+                  419.0,
+                  795.0
+                ],
+                [
+                  202.0,
+                  795.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "参赛公司：",
+              "block_bbox": [
+                1643,
+                590,
+                1967,
+                667
+              ],
+              "block_id": 4,
+              "block_order": 4,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  1643.0,
+                  590.0
+                ],
+                [
+                  1967.0,
+                  590.0
+                ],
+                [
+                  1967.0,
+                  667.0
+                ],
+                [
+                  1643.0,
+                  667.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "- 群邑（上海）广告有限公司  \n北京分公司",
+              "block_bbox": [
+                1642,
+                704,
+                2582,
+                875
+              ],
+              "block_id": 5,
+              "block_order": 5,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  1642.0,
+                  704.0
+                ],
+                [
+                  2582.0,
+                  704.0
+                ],
+                [
+                  2582.0,
+                  875.0
+                ],
+                [
+                  1642.0,
+                  875.0
+                ]
+              ]
+            },
+            {
+              "block_label": "vision_footnote",
+              "block_content": "作品名称：让爆品长红！GOODS上新模型，助力安幕希新品破圈再增长！",
+              "block_bbox": [
+                286,
+                1133,
+                2286,
+                1212
+              ],
+              "block_id": 6,
+              "block_order": null,
+              "group_id": 6,
+              "block_polygon_points": [
+                [
+                  286.0,
+                  1133.0
+                ],
+                [
+                  2286.0,
+                  1133.0
+                ],
+                [
+                  2286.0,
+                  1212.0
+                ],
+                [
+                  286.0,
+                  1212.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7280244827270508,
+                "coordinate": [
+                  137,
+                  130,
+                  434,
+                  213
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    137.0,
+                    130.0
+                  ],
+                  [
+                    434.0,
+                    130.0
+                  ],
+                  [
+                    434.0,
+                    213.0
+                  ],
+                  [
+                    137.0,
+                    213.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.8599775433540344,
+                "coordinate": [
+                  2685,
+                  49,
+                  2838,
+                  227
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2685.0,
+                    49.0
+                  ],
+                  [
+                    2838.0,
+                    49.0
+                  ],
+                  [
+                    2838.0,
+                    227.0
+                  ],
+                  [
+                    2685.0,
+                    227.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3162703812122345,
+                "coordinate": [
+                  203,
+                  589,
+                  525,
+                  670
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    203.0,
+                    589.0
+                  ],
+                  [
+                    525.0,
+                    589.0
+                  ],
+                  [
+                    525.0,
+                    670.0
+                  ],
+                  [
+                    203.0,
+                    670.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3612250089645386,
+                "coordinate": [
+                  202,
+                  708,
+                  420,
+                  796
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    202.0,
+                    716.0
+                  ],
+                  [
+                    419.0,
+                    716.0
+                  ],
+                  [
+                    419.0,
+                    795.0
+                  ],
+                  [
+                    202.0,
+                    795.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3032572567462921,
+                "coordinate": [
+                  1643,
+                  590,
+                  1967,
+                  667
+                ],
+                "order": 4,
+                "polygon_points": [
+                  [
+                    1643.0,
+                    590.0
+                  ],
+                  [
+                    1967.0,
+                    590.0
+                  ],
+                  [
+                    1967.0,
+                    667.0
+                  ],
+                  [
+                    1643.0,
+                    667.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.49794065952301025,
+                "coordinate": [
+                  1642,
+                  704,
+                  2582,
+                  875
+                ],
+                "order": 5,
+                "polygon_points": [
+                  [
+                    1642.0,
+                    704.0
+                  ],
+                  [
+                    2582.0,
+                    704.0
+                  ],
+                  [
+                    2582.0,
+                    875.0
+                  ],
+                  [
+                    1642.0,
+                    875.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.5005131959915161,
+                "coordinate": [
+                  286,
+                  1133,
+                  2286,
+                  1212
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    286.0,
+                    1133.0
+                  ],
+                  [
+                    2286.0,
+                    1133.0
+                  ],
+                  [
+                    2286.0,
+                    1212.0
+                  ],
+                  [
+                    286.0,
+                    1212.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## 作品信息\n\n品牌客户：\n\n伊利\n\n参赛公司：\n\n- 群邑（上海）广告有限公司  \n\n北京分公司\n\n作品名称：让爆品长红！GOODS上新模型，助力安幕希新品破圈再增长！",
+          "images": {
+            "imgs/img_in_header_image_box_2685_49_2838_227.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//83f75c21-fc26-40c9-850e-2c80e98ce465/markdown_0/imgs/img_in_header_image_box_2685_49_2838_227.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A33%3A43Z%2F-1%2F%2Fa016ddfd0300621a0c71707bcda64e7cf8bc00f13a44454d62bd4c9e8a572b99"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//83f75c21-fc26-40c9-850e-2c80e98ce465/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A33%3A43Z%2F-1%2F%2F6ae07eeabe0413645cff00faf1c949f4aaa7c0316ac00f0b97233b1b01592fa8"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//83f75c21-fc26-40c9-850e-2c80e98ce465/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A33%3A43Z%2F-1%2F%2Ff2b3a90c7143363b654750f1eced2f7d91422976dbbaf94f932ab94b39e62288"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//83f75c21-fc26-40c9-850e-2c80e98ce465/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A33%3A44Z%2F-1%2F%2F32d6ba85ce89e4786988ef169c7075bbb3b575be81eaff387f275abc80e3d243"
+    ]
+  }
+}

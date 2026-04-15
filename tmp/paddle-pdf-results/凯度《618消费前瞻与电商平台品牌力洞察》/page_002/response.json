@@ -1,0 +1,545 @@
+{
+  "logId": "070ed1b3-6c01-4b02-b73d-9b29e2b0f40a",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "paragraph_title",
+              "block_content": "目录",
+              "block_bbox": [
+                212,
+                236,
+                446,
+                361
+              ],
+              "block_id": 0,
+              "block_order": 1,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  212.0,
+                  236.0
+                ],
+                [
+                  446.0,
+                  236.0
+                ],
+                [
+                  446.0,
+                  361.0
+                ],
+                [
+                  212.0,
+                  361.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "ONLINE SHOPPING",
+              "block_bbox": [
+                1201,
+                139,
+                2702,
+                290
+              ],
+              "block_id": 1,
+              "block_order": 2,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  1201.0,
+                  139.0
+                ],
+                [
+                  2702.0,
+                  139.0
+                ],
+                [
+                  2702.0,
+                  290.0
+                ],
+                [
+                  1201.0,
+                  290.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "PART 1 2023年618消费前瞻",
+              "block_bbox": [
+                444,
+                420,
+                1584,
+                530
+              ],
+              "block_id": 2,
+              "block_order": 3,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  444.0,
+                  420.0
+                ],
+                [
+                  1584.0,
+                  420.0
+                ],
+                [
+                  1584.0,
+                  530.0
+                ],
+                [
+                  444.0,
+                  530.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "PART 2 电商平台品类宏观透视",
+              "block_bbox": [
+                442,
+                613,
+                1675,
+                723
+              ],
+              "block_id": 3,
+              "block_order": 4,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  442.0,
+                  613.0
+                ],
+                [
+                  1675.0,
+                  613.0
+                ],
+                [
+                  1675.0,
+                  723.0
+                ],
+                [
+                  442.0,
+                  723.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "PART 3 电商平台品牌聚焦分析",
+              "block_bbox": [
+                441,
+                805,
+                1677,
+                914
+              ],
+              "block_id": 4,
+              "block_order": 5,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  441.0,
+                  805.0
+                ],
+                [
+                  1677.0,
+                  805.0
+                ],
+                [
+                  1677.0,
+                  914.0
+                ],
+                [
+                  441.0,
+                  914.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "PART 4 细分人群电商消费趋势",
+              "block_bbox": [
+                447,
+                996,
+                1673,
+                1104
+              ],
+              "block_id": 5,
+              "block_order": 6,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  447.0,
+                  996.0
+                ],
+                [
+                  1673.0,
+                  996.0
+                ],
+                [
+                  1673.0,
+                  1104.0
+                ],
+                [
+                  447.0,
+                  1104.0
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "BUY",
+              "block_bbox": [
+                1716,
+                1192,
+                1829,
+                1245
+              ],
+              "block_id": 6,
+              "block_order": null,
+              "group_id": 6,
+              "block_polygon_points": [
+                [
+                  1716.0,
+                  1192.0
+                ],
+                [
+                  1829.0,
+                  1192.0
+                ],
+                [
+                  1829.0,
+                  1245.0
+                ],
+                [
+                  1716.0,
+                  1245.0
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "KANTAR MARKETPLACE",
+              "block_bbox": [
+                74,
+                1497,
+                855,
+                1570
+              ],
+              "block_id": 7,
+              "block_order": null,
+              "group_id": 7,
+              "block_polygon_points": [
+                [
+                  74.0,
+                  1497.0
+                ],
+                [
+                  855.0,
+                  1497.0
+                ],
+                [
+                  855.0,
+                  1570.0
+                ],
+                [
+                  74.0,
+                  1570.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8770262002944946,
+                "coordinate": [
+                  212,
+                  236,
+                  446,
+                  361
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    212.0,
+                    236.0
+                  ],
+                  [
+                    446.0,
+                    236.0
+                  ],
+                  [
+                    446.0,
+                    361.0
+                  ],
+                  [
+                    212.0,
+                    361.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8754274249076843,
+                "coordinate": [
+                  1201,
+                  139,
+                  2702,
+                  290
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    1201.0,
+                    139.0
+                  ],
+                  [
+                    2702.0,
+                    139.0
+                  ],
+                  [
+                    2702.0,
+                    290.0
+                  ],
+                  [
+                    1201.0,
+                    290.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8671372532844543,
+                "coordinate": [
+                  444,
+                  420,
+                  1584,
+                  530
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    444.0,
+                    420.0
+                  ],
+                  [
+                    1584.0,
+                    420.0
+                  ],
+                  [
+                    1584.0,
+                    530.0
+                  ],
+                  [
+                    444.0,
+                    530.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8645668029785156,
+                "coordinate": [
+                  442,
+                  613,
+                  1675,
+                  723
+                ],
+                "order": 4,
+                "polygon_points": [
+                  [
+                    442.0,
+                    613.0
+                  ],
+                  [
+                    1675.0,
+                    613.0
+                  ],
+                  [
+                    1675.0,
+                    723.0
+                  ],
+                  [
+                    442.0,
+                    723.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8442928791046143,
+                "coordinate": [
+                  441,
+                  805,
+                  1677,
+                  914
+                ],
+                "order": 5,
+                "polygon_points": [
+                  [
+                    441.0,
+                    805.0
+                  ],
+                  [
+                    1677.0,
+                    805.0
+                  ],
+                  [
+                    1677.0,
+                    914.0
+                  ],
+                  [
+                    441.0,
+                    914.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8566468358039856,
+                "coordinate": [
+                  447,
+                  996,
+                  1673,
+                  1104
+                ],
+                "order": 6,
+                "polygon_points": [
+                  [
+                    447.0,
+                    996.0
+                  ],
+                  [
+                    1673.0,
+                    996.0
+                  ],
+                  [
+                    1673.0,
+                    1104.0
+                  ],
+                  [
+                    447.0,
+                    1104.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.41125690937042236,
+                "coordinate": [
+                  1716,
+                  1192,
+                  1829,
+                  1245
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1716.0,
+                    1192.0
+                  ],
+                  [
+                    1829.0,
+                    1192.0
+                  ],
+                  [
+                    1829.0,
+                    1245.0
+                  ],
+                  [
+                    1716.0,
+                    1245.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8672604560852051,
+                "coordinate": [
+                  74,
+                  1497,
+                  855,
+                  1570
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    74.0,
+                    1497.0
+                  ],
+                  [
+                    855.0,
+                    1497.0
+                  ],
+                  [
+                    855.0,
+                    1570.0
+                  ],
+                  [
+                    74.0,
+                    1570.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## 目录\n\n## ONLINE SHOPPING\n\nPART 1 2023年618消费前瞻\n\nPART 2 电商平台品类宏观透视\n\nPART 3 电商平台品牌聚焦分析\n\nPART 4 细分人群电商消费趋势",
+          "images": {}
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//3dd8cde9-458f-4edf-acfd-e8555eb7ee19/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A34Z%2F-1%2F%2F033be1a4d58cd5e35e700b072018399092f7a12d3637dd51f10ecd73b8a131b5"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//3dd8cde9-458f-4edf-acfd-e8555eb7ee19/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A35Z%2F-1%2F%2F537bcda2d1263fdae3890c00d3bca59373695c8811989637c623b31d0367107f"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//3dd8cde9-458f-4edf-acfd-e8555eb7ee19/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A35Z%2F-1%2F%2F8e3a50bf2efbe7bfb83a74c2826df27ec13e49d04422e85845e5d37a884931b4"
+    ]
+  }
+}

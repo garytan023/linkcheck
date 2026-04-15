@@ -1,0 +1,916 @@
+{
+  "logId": "dc65ff3f-d86f-4c00-a64f-dd490625f11c",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "header",
+              "block_content": "背景诠释",
+              "block_bbox": [
+                138,
+                131,
+                434,
+                208
+              ],
+              "block_id": 0,
+              "block_order": null,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  138.0,
+                  131.0
+                ],
+                [
+                  434.0,
+                  131.0
+                ],
+                [
+                  434.0,
+                  208.0
+                ],
+                [
+                  138.0,
+                  208.0
+                ]
+              ]
+            },
+            {
+              "block_label": "header",
+              "block_content": "企业背景",
+              "block_bbox": [
+                527,
+                146,
+                682,
+                192
+              ],
+              "block_id": 1,
+              "block_order": null,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  527.0,
+                  146.0
+                ],
+                [
+                  682.0,
+                  146.0
+                ],
+                [
+                  682.0,
+                  192.0
+                ],
+                [
+                  527.0,
+                  192.0
+                ]
+              ]
+            },
+            {
+              "block_label": "header",
+              "block_content": "行业背景与挑战",
+              "block_bbox": [
+                814,
+                146,
+                1082,
+                192
+              ],
+              "block_id": 2,
+              "block_order": null,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  814.0,
+                  146.0
+                ],
+                [
+                  1082.0,
+                  146.0
+                ],
+                [
+                  1082.0,
+                  192.0
+                ],
+                [
+                  814.0,
+                  192.0
+                ]
+              ]
+            },
+            {
+              "block_label": "header_image",
+              "block_content": "",
+              "block_bbox": [
+                2691,
+                48,
+                2838,
+                225
+              ],
+              "block_id": 3,
+              "block_order": null,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  2691.0,
+                  48.0
+                ],
+                [
+                  2838.0,
+                  48.0
+                ],
+                [
+                  2838.0,
+                  225.0
+                ],
+                [
+                  2691.0,
+                  225.0
+                ]
+              ]
+            },
+            {
+              "block_label": "image",
+              "block_content": "",
+              "block_bbox": [
+                467,
+                370,
+                704,
+                574
+              ],
+              "block_id": 4,
+              "block_order": null,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  467.0,
+                  370.0
+                ],
+                [
+                  704.0,
+                  370.0
+                ],
+                [
+                  704.0,
+                  574.0
+                ],
+                [
+                  467.0,
+                  574.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "酸奶市场规模萎缩",
+              "block_bbox": [
+                263,
+                662,
+                847,
+                745
+              ],
+              "block_id": 5,
+              "block_order": 1,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  263.0,
+                  662.0
+                ],
+                [
+                  847.0,
+                  662.0
+                ],
+                [
+                  847.0,
+                  745.0
+                ],
+                [
+                  263.0,
+                  745.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "- 大健康趋势下酸奶品类持续流失，22年上半年天猫全渠道酸奶行业同比下滑12%，通过下钻洞察，主要源自老客流失，品类内拉新空间有限",
+              "block_bbox": [
+                221,
+                862,
+                896,
+                1134
+              ],
+              "block_id": 6,
+              "block_order": 2,
+              "group_id": 6,
+              "block_polygon_points": [
+                [
+                  221.0,
+                  862.0
+                ],
+                [
+                  896.0,
+                  862.0
+                ],
+                [
+                  896.0,
+                  1134.0
+                ],
+                [
+                  221.0,
+                  1134.0
+                ]
+              ]
+            },
+            {
+              "block_label": "image",
+              "block_content": "",
+              "block_bbox": [
+                1346,
+                376,
+                1595,
+                577
+              ],
+              "block_id": 7,
+              "block_order": null,
+              "group_id": 7,
+              "block_polygon_points": [
+                [
+                  1346.0,
+                  376.0
+                ],
+                [
+                  1595.0,
+                  376.0
+                ],
+                [
+                  1595.0,
+                  577.0
+                ],
+                [
+                  1346.0,
+                  577.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "消费者存在固有偏见",
+              "block_bbox": [
+                1109,
+                662,
+                1769,
+                745
+              ],
+              "block_id": 8,
+              "block_order": 3,
+              "group_id": 8,
+              "block_polygon_points": [
+                [
+                  1109.0,
+                  662.0
+                ],
+                [
+                  1769.0,
+                  662.0
+                ],
+                [
+                  1769.0,
+                  745.0
+                ],
+                [
+                  1109.0,
+                  745.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "消费者对常温酸奶存在固有偏见（口味太甜、含糖量高、不如低温酸奶健康）。",
+              "block_bbox": [
+                1123,
+                866,
+                1734,
+                1049
+              ],
+              "block_id": 9,
+              "block_order": 4,
+              "group_id": 9,
+              "block_polygon_points": [
+                [
+                  1123.0,
+                  866.0
+                ],
+                [
+                  1734.0,
+                  866.0
+                ],
+                [
+                  1734.0,
+                  1049.0
+                ],
+                [
+                  1123.0,
+                  1049.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "类目竞争激烈，多种新品吸引消费者目光，导致种草链路多元复杂",
+              "block_bbox": [
+                1123,
+                1066,
+                1734,
+                1188
+              ],
+              "block_id": 10,
+              "block_order": 5,
+              "group_id": 10,
+              "block_polygon_points": [
+                [
+                  1123.0,
+                  1066.0
+                ],
+                [
+                  1734.0,
+                  1066.0
+                ],
+                [
+                  1734.0,
+                  1188.0
+                ],
+                [
+                  1123.0,
+                  1188.0
+                ]
+              ]
+            },
+            {
+              "block_label": "image",
+              "block_content": "",
+              "block_bbox": [
+                2228,
+                413,
+                2427,
+                583
+              ],
+              "block_id": 11,
+              "block_order": null,
+              "group_id": 11,
+              "block_polygon_points": [
+                [
+                  2228.0,
+                  413.0
+                ],
+                [
+                  2427.0,
+                  413.0
+                ],
+                [
+                  2427.0,
+                  583.0
+                ],
+                [
+                  2228.0,
+                  583.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "行业竞争内卷加剧",
+              "block_bbox": [
+                2014,
+                661,
+                2599,
+                745
+              ],
+              "block_id": 12,
+              "block_order": 6,
+              "group_id": 12,
+              "block_polygon_points": [
+                [
+                  2014.0,
+                  661.0
+                ],
+                [
+                  2599.0,
+                  661.0
+                ],
+                [
+                  2599.0,
+                  745.0
+                ],
+                [
+                  2014.0,
+                  745.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "- 竞品复制推新速度快，小品牌通过“细分小众”及“新奇感”吸引用户，蚕食市场。22年上半年酸奶市场TOP20品牌中，地方奶占据5席，品牌渗透率下滑",
+              "block_bbox": [
+                2004,
+                865,
+                2629,
+                1202
+              ],
+              "block_id": 13,
+              "block_order": 7,
+              "group_id": 13,
+              "block_polygon_points": [
+                [
+                  2004.0,
+                  865.0
+                ],
+                [
+                  2629.0,
+                  865.0
+                ],
+                [
+                  2629.0,
+                  1202.0
+                ],
+                [
+                  2004.0,
+                  1202.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7740029692649841,
+                "coordinate": [
+                  138,
+                  131,
+                  434,
+                  208
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    138.0,
+                    131.0
+                  ],
+                  [
+                    434.0,
+                    131.0
+                  ],
+                  [
+                    434.0,
+                    208.0
+                  ],
+                  [
+                    138.0,
+                    208.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7822772860527039,
+                "coordinate": [
+                  527,
+                  146,
+                  682,
+                  192
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    527.0,
+                    146.0
+                  ],
+                  [
+                    682.0,
+                    146.0
+                  ],
+                  [
+                    682.0,
+                    192.0
+                  ],
+                  [
+                    527.0,
+                    192.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7987335324287415,
+                "coordinate": [
+                  814,
+                  146,
+                  1082,
+                  192
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    814.0,
+                    146.0
+                  ],
+                  [
+                    1082.0,
+                    146.0
+                  ],
+                  [
+                    1082.0,
+                    192.0
+                  ],
+                  [
+                    814.0,
+                    192.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.9005377292633057,
+                "coordinate": [
+                  2691,
+                  48,
+                  2838,
+                  225
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2691.0,
+                    48.0
+                  ],
+                  [
+                    2838.0,
+                    48.0
+                  ],
+                  [
+                    2838.0,
+                    225.0
+                  ],
+                  [
+                    2691.0,
+                    225.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.9027944207191467,
+                "coordinate": [
+                  467,
+                  370,
+                  704,
+                  574
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    467.0,
+                    370.0
+                  ],
+                  [
+                    704.0,
+                    370.0
+                  ],
+                  [
+                    704.0,
+                    574.0
+                  ],
+                  [
+                    467.0,
+                    574.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8991086483001709,
+                "coordinate": [
+                  263,
+                  662,
+                  847,
+                  745
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    263.0,
+                    662.0
+                  ],
+                  [
+                    847.0,
+                    662.0
+                  ],
+                  [
+                    847.0,
+                    745.0
+                  ],
+                  [
+                    263.0,
+                    745.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9451776146888733,
+                "coordinate": [
+                  221,
+                  862,
+                  896,
+                  1134
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    221.0,
+                    862.0
+                  ],
+                  [
+                    896.0,
+                    862.0
+                  ],
+                  [
+                    896.0,
+                    1134.0
+                  ],
+                  [
+                    221.0,
+                    1134.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.9136270880699158,
+                "coordinate": [
+                  1346,
+                  376,
+                  1595,
+                  577
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1346.0,
+                    376.0
+                  ],
+                  [
+                    1595.0,
+                    376.0
+                  ],
+                  [
+                    1595.0,
+                    577.0
+                  ],
+                  [
+                    1346.0,
+                    577.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8872016668319702,
+                "coordinate": [
+                  1109,
+                  662,
+                  1769,
+                  745
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    1109.0,
+                    662.0
+                  ],
+                  [
+                    1769.0,
+                    662.0
+                  ],
+                  [
+                    1769.0,
+                    745.0
+                  ],
+                  [
+                    1109.0,
+                    745.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9181817770004272,
+                "coordinate": [
+                  1123,
+                  866,
+                  1734,
+                  1049
+                ],
+                "order": 4,
+                "polygon_points": [
+                  [
+                    1123.0,
+                    866.0
+                  ],
+                  [
+                    1734.0,
+                    866.0
+                  ],
+                  [
+                    1734.0,
+                    1049.0
+                  ],
+                  [
+                    1123.0,
+                    1049.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9267194867134094,
+                "coordinate": [
+                  1123,
+                  1066,
+                  1734,
+                  1188
+                ],
+                "order": 5,
+                "polygon_points": [
+                  [
+                    1123.0,
+                    1066.0
+                  ],
+                  [
+                    1734.0,
+                    1066.0
+                  ],
+                  [
+                    1734.0,
+                    1188.0
+                  ],
+                  [
+                    1123.0,
+                    1188.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.8920021057128906,
+                "coordinate": [
+                  2228,
+                  413,
+                  2427,
+                  583
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2228.0,
+                    413.0
+                  ],
+                  [
+                    2427.0,
+                    413.0
+                  ],
+                  [
+                    2427.0,
+                    583.0
+                  ],
+                  [
+                    2228.0,
+                    583.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8794073462486267,
+                "coordinate": [
+                  2014,
+                  661,
+                  2599,
+                  745
+                ],
+                "order": 6,
+                "polygon_points": [
+                  [
+                    2014.0,
+                    661.0
+                  ],
+                  [
+                    2599.0,
+                    661.0
+                  ],
+                  [
+                    2599.0,
+                    745.0
+                  ],
+                  [
+                    2014.0,
+                    745.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.931797981262207,
+                "coordinate": [
+                  2004,
+                  865,
+                  2629,
+                  1202
+                ],
+                "order": 7,
+                "polygon_points": [
+                  [
+                    2004.0,
+                    865.0
+                  ],
+                  [
+                    2629.0,
+                    865.0
+                  ],
+                  [
+                    2629.0,
+                    1202.0
+                  ],
+                  [
+                    2004.0,
+                    1202.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_467_370_704_574.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n## 酸奶市场规模萎缩\n\n- 大健康趋势下酸奶品类持续流失，22年上半年天猫全渠道酸奶行业同比下滑12%，通过下钻洞察，主要源自老客流失，品类内拉新空间有限\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1346_376_1595_577.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n## 消费者存在固有偏见\n\n消费者对常温酸奶存在固有偏见（口味太甜、含糖量高、不如低温酸奶健康）。\n\n类目竞争激烈，多种新品吸引消费者目光，导致种草链路多元复杂\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2228_413_2427_583.jpg\" alt=\"Image\" width=\"6%\" /></div>\n\n\n## 行业竞争内卷加剧\n\n- 竞品复制推新速度快，小品牌通过“细分小众”及“新奇感”吸引用户，蚕食市场。22年上半年酸奶市场TOP20品牌中，地方奶占据5席，品牌渗透率下滑",
+          "images": {
+            "imgs/img_in_header_image_box_2691_48_2838_225.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//11c2f043-7ac5-4cf4-ab30-daa4e0c7230a/markdown_0/imgs/img_in_header_image_box_2691_48_2838_225.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A19Z%2F-1%2F%2F6708abc6c84c25f2e6403a8dbf86c6fb5da5ef90d4b2661260281fa1712e7c72",
+            "imgs/img_in_image_box_467_370_704_574.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//11c2f043-7ac5-4cf4-ab30-daa4e0c7230a/markdown_0/imgs/img_in_image_box_467_370_704_574.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A19Z%2F-1%2F%2Ffa5cc9808cc773420aad0b72d53e0a3259c7cc42fae033b2a92de0f31e946743",
+            "imgs/img_in_image_box_1346_376_1595_577.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//11c2f043-7ac5-4cf4-ab30-daa4e0c7230a/markdown_0/imgs/img_in_image_box_1346_376_1595_577.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A19Z%2F-1%2F%2Fdbbf69f0f1bed688b84a8d75891c316ee665a008a16a15e35ad9ccbca48b23a8",
+            "imgs/img_in_image_box_2228_413_2427_583.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//11c2f043-7ac5-4cf4-ab30-daa4e0c7230a/markdown_0/imgs/img_in_image_box_2228_413_2427_583.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A20Z%2F-1%2F%2F7e97c9de6e096e202af8b9e3b68f4b1318975a9d0ea90b9b7cf66cad0f00b175"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//11c2f043-7ac5-4cf4-ab30-daa4e0c7230a/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A21Z%2F-1%2F%2Fae716ddf8fb58fb481fbf8b512a3e1f3145c6a00531efecc87f3c721ed1f3c05"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//11c2f043-7ac5-4cf4-ab30-daa4e0c7230a/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A21Z%2F-1%2F%2F3bd6f7ecd281da3f747920bc4799486e09df85381e425456700bef4f682f0226"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//11c2f043-7ac5-4cf4-ab30-daa4e0c7230a/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A21Z%2F-1%2F%2F28bcac18e0909677cb2e1782ce509c42ff21e8acd6f48d96e5253cc383434257"
+    ]
+  }
+}

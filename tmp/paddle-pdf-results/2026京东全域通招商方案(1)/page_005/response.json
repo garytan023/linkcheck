@@ -1,0 +1,547 @@
+{
+  "logId": "70d0c885-b1a0-4bdb-8fe7-c025f4125c42",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "paragraph_title",
+              "block_content": "京东全域通-政策门槛",
+              "block_bbox": [
+                172,
+                72,
+                880,
+                163
+              ],
+              "block_id": 0,
+              "block_order": 1,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  172.0,
+                  72.0
+                ],
+                [
+                  880.0,
+                  72.0
+                ],
+                [
+                  880.0,
+                  163.0
+                ],
+                [
+                  172.0,
+                  163.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "◆ 京东全域通Q2折扣政策",
+              "block_bbox": [
+                158,
+                257,
+                792,
+                319
+              ],
+              "block_id": 1,
+              "block_order": 2,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  158.0,
+                  257.0
+                ],
+                [
+                  792.0,
+                  257.0
+                ],
+                [
+                  792.0,
+                  319.0
+                ],
+                [
+                  158.0,
+                  319.0
+                ]
+              ]
+            },
+            {
+              "block_label": "table",
+              "block_content": "<table><tr><td rowspan=\"2\">政策名称</td><td rowspan=\"2\">刊例价格</td><td rowspan=\"2\">起投门槛</td><td colspan=\"2\">日常期价格</td><td colspan=\"2\">大促期价格</td></tr><tr><td>折扣</td><td>净价</td><td>折扣</td><td>净价</td></tr><tr><td rowspan=\"3\">2026年Q2京东全域通折扣政策</td><td rowspan=\"3\">100元/cpm</td><td>单订单金额＞=50万</td><td>4折</td><td>40元/cpm</td><td>5折</td><td>50元/cpm</td></tr><tr><td>单订单金额＞=30万</td><td>4.5折</td><td>45元/cpm</td><td>5.5折</td><td>55元/cpm</td></tr><tr><td>单订单金额＞=10万</td><td>5折</td><td>50元/cpm</td><td>6折</td><td>60元/cpm</td></tr></table>",
+              "block_bbox": [
+                58,
+                507,
+                2821,
+                808
+              ],
+              "block_id": 2,
+              "block_order": null,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  58.0,
+                  507.0
+                ],
+                [
+                  2821.0,
+                  507.0
+                ],
+                [
+                  2821.0,
+                  808.0
+                ],
+                [
+                  58.0,
+                  808.0
+                ]
+              ]
+            },
+            {
+              "block_label": "vision_footnote",
+              "block_content": "政策适用周期：2026年4月1日-2026年6月30日",
+              "block_bbox": [
+                56,
+                822,
+                763,
+                864
+              ],
+              "block_id": 3,
+              "block_order": null,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  56.0,
+                  822.0
+                ],
+                [
+                  763.0,
+                  822.0
+                ],
+                [
+                  763.0,
+                  864.0
+                ],
+                [
+                  56.0,
+                  864.0
+                ]
+              ]
+            },
+            {
+              "block_label": "vision_footnote",
+              "block_content": "政策适用产品：京东全域通资源包",
+              "block_bbox": [
+                54,
+                864,
+                565,
+                903
+              ],
+              "block_id": 4,
+              "block_order": null,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  54.0,
+                  864.0
+                ],
+                [
+                  565.0,
+                  864.0
+                ],
+                [
+                  565.0,
+                  903.0
+                ],
+                [
+                  54.0,
+                  903.0
+                ]
+              ]
+            },
+            {
+              "block_label": "vision_footnote",
+              "block_content": "政策详情：政策周期内购买京东全域通资源可享受折扣政策，不可与其他折扣政策叠加使用。",
+              "block_bbox": [
+                55,
+                903,
+                1403,
+                943
+              ],
+              "block_id": 5,
+              "block_order": null,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  55.0,
+                  903.0
+                ],
+                [
+                  1403.0,
+                  903.0
+                ],
+                [
+                  1403.0,
+                  943.0
+                ],
+                [
+                  55.0,
+                  943.0
+                ]
+              ]
+            },
+            {
+              "block_label": "vision_footnote",
+              "block_content": "投放说明：1）投放各厂必须有乐乐占铺，且支持投放乐乐落地页。2）具体资源排期以京东实际库存和媒介实际要求为准。3）特殊品类准入（如健康/网服金融等行业）暂不支持。4）下单支付后不可退款。",
+              "block_bbox": [
+                47,
+                942,
+                2807,
+                1030
+              ],
+              "block_id": 6,
+              "block_order": null,
+              "group_id": 6,
+              "block_polygon_points": [
+                [
+                  47,
+                  958
+                ],
+                [
+                  62,
+                  1029
+                ],
+                [
+                  2806,
+                  1013
+                ],
+                [
+                  2806,
+                  942
+                ]
+              ]
+            },
+            {
+              "block_label": "footer_image",
+              "block_content": "",
+              "block_bbox": [
+                2629,
+                1451,
+                2817,
+                1548
+              ],
+              "block_id": 7,
+              "block_order": null,
+              "group_id": 7,
+              "block_polygon_points": [
+                [
+                  2629.0,
+                  1451.0
+                ],
+                [
+                  2817.0,
+                  1451.0
+                ],
+                [
+                  2817.0,
+                  1548.0
+                ],
+                [
+                  2629.0,
+                  1548.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.902681827545166,
+                "coordinate": [
+                  172,
+                  72,
+                  880,
+                  163
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    172.0,
+                    72.0
+                  ],
+                  [
+                    880.0,
+                    72.0
+                  ],
+                  [
+                    880.0,
+                    163.0
+                  ],
+                  [
+                    172.0,
+                    163.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8691059350967407,
+                "coordinate": [
+                  158,
+                  257,
+                  792,
+                  319
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    158.0,
+                    257.0
+                  ],
+                  [
+                    792.0,
+                    257.0
+                  ],
+                  [
+                    792.0,
+                    319.0
+                  ],
+                  [
+                    158.0,
+                    319.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.8107538819313049,
+                "coordinate": [
+                  58,
+                  507,
+                  2821,
+                  808
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    58.0,
+                    507.0
+                  ],
+                  [
+                    2821.0,
+                    507.0
+                  ],
+                  [
+                    2821.0,
+                    808.0
+                  ],
+                  [
+                    58.0,
+                    808.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.8233466148376465,
+                "coordinate": [
+                  56,
+                  822,
+                  763,
+                  864
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    56.0,
+                    822.0
+                  ],
+                  [
+                    763.0,
+                    822.0
+                  ],
+                  [
+                    763.0,
+                    864.0
+                  ],
+                  [
+                    56.0,
+                    864.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.8447529673576355,
+                "coordinate": [
+                  54,
+                  864,
+                  565,
+                  903
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    54.0,
+                    864.0
+                  ],
+                  [
+                    565.0,
+                    864.0
+                  ],
+                  [
+                    565.0,
+                    903.0
+                  ],
+                  [
+                    54.0,
+                    903.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.8546651601791382,
+                "coordinate": [
+                  55,
+                  903,
+                  1403,
+                  943
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    55.0,
+                    903.0
+                  ],
+                  [
+                    1403.0,
+                    903.0
+                  ],
+                  [
+                    1403.0,
+                    943.0
+                  ],
+                  [
+                    55.0,
+                    943.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.8110040426254272,
+                "coordinate": [
+                  47,
+                  942,
+                  2807,
+                  1030
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    47,
+                    958
+                  ],
+                  [
+                    62,
+                    1029
+                  ],
+                  [
+                    2806,
+                    1013
+                  ],
+                  [
+                    2806,
+                    942
+                  ]
+                ]
+              },
+              {
+                "cls_id": 9,
+                "label": "footer_image",
+                "score": 0.892277717590332,
+                "coordinate": [
+                  2629,
+                  1451,
+                  2817,
+                  1548
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2629.0,
+                    1451.0
+                  ],
+                  [
+                    2817.0,
+                    1451.0
+                  ],
+                  [
+                    2817.0,
+                    1548.0
+                  ],
+                  [
+                    2629.0,
+                    1548.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## 京东全域通-政策门槛\n\n## ◆ 京东全域通Q2折扣政策\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td rowspan=\"2\">政策名称</td><td rowspan=\"2\">刊例价格</td><td rowspan=\"2\">起投门槛</td><td colspan=\"2\">日常期价格</td><td colspan=\"2\">大促期价格</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>折扣</td><td style='text-align: center; word-wrap: break-word;'>净价</td><td style='text-align: center; word-wrap: break-word;'>折扣</td><td style='text-align: center; word-wrap: break-word;'>净价</td></tr><tr><td rowspan=\"3\">2026年Q2京东全域通折扣政策</td><td rowspan=\"3\">100元/cpm</td><td style='text-align: center; word-wrap: break-word;'>单订单金额＞=50万</td><td style='text-align: center; word-wrap: break-word;'>4折</td><td style='text-align: center; word-wrap: break-word;'>40元/cpm</td><td style='text-align: center; word-wrap: break-word;'>5折</td><td style='text-align: center; word-wrap: break-word;'>50元/cpm</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>单订单金额＞=30万</td><td style='text-align: center; word-wrap: break-word;'>4.5折</td><td style='text-align: center; word-wrap: break-word;'>45元/cpm</td><td style='text-align: center; word-wrap: break-word;'>5.5折</td><td style='text-align: center; word-wrap: break-word;'>55元/cpm</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>单订单金额＞=10万</td><td style='text-align: center; word-wrap: break-word;'>5折</td><td style='text-align: center; word-wrap: break-word;'>50元/cpm</td><td style='text-align: center; word-wrap: break-word;'>6折</td><td style='text-align: center; word-wrap: break-word;'>60元/cpm</td></tr></table>\n\n政策适用周期：2026年4月1日-2026年6月30日\n\n政策适用产品：京东全域通资源包\n\n政策详情：政策周期内购买京东全域通资源可享受折扣政策，不可与其他折扣政策叠加使用。\n\n投放说明：1）投放各厂必须有乐乐占铺，且支持投放乐乐落地页。2）具体资源排期以京东实际库存和媒介实际要求为准。3）特殊品类准入（如健康/网服金融等行业）暂不支持。4）下单支付后不可退款。",
+          "images": {
+            "imgs/img_in_footer_image_box_2629_1451_2817_1548.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//f3691f94-4966-4df0-bd1a-b50d73094e3a/markdown_0/imgs/img_in_footer_image_box_2629_1451_2817_1548.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A38%3A33Z%2F-1%2F%2F08892a260d308443360245fa3f7e8bea2ce5c6c8a504dfe52e8e395a43fcd223"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//f3691f94-4966-4df0-bd1a-b50d73094e3a/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A38%3A34Z%2F-1%2F%2F2e302f358126aa8b610313312aa3abef91712f55abd28cca59051dcbc197c44f"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//f3691f94-4966-4df0-bd1a-b50d73094e3a/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A38%3A34Z%2F-1%2F%2F584910e26aa296ebbe95be0258cbfb6a38d160fe7dd6b90fae10425e4173359d"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//f3691f94-4966-4df0-bd1a-b50d73094e3a/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A38%3A34Z%2F-1%2F%2Ff0604e78673af60a7c59a347597760beb92def3ef58780f82c7b5bcf1ac50bb0"
+    ]
+  }
+}

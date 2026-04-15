@@ -136,6 +136,26 @@
     "ima-skills": {
       "version": "1.0.2",
       "installedAt": 1773806181419
+    },
+    "obsidian-cli": {
+      "version": "2.0.0",
+      "installedAt": 1774959164555
+    },
+    "file-manager": {
+      "version": "1.2.0",
+      "installedAt": 1775271576436
+    },
+    "vision": {
+      "version": "3.5.0",
+      "installedAt": 1775377994953
+    },
+    "paddleocr-text-recognition": {
+      "version": "1.0.21",
+      "installedAt": 1776187816356
+    },
+    "ocr-local": {
+      "version": "1.0.0",
+      "installedAt": 1776189037682
     }
   }
 }

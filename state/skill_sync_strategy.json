@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-04-05T20:21:00",
+  "policy": {
+    "default": "public-first",
+    "overlay": "testing-only",
+    "agent_private": "exception-only"
+  },
+  "next_targets": [
+    "review all agent-private entries",
+    "confirm whether public skills should be fully replicated or capability-scoped",
+    "attach status fields to recurring audit outputs"
+  ],
+  "counts": {
+    "total": 52,
+    "needs_review": 0,
+    "needs_sync_review": 50,
+    "ok": 1,
+    "resolved_now": 1
+  }
+}

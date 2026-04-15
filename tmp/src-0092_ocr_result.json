@@ -1,0 +1,142 @@
+{
+  "manifest": "/Users/garytan/Documents/garytan/宇先生/知识库/karpathy-pkm/manifests/sources/SRC-0092.json",
+  "source_pdf": "/Users/garytan/Documents/garytan/宇先生/Documents/京东/凯度《618消费前瞻与电商平台品牌力洞察》.pdf",
+  "page_count": 46,
+  "processed_pages": 12,
+  "render_scale": 3.0,
+  "low_text_threshold": 120,
+  "results": [
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/凯度《618消费前瞻与电商平台品牌力洞察》/page_001.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_001",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_001/doc_0.md",
+      "text": "## KANTAR MARKETPLACE\n\n#凯度风向标·品牌力\n\n618消费前瞻与\n\n电商平台品牌力洞察\n\n凯度Marketplace\n\n2023.06\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1005_355_2880_1422.jpg\" alt=\"Image\" width=\"65%\" /></div>\n",
+      "text_length": 195,
+      "detected_image_count": 4,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "## KANTAR MARKETPLACE\n\n#凯度风向标·品牌力\n\n618消费前瞻与\n\n电商平台品牌力洞察\n\n凯度Marketplace\n\n2023.06\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1005_355_2880_1422.jpg\" alt=\"Image\" width=\"65%\" /></div>\n"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/凯度《618消费前瞻与电商平台品牌力洞察》/page_002.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_002",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_002/doc_0.md",
+      "text": "## 目录\n\n## ONLINE SHOPPING\n\nPART 1 2023年618消费前瞻\n\nPART 2 电商平台品类宏观透视\n\nPART 3 电商平台品牌聚焦分析\n\nPART 4 细分人群电商消费趋势",
+      "text_length": 98,
+      "detected_image_count": 0,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "## 目录\n\n## ONLINE SHOPPING\n\nPART 1 2023年618消费前瞻\n\nPART 2 电商平台品类宏观透视\n\nPART 3 电商平台品牌聚焦分析\n\nPART 4 细分人群电商消费趋势"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/凯度《618消费前瞻与电商平台品牌力洞察》/page_003.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_003",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_003/doc_0.md",
+      "text": "## ONLINE SHOPPING\n\n## PART 1 2023年618消费前瞻 BUY",
+      "text_length": 45,
+      "detected_image_count": 0,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "## ONLINE SHOPPING\n\n## PART 1 2023年618消费前瞻 BUY"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/凯度《618消费前瞻与电商平台品牌力洞察》/page_004.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_004",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_004/doc_0.md",
+      "text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n<div style=\"text-align: center;\">618消费预算（元）</div>\n\n\n95%的消费者表示618有消费预算，\n\n其中 30% 左右的消费者预算超2000元\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_1528_317_2777_1254.jpg\" alt=\"Image\" width=\"43%\" /></div>\n",
+      "text_length": 555,
+      "detected_image_count": 2,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n<div style=\"text-align: center;\">618消费预算（元）</div>\n\n\n95%的消费者表示618有消费预算，\n\n其中 30% 左右的消费者预算超2000元\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_1528_317_2777_1254.jpg\" alt=\"Image\" width=\"43%\" /></div>\n"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/凯度《618消费前瞻与电商平台品牌力洞察》/page_005.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_005",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_005/doc_0.md",
+      "text": "## 今年618消费者整体态度较为积极\n\n凯度最新研究数据显示，58%的消费者增加了预算。对于消费预算的变化原因，消费者表示主要是有需要购买的东西，并且收入变化与囤货因素也有所影响\n\n<div style=\"text-align: center;\">2023相比2022消费者预算变化%</div>\n\n\n<div style=\"text-align: center;\">消费者预算变化的原因</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_71_446_2828_1392.jpg\" alt=\"Image\" width=\"95%\" /></div>\n\n\n## 数据来源：",
+      "text_length": 326,
+      "detected_image_count": 1,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "## 今年618消费者整体态度较为积极\n\n凯度最新研究数据显示，58%的消费者增加了预算。对于消费预算的变化原因，消费者表示主要是有需要购买的东西，并且收入变化与囤货因素也有所影响\n\n<div style=\"text-align: center;\">2023相比2022消费者预算变化%</div>\n\n\n<div style=\"text-align: center;\">消费者预算变化的原因</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_71_446_2828_1392.jpg\" alt=\"Image\" width=\"95%\" /></div>\n\n\n## 数据来源："
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/凯度《618消费前瞻与电商平台品牌力洞察》/page_006.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_006",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_006/doc_0.md",
+      "text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n## 对于618预算， 男性的消费预算比女性略高\n\n## 男性消费者\n\n超60%男性的预算超1000元\n\n近33%的男性预算超2000元\n\n<div style=\"text-align: center;\">不同性别消费者2023年618消费预算（元）</div>\n\n\n## 女性消费者\n\n- 超58%的女性预算超1000元\n\n近30%的女性表示预算超过2000\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_1356_391_2804_1260.jpg\" alt=\"Image\" width=\"50%\" /></div>\n",
+      "text_length": 637,
+      "detected_image_count": 1,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n## 对于618预算， 男性的消费预算比女性略高\n\n## 男性消费者\n\n超60%男性的预算超1000元\n\n近33%的男性预算超2000元\n\n<div style=\"text-align: center;\">不同性别消费者2023年618消费预算（元）</div>\n\n\n## 女性消费者\n\n- 超58%的女性预算超1000元\n\n近30%的女性表示预算超过2000\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_1356_391_2804_1260.jpg\" alt=\"Image\" width=\"50%\" /></div>\n"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/凯度《618消费前瞻与电商平台品牌力洞察》/page_007.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_007",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_007/doc_0.md",
+      "text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n## 年轻人更爱买买买，而成熟人群消费更加谨慎\n\n34岁以下的消费者更具消费欲望，60%的年轻消费者的预算超千元；而35岁+人群消费会更加谨慎，但也有40%的消费者的预算超千元\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_72_478_2630_1379.jpg\" alt=\"Image\" width=\"88%\" /></div>\n",
+      "text_length": 550,
+      "detected_image_count": 1,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n## 年轻人更爱买买买，而成熟人群消费更加谨慎\n\n34岁以下的消费者更具消费欲望，60%的年轻消费者的预算超千元；而35岁+人群消费会更加谨慎，但也有40%的消费者的预算超千元\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_72_478_2630_1379.jpg\" alt=\"Image\" width=\"88%\" /></div>\n"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/凯度《618消费前瞻与电商平台品牌力洞察》/page_008.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_008",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_008/doc_0.md",
+      "text": "## 一 线城市有望释放强劲消费力，超七成预计在今年618花费千元以上\n\n一线城市消费者准备大买特买，74%的消费者预算超千元，其中43%预算在2000以上。而低线人群虽然预算偏低，但四成的消费者准备花费超1000元\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_114_479_2630_1397.jpg\" alt=\"Image\" width=\"87%\" /></div>\n",
+      "text_length": 228,
+      "detected_image_count": 1,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "## 一 线城市有望释放强劲消费力，超七成预计在今年618花费千元以上\n\n一线城市消费者准备大买特买，74%的消费者预算超千元，其中43%预算在2000以上。而低线人群虽然预算偏低，但四成的消费者准备花费超1000元\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_114_479_2630_1397.jpg\" alt=\"Image\" width=\"87%\" /></div>\n"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/凯度《618消费前瞻与电商平台品牌力洞察》/page_009.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_009",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_009/doc_0.md",
+      "text": "## 今年618的消费力将有望集中在护肤品/化妆品、数码产品、日化用品等\n\n618消费者更多的注意力会在护肤品/化妆品、日化用品、数码产品、家用电器、服装这五大品类。其中女性消费者更想购买化妆品，而男性消费者主要关注数码产品。\n\n<div style=\"text-align: center;\">2023消费者618计划购买品类排名</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_111_409_2809_1410.jpg\" alt=\"Image\" width=\"93%\" /></div>\n",
+      "text_length": 291,
+      "detected_image_count": 1,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "## 今年618的消费力将有望集中在护肤品/化妆品、数码产品、日化用品等\n\n618消费者更多的注意力会在护肤品/化妆品、日化用品、数码产品、家用电器、服装这五大品类。其中女性消费者更想购买化妆品，而男性消费者主要关注数码产品。\n\n<div style=\"text-align: center;\">2023消费者618计划购买品类排名</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_111_409_2809_1410.jpg\" alt=\"Image\" width=\"93%\" /></div>\n"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/凯度《618消费前瞻与电商平台品牌力洞察》/page_010.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_010",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_010/doc_0.md",
+      "text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n## 优惠与补货是今年618消费者的主要购物目的\n\n对比2022双十一多样的购物目的，促销活动和补货是消费者618购物的主要目的。并且消费者对618优惠活动的感知和认可度更高\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_81_473_2757_1437.jpg\" alt=\"Image\" width=\"92%\" /></div>\n\n\n数据来源：凯度2023.5月数据 / 凯度2022 ART 后疫情时代消费者数据",
+      "text_length": 590,
+      "detected_image_count": 1,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n## 优惠与补货是今年618消费者的主要购物目的\n\n对比2022双十一多样的购物目的，促销活动和补货是消费者618购物的主要目的。并且消费者对618优惠活动的感知和认可度更高\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_81_473_2757_1437.jpg\" alt=\"Image\" width=\"92%\" /></div>\n\n\n数据来源：凯度2023.5月数据 / 凯度2022 ART 后疫情时代消费者数据"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/凯度《618消费前瞻与电商平台品牌力洞察》/page_011.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_011",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_011/doc_0.md",
+      "text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n## 消费者618选择平台的原因：\n\n在618购物时，\n\n最能吸引消费者的是平台的优惠力度，\n\n其次 商品的质量是消费者最在意的。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1444_136_2749_1292.jpg\" alt=\"Image\" width=\"45%\" /></div>\n",
+      "text_length": 527,
+      "detected_image_count": 1,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n## 消费者618选择平台的原因：\n\n在618购物时，\n\n最能吸引消费者的是平台的优惠力度，\n\n其次 商品的质量是消费者最在意的。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1444_136_2749_1292.jpg\" alt=\"Image\" width=\"45%\" /></div>\n"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/凯度《618消费前瞻与电商平台品牌力洞察》/page_012.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_012",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/凯度《618消费前瞻与电商平台品牌力洞察》/page_012/doc_0.md",
+      "text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n## 在获取优惠信息方面，消费者主要依靠直接搜索商品或前往大促会场\n\n在购物节优惠活动营销时，消费者发现优惠的习惯几乎没有变化，主要在大促会场领到优惠券以及直奔想要的商品继而得知优惠信息\n\n<div style=\"text-align: center;\">消费者获得优惠信息的途经</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_97_376_2758_1408.jpg\" alt=\"Image\" width=\"92%\" /></div>\n",
+      "text_length": 607,
+      "detected_image_count": 1,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n## 在获取优惠信息方面，消费者主要依靠直接搜索商品或前往大促会场\n\n在购物节优惠活动营销时，消费者发现优惠的习惯几乎没有变化，主要在大促会场领到优惠券以及直奔想要的商品继而得知优惠信息\n\n<div style=\"text-align: center;\">消费者获得优惠信息的途经</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_97_376_2758_1408.jpg\" alt=\"Image\" width=\"92%\" /></div>\n"
+    }
+  ]
+}

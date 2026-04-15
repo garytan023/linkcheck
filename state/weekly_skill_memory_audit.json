@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-04-15T06:19:48",
+  "public_skill_count": 57,
+  "overlay_skill_count": 2,
+  "overlay_only": [],
+  "public_only_count": 55,
+  "agents": {
+    "la_xiao_chuang": {
+      "count": 53,
+      "missing_vs_public": [
+        "daily-news-digest",
+        "ocr-local",
+        "paddle-layout",
+        "xiaohongshu-video-to-markdown"
+      ],
+      "extra_vs_public": []
+    },
+    "la_xiao_ma": {
+      "count": 53,
+      "missing_vs_public": [
+        "daily-news-digest",
+        "ocr-local",
+        "paddle-layout",
+        "xiaohongshu-video-to-markdown"
+      ],
+      "extra_vs_public": []
+    },
+    "la_xiao_shu": {
+      "count": 53,
+      "missing_vs_public": [
+        "daily-news-digest",
+        "ocr-local",
+        "paddle-layout",
+        "xiaohongshu-video-to-markdown"
+      ],
+      "extra_vs_public": []
+    },
+    "la_xiao_tou": {
+      "count": 53,
+      "missing_vs_public": [
+        "daily-news-digest",
+        "ocr-local",
+        "paddle-layout",
+        "xiaohongshu-video-to-markdown"
+      ],
+      "extra_vs_public": []
+    },
+    "la_xiao_zhen": {
+      "count": 53,
+      "missing_vs_public": [
+        "daily-news-digest",
+        "ocr-local",
+        "paddle-layout",
+        "xiaohongshu-video-to-markdown"
+      ],
+      "extra_vs_public": []
+    },
+    "la_xiao_zhi": {
+      "count": 53,
+      "missing_vs_public": [
+        "daily-news-digest",
+        "ocr-local",
+        "paddle-layout",
+        "xiaohongshu-video-to-markdown"
+      ],
+      "extra_vs_public": []
+    }
+  }
+}

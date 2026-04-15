@@ -1,0 +1,2799 @@
+{
+  "logId": "5c6810e2-e3bd-40d7-a118-fb24183be11f",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "paragraph_title",
+              "block_content": "创意诠释 1) 定赛道：透过全域3D消费数据，找准新品口味破局机会点",
+              "block_bbox": [
+                132,
+                135,
+                2060,
+                208
+              ],
+              "block_id": 0,
+              "block_order": 1,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  132.0,
+                  135.0
+                ],
+                [
+                  2060.0,
+                  135.0
+                ],
+                [
+                  2060.0,
+                  208.0
+                ],
+                [
+                  132.0,
+                  208.0
+                ]
+              ]
+            },
+            {
+              "block_label": "header_image",
+              "block_content": "",
+              "block_bbox": [
+                2690,
+                48,
+                2837,
+                224
+              ],
+              "block_id": 1,
+              "block_order": null,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  2690.0,
+                  48.0
+                ],
+                [
+                  2837.0,
+                  48.0
+                ],
+                [
+                  2837.0,
+                  224.0
+                ],
+                [
+                  2690.0,
+                  224.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "趋势风味轮 定口味赛道",
+              "block_bbox": [
+                284,
+                298,
+                868,
+                361
+              ],
+              "block_id": 2,
+              "block_order": 2,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  284.0,
+                  298.0
+                ],
+                [
+                  868.0,
+                  298.0
+                ],
+                [
+                  868.0,
+                  361.0
+                ],
+                [
+                  284.0,
+                  361.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "2023 伊利 X WPP 口味风味轮，藉助天猫电商大数据洞察商机，根据GMV体量+增量，持续用口味征服市场",
+              "block_bbox": [
+                169,
+                399,
+                985,
+                484
+              ],
+              "block_id": 3,
+              "block_order": 3,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  169.0,
+                  399.0
+                ],
+                [
+                  985.0,
+                  399.0
+                ],
+                [
+                  985.0,
+                  484.0
+                ],
+                [
+                  169.0,
+                  484.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "6大叶子类目",
+              "block_bbox": [
+                173,
+                582,
+                348,
+                622
+              ],
+              "block_id": 4,
+              "block_order": 4,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  173.0,
+                  582.0
+                ],
+                [
+                  348.0,
+                  582.0
+                ],
+                [
+                  348.0,
+                  622.0
+                ],
+                [
+                  173.0,
+                  622.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "酸奶 茶\n低温乳制品 碳酸饮料\n含乳饮料 夹心饼干",
+              "block_bbox": [
+                139,
+                652,
+                375,
+                744
+              ],
+              "block_id": 5,
+              "block_order": 5,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  139.0,
+                  652.0
+                ],
+                [
+                  375.0,
+                  652.0
+                ],
+                [
+                  375.0,
+                  744.0
+                ],
+                [
+                  139.0,
+                  744.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "16大风味类型",
+              "block_bbox": [
+                166,
+                784,
+                358,
+                824
+              ],
+              "block_id": 6,
+              "block_order": 6,
+              "group_id": 6,
+              "block_polygon_points": [
+                [
+                  166.0,
+                  784.0
+                ],
+                [
+                  358.0,
+                  784.0
+                ],
+                [
+                  358.0,
+                  824.0
+                ],
+                [
+                  166.0,
+                  824.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "水果 茶 五谷\n植物 甜点 坚果\n咖啡 巧克力 蜜饯",
+              "block_bbox": [
+                146,
+                859,
+                368,
+                954
+              ],
+              "block_id": 7,
+              "block_order": 7,
+              "group_id": 7,
+              "block_polygon_points": [
+                [
+                  146.0,
+                  859.0
+                ],
+                [
+                  368.0,
+                  859.0
+                ],
+                [
+                  368.0,
+                  954.0
+                ],
+                [
+                  146.0,
+                  954.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "销售额增速",
+              "block_bbox": [
+                427,
+                676,
+                464,
+                843
+              ],
+              "block_id": 8,
+              "block_order": 8,
+              "group_id": 8,
+              "block_polygon_points": [
+                [
+                  427.0,
+                  676.0
+                ],
+                [
+                  464.0,
+                  676.0
+                ],
+                [
+                  464.0,
+                  843.0
+                ],
+                [
+                  427.0,
+                  843.0
+                ]
+              ]
+            },
+            {
+              "block_label": "image",
+              "block_content": "",
+              "block_bbox": [
+                138,
+                529,
+                1043,
+                1511
+              ],
+              "block_id": 9,
+              "block_order": null,
+              "group_id": 9,
+              "block_polygon_points": [
+                [
+                  343,
+                  529
+                ],
+                [
+                  343,
+                  570
+                ],
+                [
+                  343,
+                  657
+                ],
+                [
+                  343,
+                  771
+                ],
+                [
+                  299,
+                  850
+                ],
+                [
+                  283,
+                  843
+                ],
+                [
+                  225,
+                  787
+                ],
+                [
+                  138,
+                  763
+                ],
+                [
+                  138,
+                  1510
+                ],
+                [
+                  1028,
+                  1502
+                ],
+                [
+                  1028,
+                  529
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "爆款风味",
+              "block_bbox": [
+                785,
+                625,
+                962,
+                683
+              ],
+              "block_id": 10,
+              "block_order": 9,
+              "group_id": 10,
+              "block_polygon_points": [
+                [
+                  785,
+                  625
+                ],
+                [
+                  785,
+                  682
+                ],
+                [
+                  961,
+                  682
+                ],
+                [
+                  961,
+                  625
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "基于风味趋势洞察，从大体量+高需求的水果风味赛道切入。",
+              "block_bbox": [
+                529,
+                1413,
+                973,
+                1496
+              ],
+              "block_id": 11,
+              "block_order": 10,
+              "group_id": 11,
+              "block_polygon_points": [
+                [
+                  529,
+                  1421
+                ],
+                [
+                  529,
+                  1488
+                ],
+                [
+                  544,
+                  1495
+                ],
+                [
+                  972,
+                  1495
+                ],
+                [
+                  972,
+                  1451
+                ],
+                [
+                  958,
+                  1413
+                ],
+                [
+                  730,
+                  1413
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "需求波普图 锁消费周期",
+              "block_bbox": [
+                1225,
+                298,
+                1791,
+                362
+              ],
+              "block_id": 12,
+              "block_order": 11,
+              "group_id": 12,
+              "block_polygon_points": [
+                [
+                  1225.0,
+                  298.0
+                ],
+                [
+                  1791.0,
+                  298.0
+                ],
+                [
+                  1791.0,
+                  362.0
+                ],
+                [
+                  1225.0,
+                  362.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "消费者需求动向校正，锁定营销爆发周期",
+              "block_bbox": [
+                1216,
+                398,
+                1821,
+                444
+              ],
+              "block_id": 13,
+              "block_order": 12,
+              "group_id": 13,
+              "block_polygon_points": [
+                [
+                  1216.0,
+                  398.0
+                ],
+                [
+                  1821.0,
+                  398.0
+                ],
+                [
+                  1821.0,
+                  444.0
+                ],
+                [
+                  1216.0,
+                  444.0
+                ]
+              ]
+            },
+            {
+              "block_label": "vertical_text",
+              "block_content": "电商搜索指数",
+              "block_bbox": [
+                1118,
+                432,
+                1158,
+                790
+              ],
+              "block_id": 14,
+              "block_order": 13,
+              "group_id": 14,
+              "block_polygon_points": [
+                [
+                  1118.0,
+                  432.0
+                ],
+                [
+                  1158.0,
+                  432.0
+                ],
+                [
+                  1158.0,
+                  790.0
+                ],
+                [
+                  1118.0,
+                  790.0
+                ]
+              ]
+            },
+            {
+              "block_label": "image",
+              "block_content": "",
+              "block_bbox": [
+                1203,
+                490,
+                1489,
+                843
+              ],
+              "block_id": 15,
+              "block_order": null,
+              "group_id": 15,
+              "block_polygon_points": [
+                [
+                  1203.0,
+                  490.0
+                ],
+                [
+                  1489.0,
+                  490.0
+                ],
+                [
+                  1489.0,
+                  843.0
+                ],
+                [
+                  1203.0,
+                  843.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "高需求果味关键词锁定",
+              "block_bbox": [
+                1529,
+                491,
+                1897,
+                542
+              ],
+              "block_id": 16,
+              "block_order": 14,
+              "group_id": 16,
+              "block_polygon_points": [
+                [
+                  1529.0,
+                  491.0
+                ],
+                [
+                  1897.0,
+                  491.0
+                ],
+                [
+                  1897.0,
+                  542.0
+                ],
+                [
+                  1529.0,
+                  542.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "#草莓、菠萝，哈密瓜，蓝莓...#",
+              "block_bbox": [
+                1532,
+                578,
+                1897,
+                661
+              ],
+              "block_id": 17,
+              "block_order": 15,
+              "group_id": 17,
+              "block_polygon_points": [
+                [
+                  1532.0,
+                  578.0
+                ],
+                [
+                  1897.0,
+                  578.0
+                ],
+                [
+                  1897.0,
+                  661.0
+                ],
+                [
+                  1532.0,
+                  661.0
+                ]
+              ]
+            },
+            {
+              "block_label": "vision_footnote",
+              "block_content": "销售体量",
+              "block_bbox": [
+                1468,
+                837,
+                1595,
+                877
+              ],
+              "block_id": 18,
+              "block_order": null,
+              "group_id": 18,
+              "block_polygon_points": [
+                [
+                  1468.0,
+                  837.0
+                ],
+                [
+                  1595.0,
+                  837.0
+                ],
+                [
+                  1595.0,
+                  877.0
+                ],
+                [
+                  1468.0,
+                  877.0
+                ]
+              ]
+            },
+            {
+              "block_label": "image",
+              "block_content": "",
+              "block_bbox": [
+                1604,
+                750,
+                1934,
+                848
+              ],
+              "block_id": 19,
+              "block_order": null,
+              "group_id": 19,
+              "block_polygon_points": [
+                [
+                  1604.0,
+                  750.0
+                ],
+                [
+                  1934.0,
+                  750.0
+                ],
+                [
+                  1934.0,
+                  848.0
+                ],
+                [
+                  1604.0,
+                  848.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "核心关键词需求周期锁定",
+              "block_bbox": [
+                1309,
+                953,
+                1715,
+                999
+              ],
+              "block_id": 20,
+              "block_order": 16,
+              "group_id": 20,
+              "block_polygon_points": [
+                [
+                  1309.0,
+                  953.0
+                ],
+                [
+                  1715.0,
+                  953.0
+                ],
+                [
+                  1715.0,
+                  999.0
+                ],
+                [
+                  1309.0,
+                  999.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "社媒：搜索趋势",
+              "block_bbox": [
+                1099,
+                1084,
+                1344,
+                1128
+              ],
+              "block_id": 21,
+              "block_order": 17,
+              "group_id": 21,
+              "block_polygon_points": [
+                [
+                  1099.0,
+                  1084.0
+                ],
+                [
+                  1344.0,
+                  1084.0
+                ],
+                [
+                  1344.0,
+                  1128.0
+                ],
+                [
+                  1099.0,
+                  1128.0
+                ]
+              ]
+            },
+            {
+              "block_label": "image",
+              "block_content": "",
+              "block_bbox": [
+                1398,
+                1044,
+                1621,
+                1236
+              ],
+              "block_id": 22,
+              "block_order": null,
+              "group_id": 22,
+              "block_polygon_points": [
+                [
+                  1398.0,
+                  1044.0
+                ],
+                [
+                  1620.0,
+                  1044.0
+                ],
+                [
+                  1620.0,
+                  1227.0
+                ],
+                [
+                  1398.0,
+                  1227.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "#哈密瓜#",
+              "block_bbox": [
+                1692,
+                1053,
+                1851,
+                1100
+              ],
+              "block_id": 23,
+              "block_order": 18,
+              "group_id": 23,
+              "block_polygon_points": [
+                [
+                  1692.0,
+                  1053.0
+                ],
+                [
+                  1851.0,
+                  1053.0
+                ],
+                [
+                  1851.0,
+                  1100.0
+                ],
+                [
+                  1692.0,
+                  1100.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "时令性凸显\n夏季需求旺盛",
+              "block_bbox": [
+                1669,
+                1140,
+                1874,
+                1223
+              ],
+              "block_id": 24,
+              "block_order": 19,
+              "group_id": 24,
+              "block_polygon_points": [
+                [
+                  1669.0,
+                  1140.0
+                ],
+                [
+                  1874.0,
+                  1140.0
+                ],
+                [
+                  1874.0,
+                  1223.0
+                ],
+                [
+                  1669.0,
+                  1223.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "电商：货品趋势",
+              "block_bbox": [
+                1102,
+                1358,
+                1341,
+                1402
+              ],
+              "block_id": 25,
+              "block_order": 20,
+              "group_id": 25,
+              "block_polygon_points": [
+                [
+                  1102.0,
+                  1358.0
+                ],
+                [
+                  1341.0,
+                  1358.0
+                ],
+                [
+                  1341.0,
+                  1402.0
+                ],
+                [
+                  1102.0,
+                  1402.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "每年6-8月，搜索周期性增长",
+              "block_bbox": [
+                1509,
+                1267,
+                1919,
+                1309
+              ],
+              "block_id": 26,
+              "block_order": 21,
+              "group_id": 26,
+              "block_polygon_points": [
+                [
+                  1509.0,
+                  1267.0
+                ],
+                [
+                  1919.0,
+                  1267.0
+                ],
+                [
+                  1919.0,
+                  1309.0
+                ],
+                [
+                  1509.0,
+                  1309.0
+                ]
+              ]
+            },
+            {
+              "block_label": "image",
+              "block_content": "",
+              "block_bbox": [
+                1423,
+                1314,
+                1687,
+                1513
+              ],
+              "block_id": 27,
+              "block_order": null,
+              "group_id": 27,
+              "block_polygon_points": [
+                [
+                  1423.0,
+                  1314.0
+                ],
+                [
+                  1687.0,
+                  1314.0
+                ],
+                [
+                  1687.0,
+                  1513.0
+                ],
+                [
+                  1423.0,
+                  1513.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "口碑评论云 明发力方向",
+              "block_bbox": [
+                2098,
+                298,
+                2662,
+                362
+              ],
+              "block_id": 28,
+              "block_order": 22,
+              "group_id": 28,
+              "block_polygon_points": [
+                [
+                  2098.0,
+                  298.0
+                ],
+                [
+                  2662.0,
+                  298.0
+                ],
+                [
+                  2662.0,
+                  362.0
+                ],
+                [
+                  2098.0,
+                  362.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "社媒数据+口碑评论分析，定位沟通策略#哈密瓜#",
+              "block_bbox": [
+                2073,
+                398,
+                2670,
+                513
+              ],
+              "block_id": 29,
+              "block_order": 23,
+              "group_id": 29,
+              "block_polygon_points": [
+                [
+                  2073.0,
+                  398.0
+                ],
+                [
+                  2670.0,
+                  398.0
+                ],
+                [
+                  2670.0,
+                  513.0
+                ],
+                [
+                  2073.0,
+                  513.0
+                ]
+              ]
+            },
+            {
+              "block_label": "image",
+              "block_content": "",
+              "block_bbox": [
+                2118,
+                518,
+                2640,
+                850
+              ],
+              "block_id": 30,
+              "block_order": null,
+              "group_id": 30,
+              "block_polygon_points": [
+                [
+                  2118.0,
+                  518.0
+                ],
+                [
+                  2640.0,
+                  518.0
+                ],
+                [
+                  2640.0,
+                  850.0
+                ],
+                [
+                  2118.0,
+                  850.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "卖点",
+              "block_bbox": [
+                2091,
+                909,
+                2160,
+                947
+              ],
+              "block_id": 31,
+              "block_order": 24,
+              "group_id": 31,
+              "block_polygon_points": [
+                [
+                  2091.0,
+                  909.0
+                ],
+                [
+                  2160.0,
+                  909.0
+                ],
+                [
+                  2160.0,
+                  947.0
+                ],
+                [
+                  2091.0,
+                  947.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "沟通方向",
+              "block_bbox": [
+                2404,
+                909,
+                2531,
+                947
+              ],
+              "block_id": 32,
+              "block_order": 25,
+              "group_id": 32,
+              "block_polygon_points": [
+                [
+                  2404.0,
+                  909.0
+                ],
+                [
+                  2531.0,
+                  909.0
+                ],
+                [
+                  2531.0,
+                  947.0
+                ],
+                [
+                  2404.0,
+                  947.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "口味\n口感\n应季哈密瓜口味，口感清甜",
+              "block_bbox": [
+                2092,
+                973,
+                2166,
+                1053
+              ],
+              "block_id": 33,
+              "block_order": 26,
+              "group_id": 33,
+              "block_polygon_points": [
+                [
+                  2092.0,
+                  973.0
+                ],
+                [
+                  2166.0,
+                  973.0
+                ],
+                [
+                  2166.0,
+                  1053.0
+                ],
+                [
+                  2092.0,
+                  1053.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "",
+              "block_bbox": [
+                2267,
+                991,
+                2632,
+                1032
+              ],
+              "block_id": 34,
+              "block_order": 27,
+              "group_id": 33,
+              "block_polygon_points": [
+                [
+                  2267.0,
+                  991.0
+                ],
+                [
+                  2632.0,
+                  991.0
+                ],
+                [
+                  2632.0,
+                  1032.0
+                ],
+                [
+                  2267.0,
+                  1032.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "营养成分",
+              "block_bbox": [
+                2089,
+                1084,
+                2165,
+                1165
+              ],
+              "block_id": 35,
+              "block_order": 28,
+              "group_id": 35,
+              "block_polygon_points": [
+                [
+                  2089.0,
+                  1084.0
+                ],
+                [
+                  2165.0,
+                  1084.0
+                ],
+                [
+                  2165.0,
+                  1165.0
+                ],
+                [
+                  2089.0,
+                  1165.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "减糖卖点，成分安全健康",
+              "block_bbox": [
+                2267,
+                1102,
+                2603,
+                1143
+              ],
+              "block_id": 36,
+              "block_order": 29,
+              "group_id": 36,
+              "block_polygon_points": [
+                [
+                  2267.0,
+                  1102.0
+                ],
+                [
+                  2603.0,
+                  1102.0
+                ],
+                [
+                  2603.0,
+                  1143.0
+                ],
+                [
+                  2267.0,
+                  1143.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "产地",
+              "block_bbox": [
+                2085,
+                1216,
+                2163,
+                1258
+              ],
+              "block_id": 37,
+              "block_order": 30,
+              "group_id": 37,
+              "block_polygon_points": [
+                [
+                  2085.0,
+                  1216.0
+                ],
+                [
+                  2163.0,
+                  1216.0
+                ],
+                [
+                  2163.0,
+                  1258.0
+                ],
+                [
+                  2085.0,
+                  1258.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "价格优惠",
+              "block_bbox": [
+                2088,
+                1308,
+                2165,
+                1389
+              ],
+              "block_id": 38,
+              "block_order": 31,
+              "group_id": 38,
+              "block_polygon_points": [
+                [
+                  2088.0,
+                  1308.0
+                ],
+                [
+                  2165.0,
+                  1308.0
+                ],
+                [
+                  2165.0,
+                  1389.0
+                ],
+                [
+                  2088.0,
+                  1389.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "强化产地直采溯源",
+              "block_bbox": [
+                2267,
+                1217,
+                2513,
+                1257
+              ],
+              "block_id": 39,
+              "block_order": 32,
+              "group_id": 39,
+              "block_polygon_points": [
+                [
+                  2267.0,
+                  1217.0
+                ],
+                [
+                  2513.0,
+                  1217.0
+                ],
+                [
+                  2513.0,
+                  1257.0
+                ],
+                [
+                  2267.0,
+                  1257.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "明星代言\n突出产品利益点，价格优惠",
+              "block_bbox": [
+                2087,
+                1420,
+                2166,
+                1501
+              ],
+              "block_id": 40,
+              "block_order": 33,
+              "group_id": 40,
+              "block_polygon_points": [
+                [
+                  2087.0,
+                  1420.0
+                ],
+                [
+                  2166.0,
+                  1420.0
+                ],
+                [
+                  2166.0,
+                  1501.0
+                ],
+                [
+                  2087.0,
+                  1501.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "",
+              "block_bbox": [
+                2265,
+                1329,
+                2633,
+                1371
+              ],
+              "block_id": 41,
+              "block_order": 34,
+              "group_id": 40,
+              "block_polygon_points": [
+                [
+                  2265.0,
+                  1329.0
+                ],
+                [
+                  2633.0,
+                  1329.0
+                ],
+                [
+                  2633.0,
+                  1371.0
+                ],
+                [
+                  2265.0,
+                  1371.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "借势明星热度，吸引粉丝",
+              "block_bbox": [
+                2268,
+                1440,
+                2604,
+                1482
+              ],
+              "block_id": 42,
+              "block_order": 35,
+              "group_id": 42,
+              "block_polygon_points": [
+                [
+                  2268.0,
+                  1440.0
+                ],
+                [
+                  2604.0,
+                  1440.0
+                ],
+                [
+                  2604.0,
+                  1482.0
+                ],
+                [
+                  2268.0,
+                  1482.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9038682579994202,
+                "coordinate": [
+                  132,
+                  135,
+                  2060,
+                  208
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    132.0,
+                    135.0
+                  ],
+                  [
+                    2060.0,
+                    135.0
+                  ],
+                  [
+                    2060.0,
+                    208.0
+                  ],
+                  [
+                    132.0,
+                    208.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.8480411171913147,
+                "coordinate": [
+                  2690,
+                  48,
+                  2837,
+                  224
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2690.0,
+                    48.0
+                  ],
+                  [
+                    2837.0,
+                    48.0
+                  ],
+                  [
+                    2837.0,
+                    224.0
+                  ],
+                  [
+                    2690.0,
+                    224.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8887773156166077,
+                "coordinate": [
+                  284,
+                  298,
+                  868,
+                  361
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    284.0,
+                    298.0
+                  ],
+                  [
+                    868.0,
+                    298.0
+                  ],
+                  [
+                    868.0,
+                    361.0
+                  ],
+                  [
+                    284.0,
+                    361.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.914045512676239,
+                "coordinate": [
+                  169,
+                  399,
+                  985,
+                  484
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    169.0,
+                    399.0
+                  ],
+                  [
+                    985.0,
+                    399.0
+                  ],
+                  [
+                    985.0,
+                    484.0
+                  ],
+                  [
+                    169.0,
+                    484.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.36373084783554077,
+                "coordinate": [
+                  173,
+                  582,
+                  348,
+                  622
+                ],
+                "order": 4,
+                "polygon_points": [
+                  [
+                    173.0,
+                    582.0
+                  ],
+                  [
+                    348.0,
+                    582.0
+                  ],
+                  [
+                    348.0,
+                    622.0
+                  ],
+                  [
+                    173.0,
+                    622.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7734779119491577,
+                "coordinate": [
+                  139,
+                  652,
+                  375,
+                  744
+                ],
+                "order": 5,
+                "polygon_points": [
+                  [
+                    139.0,
+                    652.0
+                  ],
+                  [
+                    375.0,
+                    652.0
+                  ],
+                  [
+                    375.0,
+                    744.0
+                  ],
+                  [
+                    139.0,
+                    744.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4440777003765106,
+                "coordinate": [
+                  166,
+                  784,
+                  358,
+                  824
+                ],
+                "order": 6,
+                "polygon_points": [
+                  [
+                    166.0,
+                    784.0
+                  ],
+                  [
+                    358.0,
+                    784.0
+                  ],
+                  [
+                    358.0,
+                    824.0
+                  ],
+                  [
+                    166.0,
+                    824.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5218124985694885,
+                "coordinate": [
+                  146,
+                  859,
+                  368,
+                  954
+                ],
+                "order": 7,
+                "polygon_points": [
+                  [
+                    146.0,
+                    859.0
+                  ],
+                  [
+                    368.0,
+                    859.0
+                  ],
+                  [
+                    368.0,
+                    954.0
+                  ],
+                  [
+                    146.0,
+                    954.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.31756898760795593,
+                "coordinate": [
+                  427,
+                  676,
+                  464,
+                  843
+                ],
+                "order": 8,
+                "polygon_points": [
+                  [
+                    427.0,
+                    676.0
+                  ],
+                  [
+                    464.0,
+                    676.0
+                  ],
+                  [
+                    464.0,
+                    843.0
+                  ],
+                  [
+                    427.0,
+                    843.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.3540722131729126,
+                "coordinate": [
+                  138,
+                  529,
+                  1043,
+                  1511
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    343,
+                    529
+                  ],
+                  [
+                    343,
+                    570
+                  ],
+                  [
+                    343,
+                    657
+                  ],
+                  [
+                    343,
+                    771
+                  ],
+                  [
+                    299,
+                    850
+                  ],
+                  [
+                    283,
+                    843
+                  ],
+                  [
+                    225,
+                    787
+                  ],
+                  [
+                    138,
+                    763
+                  ],
+                  [
+                    138,
+                    1510
+                  ],
+                  [
+                    1028,
+                    1502
+                  ],
+                  [
+                    1028,
+                    529
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.37521883845329285,
+                "coordinate": [
+                  785,
+                  625,
+                  962,
+                  683
+                ],
+                "order": 9,
+                "polygon_points": [
+                  [
+                    785,
+                    625
+                  ],
+                  [
+                    785,
+                    682
+                  ],
+                  [
+                    961,
+                    682
+                  ],
+                  [
+                    961,
+                    625
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.42389023303985596,
+                "coordinate": [
+                  135,
+                  1067,
+                  965,
+                  1509
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    135.0,
+                    1067.0
+                  ],
+                  [
+                    965.0,
+                    1067.0
+                  ],
+                  [
+                    965.0,
+                    1509.0
+                  ],
+                  [
+                    135.0,
+                    1509.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6315525770187378,
+                "coordinate": [
+                  529,
+                  1413,
+                  973,
+                  1496
+                ],
+                "order": 10,
+                "polygon_points": [
+                  [
+                    529,
+                    1421
+                  ],
+                  [
+                    529,
+                    1488
+                  ],
+                  [
+                    544,
+                    1495
+                  ],
+                  [
+                    972,
+                    1495
+                  ],
+                  [
+                    972,
+                    1451
+                  ],
+                  [
+                    958,
+                    1413
+                  ],
+                  [
+                    730,
+                    1413
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8792232275009155,
+                "coordinate": [
+                  1225,
+                  298,
+                  1791,
+                  362
+                ],
+                "order": 11,
+                "polygon_points": [
+                  [
+                    1225.0,
+                    298.0
+                  ],
+                  [
+                    1791.0,
+                    298.0
+                  ],
+                  [
+                    1791.0,
+                    362.0
+                  ],
+                  [
+                    1225.0,
+                    362.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.843059241771698,
+                "coordinate": [
+                  1216,
+                  398,
+                  1821,
+                  444
+                ],
+                "order": 12,
+                "polygon_points": [
+                  [
+                    1216.0,
+                    398.0
+                  ],
+                  [
+                    1821.0,
+                    398.0
+                  ],
+                  [
+                    1821.0,
+                    444.0
+                  ],
+                  [
+                    1216.0,
+                    444.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 23,
+                "label": "vertical_text",
+                "score": 0.36662882566452026,
+                "coordinate": [
+                  1118,
+                  432,
+                  1158,
+                  790
+                ],
+                "order": 13,
+                "polygon_points": [
+                  [
+                    1118.0,
+                    432.0
+                  ],
+                  [
+                    1158.0,
+                    432.0
+                  ],
+                  [
+                    1158.0,
+                    790.0
+                  ],
+                  [
+                    1118.0,
+                    790.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.659151017665863,
+                "coordinate": [
+                  1203,
+                  490,
+                  1489,
+                  843
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1203.0,
+                    490.0
+                  ],
+                  [
+                    1489.0,
+                    490.0
+                  ],
+                  [
+                    1489.0,
+                    843.0
+                  ],
+                  [
+                    1203.0,
+                    843.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4287213981151581,
+                "coordinate": [
+                  1529,
+                  491,
+                  1897,
+                  542
+                ],
+                "order": 14,
+                "polygon_points": [
+                  [
+                    1529.0,
+                    491.0
+                  ],
+                  [
+                    1897.0,
+                    491.0
+                  ],
+                  [
+                    1897.0,
+                    542.0
+                  ],
+                  [
+                    1529.0,
+                    542.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7215288281440735,
+                "coordinate": [
+                  1532,
+                  578,
+                  1897,
+                  661
+                ],
+                "order": 15,
+                "polygon_points": [
+                  [
+                    1532.0,
+                    578.0
+                  ],
+                  [
+                    1897.0,
+                    578.0
+                  ],
+                  [
+                    1897.0,
+                    661.0
+                  ],
+                  [
+                    1532.0,
+                    661.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.3966676890850067,
+                "coordinate": [
+                  1468,
+                  837,
+                  1595,
+                  877
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1468.0,
+                    837.0
+                  ],
+                  [
+                    1595.0,
+                    837.0
+                  ],
+                  [
+                    1595.0,
+                    877.0
+                  ],
+                  [
+                    1468.0,
+                    877.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.6452347636222839,
+                "coordinate": [
+                  1604,
+                  750,
+                  1934,
+                  848
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1604.0,
+                    750.0
+                  ],
+                  [
+                    1934.0,
+                    750.0
+                  ],
+                  [
+                    1934.0,
+                    848.0
+                  ],
+                  [
+                    1604.0,
+                    848.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8375884890556335,
+                "coordinate": [
+                  1309,
+                  953,
+                  1715,
+                  999
+                ],
+                "order": 16,
+                "polygon_points": [
+                  [
+                    1309.0,
+                    953.0
+                  ],
+                  [
+                    1715.0,
+                    953.0
+                  ],
+                  [
+                    1715.0,
+                    999.0
+                  ],
+                  [
+                    1309.0,
+                    999.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5941463708877563,
+                "coordinate": [
+                  1099,
+                  1084,
+                  1344,
+                  1128
+                ],
+                "order": 17,
+                "polygon_points": [
+                  [
+                    1099.0,
+                    1084.0
+                  ],
+                  [
+                    1344.0,
+                    1084.0
+                  ],
+                  [
+                    1344.0,
+                    1128.0
+                  ],
+                  [
+                    1099.0,
+                    1128.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.5660232305526733,
+                "coordinate": [
+                  1398,
+                  1044,
+                  1621,
+                  1236
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1398.0,
+                    1044.0
+                  ],
+                  [
+                    1620.0,
+                    1044.0
+                  ],
+                  [
+                    1620.0,
+                    1227.0
+                  ],
+                  [
+                    1398.0,
+                    1227.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.40752527117729187,
+                "coordinate": [
+                  1692,
+                  1053,
+                  1851,
+                  1100
+                ],
+                "order": 18,
+                "polygon_points": [
+                  [
+                    1692.0,
+                    1053.0
+                  ],
+                  [
+                    1851.0,
+                    1053.0
+                  ],
+                  [
+                    1851.0,
+                    1100.0
+                  ],
+                  [
+                    1692.0,
+                    1100.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7372719645500183,
+                "coordinate": [
+                  1669,
+                  1140,
+                  1874,
+                  1223
+                ],
+                "order": 19,
+                "polygon_points": [
+                  [
+                    1669.0,
+                    1140.0
+                  ],
+                  [
+                    1874.0,
+                    1140.0
+                  ],
+                  [
+                    1874.0,
+                    1223.0
+                  ],
+                  [
+                    1669.0,
+                    1223.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5841690301895142,
+                "coordinate": [
+                  1102,
+                  1358,
+                  1341,
+                  1402
+                ],
+                "order": 20,
+                "polygon_points": [
+                  [
+                    1102.0,
+                    1358.0
+                  ],
+                  [
+                    1341.0,
+                    1358.0
+                  ],
+                  [
+                    1341.0,
+                    1402.0
+                  ],
+                  [
+                    1102.0,
+                    1402.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4656163156032562,
+                "coordinate": [
+                  1509,
+                  1267,
+                  1919,
+                  1309
+                ],
+                "order": 21,
+                "polygon_points": [
+                  [
+                    1509.0,
+                    1267.0
+                  ],
+                  [
+                    1919.0,
+                    1267.0
+                  ],
+                  [
+                    1919.0,
+                    1309.0
+                  ],
+                  [
+                    1509.0,
+                    1309.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.7841466665267944,
+                "coordinate": [
+                  1423,
+                  1314,
+                  1687,
+                  1513
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1423.0,
+                    1314.0
+                  ],
+                  [
+                    1687.0,
+                    1314.0
+                  ],
+                  [
+                    1687.0,
+                    1513.0
+                  ],
+                  [
+                    1423.0,
+                    1513.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8570935130119324,
+                "coordinate": [
+                  2098,
+                  298,
+                  2662,
+                  362
+                ],
+                "order": 22,
+                "polygon_points": [
+                  [
+                    2098.0,
+                    298.0
+                  ],
+                  [
+                    2662.0,
+                    298.0
+                  ],
+                  [
+                    2662.0,
+                    362.0
+                  ],
+                  [
+                    2098.0,
+                    362.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8931690454483032,
+                "coordinate": [
+                  2073,
+                  398,
+                  2670,
+                  513
+                ],
+                "order": 23,
+                "polygon_points": [
+                  [
+                    2073.0,
+                    398.0
+                  ],
+                  [
+                    2670.0,
+                    398.0
+                  ],
+                  [
+                    2670.0,
+                    513.0
+                  ],
+                  [
+                    2073.0,
+                    513.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.8484654426574707,
+                "coordinate": [
+                  2118,
+                  518,
+                  2640,
+                  850
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2118.0,
+                    518.0
+                  ],
+                  [
+                    2640.0,
+                    518.0
+                  ],
+                  [
+                    2640.0,
+                    850.0
+                  ],
+                  [
+                    2118.0,
+                    850.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.41076168417930603,
+                "coordinate": [
+                  2091,
+                  909,
+                  2160,
+                  947
+                ],
+                "order": 24,
+                "polygon_points": [
+                  [
+                    2091.0,
+                    909.0
+                  ],
+                  [
+                    2160.0,
+                    909.0
+                  ],
+                  [
+                    2160.0,
+                    947.0
+                  ],
+                  [
+                    2091.0,
+                    947.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4525240361690521,
+                "coordinate": [
+                  2404,
+                  909,
+                  2531,
+                  947
+                ],
+                "order": 25,
+                "polygon_points": [
+                  [
+                    2404.0,
+                    909.0
+                  ],
+                  [
+                    2531.0,
+                    909.0
+                  ],
+                  [
+                    2531.0,
+                    947.0
+                  ],
+                  [
+                    2404.0,
+                    947.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.687784731388092,
+                "coordinate": [
+                  2092,
+                  973,
+                  2166,
+                  1053
+                ],
+                "order": 26,
+                "polygon_points": [
+                  [
+                    2092.0,
+                    973.0
+                  ],
+                  [
+                    2166.0,
+                    973.0
+                  ],
+                  [
+                    2166.0,
+                    1053.0
+                  ],
+                  [
+                    2092.0,
+                    1053.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.819709300994873,
+                "coordinate": [
+                  2267,
+                  991,
+                  2632,
+                  1032
+                ],
+                "order": 27,
+                "polygon_points": [
+                  [
+                    2267.0,
+                    991.0
+                  ],
+                  [
+                    2632.0,
+                    991.0
+                  ],
+                  [
+                    2632.0,
+                    1032.0
+                  ],
+                  [
+                    2267.0,
+                    1032.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6783068180084229,
+                "coordinate": [
+                  2089,
+                  1084,
+                  2165,
+                  1165
+                ],
+                "order": 28,
+                "polygon_points": [
+                  [
+                    2089.0,
+                    1084.0
+                  ],
+                  [
+                    2165.0,
+                    1084.0
+                  ],
+                  [
+                    2165.0,
+                    1165.0
+                  ],
+                  [
+                    2089.0,
+                    1165.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8253507018089294,
+                "coordinate": [
+                  2267,
+                  1102,
+                  2603,
+                  1143
+                ],
+                "order": 29,
+                "polygon_points": [
+                  [
+                    2267.0,
+                    1102.0
+                  ],
+                  [
+                    2603.0,
+                    1102.0
+                  ],
+                  [
+                    2603.0,
+                    1143.0
+                  ],
+                  [
+                    2267.0,
+                    1143.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.484770804643631,
+                "coordinate": [
+                  2085,
+                  1216,
+                  2163,
+                  1258
+                ],
+                "order": 30,
+                "polygon_points": [
+                  [
+                    2085.0,
+                    1216.0
+                  ],
+                  [
+                    2163.0,
+                    1216.0
+                  ],
+                  [
+                    2163.0,
+                    1258.0
+                  ],
+                  [
+                    2085.0,
+                    1258.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5306520462036133,
+                "coordinate": [
+                  2088,
+                  1308,
+                  2165,
+                  1389
+                ],
+                "order": 31,
+                "polygon_points": [
+                  [
+                    2088.0,
+                    1308.0
+                  ],
+                  [
+                    2165.0,
+                    1308.0
+                  ],
+                  [
+                    2165.0,
+                    1389.0
+                  ],
+                  [
+                    2088.0,
+                    1389.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8019112944602966,
+                "coordinate": [
+                  2267,
+                  1217,
+                  2513,
+                  1257
+                ],
+                "order": 32,
+                "polygon_points": [
+                  [
+                    2267.0,
+                    1217.0
+                  ],
+                  [
+                    2513.0,
+                    1217.0
+                  ],
+                  [
+                    2513.0,
+                    1257.0
+                  ],
+                  [
+                    2267.0,
+                    1257.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6699424386024475,
+                "coordinate": [
+                  2087,
+                  1420,
+                  2166,
+                  1501
+                ],
+                "order": 33,
+                "polygon_points": [
+                  [
+                    2087.0,
+                    1420.0
+                  ],
+                  [
+                    2166.0,
+                    1420.0
+                  ],
+                  [
+                    2166.0,
+                    1501.0
+                  ],
+                  [
+                    2087.0,
+                    1501.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8402543067932129,
+                "coordinate": [
+                  2265,
+                  1329,
+                  2633,
+                  1371
+                ],
+                "order": 34,
+                "polygon_points": [
+                  [
+                    2265.0,
+                    1329.0
+                  ],
+                  [
+                    2633.0,
+                    1329.0
+                  ],
+                  [
+                    2633.0,
+                    1371.0
+                  ],
+                  [
+                    2265.0,
+                    1371.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.834375262260437,
+                "coordinate": [
+                  2268,
+                  1440,
+                  2604,
+                  1482
+                ],
+                "order": 35,
+                "polygon_points": [
+                  [
+                    2268.0,
+                    1440.0
+                  ],
+                  [
+                    2604.0,
+                    1440.0
+                  ],
+                  [
+                    2604.0,
+                    1482.0
+                  ],
+                  [
+                    2268.0,
+                    1482.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## 创意诠释 1) 定赛道：透过全域3D消费数据，找准新品口味破局机会点\n\n## 趋势风味轮 定口味赛道\n\n2023 伊利 X WPP 口味风味轮，藉助天猫电商大数据洞察商机，根据GMV体量+增量，持续用口味征服市场\n\n## 6 大叶子类目\n\n酸奶 茶\n\n低温乳制品 碳酸饮料\n\n含乳饮料 夹心饼干\n\n16大风味类型\n\n水果 茶 五谷\n\n植物 甜点 坚果\n\n咖啡 巧克力 蜜饯\n\n## 销售额增速\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_138_529_1043_1511.jpg\" alt=\"Image\" width=\"31%\" /></div>\n\n\n爆款风味\n\n基于风味趋势洞察，从大体量+高需求的水果风味赛道切入。\n\n## 需求波普图 锁消费周期\n\n消费者需求动向校正，锁定营销爆发周期\n\n电商搜索指数\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1203_490_1489_843.jpg\" alt=\"Image\" width=\"9%\" /></div>\n\n\n高需求果味关键词锁定\n\n#草莓、菠萝，哈密瓜，蓝莓...#\n\n销售体量\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1604_750_1934_848.jpg\" alt=\"Image\" width=\"11%\" /></div>\n\n\n## 核心关键词需求周期锁定\n\n社媒：搜索趋势\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1398_1044_1621_1236.jpg\" alt=\"Image\" width=\"7%\" /></div>\n\n\n## #哈密瓜#\n\n时令性凸显\n\n夏季需求旺盛\n\n电商：货品趋势\n\n每年6-8月，搜索周期性增长\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1423_1314_1687_1513.jpg\" alt=\"Image\" width=\"9%\" /></div>\n\n\n## 口碑评论云 明发力方向\n\n社媒数据+口碑评论分析，定位沟通策略#哈密瓜#\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2118_518_2640_850.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n\n卖点\n\n沟通方向\n\n口味\n\n口感\n\n应季哈密瓜口味，口感清甜\n\n\n\n营养成分\n\n减糖卖点，成分安全健康\n\n产地\n\n价格优惠\n\n强化产地直采溯源\n\n明星代言\n\n突出产品利益点，价格优惠\n\n\n\n借势明星热度，吸引粉丝",
+          "images": {
+            "imgs/img_in_header_image_box_2690_48_2837_224.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d01a9358-de20-48bd-943c-3f1a51a2c0a8/markdown_0/imgs/img_in_header_image_box_2690_48_2837_224.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A56Z%2F-1%2F%2Ff5a34e5a797888748cd7e56767fd058d09399538e1707da2362cf2682f1e0e33",
+            "imgs/img_in_image_box_138_529_1043_1511.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d01a9358-de20-48bd-943c-3f1a51a2c0a8/markdown_0/imgs/img_in_image_box_138_529_1043_1511.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A56Z%2F-1%2F%2Fcc59a0115711c86a108251a995c7a7c2972682dbe32dbc945b7e0f8027d076a0",
+            "imgs/img_in_image_box_1203_490_1489_843.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d01a9358-de20-48bd-943c-3f1a51a2c0a8/markdown_0/imgs/img_in_image_box_1203_490_1489_843.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A56Z%2F-1%2F%2Fe769cc7b4f9563b31ca3a3cd99812f5e03c512966b1f82a77fa67e700eb59e3a",
+            "imgs/img_in_image_box_1604_750_1934_848.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d01a9358-de20-48bd-943c-3f1a51a2c0a8/markdown_0/imgs/img_in_image_box_1604_750_1934_848.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A56Z%2F-1%2F%2Fc717cca4e34b5c3733d08917405757d7a942450dfef43cb14fa12d3a872fba17",
+            "imgs/img_in_image_box_1398_1044_1621_1236.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d01a9358-de20-48bd-943c-3f1a51a2c0a8/markdown_0/imgs/img_in_image_box_1398_1044_1621_1236.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A56Z%2F-1%2F%2Ffa6a6b76d278a6ca68ab1d7b64c0fbab3d46efc8350a5ae61a52716ca2006ce2",
+            "imgs/img_in_image_box_1423_1314_1687_1513.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d01a9358-de20-48bd-943c-3f1a51a2c0a8/markdown_0/imgs/img_in_image_box_1423_1314_1687_1513.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A57Z%2F-1%2F%2Fa692bc6c682684c51174bac536175eda45dc332d1cbe5e8be79c3ec5a3128107",
+            "imgs/img_in_image_box_2118_518_2640_850.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d01a9358-de20-48bd-943c-3f1a51a2c0a8/markdown_0/imgs/img_in_image_box_2118_518_2640_850.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A57Z%2F-1%2F%2F613c3a804af35e5d681dfa098df992f6eb5ef0563b95cb00f61d08da0c0da36b",
+            "imgs/img_in_image_box_135_1067_965_1509.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d01a9358-de20-48bd-943c-3f1a51a2c0a8/markdown_0/imgs/img_in_image_box_135_1067_965_1509.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A57Z%2F-1%2F%2Feee717afd5149b509dc5cf1e762e1c7aa8d4ace68bb915929d25b010afd542be"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d01a9358-de20-48bd-943c-3f1a51a2c0a8/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A58Z%2F-1%2F%2F3f2fedd6607e17a44f69b24ef6ba56df05cae654b19996b179c07b6448456520"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d01a9358-de20-48bd-943c-3f1a51a2c0a8/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A59Z%2F-1%2F%2F49e941d2c3558083f7ff654938953d6ebdbc768fcb7e1da05bab6c58a9e94744"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d01a9358-de20-48bd-943c-3f1a51a2c0a8/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A59Z%2F-1%2F%2F298fe7ab2f3f288c2c23167b4c836095a78bfd2828d1e1cec17176f99d54d4d8"
+    ]
+  }
+}

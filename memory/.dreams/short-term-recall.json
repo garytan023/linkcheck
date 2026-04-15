@@ -1,0 +1,218 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-13T11:56:24.732Z",
+  "entries": {
+    "memory:memory/2026-03-31.md:48:59": {
+      "key": "memory:memory/2026-03-31.md:48:59",
+      "path": "memory/2026-03-31.md",
+      "startLine": 48,
+      "endLine": 59,
+      "source": "memory",
+      "snippet": "- 🟡 memory_search embedding 401 未修复（降级到文件+LCM 可用） - ⏳ 小诊视频 12 下载补跑 *本记录由 daily-memory-refresh cron（02:30）自动生成* --- # 日记 | 2026-03-31 > 拉小风视角 · 主控协调与跨Agent全局管控 ## 今日概览",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.5651550516486168,
+      "maxScore": 0.5651550516486168,
+      "firstRecalledAt": "2026-04-08T02:27:06.546Z",
+      "lastRecalledAt": "2026-04-08T02:27:06.546Z",
+      "queryHashes": [
+        "32567bde442d"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "embedding",
+        "memory-search",
+        "daily-memory-refresh",
+        "修复",
+        "降级",
+        "文件",
+        "lcm",
+        "可用"
+      ]
+    },
+    "memory:memory/2026-03-31.md:81:83": {
+      "key": "memory:memory/2026-03-31.md:81:83",
+      "path": "memory/2026-03-31.md",
+      "startLine": 81,
+      "endLine": 83,
+      "source": "memory",
+      "snippet": "Gary 发了一张会议截图，我解析后直接写进 Obsidian vault 的\"抖音\"文件夹，文件名 `OPPO新品抖音营销会议笔记-2026-03-31.md`，并打开确认写入成功。Gary 扔张图就能存档，这个流程跑通了。 **✅ la_xiao_chuang 海报三版迭代完成**",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.5633457541465758,
+      "maxScore": 0.5633457541465758,
+      "firstRecalledAt": "2026-04-13T11:54:54.062Z",
+      "lastRecalledAt": "2026-04-13T11:54:54.062Z",
+      "queryHashes": [
+        "85af452323db"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "oppo新品抖音营销会议笔记-2026-03-31.md",
+        "la-xiao-chuang",
+        "gary",
+        "一张",
+        "会议",
+        "解析",
+        "直接",
+        "写进"
+      ]
+    },
+    "memory:../workspace-assistant/memory/2026-04-04.md:94:97": {
+      "key": "memory:../workspace-assistant/memory/2026-04-04.md:94:97",
+      "path": "../workspace-assistant/memory/2026-04-04.md",
+      "startLine": 94,
+      "endLine": 97,
+      "source": "memory",
+      "snippet": "la_xiao_chuang / la_xiao_shu / la_xiao_zhi / la_xiao_zhen 今日日记完全未输出，Gary 的创意设计、信息知识、统筹协调三条工作线的数据今日空白。建议本周内触发补跑，或在下一次正常运行时附加\"补昨日\"逻辑。 ### 4. Obsidian vault 双向打通后主助理应主动利用 Obsidian CLI 已确认可用，主助理（我）可以直接读写 Gary 的 Obsidian 笔记。以后 Gary 提到\"我之前写过/记过 XX\"，应优先查询 Obsidian，而非只依赖 memory_search。",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "totalScore": 1.1111438915133476,
+      "maxScore": 0.5655486062169075,
+      "firstRecalledAt": "2026-04-13T11:54:54.062Z",
+      "lastRecalledAt": "2026-04-13T11:56:24.732Z",
+      "queryHashes": [
+        "85af452323db",
+        "9da375459c0b"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "la-xiao-chuang",
+        "la-xiao-shu",
+        "la-xiao-zhi",
+        "la-xiao-zhen",
+        "我之前写过/记过",
+        "memory-search",
+        "今日",
+        "日记"
+      ]
+    },
+    "memory:memory/2026-04-04.md:1:12": {
+      "key": "memory:memory/2026-04-04.md:1:12",
+      "path": "memory/2026-04-04.md",
+      "startLine": 1,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "# 2026-04-04 ## 00:01 - Gary 让记录今天日记。 - 今晚把 exec 权限问题终于打通，`exec` 从 `allowlist miss` 恢复可用。 - 确认 Obsidian CLI 已可用： - Obsidian 版本 `1.12.7` - CLI 可正常连接 - 当前 vault：`/Users/garytan/Documents/garytan` - 结论：obsidian-cli 这条线已经跑通，后续可以直接用来读写 Gary 的 Obsidian 笔记。 ## 今日备注",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "totalScore": 1.1358907237648963,
+      "maxScore": 0.5945605143904685,
+      "firstRecalledAt": "2026-04-13T11:54:54.062Z",
+      "lastRecalledAt": "2026-04-13T11:56:24.732Z",
+      "queryHashes": [
+        "85af452323db",
+        "9da375459c0b"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "1.12.7",
+        "users/garytan/documents/garytan",
+        "obsidian-cli",
+        "gary",
+        "记录",
+        "今天",
+        "日记",
+        "今晚"
+      ]
+    },
+    "memory:../workspace-assistant/memory/2026-04-04.md:97:103": {
+      "key": "memory:../workspace-assistant/memory/2026-04-04.md:97:103",
+      "path": "../workspace-assistant/memory/2026-04-04.md",
+      "startLine": 97,
+      "endLine": 103,
+      "source": "memory",
+      "snippet": "Obsidian CLI 已确认可用，主助理（我）可以直接读写 Gary 的 Obsidian 笔记。以后 Gary 提到\"我之前写过/记过 XX\"，应优先查询 Obsidian，而非只依赖 memory_search。 ### 5. 飞书消息去重机制最终方案 建议在下次飞书 channel 规则更新中彻底解决重复入队问题，可考虑：消息 hash 去重（本地）+ 消费位点幂等校验。 ---",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.5405057892203331,
+      "maxScore": 0.5405057892203331,
+      "firstRecalledAt": "2026-04-13T11:54:54.062Z",
+      "lastRecalledAt": "2026-04-13T11:54:54.062Z",
+      "queryHashes": [
+        "85af452323db"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "我之前写过/记过",
+        "memory-search",
+        "obsidian",
+        "cli",
+        "确认",
+        "可用",
+        "助理",
+        "可以"
+      ]
+    },
+    "memory:memory/2026-04-04.md:14:23": {
+      "key": "memory:memory/2026-04-04.md:14:23",
+      "path": "memory/2026-04-04.md",
+      "startLine": 14,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "- 不过本地关键能力有实质进展：exec 恢复、Obsidian CLI 打通。 # 2026-04-04 ## 00:01 - Gary 让记录今天日记。 - 今晚把 exec 权限问题终于打通，`exec` 从 `allowlist miss` 恢复可用。 - 确认 Obsidian CLI 已可用： - Obsidian 版本 `1.12.7` - CLI 可正常连接 - 当前 vault：`/Users/garytan/Documents/garytan`",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.6143809728324413,
+      "maxScore": 0.6143809728324413,
+      "firstRecalledAt": "2026-04-13T11:56:24.732Z",
+      "lastRecalledAt": "2026-04-13T11:56:24.732Z",
+      "queryHashes": [
+        "9da375459c0b"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "1.12.7",
+        "users/garytan/documents/garytan",
+        "不过",
+        "本地",
+        "关键",
+        "能力",
+        "实质",
+        "进展"
+      ]
+    },
+    "memory:memory/2026-04-04.md:22:30": {
+      "key": "memory:memory/2026-04-04.md:22:30",
+      "path": "memory/2026-04-04.md",
+      "startLine": 22,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "- CLI 可正常连接 - 当前 vault：`/Users/garytan/Documents/garytan` - 结论：obsidian-cli 这条线已经跑通，后续可以直接用来读写 Gary 的 Obsidian 笔记。 ## 今日备注 - 今天系统整体状态不太健康，多个 isolated cron 因 LLM timeout 连续失败。 - 不过本地关键能力有实质进展：exec 恢复、Obsidian CLI 打通。 ## 23:31 修复（拉小风）",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.5907027825713157,
+      "maxScore": 0.5907027825713157,
+      "firstRecalledAt": "2026-04-13T11:56:24.732Z",
+      "lastRecalledAt": "2026-04-13T11:56:24.732Z",
+      "queryHashes": [
+        "9da375459c0b"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "users/garytan/documents/garytan",
+        "obsidian-cli",
+        "cli",
+        "正常",
+        "连接",
+        "当前",
+        "vault",
+        "users"
+      ]
+    }
+  }
+}

@@ -1,0 +1,731 @@
+{
+  "logId": "a56b4d4e-5114-483b-8317-c0805bb31934",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "header_image",
+              "block_content": "",
+              "block_bbox": [
+                2470,
+                56,
+                2798,
+                216
+              ],
+              "block_id": 0,
+              "block_order": null,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  2470.0,
+                  56.0
+                ],
+                [
+                  2798.0,
+                  56.0
+                ],
+                [
+                  2798.0,
+                  216.0
+                ],
+                [
+                  2470.0,
+                  216.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "让爆品长红！\nGOODS上新模型\n助力安幕希新品破圈再增长",
+              "block_bbox": [
+                109,
+                207,
+                1568,
+                741
+              ],
+              "block_id": 1,
+              "block_order": 1,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  109.0,
+                  207.0
+                ],
+                [
+                  1568.0,
+                  207.0
+                ],
+                [
+                  1568.0,
+                  741.0
+                ],
+                [
+                  109.0,
+                  741.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "新\n安慕希\n清甜菠萝",
+              "block_bbox": [
+                171,
+                1399,
+                350,
+                1525
+              ],
+              "block_id": 2,
+              "block_order": 2,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  171.0,
+                  1399.0
+                ],
+                [
+                  350.0,
+                  1399.0
+                ],
+                [
+                  350.0,
+                  1525.0
+                ],
+                [
+                  171.0,
+                  1525.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "groupm 群邑电商 | 2023",
+              "block_bbox": [
+                132,
+                801,
+                903,
+                890
+              ],
+              "block_id": 3,
+              "block_order": 3,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  132.0,
+                  801.0
+                ],
+                [
+                  903.0,
+                  801.0
+                ],
+                [
+                  903.0,
+                  890.0
+                ],
+                [
+                  132.0,
+                  890.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "登慕希清甜菠萝",
+              "block_bbox": [
+                53,
+                1381,
+                113,
+                1617
+              ],
+              "block_id": 4,
+              "block_order": 4,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  53.0,
+                  1381.0
+                ],
+                [
+                  113.0,
+                  1381.0
+                ],
+                [
+                  113.0,
+                  1617.0
+                ],
+                [
+                  53.0,
+                  1617.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "安慕希甜郁芒果酸\n安慕希\n甜郁芒果",
+              "block_bbox": [
+                564,
+                1382,
+                608,
+                1619
+              ],
+              "block_id": 5,
+              "block_order": 5,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  564.0,
+                  1382.0
+                ],
+                [
+                  608.0,
+                  1382.0
+                ],
+                [
+                  608.0,
+                  1619.0
+                ],
+                [
+                  564.0,
+                  1619.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "",
+              "block_bbox": [
+                649,
+                1452,
+                807,
+                1552
+              ],
+              "block_id": 6,
+              "block_order": 6,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  649.0,
+                  1452.0
+                ],
+                [
+                  807.0,
+                  1452.0
+                ],
+                [
+                  807.0,
+                  1552.0
+                ],
+                [
+                  649.0,
+                  1552.0
+                ]
+              ]
+            },
+            {
+              "block_label": "image",
+              "block_content": "",
+              "block_bbox": [
+                1001,
+                915,
+                1401,
+                1617
+              ],
+              "block_id": 7,
+              "block_order": null,
+              "group_id": 7,
+              "block_polygon_points": [
+                [
+                  1001.0,
+                  915.0
+                ],
+                [
+                  1401.0,
+                  915.0
+                ],
+                [
+                  1401.0,
+                  1617.0
+                ],
+                [
+                  1001.0,
+                  1617.0
+                ]
+              ]
+            },
+            {
+              "block_label": "header",
+              "block_content": "北京2022年冬奥会官方合作伙伴\nOfficial Partner of the Olympic Winter Games Beijing 2022",
+              "block_bbox": [
+                2495,
+                230,
+                2770,
+                271
+              ],
+              "block_id": 8,
+              "block_order": null,
+              "group_id": 8,
+              "block_polygon_points": [
+                [
+                  2495.0,
+                  230.0
+                ],
+                [
+                  2770.0,
+                  230.0
+                ],
+                [
+                  2770.0,
+                  271.0
+                ],
+                [
+                  2495.0,
+                  271.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "安慕希修文猕猴桃",
+              "block_bbox": [
+                2473,
+                1351,
+                2521,
+                1619
+              ],
+              "block_id": 9,
+              "block_order": 7,
+              "group_id": 9,
+              "block_polygon_points": [
+                [
+                  2473.0,
+                  1351.0
+                ],
+                [
+                  2521.0,
+                  1351.0
+                ],
+                [
+                  2521.0,
+                  1619.0
+                ],
+                [
+                  2473.0,
+                  1619.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "安慕希 $ ^{®} $\n修文猕猴桃",
+              "block_bbox": [
+                2573,
+                1360,
+                2723,
+                1449
+              ],
+              "block_id": 10,
+              "block_order": 8,
+              "group_id": 10,
+              "block_polygon_points": [
+                [
+                  2573.0,
+                  1360.0
+                ],
+                [
+                  2723.0,
+                  1360.0
+                ],
+                [
+                  2723.0,
+                  1449.0
+                ],
+                [
+                  2573.0,
+                  1449.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.8496332764625549,
+                "coordinate": [
+                  2470,
+                  56,
+                  2798,
+                  216
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2470.0,
+                    56.0
+                  ],
+                  [
+                    2798.0,
+                    56.0
+                  ],
+                  [
+                    2798.0,
+                    216.0
+                  ],
+                  [
+                    2470.0,
+                    216.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7851357460021973,
+                "coordinate": [
+                  109,
+                  207,
+                  1568,
+                  741
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    109.0,
+                    207.0
+                  ],
+                  [
+                    1568.0,
+                    207.0
+                  ],
+                  [
+                    1568.0,
+                    741.0
+                  ],
+                  [
+                    109.0,
+                    741.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6435762047767639,
+                "coordinate": [
+                  171,
+                  1399,
+                  350,
+                  1525
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    171.0,
+                    1399.0
+                  ],
+                  [
+                    350.0,
+                    1399.0
+                  ],
+                  [
+                    350.0,
+                    1525.0
+                  ],
+                  [
+                    171.0,
+                    1525.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8559527397155762,
+                "coordinate": [
+                  132,
+                  801,
+                  903,
+                  890
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    132.0,
+                    801.0
+                  ],
+                  [
+                    903.0,
+                    801.0
+                  ],
+                  [
+                    903.0,
+                    890.0
+                  ],
+                  [
+                    132.0,
+                    890.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.32222822308540344,
+                "coordinate": [
+                  53,
+                  1381,
+                  113,
+                  1617
+                ],
+                "order": 4,
+                "polygon_points": [
+                  [
+                    53.0,
+                    1381.0
+                  ],
+                  [
+                    113.0,
+                    1381.0
+                  ],
+                  [
+                    113.0,
+                    1617.0
+                  ],
+                  [
+                    53.0,
+                    1617.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.44253039360046387,
+                "coordinate": [
+                  564,
+                  1382,
+                  608,
+                  1619
+                ],
+                "order": 5,
+                "polygon_points": [
+                  [
+                    564.0,
+                    1382.0
+                  ],
+                  [
+                    608.0,
+                    1382.0
+                  ],
+                  [
+                    608.0,
+                    1619.0
+                  ],
+                  [
+                    564.0,
+                    1619.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8047343492507935,
+                "coordinate": [
+                  649,
+                  1452,
+                  807,
+                  1552
+                ],
+                "order": 6,
+                "polygon_points": [
+                  [
+                    649.0,
+                    1452.0
+                  ],
+                  [
+                    807.0,
+                    1452.0
+                  ],
+                  [
+                    807.0,
+                    1552.0
+                  ],
+                  [
+                    649.0,
+                    1552.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.392939954996109,
+                "coordinate": [
+                  1001,
+                  915,
+                  1401,
+                  1617
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1001.0,
+                    915.0
+                  ],
+                  [
+                    1401.0,
+                    915.0
+                  ],
+                  [
+                    1401.0,
+                    1617.0
+                  ],
+                  [
+                    1001.0,
+                    1617.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.5415879487991333,
+                "coordinate": [
+                  2495,
+                  230,
+                  2770,
+                  271
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2495.0,
+                    230.0
+                  ],
+                  [
+                    2770.0,
+                    230.0
+                  ],
+                  [
+                    2770.0,
+                    271.0
+                  ],
+                  [
+                    2495.0,
+                    271.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.39426809549331665,
+                "coordinate": [
+                  2473,
+                  1351,
+                  2521,
+                  1619
+                ],
+                "order": 7,
+                "polygon_points": [
+                  [
+                    2473.0,
+                    1351.0
+                  ],
+                  [
+                    2521.0,
+                    1351.0
+                  ],
+                  [
+                    2521.0,
+                    1619.0
+                  ],
+                  [
+                    2473.0,
+                    1619.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6229920387268066,
+                "coordinate": [
+                  2573,
+                  1360,
+                  2723,
+                  1449
+                ],
+                "order": 8,
+                "polygon_points": [
+                  [
+                    2573.0,
+                    1360.0
+                  ],
+                  [
+                    2723.0,
+                    1360.0
+                  ],
+                  [
+                    2723.0,
+                    1449.0
+                  ],
+                  [
+                    2573.0,
+                    1449.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## 让爆品长红！ GOODS上新模型 助力安幕希新品破圈再增长\n\n新\n\n安慕希\n\n清甜菠萝\n\ngroupm 群邑电商 | 2023\n\n登慕希清甜菠萝\n\n安慕希甜郁芒果酸\n\n安慕希\n\n甜郁芒果\n\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1001_915_1401_1617.jpg\" alt=\"Image\" width=\"13%\" /></div>\n\n\n安慕希修文猕猴桃\n\n安慕希 $ ^{®} $\n\n修文猕猴桃",
+          "images": {
+            "imgs/img_in_header_image_box_2470_56_2798_216.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//bf4f4698-7c3f-4988-b0ad-caa4948e6ca4/markdown_0/imgs/img_in_header_image_box_2470_56_2798_216.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A34%3A53Z%2F-1%2F%2F565c787dfdcdb8a3865e75cd3f7fa6ccf2d9df9dfa762b3c1de60515d8003322",
+            "imgs/img_in_image_box_1001_915_1401_1617.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//bf4f4698-7c3f-4988-b0ad-caa4948e6ca4/markdown_0/imgs/img_in_image_box_1001_915_1401_1617.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A34%3A54Z%2F-1%2F%2Fadd07e5af7e01b2b92da3d704da8a1c0a09194b05ea66a055b70cea93a1417cf"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//bf4f4698-7c3f-4988-b0ad-caa4948e6ca4/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A34%3A54Z%2F-1%2F%2Fb318a5d4bab05d3d796f4406f2da3c00a3fc5bc3c5a8ff3fccddd4650a74802c"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//bf4f4698-7c3f-4988-b0ad-caa4948e6ca4/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A34%3A55Z%2F-1%2F%2Ffd2ab30f2ff05bb0effbdcc9f9cbfebad85eefd9fb6fd97acb981d95e5e4f1e7"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//bf4f4698-7c3f-4988-b0ad-caa4948e6ca4/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A34%3A55Z%2F-1%2F%2Fa5f42610f5491ffdcf2d0ed6564fbf961bed764b61714946ed929d483e0ebf52"
+    ]
+  }
+}

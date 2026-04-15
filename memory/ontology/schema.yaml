@@ -99,21 +99,27 @@ relations:
     from_types:
     - Agent
     - System
+    - Person
     to_types:
     - Rule
     cardinality: many_to_many
   documents:
     from_types:
+    - Session
     - Document
+    - SummaryNote
+    - Rule
     to_types:
     - Project
     - System
     - Rule
+    - Agent
     cardinality: many_to_many
   about:
     from_types:
     - Session
     - Document
+    - SummaryNote
     to_types:
     - Topic
     - Project

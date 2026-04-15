@@ -1,0 +1,242 @@
+{
+  "logId": "45f63f1c-8bdd-474d-b58a-bb166bbacddd",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "header_image",
+              "block_content": "",
+              "block_bbox": [
+                86,
+                56,
+                385,
+                147
+              ],
+              "block_id": 0,
+              "block_order": null,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  86.0,
+                  56.0
+                ],
+                [
+                  385.0,
+                  56.0
+                ],
+                [
+                  385.0,
+                  147.0
+                ],
+                [
+                  86.0,
+                  147.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "PART 01",
+              "block_bbox": [
+                567,
+                319,
+                766,
+                376
+              ],
+              "block_id": 1,
+              "block_order": 1,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  567.0,
+                  319.0
+                ],
+                [
+                  766.0,
+                  319.0
+                ],
+                [
+                  766.0,
+                  376.0
+                ],
+                [
+                  567.0,
+                  376.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "趋势洞察\n与经营策略",
+              "block_bbox": [
+                251,
+                412,
+                1090,
+                785
+              ],
+              "block_id": 2,
+              "block_order": 2,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  251.0,
+                  412.0
+                ],
+                [
+                  1090.0,
+                  412.0
+                ],
+                [
+                  1090.0,
+                  785.0
+                ],
+                [
+                  251.0,
+                  785.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.864717423915863,
+                "coordinate": [
+                  86,
+                  56,
+                  385,
+                  147
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    86.0,
+                    56.0
+                  ],
+                  [
+                    385.0,
+                    56.0
+                  ],
+                  [
+                    385.0,
+                    147.0
+                  ],
+                  [
+                    86.0,
+                    147.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5927601456642151,
+                "coordinate": [
+                  567,
+                  319,
+                  766,
+                  376
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    567.0,
+                    319.0
+                  ],
+                  [
+                    766.0,
+                    319.0
+                  ],
+                  [
+                    766.0,
+                    376.0
+                  ],
+                  [
+                    567.0,
+                    376.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.871752917766571,
+                "coordinate": [
+                  251,
+                  412,
+                  1090,
+                  785
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    251.0,
+                    412.0
+                  ],
+                  [
+                    1090.0,
+                    412.0
+                  ],
+                  [
+                    1090.0,
+                    785.0
+                  ],
+                  [
+                    251.0,
+                    785.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## PART 01\n\n## 趋势洞察 与经营策略",
+          "images": {
+            "imgs/img_in_header_image_box_86_56_385_147.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//9f27040c-28fb-4fb4-9ccf-68b1297cb06d/markdown_0/imgs/img_in_header_image_box_86_56_385_147.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A14%3A23Z%2F-1%2F%2F1a94df3eb49efddc2a87b8ab20f538208f6e6eee1fd2872a1e8663b0a156d78d"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//9f27040c-28fb-4fb4-9ccf-68b1297cb06d/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A14%3A24Z%2F-1%2F%2F9d1c5a1611bcb436c9f50a193a3a7a27f9a3e9145ea1d0a3db51038054c50859"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//9f27040c-28fb-4fb4-9ccf-68b1297cb06d/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A14%3A24Z%2F-1%2F%2F507790bdb84629def707a447fa4807dd5ddf86ee60e4e938890c79014afc5bbf"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//9f27040c-28fb-4fb4-9ccf-68b1297cb06d/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A14%3A24Z%2F-1%2F%2Fcb0fc10d98dd2708c0340ba3ef9762f921f3f18efebac1487c883a83212ee52c"
+    ]
+  }
+}

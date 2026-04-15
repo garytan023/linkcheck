@@ -1,0 +1,829 @@
+[
+  {
+    "name": "agent-browser",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "agent-memory",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "agent-reach",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "agent-reach-setup",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "ai-marketing-claude-code-skills",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "anthropic",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "baoyu-url-to-markdown",
+    "in_public": true,
+    "in_overlay": true,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "brave-api-search",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "china-ads-audit",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "claude-search-skill",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "coding",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "daily-digest",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "daily-news-digest",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [],
+    "layer_judgement": "public",
+    "needs_attention": true
+  },
+  {
+    "name": "daily-news-sync",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "data-analysis",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "ddg-web-search",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "douyin-batch-analyzer",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "douyin-downloader",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "ecommerce-creative-analyst",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "faster-whisper-transcribe",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "file-manager",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "find-skills",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "gogcli",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "hot-topic-ideator",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "ima-skills",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "jd-product-check",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "knowledge-compiler",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "memory-setup",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "memory-tiering",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "microsoft-excel",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "nano-banana-pro",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "notion",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "obsidian-cli",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "ocr-local",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [],
+    "layer_judgement": "public",
+    "needs_attention": true
+  },
+  {
+    "name": "ontology",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "openai-image-gen",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "openai-whisper",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "openclaw-backup",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "openclaw-skill-vetter",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "openclaw-tavily-search",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "paddle-layout",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [],
+    "layer_judgement": "public",
+    "needs_attention": true
+  },
+  {
+    "name": "playwright-scraper-skill",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "proactive-agent-skill",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "qwen-image",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "self-improvement",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "self-improving",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "sell-video-audit",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "skill-creator",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "skill-vetter",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "summarize",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "superpower",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "tavily-search",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "tencent-ads-assistant",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "vision",
+    "in_public": true,
+    "in_overlay": true,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "web-search-exa",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "xhs-ad-analyst",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [
+      "la_xiao_chuang",
+      "la_xiao_ma",
+      "la_xiao_shu",
+      "la_xiao_tou",
+      "la_xiao_zhen",
+      "la_xiao_zhi"
+    ],
+    "layer_judgement": "public",
+    "needs_attention": false
+  },
+  {
+    "name": "xiaohongshu-video-to-markdown",
+    "in_public": true,
+    "in_overlay": false,
+    "agents": [],
+    "layer_judgement": "public",
+    "needs_attention": true
+  }
+]

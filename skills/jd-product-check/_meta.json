@@ -1,0 +1,7 @@
+{
+  "name": "jd-product-check",
+  "version": "1.0.0",
+  "description": "JD.com product data extraction and report generation tool",
+  "author": "custom",
+  "tags": ["jd", "ecommerce", "product-data", "scraper"]
+}

@@ -1,0 +1,240 @@
+{
+  "logId": "1cc3e39a-046e-48f4-8cab-71098164e7dd",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "paragraph_title",
+              "block_content": "ONLINE SHOPPING",
+              "block_bbox": [
+                1201,
+                139,
+                2697,
+                289
+              ],
+              "block_id": 0,
+              "block_order": 1,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  1201.0,
+                  139.0
+                ],
+                [
+                  2697.0,
+                  139.0
+                ],
+                [
+                  2697.0,
+                  289.0
+                ],
+                [
+                  1201.0,
+                  289.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "PART 1\n2023年618消费前瞻\nBUY",
+              "block_bbox": [
+                207,
+                472,
+                1861,
+                1302
+              ],
+              "block_id": 1,
+              "block_order": 2,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  207.0,
+                  472.0
+                ],
+                [
+                  1861.0,
+                  472.0
+                ],
+                [
+                  1861.0,
+                  1302.0
+                ],
+                [
+                  207.0,
+                  1302.0
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "KANTAR MARKETPLACE",
+              "block_bbox": [
+                74,
+                1495,
+                853,
+                1570
+              ],
+              "block_id": 2,
+              "block_order": null,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  74.0,
+                  1495.0
+                ],
+                [
+                  853.0,
+                  1495.0
+                ],
+                [
+                  853.0,
+                  1570.0
+                ],
+                [
+                  74.0,
+                  1570.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7655408978462219,
+                "coordinate": [
+                  1201,
+                  139,
+                  2697,
+                  289
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    1201.0,
+                    139.0
+                  ],
+                  [
+                    2697.0,
+                    139.0
+                  ],
+                  [
+                    2697.0,
+                    289.0
+                  ],
+                  [
+                    1201.0,
+                    289.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.3147653639316559,
+                "coordinate": [
+                  207,
+                  472,
+                  1861,
+                  1302
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    207.0,
+                    472.0
+                  ],
+                  [
+                    1861.0,
+                    472.0
+                  ],
+                  [
+                    1861.0,
+                    1302.0
+                  ],
+                  [
+                    207.0,
+                    1302.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.7998878359794617,
+                "coordinate": [
+                  74,
+                  1495,
+                  853,
+                  1570
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    74.0,
+                    1495.0
+                  ],
+                  [
+                    853.0,
+                    1495.0
+                  ],
+                  [
+                    853.0,
+                    1570.0
+                  ],
+                  [
+                    74.0,
+                    1570.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## ONLINE SHOPPING\n\n## PART 1 2023年618消费前瞻 BUY",
+          "images": {}
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//3cbd6838-d64d-4b06-bd5d-dc647545866d/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A39Z%2F-1%2F%2Fa6b8647e1732e4864630179146c12ba63d0863a74c80f94817c91ce31864e4b2"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//3cbd6838-d64d-4b06-bd5d-dc647545866d/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A40Z%2F-1%2F%2Fb21927305510bfa55b9a4faef3697caa20c967592985193371e399bc4cafcc60"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//3cbd6838-d64d-4b06-bd5d-dc647545866d/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A40Z%2F-1%2F%2F3aac05ddac37348c2ebd953d08043825608559e9d23907e6b7d096b06e0c98c6"
+    ]
+  }
+}

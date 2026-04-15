@@ -1,0 +1,242 @@
+{
+  "logId": "0d58b6c6-cfa9-470b-9755-1ac7530e12f4",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "header_image",
+              "block_content": "",
+              "block_bbox": [
+                2627,
+                37,
+                2817,
+                133
+              ],
+              "block_id": 0,
+              "block_order": null,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  2627.0,
+                  37.0
+                ],
+                [
+                  2817.0,
+                  37.0
+                ],
+                [
+                  2817.0,
+                  133.0
+                ],
+                [
+                  2627.0,
+                  133.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "感谢聆听",
+              "block_bbox": [
+                998,
+                693,
+                1859,
+                906
+              ],
+              "block_id": 1,
+              "block_order": 1,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  998.0,
+                  693.0
+                ],
+                [
+                  1859.0,
+                  693.0
+                ],
+                [
+                  1859.0,
+                  906.0
+                ],
+                [
+                  998.0,
+                  906.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "JDR 平台营销中心 2026年",
+              "block_bbox": [
+                1107,
+                1097,
+                1774,
+                1157
+              ],
+              "block_id": 2,
+              "block_order": 2,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  1107.0,
+                  1097.0
+                ],
+                [
+                  1774.0,
+                  1097.0
+                ],
+                [
+                  1774.0,
+                  1157.0
+                ],
+                [
+                  1107.0,
+                  1157.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.3231102526187897,
+                "coordinate": [
+                  2627,
+                  37,
+                  2817,
+                  133
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2627.0,
+                    37.0
+                  ],
+                  [
+                    2817.0,
+                    37.0
+                  ],
+                  [
+                    2817.0,
+                    133.0
+                  ],
+                  [
+                    2627.0,
+                    133.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9082733988761902,
+                "coordinate": [
+                  998,
+                  693,
+                  1859,
+                  906
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    998.0,
+                    693.0
+                  ],
+                  [
+                    1859.0,
+                    693.0
+                  ],
+                  [
+                    1859.0,
+                    906.0
+                  ],
+                  [
+                    998.0,
+                    906.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8419814109802246,
+                "coordinate": [
+                  1107,
+                  1097,
+                  1774,
+                  1157
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    1107.0,
+                    1097.0
+                  ],
+                  [
+                    1774.0,
+                    1097.0
+                  ],
+                  [
+                    1774.0,
+                    1157.0
+                  ],
+                  [
+                    1107.0,
+                    1157.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## 感谢聆听\n\nJDR 平台营销中心 2026年",
+          "images": {
+            "imgs/img_in_header_image_box_2627_37_2817_133.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//7b8594ee-e0c2-4408-af24-b4afc08b6ff1/markdown_0/imgs/img_in_header_image_box_2627_37_2817_133.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A39%3A15Z%2F-1%2F%2Fcca43b9081e2ee12443ec6cfc459c6e919eb09729177230c0bfefca45e4bbf44"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//7b8594ee-e0c2-4408-af24-b4afc08b6ff1/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A39%3A15Z%2F-1%2F%2F7d5a970b1f850ca60621d5b0624a2f542e4c5a2ebaa136049824cab84be31b76"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//7b8594ee-e0c2-4408-af24-b4afc08b6ff1/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A39%3A15Z%2F-1%2F%2F4b5c22da292fd5ec174de947e907d74af75da55334481fba3ed2414dccb11621"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//7b8594ee-e0c2-4408-af24-b4afc08b6ff1/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A39%3A16Z%2F-1%2F%2F344009e11e469825d0454d1a94cc45def8e89e84bdc7dd0738c1e8e7ee4d7ef4"
+    ]
+  }
+}

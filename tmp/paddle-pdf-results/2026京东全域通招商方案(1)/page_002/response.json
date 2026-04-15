@@ -1,0 +1,852 @@
+{
+  "logId": "ac893b1d-f710-40a7-8f35-d61b8c8d368d",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "header_image",
+              "block_content": "",
+              "block_bbox": [
+                48,
+                37,
+                263,
+                245
+              ],
+              "block_id": 0,
+              "block_order": null,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  48.0,
+                  37.0
+                ],
+                [
+                  263.0,
+                  37.0
+                ],
+                [
+                  263.0,
+                  245.0
+                ],
+                [
+                  48.0,
+                  245.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "京东全域通",
+              "block_bbox": [
+                1102,
+                95,
+                1767,
+                235
+              ],
+              "block_id": 1,
+              "block_order": 1,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  1102.0,
+                  95.0
+                ],
+                [
+                  1767.0,
+                  95.0
+                ],
+                [
+                  1767.0,
+                  235.0
+                ],
+                [
+                  1102.0,
+                  235.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "依托京东媒介采买及电商大数据能力，打造一站式全域营销解决方案",
+              "block_bbox": [
+                536,
+                286,
+                2346,
+                357
+              ],
+              "block_id": 2,
+              "block_order": 2,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  536.0,
+                  286.0
+                ],
+                [
+                  2346.0,
+                  286.0
+                ],
+                [
+                  2346.0,
+                  357.0
+                ],
+                [
+                  536.0,
+                  357.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "广覆盖",
+              "block_bbox": [
+                698,
+                614,
+                859,
+                671
+              ],
+              "block_id": 3,
+              "block_order": 3,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  698.0,
+                  614.0
+                ],
+                [
+                  859.0,
+                  614.0
+                ],
+                [
+                  859.0,
+                  671.0
+                ],
+                [
+                  698.0,
+                  671.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "全域媒体深度整合",
+              "block_bbox": [
+                480,
+                728,
+                1064,
+                814
+              ],
+              "block_id": 4,
+              "block_order": 4,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  480.0,
+                  728.0
+                ],
+                [
+                  1064.0,
+                  728.0
+                ],
+                [
+                  1064.0,
+                  814.0
+                ],
+                [
+                  480.0,
+                  814.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "主流媒体跨平台联投",
+              "block_bbox": [
+                562,
+                939,
+                986,
+                995
+              ],
+              "block_id": 5,
+              "block_order": 5,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  562.0,
+                  939.0
+                ],
+                [
+                  986.0,
+                  939.0
+                ],
+                [
+                  986.0,
+                  995.0
+                ],
+                [
+                  562.0,
+                  995.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "稀缺开屏资源全域曝光",
+              "block_bbox": [
+                569,
+                1047,
+                1028,
+                1102
+              ],
+              "block_id": 6,
+              "block_order": 6,
+              "group_id": 6,
+              "block_polygon_points": [
+                [
+                  569.0,
+                  1047.0
+                ],
+                [
+                  1028.0,
+                  1047.0
+                ],
+                [
+                  1028.0,
+                  1102.0
+                ],
+                [
+                  569.0,
+                  1102.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "大促期流量有保障",
+              "block_bbox": [
+                569,
+                1162,
+                943,
+                1217
+              ],
+              "block_id": 7,
+              "block_order": 7,
+              "group_id": 7,
+              "block_polygon_points": [
+                [
+                  569.0,
+                  1162.0
+                ],
+                [
+                  943.0,
+                  1162.0
+                ],
+                [
+                  943.0,
+                  1217.0
+                ],
+                [
+                  569.0,
+                  1217.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "深渗透",
+              "block_bbox": [
+                1995,
+                613,
+                2153,
+                671
+              ],
+              "block_id": 8,
+              "block_order": 8,
+              "group_id": 8,
+              "block_polygon_points": [
+                [
+                  1995.0,
+                  613.0
+                ],
+                [
+                  2153.0,
+                  613.0
+                ],
+                [
+                  2153.0,
+                  671.0
+                ],
+                [
+                  1995.0,
+                  671.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "100%TA浓度",
+              "block_bbox": [
+                1850,
+                730,
+                2299,
+                811
+              ],
+              "block_id": 9,
+              "block_order": 9,
+              "group_id": 9,
+              "block_polygon_points": [
+                [
+                  1850.0,
+                  730.0
+                ],
+                [
+                  2299.0,
+                  730.0
+                ],
+                [
+                  2299.0,
+                  811.0
+                ],
+                [
+                  1850.0,
+                  811.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "100%京东/一方人群触达",
+              "block_bbox": [
+                1919,
+                933,
+                2404,
+                990
+              ],
+              "block_id": 10,
+              "block_order": 10,
+              "group_id": 10,
+              "block_polygon_points": [
+                [
+                  1919.0,
+                  933.0
+                ],
+                [
+                  2404.0,
+                  933.0
+                ],
+                [
+                  2404.0,
+                  990.0
+                ],
+                [
+                  1919.0,
+                  990.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "保价保量成本可控",
+              "block_bbox": [
+                1891,
+                1041,
+                2269,
+                1097
+              ],
+              "block_id": 11,
+              "block_order": 11,
+              "group_id": 11,
+              "block_polygon_points": [
+                [
+                  1891.0,
+                  1041.0
+                ],
+                [
+                  2269.0,
+                  1041.0
+                ],
+                [
+                  2269.0,
+                  1097.0
+                ],
+                [
+                  1891.0,
+                  1097.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "联合频控更高效",
+              "block_bbox": [
+                1907,
+                1157,
+                2227,
+                1213
+              ],
+              "block_id": 12,
+              "block_order": 12,
+              "group_id": 12,
+              "block_polygon_points": [
+                [
+                  1920.999755859375,
+                  1156.9998779296875
+                ],
+                [
+                  2225.999755859375,
+                  1156.9998779296875
+                ],
+                [
+                  2225.999755859375,
+                  1211.9998779296875
+                ],
+                [
+                  1920.999755859375,
+                  1211.9998779296875
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.3055298626422882,
+                "coordinate": [
+                  48,
+                  37,
+                  263,
+                  245
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    48.0,
+                    37.0
+                  ],
+                  [
+                    263.0,
+                    37.0
+                  ],
+                  [
+                    263.0,
+                    245.0
+                  ],
+                  [
+                    48.0,
+                    245.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9165838956832886,
+                "coordinate": [
+                  1102,
+                  95,
+                  1767,
+                  235
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    1102.0,
+                    95.0
+                  ],
+                  [
+                    1767.0,
+                    95.0
+                  ],
+                  [
+                    1767.0,
+                    235.0
+                  ],
+                  [
+                    1102.0,
+                    235.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6067422032356262,
+                "coordinate": [
+                  536,
+                  286,
+                  2346,
+                  357
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    536.0,
+                    286.0
+                  ],
+                  [
+                    2346.0,
+                    286.0
+                  ],
+                  [
+                    2346.0,
+                    357.0
+                  ],
+                  [
+                    536.0,
+                    357.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.4520983099937439,
+                "coordinate": [
+                  698,
+                  614,
+                  859,
+                  671
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    698.0,
+                    614.0
+                  ],
+                  [
+                    859.0,
+                    614.0
+                  ],
+                  [
+                    859.0,
+                    671.0
+                  ],
+                  [
+                    698.0,
+                    671.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6390699148178101,
+                "coordinate": [
+                  480,
+                  728,
+                  1064,
+                  814
+                ],
+                "order": 4,
+                "polygon_points": [
+                  [
+                    480.0,
+                    728.0
+                  ],
+                  [
+                    1064.0,
+                    728.0
+                  ],
+                  [
+                    1064.0,
+                    814.0
+                  ],
+                  [
+                    480.0,
+                    814.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8014196753501892,
+                "coordinate": [
+                  562,
+                  939,
+                  986,
+                  995
+                ],
+                "order": 5,
+                "polygon_points": [
+                  [
+                    562.0,
+                    939.0
+                  ],
+                  [
+                    986.0,
+                    939.0
+                  ],
+                  [
+                    986.0,
+                    995.0
+                  ],
+                  [
+                    562.0,
+                    995.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8154934048652649,
+                "coordinate": [
+                  569,
+                  1047,
+                  1028,
+                  1102
+                ],
+                "order": 6,
+                "polygon_points": [
+                  [
+                    569.0,
+                    1047.0
+                  ],
+                  [
+                    1028.0,
+                    1047.0
+                  ],
+                  [
+                    1028.0,
+                    1102.0
+                  ],
+                  [
+                    569.0,
+                    1102.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8026642799377441,
+                "coordinate": [
+                  569,
+                  1162,
+                  943,
+                  1217
+                ],
+                "order": 7,
+                "polygon_points": [
+                  [
+                    569.0,
+                    1162.0
+                  ],
+                  [
+                    943.0,
+                    1162.0
+                  ],
+                  [
+                    943.0,
+                    1217.0
+                  ],
+                  [
+                    569.0,
+                    1217.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6299666166305542,
+                "coordinate": [
+                  1995,
+                  613,
+                  2153,
+                  671
+                ],
+                "order": 8,
+                "polygon_points": [
+                  [
+                    1995.0,
+                    613.0
+                  ],
+                  [
+                    2153.0,
+                    613.0
+                  ],
+                  [
+                    2153.0,
+                    671.0
+                  ],
+                  [
+                    1995.0,
+                    671.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.669756293296814,
+                "coordinate": [
+                  1850,
+                  730,
+                  2299,
+                  811
+                ],
+                "order": 9,
+                "polygon_points": [
+                  [
+                    1850.0,
+                    730.0
+                  ],
+                  [
+                    2299.0,
+                    730.0
+                  ],
+                  [
+                    2299.0,
+                    811.0
+                  ],
+                  [
+                    1850.0,
+                    811.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.817854106426239,
+                "coordinate": [
+                  1919,
+                  933,
+                  2404,
+                  990
+                ],
+                "order": 10,
+                "polygon_points": [
+                  [
+                    1919.0,
+                    933.0
+                  ],
+                  [
+                    2404.0,
+                    933.0
+                  ],
+                  [
+                    2404.0,
+                    990.0
+                  ],
+                  [
+                    1919.0,
+                    990.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7989007234573364,
+                "coordinate": [
+                  1891,
+                  1041,
+                  2269,
+                  1097
+                ],
+                "order": 11,
+                "polygon_points": [
+                  [
+                    1891.0,
+                    1041.0
+                  ],
+                  [
+                    2269.0,
+                    1041.0
+                  ],
+                  [
+                    2269.0,
+                    1097.0
+                  ],
+                  [
+                    1891.0,
+                    1097.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.785548746585846,
+                "coordinate": [
+                  1907,
+                  1157,
+                  2227,
+                  1213
+                ],
+                "order": 12,
+                "polygon_points": [
+                  [
+                    1920.999755859375,
+                    1156.9998779296875
+                  ],
+                  [
+                    2225.999755859375,
+                    1156.9998779296875
+                  ],
+                  [
+                    2225.999755859375,
+                    1211.9998779296875
+                  ],
+                  [
+                    1920.999755859375,
+                    1211.9998779296875
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## 京东全域通\n\n## 依托京东媒介采买及电商大数据能力，打造一站式全域营销解决方案\n\n## 广覆盖\n\n## 全域媒体深度整合\n\n主流媒体跨平台联投\n\n稀缺开屏资源全域曝光\n\n大促期流量有保障\n\n## 深渗透\n\n## 100 %TA浓度\n\n100%京东/一方人群触达\n\n保价保量成本可控\n\n联合频控更高效",
+          "images": {
+            "imgs/img_in_header_image_box_48_37_263_245.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//f2a5abba-79d4-41ab-af50-7451cbe9ce9d/markdown_0/imgs/img_in_header_image_box_48_37_263_245.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A37%3A07Z%2F-1%2F%2F60a620b1014aa9be5dc963c81bd9670e40f030d2a6a453ae7da2f1e4d5b933f1"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//f2a5abba-79d4-41ab-af50-7451cbe9ce9d/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A37%3A08Z%2F-1%2F%2F4af4eb69edf8094437ea60fa0e038a14b93d4d5a6531cbb5801414ab5bd0ca51"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//f2a5abba-79d4-41ab-af50-7451cbe9ce9d/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A37%3A08Z%2F-1%2F%2F51c56415150b8fb897d9e8ebedef9def6b892d2528913151cb1b26d10e858ba0"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//f2a5abba-79d4-41ab-af50-7451cbe9ce9d/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A37%3A08Z%2F-1%2F%2Ff11a1bec5585b5c7050ba945b583f5b420600b3e156e1e89839a90aa0275bb1d"
+    ]
+  }
+}

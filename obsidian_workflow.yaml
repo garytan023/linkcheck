@@ -1,0 +1,21 @@
+name: Obsidian 笔记整理
+steps:
+  - name: 读取新笔记
+    action: file.read
+    input: "{{vault_path}}/Inbox/*.md"
+  
+  - name: AI分析内容
+    action: llm.analyze
+    prompt: |
+      分析以下笔记内容，提取关键信息：
+      1. 主题分类
+      2. 重要标签
+      3. 核心观点摘要
+      4. 建议的存放位置
+      
+      内容：{{content}}
+  
+  - name: 移动整理
+    action: file.move
+    source: "{{file_path}}"
+    target: "{{vault_path}}/{{category}}/{{new_filename}}"

@@ -1,0 +1,7 @@
+{
+  "name": "ecommerce-creative-analyst",
+  "version": "1.0.0",
+  "description": "Diagnose e-commerce ad creative performance (CTR/CVR/ROI/ROAS/CPM) and output optimization suggestions",
+  "author": "custom",
+  "tags": ["ecommerce", "ad-creative", "analytics", "ctr", "roi"]
+}

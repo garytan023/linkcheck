@@ -1,0 +1,365 @@
+{
+  "logId": "c323e033-8f5b-4327-a209-6ee82ed81ead",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "header_image",
+              "block_content": "",
+              "block_bbox": [
+                85,
+                44,
+                341,
+                118
+              ],
+              "block_id": 0,
+              "block_order": null,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  85.0,
+                  44.0
+                ],
+                [
+                  341.0,
+                  44.0
+                ],
+                [
+                  341.0,
+                  118.0
+                ],
+                [
+                  85.0,
+                  118.0
+                ]
+              ]
+            },
+            {
+              "block_label": "aside_text",
+              "block_content": "让每一份经营都算数",
+              "block_bbox": [
+                44,
+                1174,
+                96,
+                1515
+              ],
+              "block_id": 1,
+              "block_order": null,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  44.0,
+                  1174.0
+                ],
+                [
+                  96.0,
+                  1174.0
+                ],
+                [
+                  96.0,
+                  1515.0
+                ],
+                [
+                  44.0,
+                  1515.0
+                ]
+              ]
+            },
+            {
+              "block_label": "header",
+              "block_content": "营销全景图",
+              "block_bbox": [
+                2252,
+                84,
+                2439,
+                126
+              ],
+              "block_id": 2,
+              "block_order": null,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  2252.0,
+                  84.0
+                ],
+                [
+                  2439.0,
+                  84.0
+                ],
+                [
+                  2439.0,
+                  126.0
+                ],
+                [
+                  2252.0,
+                  126.0
+                ]
+              ]
+            },
+            {
+              "block_label": "header",
+              "block_content": "经营策略",
+              "block_bbox": [
+                2547,
+                71,
+                2721,
+                118
+              ],
+              "block_id": 3,
+              "block_order": null,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  2547.0,
+                  71.0
+                ],
+                [
+                  2721.0,
+                  71.0
+                ],
+                [
+                  2721.0,
+                  118.0
+                ],
+                [
+                  2547.0,
+                  118.0
+                ]
+              ]
+            },
+            {
+              "block_label": "image",
+              "block_content": "",
+              "block_bbox": [
+                105,
+                186,
+                2806,
+                1538
+              ],
+              "block_id": 4,
+              "block_order": null,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  105.0,
+                  186.0
+                ],
+                [
+                  2806.0,
+                  186.0
+                ],
+                [
+                  2806.0,
+                  1538.0
+                ],
+                [
+                  105.0,
+                  1538.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.8769070506095886,
+                "coordinate": [
+                  85,
+                  44,
+                  341,
+                  118
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    85.0,
+                    44.0
+                  ],
+                  [
+                    341.0,
+                    44.0
+                  ],
+                  [
+                    341.0,
+                    118.0
+                  ],
+                  [
+                    85.0,
+                    118.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 2,
+                "label": "aside_text",
+                "score": 0.6739263534545898,
+                "coordinate": [
+                  44,
+                  1174,
+                  96,
+                  1515
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    44.0,
+                    1174.0
+                  ],
+                  [
+                    96.0,
+                    1174.0
+                  ],
+                  [
+                    96.0,
+                    1515.0
+                  ],
+                  [
+                    44.0,
+                    1515.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8552709817886353,
+                "coordinate": [
+                  2252,
+                  84,
+                  2439,
+                  126
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2252.0,
+                    84.0
+                  ],
+                  [
+                    2439.0,
+                    84.0
+                  ],
+                  [
+                    2439.0,
+                    126.0
+                  ],
+                  [
+                    2252.0,
+                    126.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8095529079437256,
+                "coordinate": [
+                  2547,
+                  71,
+                  2721,
+                  118
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2547.0,
+                    71.0
+                  ],
+                  [
+                    2721.0,
+                    71.0
+                  ],
+                  [
+                    2721.0,
+                    118.0
+                  ],
+                  [
+                    2547.0,
+                    118.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.9404218196868896,
+                "coordinate": [
+                  105,
+                  186,
+                  2806,
+                  1538
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    105.0,
+                    186.0
+                  ],
+                  [
+                    2806.0,
+                    186.0
+                  ],
+                  [
+                    2806.0,
+                    1538.0
+                  ],
+                  [
+                    105.0,
+                    1538.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_105_186_2806_1538.jpg\" alt=\"Image\" width=\"93%\" /></div>\n",
+          "images": {
+            "imgs/img_in_header_image_box_85_44_341_118.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//e99ace7b-6af8-4fad-ba8d-068565227c97/markdown_0/imgs/img_in_header_image_box_85_44_341_118.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A21%3A15Z%2F-1%2F%2Fd13d8dbf5cbc9a4a965de776b2ae842f2e15f154956688b9920088d1ed13c1e3",
+            "imgs/img_in_image_box_105_186_2806_1538.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//e99ace7b-6af8-4fad-ba8d-068565227c97/markdown_0/imgs/img_in_image_box_105_186_2806_1538.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A21%3A16Z%2F-1%2F%2F9aca29340b96f7e32f910e31e0ef3f26fd1b7fe1a727b2bc4c8d195eee1bde05"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//e99ace7b-6af8-4fad-ba8d-068565227c97/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A21%3A16Z%2F-1%2F%2Fab110b8dc0c95389a6ff46f6226bdb04a467349982808c2cb2f35d2249d85441"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//e99ace7b-6af8-4fad-ba8d-068565227c97/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A21%3A17Z%2F-1%2F%2Fbe973d0fb19eea79a18bc226c5fd8c9687010c520ed85734f7225e34574b40ea"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//e99ace7b-6af8-4fad-ba8d-068565227c97/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A21%3A17Z%2F-1%2F%2Feb16e846a9c3037778e2ed057b7017ec3debb1a93778321fb08a5389c25e5b49"
+    ]
+  }
+}

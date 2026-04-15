@@ -1,0 +1,12 @@
+{
+  "name": "xhs-ad-analyst",
+  "description": "小红书广告笔记数据分析专家 - 基于投放数据分析笔记表现，提供优化建议",
+  "emoji": "📕",
+  "version": "1.0.0",
+  "author": "Gary",
+  "commands": [
+    "/xhs分析",
+    "/xhs审计",
+    "/xhs优化"
+  ]
+}

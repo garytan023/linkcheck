@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "default_owner": "laoda",
+  "rules": [
+    {
+      "intent": "竞价投放/账户优化/预算/出价/电商媒体策略",
+      "primary_agent": "la_xiao_tou",
+      "fallback": "laoda"
+    },
+    {
+      "intent": "数据分析/报表/归因/指标诊断/实验分析",
+      "primary_agent": "la_xiao_shu",
+      "fallback": "laoda"
+    },
+    {
+      "intent": "创意脚本/素材分析/内容拆解/卖点表达",
+      "primary_agent": "la_xiao_chuang",
+      "fallback": "laoda"
+    },
+    {
+      "intent": "脚本开发/自动化/调试/系统修复/工具接入",
+      "primary_agent": "la_xiao_ma",
+      "fallback": "laoda"
+    },
+    {
+      "intent": "问题审计/链路排查/异常复盘/风险识别",
+      "primary_agent": "la_xiao_zhen",
+      "fallback": "laoda"
+    },
+    {
+      "intent": "资料搜索/情报研究/信息整理/知识提炼",
+      "primary_agent": "la_xiao_zhi",
+      "fallback": "laoda"
+    },
+    {
+      "intent": "跨域、模糊、需要统一判断的复杂任务",
+      "primary_agent": "laoda",
+      "fallback": "laoda"
+    }
+  ]
+}

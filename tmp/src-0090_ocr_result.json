@@ -1,0 +1,87 @@
+{
+  "manifest": "/Users/garytan/Documents/garytan/宇先生/知识库/karpathy-pkm/manifests/sources/SRC-0090.json",
+  "source_pdf": "/Users/garytan/Documents/garytan/宇先生/Documents/京东/2026京东全域通招商方案(1).pdf",
+  "page_count": 7,
+  "processed_pages": 7,
+  "render_scale": 3.0,
+  "low_text_threshold": 120,
+  "results": [
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/2026京东全域通招商方案(1)/page_001.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/2026京东全域通招商方案(1)/page_001",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/2026京东全域通招商方案(1)/page_001/doc_0.md",
+      "text": "## 2026年京东站外合约 京东全域通招商方案",
+      "text_length": 24,
+      "detected_image_count": 1,
+      "vision_summary": "2026年京东站外合约\n京东全域通招商方案",
+      "enhancement_triggered": true,
+      "final_text": "## OCR Text\n\n## 2026年京东站外合约 京东全域通招商方案\n\n## Vision Summary\n\n2026年京东站外合约\n京东全域通招商方案"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/2026京东全域通招商方案(1)/page_002.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/2026京东全域通招商方案(1)/page_002",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/2026京东全域通招商方案(1)/page_002/doc_0.md",
+      "text": "## 京东全域通\n\n## 依托京东媒介采买及电商大数据能力，打造一站式全域营销解决方案\n\n## 广覆盖\n\n## 全域媒体深度整合\n\n主流媒体跨平台联投\n\n稀缺开屏资源全域曝光\n\n大促期流量有保障\n\n## 深渗透\n\n## 100 %TA浓度\n\n100%京东/一方人群触达\n\n保价保量成本可控\n\n联合频控更高效",
+      "text_length": 142,
+      "detected_image_count": 1,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "## 京东全域通\n\n## 依托京东媒介采买及电商大数据能力，打造一站式全域营销解决方案\n\n## 广覆盖\n\n## 全域媒体深度整合\n\n主流媒体跨平台联投\n\n稀缺开屏资源全域曝光\n\n大促期流量有保障\n\n## 深渗透\n\n## 100 %TA浓度\n\n100%京东/一方人群触达\n\n保价保量成本可控\n\n联合频控更高效"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/2026京东全域通招商方案(1)/page_003.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/2026京东全域通招商方案(1)/page_003",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/2026京东全域通招商方案(1)/page_003/doc_0.md",
+      "text": "## 京东全域通-整合全域媒体，深度激活目标受众，让品牌营销更加快捷高效。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_244_490_605_602.jpg\" alt=\"Image\" width=\"12%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_249_622_579_732.jpg\" alt=\"Image\" width=\"11%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_241_756_587_863.jpg\" alt=\"Image\" width=\"12%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_244_887_587_994.jpg\" alt=\"Image\" width=\"11%\" /></div>\n\n\n● ● ●\n\n联合频控\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_933_576_1017_658.jpg\" alt=\"Image\" width=\"2%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1072_727_1215_892.jpg\" alt=\"Image\" width=\"4%\" /></div>\n\n\nTA人群\n\n数坊+DMP\n\n亿级流量\n\n## 京准通\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_917_1114_1168_1249.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n优先展现\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1883_704_1976_923.jpg\" alt=\"Image\" width=\"3%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1650_1042_1739_1127.jpg\" alt=\"Image\" width=\"3%\" /></div>\n\n\n## 全链路效果评估\n\n浏览\n\n关注\n\n加购\n\n购买\n\n资产沉淀再营销\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2098_676_2296_867.jpg\" alt=\"Image\" width=\"6%\" /></div>\n\n\n品牌心智深化\n\n认知度 ➝ 吸引力 ➝\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2445_658_2657_859.jpg\" alt=\"Image\" width=\"7%\" /></div>\n\n\n站内销售转化\n\nROI ☐ CPC ☑\n\n## 自助结案交付\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2074_1165_2342_1291.jpg\" alt=\"Image\" width=\"9%\" /></div>\n\n\n• 项目概况\n\n传播表现\n\n种草表现\n\nCPM\n\n• 转化表现\n\n自助\n\n自助化投放\n\n\n\n保价保量交付\n\n(整包售卖)\n\n预占\n\n促期流量提前锁定\n\n",
+      "text_length": 1659,
+      "detected_image_count": 29,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "## 京东全域通-整合全域媒体，深度激活目标受众，让品牌营销更加快捷高效。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_244_490_605_602.jpg\" alt=\"Image\" width=\"12%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_249_622_579_732.jpg\" alt=\"Image\" width=\"11%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_241_756_587_863.jpg\" alt=\"Image\" width=\"12%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_244_887_587_994.jpg\" alt=\"Image\" width=\"11%\" /></div>\n\n\n● ● ●\n\n联合频控\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_933_576_1017_658.jpg\" alt=\"Image\" width=\"2%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1072_727_1215_892.jpg\" alt=\"Image\" width=\"4%\" /></div>\n\n\nTA人群\n\n数坊+DMP\n\n亿级流量\n\n## 京准通\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_917_1114_1168_1249.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n优先展现\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1883_704_1976_923.jpg\" alt=\"Image\" width=\"3%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1650_1042_1739_1127.jpg\" alt=\"Image\" width=\"3%\" /></div>\n\n\n## 全链路效果评估\n\n浏览\n\n关注\n\n加购\n\n购买\n\n资产沉淀再营销\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2098_676_2296_867.jpg\" alt=\"Image\" width=\"6%\" /></div>\n\n\n品牌心智深化\n\n认知度 ➝ 吸引力 ➝\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2445_658_2657_859.jpg\" alt=\"Image\" width=\"7%\" /></div>\n\n\n站内销售转化\n\nROI ☐ CPC ☑\n\n## 自助结案交付\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2074_1165_2342_1291.jpg\" alt=\"Image\" width=\"9%\" /></div>\n\n\n• 项目概况\n\n传播表现\n\n种草表现\n\nCPM\n\n• 转化表现\n\n自助\n\n自助化投放\n\n\n\n保价保量交付\n\n(整包售卖)\n\n预占\n\n促期流量提前锁定\n\n"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/2026京东全域通招商方案(1)/page_004.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/2026京东全域通招商方案(1)/page_004",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/2026京东全域通招商方案(1)/page_004/doc_0.md",
+      "text": "## 京东全域通-稀缺开屏资源，提前锁定\n\n头部媒体稀缺开机屏资源\n\n## 头条 K du 贴 mI 听 知乎 yd\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_216_612_475_1134.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_497_580_779_1126.jpg\" alt=\"Image\" width=\"9%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_805_577_1054_1140.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1081_575_1327_1131.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1340_586_1588_1129.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n## 内测招募\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1610_579_1866_1092.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n内测权益先到先得\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1881_580_2151_1113.jpg\" alt=\"Image\" width=\"9%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2156_603_2413_1115.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n## 4 月中旬\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2433_583_2675_1107.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_211_1235_376_1373.jpg\" alt=\"Image\" width=\"5%\" /></div>\n\n\n## 正式上线\n\n全面开放招商投放",
+      "text_length": 1303,
+      "detected_image_count": 22,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "## 京东全域通-稀缺开屏资源，提前锁定\n\n头部媒体稀缺开机屏资源\n\n## 头条 K du 贴 mI 听 知乎 yd\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_216_612_475_1134.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_497_580_779_1126.jpg\" alt=\"Image\" width=\"9%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_805_577_1054_1140.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1081_575_1327_1131.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1340_586_1588_1129.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n## 内测招募\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1610_579_1866_1092.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n内测权益先到先得\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1881_580_2151_1113.jpg\" alt=\"Image\" width=\"9%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2156_603_2413_1115.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n## 4 月中旬\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2433_583_2675_1107.jpg\" alt=\"Image\" width=\"8%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_211_1235_376_1373.jpg\" alt=\"Image\" width=\"5%\" /></div>\n\n\n## 正式上线\n\n全面开放招商投放"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/2026京东全域通招商方案(1)/page_005.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/2026京东全域通招商方案(1)/page_005",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/2026京东全域通招商方案(1)/page_005/doc_0.md",
+      "text": "## 京东全域通-政策门槛\n\n## ◆ 京东全域通Q2折扣政策\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td rowspan=\"2\">政策名称</td><td rowspan=\"2\">刊例价格</td><td rowspan=\"2\">起投门槛</td><td colspan=\"2\">日常期价格</td><td colspan=\"2\">大促期价格</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>折扣</td><td style='text-align: center; word-wrap: break-word;'>净价</td><td style='text-align: center; word-wrap: break-word;'>折扣</td><td style='text-align: center; word-wrap: break-word;'>净价</td></tr><tr><td rowspan=\"3\">2026年Q2京东全域通折扣政策</td><td rowspan=\"3\">100元/cpm</td><td style='text-align: center; word-wrap: break-word;'>单订单金额＞=50万</td><td style='text-align: center; word-wrap: break-word;'>4折</td><td style='text-align: center; word-wrap: break-word;'>40元/cpm</td><td style='text-align: center; word-wrap: break-word;'>5折</td><td style='text-align: center; word-wrap: break-word;'>50元/cpm</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>单订单金额＞=30万</td><td style='text-align: center; word-wrap: break-word;'>4.5折</td><td style='text-align: center; word-wrap: break-word;'>45元/cpm</td><td style='text-align: center; word-wrap: break-word;'>5.5折</td><td style='text-align: center; word-wrap: break-word;'>55元/cpm</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>单订单金额＞=10万</td><td style='text-align: center; word-wrap: break-word;'>5折</td><td style='text-align: center; word-wrap: break-word;'>50元/cpm</td><td style='text-align: center; word-wrap: break-word;'>6折</td><td style='text-align: center; word-wrap: break-word;'>60元/cpm</td></tr></table>\n\n政策适用周期：2026年4月1日-2026年6月30日\n\n政策适用产品：京东全域通资源包\n\n政策详情：政策周期内购买京东全域通资源可享受折扣政策，不可与其他折扣政策叠加使用。\n\n投放说明：1）投放各厂必须有乐乐占铺，且支持投放乐乐落地页。2）具体资源排期以京东实际库存和媒介实际要求为准。3）特殊品类准入（如健康/网服金融等行业）暂不支持。4）下单支付后不可退款。",
+      "text_length": 1754,
+      "detected_image_count": 1,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "## 京东全域通-政策门槛\n\n## ◆ 京东全域通Q2折扣政策\n\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td rowspan=\"2\">政策名称</td><td rowspan=\"2\">刊例价格</td><td rowspan=\"2\">起投门槛</td><td colspan=\"2\">日常期价格</td><td colspan=\"2\">大促期价格</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>折扣</td><td style='text-align: center; word-wrap: break-word;'>净价</td><td style='text-align: center; word-wrap: break-word;'>折扣</td><td style='text-align: center; word-wrap: break-word;'>净价</td></tr><tr><td rowspan=\"3\">2026年Q2京东全域通折扣政策</td><td rowspan=\"3\">100元/cpm</td><td style='text-align: center; word-wrap: break-word;'>单订单金额＞=50万</td><td style='text-align: center; word-wrap: break-word;'>4折</td><td style='text-align: center; word-wrap: break-word;'>40元/cpm</td><td style='text-align: center; word-wrap: break-word;'>5折</td><td style='text-align: center; word-wrap: break-word;'>50元/cpm</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>单订单金额＞=30万</td><td style='text-align: center; word-wrap: break-word;'>4.5折</td><td style='text-align: center; word-wrap: break-word;'>45元/cpm</td><td style='text-align: center; word-wrap: break-word;'>5.5折</td><td style='text-align: center; word-wrap: break-word;'>55元/cpm</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>单订单金额＞=10万</td><td style='text-align: center; word-wrap: break-word;'>5折</td><td style='text-align: center; word-wrap: break-word;'>50元/cpm</td><td style='text-align: center; word-wrap: break-word;'>6折</td><td style='text-align: center; word-wrap: break-word;'>60元/cpm</td></tr></table>\n\n政策适用周期：2026年4月1日-2026年6月30日\n\n政策适用产品：京东全域通资源包\n\n政策详情：政策周期内购买京东全域通资源可享受折扣政策，不可与其他折扣政策叠加使用。\n\n投放说明：1）投放各厂必须有乐乐占铺，且支持投放乐乐落地页。2）具体资源排期以京东实际库存和媒介实际要求为准。3）特殊品类准入（如健康/网服金融等行业）暂不支持。4）下单支付后不可退款。"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/2026京东全域通招商方案(1)/page_006.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/2026京东全域通招商方案(1)/page_006",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/2026京东全域通招商方案(1)/page_006/doc_0.md",
+      "text": "## 京东全域通-合作流程\n\n## 01\n\n## 广告上线前至少15个工作日\n\n## 需求沟通\n\n1、账号准备：京准通PIN\n\n2、TA人群：在京准通DMP/数坊内自行圈选人群包（为保障询量库存充足，建议人群体量5000万+）\n\n3、投放日期、金额、人群包ID邮件至京东运营\n\n## 02\n\n## 上线前至少10个工作日\n\n## 询量出排期\n\n1、京东运营根据brief进行系统询量\n\n2、如库存不能满足与代理/广告主协调拓包或调整排期\n\n3、如库存满足，京东运营出具排期并反馈\n\n## 03\n\n## 上线前至少7个工作日\n\n## 正式下单\n\n1、邮件向京东下单，填写《下单模板》邮件至 ads-zw-hy@jd.com、及销售\n\n2、登录京准通线上签署合同/支付（无账期需在上线前完成支付）\n\n## 06\n\n## 付款及开票\n\n1、京准通账户中心自助开票\n\n2、账期内登录京准通完成付款\n\n## 05\n\n## 数据/结案\n\n1、京准通数据报表T+1自助查看数据\n\n2、登录京准通自助完成结案报告生成（推荐投放之后+15日下载结案报告）\n\n## 04\n\n建议上线前7个工作日（需提前3日预加载）\n\n## 配置及上线\n\n1、在京准通创意中心创建素材、文案及落地页进行送审，过审后待使用\n\n2、京东侧下好单后在京准通系统相应订单下绑定素材，配置三方监测",
+      "text_length": 544,
+      "detected_image_count": 1,
+      "vision_summary": "",
+      "enhancement_triggered": false,
+      "final_text": "## 京东全域通-合作流程\n\n## 01\n\n## 广告上线前至少15个工作日\n\n## 需求沟通\n\n1、账号准备：京准通PIN\n\n2、TA人群：在京准通DMP/数坊内自行圈选人群包（为保障询量库存充足，建议人群体量5000万+）\n\n3、投放日期、金额、人群包ID邮件至京东运营\n\n## 02\n\n## 上线前至少10个工作日\n\n## 询量出排期\n\n1、京东运营根据brief进行系统询量\n\n2、如库存不能满足与代理/广告主协调拓包或调整排期\n\n3、如库存满足，京东运营出具排期并反馈\n\n## 03\n\n## 上线前至少7个工作日\n\n## 正式下单\n\n1、邮件向京东下单，填写《下单模板》邮件至 ads-zw-hy@jd.com、及销售\n\n2、登录京准通线上签署合同/支付（无账期需在上线前完成支付）\n\n## 06\n\n## 付款及开票\n\n1、京准通账户中心自助开票\n\n2、账期内登录京准通完成付款\n\n## 05\n\n## 数据/结案\n\n1、京准通数据报表T+1自助查看数据\n\n2、登录京准通自助完成结案报告生成（推荐投放之后+15日下载结案报告）\n\n## 04\n\n建议上线前7个工作日（需提前3日预加载）\n\n## 配置及上线\n\n1、在京准通创意中心创建素材、文案及落地页进行送审，过审后待使用\n\n2、京东侧下好单后在京准通系统相应订单下绑定素材，配置三方监测"
+    },
+    {
+      "image": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-pages/2026京东全域通招商方案(1)/page_007.png",
+      "output_dir": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/2026京东全域通招商方案(1)/page_007",
+      "markdown_path": "/Users/garytan/.openclaw/workspace-dev/tmp/paddle-pdf-results/2026京东全域通招商方案(1)/page_007/doc_0.md",
+      "text": "## 感谢聆听\n\nJDR 平台营销中心 2026年",
+      "text_length": 24,
+      "detected_image_count": 1,
+      "vision_summary": "京东\n又好又便宜\n感谢聆听\nJDR 平台营销中心 2026年\n- 京东\n- 又好又便宜\n- 谢谢聆听\n- JDR 平台营销中心 2026年\n- JDR 平台营销中心",
+      "enhancement_triggered": true,
+      "final_text": "## OCR Text\n\n## 感谢聆听\n\nJDR 平台营销中心 2026年\n\n## Vision Summary\n\n京东\n又好又便宜\n感谢聆听\nJDR 平台营销中心 2026年\n- 京东\n- 又好又便宜\n- 谢谢聆听\n- JDR 平台营销中心 2026年\n- JDR 平台营销中心"
+    }
+  ]
+}

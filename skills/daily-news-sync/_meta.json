@@ -1,0 +1,7 @@
+{
+  "name": "daily-news-sync",
+  "version": "1.0.0",
+  "description": "Automated daily news sync: RSS parsing, filtering, Notion sync, Discord delivery",
+  "author": "custom",
+  "tags": ["rss", "news", "automation", "notion", "discord"]
+}

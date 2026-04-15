@@ -1,0 +1,13 @@
+{
+  "date": "2026-04-14",
+  "stage": "done",
+  "total_feeds": 45,
+  "completed_feeds": 45,
+  "stats": {
+    "ok": 45,
+    "empty": 0,
+    "failed": 0
+  },
+  "item_count": 42,
+  "saved_at": "2026-04-15T13:26:48.479207+08:00"
+}

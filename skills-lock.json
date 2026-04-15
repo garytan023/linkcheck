@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "baoyu-url-to-markdown": {
+      "source": "Aston1690/baoyu-url-to-markdown",
+      "sourceType": "github",
+      "computedHash": "e24dcd2665e56e7c3c13e0f0c972799916c39e50241353e273580d090bdb45e8"
+    }
+  }
+}

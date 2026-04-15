@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "douyin": {
+      "command": "douyin-mcp-server"
+    },
+    "weibo": {
+      "command": "mcp-server-weibo"
+    },
+    "xiaohongshu": {
+      "baseUrl": "http://localhost:18060/mcp"
+    }
+  },
+  "imports": []
+}

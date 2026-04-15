@@ -1,0 +1,7 @@
+{
+  "name": "douyin-batch-analyzer",
+  "version": "1.0.0",
+  "description": "Batch analyze Douyin video content with structured output templates for Feishu tables",
+  "author": "custom",
+  "tags": ["douyin", "video-analysis", "ecommerce", "content-audit"]
+}

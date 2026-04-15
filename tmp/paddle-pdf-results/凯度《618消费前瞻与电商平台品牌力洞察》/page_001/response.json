@@ -1,0 +1,426 @@
+{
+  "logId": "45f528fa-3791-409d-89d1-c65207df46f3",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "paragraph_title",
+              "block_content": "KANTAR MARKETPLACE",
+              "block_bbox": [
+                72,
+                117,
+                1463,
+                237
+              ],
+              "block_id": 0,
+              "block_order": 1,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  71.36083221435547,
+                  124.92311096191406
+                ],
+                [
+                  1461.4989013671875,
+                  116.92228698730469
+                ],
+                [
+                  1462.13818359375,
+                  227.9991912841797
+                ],
+                [
+                  72.0001220703125,
+                  236.00001525878906
+                ]
+              ]
+            },
+            {
+              "block_label": "header_image",
+              "block_content": "",
+              "block_bbox": [
+                2499,
+                72,
+                2804,
+                294
+              ],
+              "block_id": 1,
+              "block_order": null,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  2499.0,
+                  72.0
+                ],
+                [
+                  2804.0,
+                  72.0
+                ],
+                [
+                  2804.0,
+                  294.0
+                ],
+                [
+                  2499.0,
+                  294.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "#凯度风向标·品牌力",
+              "block_bbox": [
+                75,
+                349,
+                647,
+                425
+              ],
+              "block_id": 2,
+              "block_order": 2,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  75.0,
+                  349.0
+                ],
+                [
+                  647.0,
+                  349.0
+                ],
+                [
+                  647.0,
+                  425.0
+                ],
+                [
+                  75.0,
+                  425.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "618消费前瞻与\n电商平台品牌力洞察",
+              "block_bbox": [
+                76,
+                526,
+                834,
+                725
+              ],
+              "block_id": 3,
+              "block_order": 3,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  76.0,
+                  526.0
+                ],
+                [
+                  834.0,
+                  526.0
+                ],
+                [
+                  834.0,
+                  725.0
+                ],
+                [
+                  76.0,
+                  725.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "凯度Marketplace\n2023.06",
+              "block_bbox": [
+                74,
+                1310,
+                376,
+                1416
+              ],
+              "block_id": 4,
+              "block_order": 4,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  74.0,
+                  1310.0
+                ],
+                [
+                  376.0,
+                  1310.0
+                ],
+                [
+                  376.0,
+                  1416.0
+                ],
+                [
+                  74.0,
+                  1416.0
+                ]
+              ]
+            },
+            {
+              "block_label": "image",
+              "block_content": "",
+              "block_bbox": [
+                1005,
+                355,
+                2880,
+                1422
+              ],
+              "block_id": 5,
+              "block_order": null,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  1005.0,
+                  355.0
+                ],
+                [
+                  2883.0,
+                  355.0
+                ],
+                [
+                  2883.0,
+                  1422.0
+                ],
+                [
+                  1005.0,
+                  1422.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7485737204551697,
+                "coordinate": [
+                  72,
+                  117,
+                  1463,
+                  237
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    71.36083221435547,
+                    124.92311096191406
+                  ],
+                  [
+                    1461.4989013671875,
+                    116.92228698730469
+                  ],
+                  [
+                    1462.13818359375,
+                    227.9991912841797
+                  ],
+                  [
+                    72.0001220703125,
+                    236.00001525878906
+                  ]
+                ]
+              },
+              {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.8157181143760681,
+                "coordinate": [
+                  2499,
+                  72,
+                  2804,
+                  294
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2499.0,
+                    72.0
+                  ],
+                  [
+                    2804.0,
+                    72.0
+                  ],
+                  [
+                    2804.0,
+                    294.0
+                  ],
+                  [
+                    2499.0,
+                    294.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8484455347061157,
+                "coordinate": [
+                  75,
+                  349,
+                  647,
+                  425
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    75.0,
+                    349.0
+                  ],
+                  [
+                    647.0,
+                    349.0
+                  ],
+                  [
+                    647.0,
+                    425.0
+                  ],
+                  [
+                    75.0,
+                    425.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8562892079353333,
+                "coordinate": [
+                  76,
+                  526,
+                  834,
+                  725
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    76.0,
+                    526.0
+                  ],
+                  [
+                    834.0,
+                    526.0
+                  ],
+                  [
+                    834.0,
+                    725.0
+                  ],
+                  [
+                    76.0,
+                    725.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7078427672386169,
+                "coordinate": [
+                  74,
+                  1310,
+                  376,
+                  1416
+                ],
+                "order": 4,
+                "polygon_points": [
+                  [
+                    74.0,
+                    1310.0
+                  ],
+                  [
+                    376.0,
+                    1310.0
+                  ],
+                  [
+                    376.0,
+                    1416.0
+                  ],
+                  [
+                    74.0,
+                    1416.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.3316537141799927,
+                "coordinate": [
+                  1005,
+                  355,
+                  2880,
+                  1422
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1005.0,
+                    355.0
+                  ],
+                  [
+                    2883.0,
+                    355.0
+                  ],
+                  [
+                    2883.0,
+                    1422.0
+                  ],
+                  [
+                    1005.0,
+                    1422.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## KANTAR MARKETPLACE\n\n#凯度风向标·品牌力\n\n618消费前瞻与\n\n电商平台品牌力洞察\n\n凯度Marketplace\n\n2023.06\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1005_355_2880_1422.jpg\" alt=\"Image\" width=\"65%\" /></div>\n",
+          "images": {
+            "imgs/img_in_header_image_box_2499_72_2804_294.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//8eb709d0-a190-413a-a5ff-52917785b5c6/markdown_0/imgs/img_in_header_image_box_2499_72_2804_294.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A25Z%2F-1%2F%2F0ce3cdcfc819ebe524cd85ada5b0c8676964ae71da6d5595a029d2407e727e63",
+            "imgs/img_in_image_box_1005_355_2880_1422.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//8eb709d0-a190-413a-a5ff-52917785b5c6/markdown_0/imgs/img_in_image_box_1005_355_2880_1422.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A25Z%2F-1%2F%2F12fbaf6946d1f65a035b028373c9b0aaaa01ac97b2bdf9d4510bb2e7a8c1ee26"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//8eb709d0-a190-413a-a5ff-52917785b5c6/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A26Z%2F-1%2F%2F517489d4b6618bd6e45fea9d9455dfb36e7ebec42f793c5e0cba8960b7a61bd3"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//8eb709d0-a190-413a-a5ff-52917785b5c6/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A26Z%2F-1%2F%2F65139df38573042577fdb172150a12cabb4e447cb56ad26d8fc93f0921c51373"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//8eb709d0-a190-413a-a5ff-52917785b5c6/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A26Z%2F-1%2F%2F00a607a39f665e1a59d1eb84cd28bf8ae5c026d2b5be3ed5c736854701dbc16a"
+    ]
+  }
+}

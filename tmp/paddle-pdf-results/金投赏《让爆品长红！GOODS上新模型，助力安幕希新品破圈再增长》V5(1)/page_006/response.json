@@ -1,0 +1,852 @@
+{
+  "logId": "eb5172c5-f57e-41e4-a43f-b4b9a526d9d6",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "paragraph_title",
+              "block_content": "目标",
+              "block_bbox": [
+                140,
+                130,
+                292,
+                211
+              ],
+              "block_id": 0,
+              "block_order": 1,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  140.0,
+                  130.0
+                ],
+                [
+                  292.0,
+                  130.0
+                ],
+                [
+                  292.0,
+                  211.0
+                ],
+                [
+                  140.0,
+                  211.0
+                ]
+              ]
+            },
+            {
+              "block_label": "header_image",
+              "block_content": "",
+              "block_bbox": [
+                2687,
+                48,
+                2837,
+                225
+              ],
+              "block_id": 1,
+              "block_order": null,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  2687.0,
+                  48.0
+                ],
+                [
+                  2837.0,
+                  48.0
+                ],
+                [
+                  2837.0,
+                  225.0
+                ],
+                [
+                  2687.0,
+                  225.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "快速打造新爆品，并实现爆品长销\n打造经典安幕希第二增长曲线",
+              "block_bbox": [
+                794,
+                238,
+                2055,
+                463
+              ],
+              "block_id": 2,
+              "block_order": 2,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  794.0,
+                  238.0
+                ],
+                [
+                  2055.0,
+                  238.0
+                ],
+                [
+                  2055.0,
+                  463.0
+                ],
+                [
+                  794.0,
+                  463.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "目标拆解",
+              "block_bbox": [
+                1332,
+                508,
+                1546,
+                573
+              ],
+              "block_id": 3,
+              "block_order": 3,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  1332.0,
+                  508.0
+                ],
+                [
+                  1546.0,
+                  508.0
+                ],
+                [
+                  1546.0,
+                  573.0
+                ],
+                [
+                  1332.0,
+                  573.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "资产扩充",
+              "block_bbox": [
+                469,
+                737,
+                775,
+                1032
+              ],
+              "block_id": 4,
+              "block_order": 4,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  469.0,
+                  737.0
+                ],
+                [
+                  775.0,
+                  737.0
+                ],
+                [
+                  775.0,
+                  1032.0
+                ],
+                [
+                  469.0,
+                  1032.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "把握行业趋势打造差异化新品\n扩展品牌新客，提升品牌热度\n及年轻人群渗透",
+              "block_bbox": [
+                378,
+                1087,
+                866,
+                1271
+              ],
+              "block_id": 5,
+              "block_order": 5,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  378.0,
+                  1087.0
+                ],
+                [
+                  866.0,
+                  1087.0
+                ],
+                [
+                  866.0,
+                  1271.0
+                ],
+                [
+                  378.0,
+                  1271.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "KPI：人群资产量、主动搜索、TA渗透",
+              "block_bbox": [
+                320,
+                1379,
+                917,
+                1428
+              ],
+              "block_id": 6,
+              "block_order": 6,
+              "group_id": 6,
+              "block_polygon_points": [
+                [
+                  320.0,
+                  1379.0
+                ],
+                [
+                  917.0,
+                  1379.0
+                ],
+                [
+                  917.0,
+                  1428.0
+                ],
+                [
+                  320.0,
+                  1428.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "心智渗透",
+              "block_bbox": [
+                1292,
+                743,
+                1590,
+                1029
+              ],
+              "block_id": 7,
+              "block_order": 7,
+              "group_id": 7,
+              "block_polygon_points": [
+                [
+                  1292.0,
+                  743.0
+                ],
+                [
+                  1590.0,
+                  743.0
+                ],
+                [
+                  1590.0,
+                  1029.0
+                ],
+                [
+                  1292.0,
+                  1029.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "新一代健康酸奶心智占位，强化品质与健康印象，提升种草流转效率",
+              "block_bbox": [
+                1197,
+                1088,
+                1684,
+                1270
+              ],
+              "block_id": 8,
+              "block_order": 8,
+              "group_id": 8,
+              "block_polygon_points": [
+                [
+                  1197.0,
+                  1088.0
+                ],
+                [
+                  1684.0,
+                  1088.0
+                ],
+                [
+                  1684.0,
+                  1270.0
+                ],
+                [
+                  1197.0,
+                  1270.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "兴趣人群、流转效率",
+              "block_bbox": [
+                1355,
+                1381,
+                1657,
+                1428
+              ],
+              "block_id": 9,
+              "block_order": 9,
+              "group_id": 9,
+              "block_polygon_points": [
+                [
+                  1355.0,
+                  1381.0
+                ],
+                [
+                  1657.0,
+                  1381.0
+                ],
+                [
+                  1657.0,
+                  1428.0
+                ],
+                [
+                  1355.0,
+                  1428.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "生意转化与放大",
+              "block_bbox": [
+                1995,
+                737,
+                2523,
+                1029
+              ],
+              "block_id": 10,
+              "block_order": 10,
+              "group_id": 10,
+              "block_polygon_points": [
+                [
+                  1995.0,
+                  737.0
+                ],
+                [
+                  2523.0,
+                  737.0
+                ],
+                [
+                  2523.0,
+                  1029.0
+                ],
+                [
+                  1995.0,
+                  1029.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "提升产品营销效率，助力店铺生意增长，提升品牌行业渗透率",
+              "block_bbox": [
+                2020,
+                1088,
+                2472,
+                1269
+              ],
+              "block_id": 11,
+              "block_order": 11,
+              "group_id": 11,
+              "block_polygon_points": [
+                [
+                  2020.0,
+                  1088.0
+                ],
+                [
+                  2472.0,
+                  1088.0
+                ],
+                [
+                  2472.0,
+                  1269.0
+                ],
+                [
+                  2020.0,
+                  1269.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "CPC, ROI, 行业渗透率",
+              "block_bbox": [
+                2135,
+                1381,
+                2497,
+                1426
+              ],
+              "block_id": 12,
+              "block_order": 12,
+              "group_id": 12,
+              "block_polygon_points": [
+                [
+                  2135.0,
+                  1381.0
+                ],
+                [
+                  2497.0,
+                  1381.0
+                ],
+                [
+                  2497.0,
+                  1426.0
+                ],
+                [
+                  2135.0,
+                  1426.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5225765705108643,
+                "coordinate": [
+                  140,
+                  130,
+                  292,
+                  211
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    140.0,
+                    130.0
+                  ],
+                  [
+                    292.0,
+                    130.0
+                  ],
+                  [
+                    292.0,
+                    211.0
+                  ],
+                  [
+                    140.0,
+                    211.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.8939958214759827,
+                "coordinate": [
+                  2687,
+                  48,
+                  2837,
+                  225
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2687.0,
+                    48.0
+                  ],
+                  [
+                    2837.0,
+                    48.0
+                  ],
+                  [
+                    2837.0,
+                    225.0
+                  ],
+                  [
+                    2687.0,
+                    225.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.874139130115509,
+                "coordinate": [
+                  794,
+                  238,
+                  2055,
+                  463
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    794.0,
+                    238.0
+                  ],
+                  [
+                    2055.0,
+                    238.0
+                  ],
+                  [
+                    2055.0,
+                    463.0
+                  ],
+                  [
+                    794.0,
+                    463.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5549302697181702,
+                "coordinate": [
+                  1332,
+                  508,
+                  1546,
+                  573
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    1332.0,
+                    508.0
+                  ],
+                  [
+                    1546.0,
+                    508.0
+                  ],
+                  [
+                    1546.0,
+                    573.0
+                  ],
+                  [
+                    1332.0,
+                    573.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7907747626304626,
+                "coordinate": [
+                  469,
+                  737,
+                  775,
+                  1032
+                ],
+                "order": 4,
+                "polygon_points": [
+                  [
+                    469.0,
+                    737.0
+                  ],
+                  [
+                    775.0,
+                    737.0
+                  ],
+                  [
+                    775.0,
+                    1032.0
+                  ],
+                  [
+                    469.0,
+                    1032.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8916676640510559,
+                "coordinate": [
+                  378,
+                  1087,
+                  866,
+                  1271
+                ],
+                "order": 5,
+                "polygon_points": [
+                  [
+                    378.0,
+                    1087.0
+                  ],
+                  [
+                    866.0,
+                    1087.0
+                  ],
+                  [
+                    866.0,
+                    1271.0
+                  ],
+                  [
+                    378.0,
+                    1271.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7663506269454956,
+                "coordinate": [
+                  320,
+                  1379,
+                  917,
+                  1428
+                ],
+                "order": 6,
+                "polygon_points": [
+                  [
+                    320.0,
+                    1379.0
+                  ],
+                  [
+                    917.0,
+                    1379.0
+                  ],
+                  [
+                    917.0,
+                    1428.0
+                  ],
+                  [
+                    320.0,
+                    1428.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7100763320922852,
+                "coordinate": [
+                  1292,
+                  743,
+                  1590,
+                  1029
+                ],
+                "order": 7,
+                "polygon_points": [
+                  [
+                    1292.0,
+                    743.0
+                  ],
+                  [
+                    1590.0,
+                    743.0
+                  ],
+                  [
+                    1590.0,
+                    1029.0
+                  ],
+                  [
+                    1292.0,
+                    1029.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9063328504562378,
+                "coordinate": [
+                  1197,
+                  1088,
+                  1684,
+                  1270
+                ],
+                "order": 8,
+                "polygon_points": [
+                  [
+                    1197.0,
+                    1088.0
+                  ],
+                  [
+                    1684.0,
+                    1088.0
+                  ],
+                  [
+                    1684.0,
+                    1270.0
+                  ],
+                  [
+                    1197.0,
+                    1270.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5862037539482117,
+                "coordinate": [
+                  1355,
+                  1381,
+                  1657,
+                  1428
+                ],
+                "order": 9,
+                "polygon_points": [
+                  [
+                    1355.0,
+                    1381.0
+                  ],
+                  [
+                    1657.0,
+                    1381.0
+                  ],
+                  [
+                    1657.0,
+                    1428.0
+                  ],
+                  [
+                    1355.0,
+                    1428.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6971430778503418,
+                "coordinate": [
+                  1995,
+                  737,
+                  2523,
+                  1029
+                ],
+                "order": 10,
+                "polygon_points": [
+                  [
+                    1995.0,
+                    737.0
+                  ],
+                  [
+                    2523.0,
+                    737.0
+                  ],
+                  [
+                    2523.0,
+                    1029.0
+                  ],
+                  [
+                    1995.0,
+                    1029.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8902475833892822,
+                "coordinate": [
+                  2020,
+                  1088,
+                  2472,
+                  1269
+                ],
+                "order": 11,
+                "polygon_points": [
+                  [
+                    2020.0,
+                    1088.0
+                  ],
+                  [
+                    2472.0,
+                    1088.0
+                  ],
+                  [
+                    2472.0,
+                    1269.0
+                  ],
+                  [
+                    2020.0,
+                    1269.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8049430847167969,
+                "coordinate": [
+                  2135,
+                  1381,
+                  2497,
+                  1426
+                ],
+                "order": 12,
+                "polygon_points": [
+                  [
+                    2135.0,
+                    1381.0
+                  ],
+                  [
+                    2497.0,
+                    1381.0
+                  ],
+                  [
+                    2497.0,
+                    1426.0
+                  ],
+                  [
+                    2135.0,
+                    1426.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## 目标\n\n## 快速打造新爆品，并实现爆品长销 打造经典安幕希第二增长曲线\n\n## 目标拆解\n\n## 资产扩充\n\n把握行业趋势打造差异化新品\n\n扩展品牌新客，提升品牌热度\n\n及年轻人群渗透\n\nKPI：人群资产量、主动搜索、TA渗透\n\n## 心智渗透\n\n新一代健康酸奶心智占位，强化品质与健康印象，提升种草流转效率\n\n## 兴趣人群、流转效率\n\n## 生意转化与放大\n\n提升产品营销效率，助力店铺生意增长，提升品牌行业渗透率\n\nCPC, ROI, 行业渗透率",
+          "images": {
+            "imgs/img_in_header_image_box_2687_48_2837_225.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//e9fa0e19-f855-4916-a0dc-c149425eb9d4/markdown_0/imgs/img_in_header_image_box_2687_48_2837_225.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A28Z%2F-1%2F%2Fb6a7f7331490736e58f2b47ab965a2fd3d9284ecc85ced9f56ed81f573732a01"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//e9fa0e19-f855-4916-a0dc-c149425eb9d4/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A29Z%2F-1%2F%2Fbf77808aa9deec3d519966d5432aad4d6bd4195e88c220e112b1ac62f5f5edb5"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//e9fa0e19-f855-4916-a0dc-c149425eb9d4/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A29Z%2F-1%2F%2F41074a4ce2328d20fb7872d38de77636075a6862b7a854f5fb9a156467adf796"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//e9fa0e19-f855-4916-a0dc-c149425eb9d4/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A30Z%2F-1%2F%2F575e977519a81ad8879c6a93677f95bc4305aafac0cb550bc96a32cd6f2d45b2"
+    ]
+  }
+}

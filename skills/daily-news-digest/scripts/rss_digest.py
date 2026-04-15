@@ -35,29 +35,32 @@ CAT_EMOJI = {
     '京东': '🟣', '字节': '🔵', '小红书': '🔴', '腾讯': '🟢', '百度': '⚪',
     '营销+AI': '🤖', '电商零售': '🛒', '营销增长': '📈'
 }
-# 平台分类只接收官方账号；第三方账号全部进入 topic 分类
 CAT_ORDER = ['京东', '字节', '小红书', '腾讯', '百度', '营销+AI', '电商零售', '营销增长']
 
-# 来源账号 → 平台官方分类（优先级最高）
+# 来源账号 → 平台分类（优先级最高）
 SOURCE_PLATFORM_MAP = {
     # 京东
     "京东黑板报": "京东",
     "京准通": "京东",
     "京麦商家中心": "京东",
     "京东研究院": "京东",
-    # 字节/抖音
+    # 字节/抖音/巨量
     "巨量引擎营销观察": "字节",
     "巨量引擎营销科学": "字节",
     "抖音电商营销观察": "字节",
+    "巨量引擎": "字节",
+    "巨量云图": "字节",
     # 小红书
     "小红书种草学": "小红书",
     "小红书商业动态": "小红书",
     "小红书技术REDtech": "小红书",
+    "小红书商业广告": "小红书",
     # 腾讯
     "腾讯广告": "腾讯",
     # 百度
     "百度营销观": "百度",
 }
+
 
 _session = None
 
@@ -137,10 +140,12 @@ def parse_date(text):
     if not text:
         return None
     text = text.strip()
+    # RFC 1123 格式（WeChat RSS 使用），时间戳为 CST 时区
     try:
-        dt = datetime.strptime(text[:25], '%a, %d %b %Y %H:%M:%S')
-        return dt.replace(tzinfo=timezone.utc).astimezone(CST)
+        dt = datetime.strptime(text[:26], '%a, %d %b %Y %H:%M:%S')
+        return dt.replace(tzinfo=CST)
     except:
+        # ISO 8601 格式（包含 Z 或 +00:00）
         try:
             dt = datetime.fromisoformat(text.replace('Z', '+00:00'))
             return dt.astimezone(CST)
@@ -148,30 +153,37 @@ def parse_date(text):
             return None
 
 def classify(title, content, source):
-    """排他性分类：
-    - 官方平台账号（SOURCE_PLATFORM_MAP） → 对应平台分类
-    - 其他账号 → 按内容关键词分入 topic 分类（京东/字节/小红书/百度只接收官方账号）
+    """排他性分类，严格按来源账号归类：
+    1. 官方平台账号（SOURCE_PLATFORM_MAP） → 对应平台分类
+    2. 其余全部按内容关键词落入 topic 分类（京东/字节/小红书/腾讯/百度严格只收官方账号）
     """
-    # 官方平台账号优先 → 进入平台分类
+    # 官方平台账号优先 → 进入平台分类（不做任何关键词扩展）
     if source in SOURCE_PLATFORM_MAP:
         return SOURCE_PLATFORM_MAP[source]
-    # 第三方账号 → 只能进入 topic 分类
+
     t = (title or '').lower()
     c = ((content or '')[:3000]).lower()
     # topic 关键词（排他）
     if any(k in t or k in c for k in ['ai', '人工智能', 'gpt', '大模型', '自动化', 'aigc', '数字人',
-                                          'deepseek', 'chatgpt', '智能投放', 'geo', 'ai营销', 'claude',
-                                          'genai', 'llm', 'agent', '智能体', '工作流', 'gpt-4', 'o1', 'o3', 'gemini']):
+                                       'deepseek', 'chatgpt', '智能投放', 'geo', 'ai营销', 'claude',
+                                       'genai', 'llm', 'agent', '智能体', '工作流', 'gpt-4', 'o1', 'o3', 'gemini']):
         return '营销+AI'
     if any(k in t or k in c for k in ['电商', '零售', '直播带货', '天猫', '淘宝', '选品', '跨境',
-                                          '亚马逊', 'shopify', '私域', '拼多多', '唯品会', '即时零售',
-                                          '货架电商', '跨境电商', '电商平台', '电商运营', '京东', 'jd.com']):
+                                       '亚马逊', 'shopify', '私域', '拼多多', '唯品会', '即时零售',
+                                       '货架电商', '跨境电商', '电商平台', '电商运营', '京东', 'jd.com']):
         return '电商零售'
     return '营销增长'
 
 def score_article(title, content):
     t = (title or '').lower()
     c = ((content or '')[:3000]).lower()
+
+    # ★ 满分关键词：直接返回10，不走常规打分
+    满分_kw = ['白皮书', '案例拆解', '实战案例', '案例精解', '完整案例', '案例分析',
+                '电商白皮书', '行业白皮书', '平台白皮书']
+    if any(k in t for k in 满分_kw):
+        return 10
+
     score = 0
     case_kw = ['案例', '实战', '方法论', '数据', 'gmv', 'roi', '转化率', '投放效果',
                 '销售额', '增长', '操盘', '策略', '复盘', '分析报告', '洞察', '拆解',
@@ -233,11 +245,14 @@ def parse_feed(feed_url, feed_title):
         for entry in root.findall('.//' + tag('entry')):
             title_el = entry.find(tag('title'))
             link_el = entry.find(tag('link'))
+            published_el = entry.find(tag('published'))
             updated_el = entry.find(tag('updated'))
             content_el = entry.find(f'{{{CONTENT_NS}}}encoded')
             title = html.unescape(title_el.text or '') if title_el is not None else ''
             link = (link_el.get('href') or '') if link_el is not None else ''
-            pub = parse_date(updated_el.text if updated_el is not None else '')
+            # 优先用 <published>（文章发布时间），其次 <updated>（feed 更新时刻）
+            date_text = (published_el.text if published_el is not None else None) or (updated_el.text if updated_el is not None else None)
+            pub = parse_date(date_text) if date_text else None
             content = html.unescape(content_el.text) if content_el is not None and content_el.text else ''
             if not title or not link:
                 continue
@@ -387,6 +402,20 @@ for it in recent:
     link = (it.get('link') or '').strip()
     title = (it.get('title') or '').strip()
     fp = title_fp(title)
+    pub = it.get('pub')
+    pub_date = pub.strftime('%Y-%m-%d') if pub else ''
+
+    matched_same_day = False
+    if link:
+        for hist in history_items:
+            if hist.get('link') == link and hist.get('date') == pub_date:
+                matched_same_day = True
+                break
+
+    if matched_same_day:
+        cross_day_recent.append(it)
+        continue
+
     if (link and link in seen_links_hist) or (title and title in seen_titles_hist) or (fp and fp in seen_fp_hist):
         cross_day_dropped += 1
         continue
@@ -428,23 +457,29 @@ lines = [
 
 MIN_SCORE = 4  # 低于此分的文章不进入精选
 AD_KEYWORDS = ['金冠俱乐部', '独角招聘', '热招中', '晋升通道', '员工福利', '招聘岗位']  # 明显广告帖直接过滤
-MAX_TOTAL = 40  # 精选总条数上限
+MAX_TOTAL = 40  # 精选总条数上限（不含平台官方账号）
 
-# 收集所有精选，再全局截断
+# 平台官方账号（京东/字节/小红书/腾讯/百度）不受 MIN_SCORE 限制，单独追加，不占 MAX_TOTAL 名额
 all_qualified = []
+platform_items = []
 for cat in CAT_ORDER:
     if cat not in by_cat or not by_cat[cat]:
         continue
-    qualified = [
-        it for it in by_cat[cat]
-        if it['score'] >= MIN_SCORE
-        and not any(k in (it['title'] or '') for k in AD_KEYWORDS)
-    ]
-    all_qualified.extend([(it, cat) for it in qualified])
+    for it in by_cat[cat]:
+        if it.get('source') in SOURCE_PLATFORM_MAP:
+            # 平台官方账号 → 无条件保留，但去广告帖
+            if not any(k in (it['title'] or '') for k in AD_KEYWORDS):
+                platform_items.append((it, cat))
+        elif it['score'] >= MIN_SCORE and not any(k in (it['title'] or '') for k in AD_KEYWORDS):
+            all_qualified.append((it, cat))
 
-# 按分数降序，截断至 MAX_TOTAL
+# 非平台文章：按分数降序，截断至 MAX_TOTAL
 all_qualified.sort(key=lambda x: x[0]['score'], reverse=True)
 capped = all_qualified[:MAX_TOTAL]
+
+# 平台官方账号文章：全部追加在后面（不受 MAX_TOTAL 限制）
+platform_items.sort(key=lambda x: x[0]['score'], reverse=True)
+capped.extend(platform_items)
 
 # 按 CAT_ORDER 分组输出
 for cat in CAT_ORDER:

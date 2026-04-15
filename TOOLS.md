@@ -40,4 +40,10 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+### Obsidian
+
+- vault: ~/Documents/garytan (Obsidian 1.12+, CLI enabled)
+- config: ~/.config/openclaw/config.yaml (knowledge_base.obsidian_path)
+- Inbox 路径: ~/Documents/garytan/宇先生/Inbox/ （不在 vault 根目录）
+
 Add whatever helps you do your job. This is your cheat sheet.

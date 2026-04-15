@@ -1,0 +1,242 @@
+{
+  "logId": "b5964f5c-ae47-4808-9088-128fb74011c5",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "header_image",
+              "block_content": "",
+              "block_bbox": [
+                86,
+                57,
+                385,
+                148
+              ],
+              "block_id": 0,
+              "block_order": null,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  86.0,
+                  57.0
+                ],
+                [
+                  385.0,
+                  57.0
+                ],
+                [
+                  385.0,
+                  148.0
+                ],
+                [
+                  86.0,
+                  148.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "PART 02",
+              "block_bbox": [
+                566,
+                411,
+                785,
+                471
+              ],
+              "block_id": 1,
+              "block_order": 1,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  566.0,
+                  411.0
+                ],
+                [
+                  785.0,
+                  411.0
+                ],
+                [
+                  785.0,
+                  471.0
+                ],
+                [
+                  566.0,
+                  471.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "生意工具介绍",
+              "block_bbox": [
+                196,
+                508,
+                1153,
+                684
+              ],
+              "block_id": 2,
+              "block_order": 2,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  196.0,
+                  508.0
+                ],
+                [
+                  1153.0,
+                  508.0
+                ],
+                [
+                  1153.0,
+                  684.0
+                ],
+                [
+                  196.0,
+                  684.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.8780544996261597,
+                "coordinate": [
+                  86,
+                  57,
+                  385,
+                  148
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    86.0,
+                    57.0
+                  ],
+                  [
+                    385.0,
+                    57.0
+                  ],
+                  [
+                    385.0,
+                    148.0
+                  ],
+                  [
+                    86.0,
+                    148.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.34937673807144165,
+                "coordinate": [
+                  566,
+                  411,
+                  785,
+                  471
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    566.0,
+                    411.0
+                  ],
+                  [
+                    785.0,
+                    411.0
+                  ],
+                  [
+                    785.0,
+                    471.0
+                  ],
+                  [
+                    566.0,
+                    471.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8271776437759399,
+                "coordinate": [
+                  196,
+                  508,
+                  1153,
+                  684
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    196.0,
+                    508.0
+                  ],
+                  [
+                    1153.0,
+                    508.0
+                  ],
+                  [
+                    1153.0,
+                    684.0
+                  ],
+                  [
+                    196.0,
+                    684.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## PART 02\n\n## 生意工具介绍",
+          "images": {
+            "imgs/img_in_header_image_box_86_57_385_148.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//7cd37f4d-177d-4910-9e12-e51e7939ce57/markdown_0/imgs/img_in_header_image_box_86_57_385_148.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A22%3A34Z%2F-1%2F%2F22872aa2136d7a1b6e4798ecfd4148af10824c8f0e8510ba961b6b05439b71d3"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//7cd37f4d-177d-4910-9e12-e51e7939ce57/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A22%3A34Z%2F-1%2F%2F9579e0ac3c4fdba811b0198ffe5b0bc6f8b1bde7c4145630c304eb9fd7543185"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//7cd37f4d-177d-4910-9e12-e51e7939ce57/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A22%3A34Z%2F-1%2F%2Fcba249c65af63835aa8e0bc04bdaf37f854cbb023f1ec4e7ddc906d7618a451d"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//7cd37f4d-177d-4910-9e12-e51e7939ce57/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A22%3A35Z%2F-1%2F%2Fd7daa7de9f3b4426ecf561938c1ff993e921e185ed9c84e9d4e40770c8f05c6c"
+    ]
+  }
+}

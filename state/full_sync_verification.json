@@ -1,0 +1,49 @@
+{
+  "public_count": 52,
+  "agent_count": 6,
+  "all_ok": true,
+  "verification": [
+    {
+      "agent": "la_xiao_chuang",
+      "count": 52,
+      "missing_vs_public": [],
+      "extra_vs_public": [],
+      "ok": true
+    },
+    {
+      "agent": "la_xiao_ma",
+      "count": 52,
+      "missing_vs_public": [],
+      "extra_vs_public": [],
+      "ok": true
+    },
+    {
+      "agent": "la_xiao_shu",
+      "count": 52,
+      "missing_vs_public": [],
+      "extra_vs_public": [],
+      "ok": true
+    },
+    {
+      "agent": "la_xiao_tou",
+      "count": 52,
+      "missing_vs_public": [],
+      "extra_vs_public": [],
+      "ok": true
+    },
+    {
+      "agent": "la_xiao_zhen",
+      "count": 52,
+      "missing_vs_public": [],
+      "extra_vs_public": [],
+      "ok": true
+    },
+    {
+      "agent": "la_xiao_zhi",
+      "count": 52,
+      "missing_vs_public": [],
+      "extra_vs_public": [],
+      "ok": true
+    }
+  ]
+}

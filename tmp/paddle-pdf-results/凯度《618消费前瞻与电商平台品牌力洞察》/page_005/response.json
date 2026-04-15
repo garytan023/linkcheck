@@ -1,0 +1,624 @@
+{
+  "logId": "b541063a-6b24-4ed7-bdd8-9532b667ce0e",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "paragraph_title",
+              "block_content": "今年618消费者整体态度较为积极",
+              "block_bbox": [
+                76,
+                103,
+                1140,
+                185
+              ],
+              "block_id": 0,
+              "block_order": 1,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  76.0,
+                  103.0
+                ],
+                [
+                  1140.0,
+                  103.0
+                ],
+                [
+                  1140.0,
+                  185.0
+                ],
+                [
+                  76.0,
+                  185.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "凯度最新研究数据显示，58%的消费者增加了预算。对于消费预算的变化原因，消费者表示主要是有需要购买的东西，并且收入变化与囤货因素也有所影响",
+              "block_bbox": [
+                71,
+                229,
+                2737,
+                373
+              ],
+              "block_id": 1,
+              "block_order": 2,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  71.0,
+                  229.0
+                ],
+                [
+                  2737.0,
+                  229.0
+                ],
+                [
+                  2737.0,
+                  373.0
+                ],
+                [
+                  71.0,
+                  373.0
+                ]
+              ]
+            },
+            {
+              "block_label": "figure_title",
+              "block_content": "2023相比2022消费者预算变化%",
+              "block_bbox": [
+                507,
+                432,
+                1203,
+                493
+              ],
+              "block_id": 2,
+              "block_order": null,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  507.0,
+                  432.0
+                ],
+                [
+                  1203.0,
+                  432.0
+                ],
+                [
+                  1203.0,
+                  493.0
+                ],
+                [
+                  507.0,
+                  493.0
+                ]
+              ]
+            },
+            {
+              "block_label": "figure_title",
+              "block_content": "消费者预算变化的原因",
+              "block_bbox": [
+                1910,
+                415,
+                2392,
+                476
+              ],
+              "block_id": 3,
+              "block_order": null,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  1910.0,
+                  415.0
+                ],
+                [
+                  2392.0,
+                  415.0
+                ],
+                [
+                  2392.0,
+                  476.0
+                ],
+                [
+                  1910.0,
+                  476.0
+                ]
+              ]
+            },
+            {
+              "block_label": "chart",
+              "block_content": "",
+              "block_bbox": [
+                71,
+                446,
+                2828,
+                1392
+              ],
+              "block_id": 4,
+              "block_order": null,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  71,
+                  511
+                ],
+                [
+                  86,
+                  1391
+                ],
+                [
+                  2279,
+                  1383
+                ],
+                [
+                  2784,
+                  1335
+                ],
+                [
+                  2813,
+                  446
+                ],
+                [
+                  158,
+                  446
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "KANTAR MARKETPLACE",
+              "block_bbox": [
+                72,
+                1499,
+                855,
+                1569
+              ],
+              "block_id": 5,
+              "block_order": null,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  72.0,
+                  1499.0
+                ],
+                [
+                  855.0,
+                  1499.0
+                ],
+                [
+                  855.0,
+                  1569.0
+                ],
+                [
+                  72.0,
+                  1569.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "数据来源：",
+              "block_bbox": [
+                1431,
+                1473,
+                1551,
+                1507
+              ],
+              "block_id": 6,
+              "block_order": 3,
+              "group_id": 6,
+              "block_polygon_points": [
+                [
+                  1431.0,
+                  1473.0
+                ],
+                [
+                  1551.0,
+                  1473.0
+                ],
+                [
+                  1551.0,
+                  1507.0
+                ],
+                [
+                  1431.0,
+                  1507.0
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "凯度2023.5月数据 Q：5.对比去年618，您今年的618购物预算有变化吗？Q：您预算变化的原因时什么？（开放题）\n\n凯度2022 ART 后疫情时代消费者数据 Q：对比去年双11，您今年的双11购物预算有变化吗？",
+              "block_bbox": [
+                1428,
+                1519,
+                2661,
+                1601
+              ],
+              "block_id": 7,
+              "block_order": null,
+              "group_id": 7,
+              "block_polygon_points": [
+                [
+                  1428.0,
+                  1519.0
+                ],
+                [
+                  2661.0,
+                  1519.0
+                ],
+                [
+                  2661.0,
+                  1601.0
+                ],
+                [
+                  1428.0,
+                  1601.0
+                ]
+              ]
+            },
+            {
+              "block_label": "number",
+              "block_content": "4",
+              "block_bbox": [
+                2771,
+                1519,
+                2802,
+                1551
+              ],
+              "block_id": 8,
+              "block_order": null,
+              "group_id": 8,
+              "block_polygon_points": [
+                [
+                  2771.0,
+                  1519.0
+                ],
+                [
+                  2801.0,
+                  1519.0
+                ],
+                [
+                  2801.0,
+                  1550.0
+                ],
+                [
+                  2771.0,
+                  1550.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8675534725189209,
+                "coordinate": [
+                  76,
+                  103,
+                  1140,
+                  185
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    76.0,
+                    103.0
+                  ],
+                  [
+                    1140.0,
+                    103.0
+                  ],
+                  [
+                    1140.0,
+                    185.0
+                  ],
+                  [
+                    76.0,
+                    185.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9373855590820312,
+                "coordinate": [
+                  71,
+                  229,
+                  2737,
+                  373
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    71.0,
+                    229.0
+                  ],
+                  [
+                    2737.0,
+                    229.0
+                  ],
+                  [
+                    2737.0,
+                    373.0
+                  ],
+                  [
+                    71.0,
+                    373.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.4234181046485901,
+                "coordinate": [
+                  507,
+                  432,
+                  1203,
+                  493
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    507.0,
+                    432.0
+                  ],
+                  [
+                    1203.0,
+                    432.0
+                  ],
+                  [
+                    1203.0,
+                    493.0
+                  ],
+                  [
+                    507.0,
+                    493.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.6188915371894836,
+                "coordinate": [
+                  1910,
+                  415,
+                  2392,
+                  476
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1910.0,
+                    415.0
+                  ],
+                  [
+                    2392.0,
+                    415.0
+                  ],
+                  [
+                    2392.0,
+                    476.0
+                  ],
+                  [
+                    1910.0,
+                    476.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 3,
+                "label": "chart",
+                "score": 0.4724096357822418,
+                "coordinate": [
+                  71,
+                  446,
+                  2828,
+                  1392
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    71,
+                    511
+                  ],
+                  [
+                    86,
+                    1391
+                  ],
+                  [
+                    2279,
+                    1383
+                  ],
+                  [
+                    2784,
+                    1335
+                  ],
+                  [
+                    2813,
+                    446
+                  ],
+                  [
+                    158,
+                    446
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.5319311618804932,
+                "coordinate": [
+                  72,
+                  1499,
+                  855,
+                  1569
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    72.0,
+                    1499.0
+                  ],
+                  [
+                    855.0,
+                    1499.0
+                  ],
+                  [
+                    855.0,
+                    1569.0
+                  ],
+                  [
+                    72.0,
+                    1569.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.4047810435295105,
+                "coordinate": [
+                  1431,
+                  1473,
+                  1551,
+                  1507
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    1431.0,
+                    1473.0
+                  ],
+                  [
+                    1551.0,
+                    1473.0
+                  ],
+                  [
+                    1551.0,
+                    1507.0
+                  ],
+                  [
+                    1431.0,
+                    1507.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.37027743458747864,
+                "coordinate": [
+                  1428,
+                  1519,
+                  2661,
+                  1601
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1428.0,
+                    1519.0
+                  ],
+                  [
+                    2661.0,
+                    1519.0
+                  ],
+                  [
+                    2661.0,
+                    1601.0
+                  ],
+                  [
+                    1428.0,
+                    1601.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.5770583152770996,
+                "coordinate": [
+                  2771,
+                  1519,
+                  2802,
+                  1551
+                ],
+                "order": 4,
+                "polygon_points": [
+                  [
+                    2771.0,
+                    1519.0
+                  ],
+                  [
+                    2801.0,
+                    1519.0
+                  ],
+                  [
+                    2801.0,
+                    1550.0
+                  ],
+                  [
+                    2771.0,
+                    1550.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## 今年618消费者整体态度较为积极\n\n凯度最新研究数据显示，58%的消费者增加了预算。对于消费预算的变化原因，消费者表示主要是有需要购买的东西，并且收入变化与囤货因素也有所影响\n\n<div style=\"text-align: center;\">2023相比2022消费者预算变化%</div>\n\n\n<div style=\"text-align: center;\">消费者预算变化的原因</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_71_446_2828_1392.jpg\" alt=\"Image\" width=\"95%\" /></div>\n\n\n## 数据来源：",
+          "images": {
+            "imgs/img_in_chart_box_71_446_2828_1392.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//4e1fd252-39f6-4388-9cf7-fabc8eea8553/markdown_0/imgs/img_in_chart_box_71_446_2828_1392.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A09Z%2F-1%2F%2F5c47cf3040a392ba6e018accf42f1928cad07f8f79787466425d11b7aa723f24"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//4e1fd252-39f6-4388-9cf7-fabc8eea8553/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A09Z%2F-1%2F%2Fe0ff80efc3af5f883b70e953fe3cfc5d3d19a231ff6bf45b194e6f600e3528d3"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//4e1fd252-39f6-4388-9cf7-fabc8eea8553/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A09Z%2F-1%2F%2Faa293f16013a5d04c8f16520f85653468167b5e4b0711a833fa4ba9f97a06073"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//4e1fd252-39f6-4388-9cf7-fabc8eea8553/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A10Z%2F-1%2F%2F13ba0ee81ff795bb3d07314f7886cfbdf9287e9318d3e4960d48de401d65bc58"
+    ]
+  }
+}

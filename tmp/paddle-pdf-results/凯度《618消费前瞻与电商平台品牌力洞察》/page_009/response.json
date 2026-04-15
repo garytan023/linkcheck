@@ -1,0 +1,510 @@
+{
+  "logId": "21dd6470-f62f-4bbb-a40c-4048a71764b7",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "paragraph_title",
+              "block_content": "今年618的消费力将有望集中在护肤品/化妆品、数码产品、日化用品等",
+              "block_bbox": [
+                74,
+                102,
+                2315,
+                185
+              ],
+              "block_id": 0,
+              "block_order": 1,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  74.0,
+                  102.0
+                ],
+                [
+                  2315.0,
+                  102.0
+                ],
+                [
+                  2315.0,
+                  185.0
+                ],
+                [
+                  74.0,
+                  185.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "618消费者更多的注意力会在护肤品/化妆品、日化用品、数码产品、家用电器、服装这五大品类。其中女性消费者更想购买化妆品，而男性消费者主要关注数码产品。",
+              "block_bbox": [
+                77,
+                229,
+                2763,
+                372
+              ],
+              "block_id": 1,
+              "block_order": 2,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  77.0,
+                  229.0
+                ],
+                [
+                  2763.0,
+                  229.0
+                ],
+                [
+                  2763.0,
+                  372.0
+                ],
+                [
+                  77.0,
+                  372.0
+                ]
+              ]
+            },
+            {
+              "block_label": "figure_title",
+              "block_content": "2023消费者618计划购买品类排名",
+              "block_bbox": [
+                2016,
+                372,
+                2727,
+                431
+              ],
+              "block_id": 2,
+              "block_order": null,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  2016.0,
+                  372.0
+                ],
+                [
+                  2727.0,
+                  372.0
+                ],
+                [
+                  2727.0,
+                  431.0
+                ],
+                [
+                  2016.0,
+                  431.0
+                ]
+              ]
+            },
+            {
+              "block_label": "chart",
+              "block_content": "",
+              "block_bbox": [
+                111,
+                409,
+                2809,
+                1410
+              ],
+              "block_id": 3,
+              "block_order": null,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  111,
+                  418
+                ],
+                [
+                  111,
+                  1409
+                ],
+                [
+                  2808,
+                  1377
+                ],
+                [
+                  2794,
+                  603
+                ],
+                [
+                  2708,
+                  450
+                ],
+                [
+                  2059,
+                  450
+                ],
+                [
+                  1827,
+                  409
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "KANTAR MARKETPLACE",
+              "block_bbox": [
+                72,
+                1500,
+                854,
+                1567
+              ],
+              "block_id": 4,
+              "block_order": null,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  72.0,
+                  1500.0
+                ],
+                [
+                  854.0,
+                  1500.0
+                ],
+                [
+                  854.0,
+                  1567.0
+                ],
+                [
+                  72.0,
+                  1567.0
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "数据来源：凯度2023.5月数据",
+              "block_bbox": [
+                1453,
+                1517,
+                1784,
+                1550
+              ],
+              "block_id": 5,
+              "block_order": null,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  1453.0,
+                  1517.0
+                ],
+                [
+                  1784.0,
+                  1517.0
+                ],
+                [
+                  1784.0,
+                  1550.0
+                ],
+                [
+                  1453.0,
+                  1550.0
+                ]
+              ]
+            },
+            {
+              "block_label": "number",
+              "block_content": "8",
+              "block_bbox": [
+                2770,
+                1519,
+                2801,
+                1551
+              ],
+              "block_id": 6,
+              "block_order": null,
+              "group_id": 6,
+              "block_polygon_points": [
+                [
+                  2770.0,
+                  1519.0
+                ],
+                [
+                  2800.0,
+                  1519.0
+                ],
+                [
+                  2800.0,
+                  1550.0
+                ],
+                [
+                  2770.0,
+                  1550.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8925720453262329,
+                "coordinate": [
+                  74,
+                  102,
+                  2315,
+                  185
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    74.0,
+                    102.0
+                  ],
+                  [
+                    2315.0,
+                    102.0
+                  ],
+                  [
+                    2315.0,
+                    185.0
+                  ],
+                  [
+                    74.0,
+                    185.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9400031566619873,
+                "coordinate": [
+                  77,
+                  229,
+                  2763,
+                  372
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    77.0,
+                    229.0
+                  ],
+                  [
+                    2763.0,
+                    229.0
+                  ],
+                  [
+                    2763.0,
+                    372.0
+                  ],
+                  [
+                    77.0,
+                    372.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.5333055853843689,
+                "coordinate": [
+                  2016,
+                  372,
+                  2727,
+                  431
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2016.0,
+                    372.0
+                  ],
+                  [
+                    2727.0,
+                    372.0
+                  ],
+                  [
+                    2727.0,
+                    431.0
+                  ],
+                  [
+                    2016.0,
+                    431.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 3,
+                "label": "chart",
+                "score": 0.963131308555603,
+                "coordinate": [
+                  111,
+                  409,
+                  2809,
+                  1410
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    111,
+                    418
+                  ],
+                  [
+                    111,
+                    1409
+                  ],
+                  [
+                    2808,
+                    1377
+                  ],
+                  [
+                    2794,
+                    603
+                  ],
+                  [
+                    2708,
+                    450
+                  ],
+                  [
+                    2059,
+                    450
+                  ],
+                  [
+                    1827,
+                    409
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.6569945812225342,
+                "coordinate": [
+                  72,
+                  1500,
+                  854,
+                  1567
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    72.0,
+                    1500.0
+                  ],
+                  [
+                    854.0,
+                    1500.0
+                  ],
+                  [
+                    854.0,
+                    1567.0
+                  ],
+                  [
+                    72.0,
+                    1567.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.7518436312675476,
+                "coordinate": [
+                  1453,
+                  1517,
+                  1784,
+                  1550
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1453.0,
+                    1517.0
+                  ],
+                  [
+                    1784.0,
+                    1517.0
+                  ],
+                  [
+                    1784.0,
+                    1550.0
+                  ],
+                  [
+                    1453.0,
+                    1550.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6477184295654297,
+                "coordinate": [
+                  2770,
+                  1519,
+                  2801,
+                  1551
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    2770.0,
+                    1519.0
+                  ],
+                  [
+                    2800.0,
+                    1519.0
+                  ],
+                  [
+                    2800.0,
+                    1550.0
+                  ],
+                  [
+                    2770.0,
+                    1550.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## 今年618的消费力将有望集中在护肤品/化妆品、数码产品、日化用品等\n\n618消费者更多的注意力会在护肤品/化妆品、日化用品、数码产品、家用电器、服装这五大品类。其中女性消费者更想购买化妆品，而男性消费者主要关注数码产品。\n\n<div style=\"text-align: center;\">2023消费者618计划购买品类排名</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_111_409_2809_1410.jpg\" alt=\"Image\" width=\"93%\" /></div>\n",
+          "images": {
+            "imgs/img_in_chart_box_111_409_2809_1410.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//cb13f5ff-68e2-42f9-8e2f-71749a6750f9/markdown_0/imgs/img_in_chart_box_111_409_2809_1410.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A45Z%2F-1%2F%2F885d6ba26a8beafb08cb91fba290b7098612fd274170c74cacc2896cc022a133"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//cb13f5ff-68e2-42f9-8e2f-71749a6750f9/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A46Z%2F-1%2F%2F83232806dd36786a5750926acac265c4695d8b0b60a170f7a041722f7a18eb19"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//cb13f5ff-68e2-42f9-8e2f-71749a6750f9/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A46Z%2F-1%2F%2F42056493e1d11297f2b875c5538246dc00c124323c5de430a01cc91a7492c2c3"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//cb13f5ff-68e2-42f9-8e2f-71749a6750f9/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A46Z%2F-1%2F%2Fd0008d1f7f947c8ac397f080b9e498a3e79d99f8b759e5a05ad39e921e90107d"
+    ]
+  }
+}

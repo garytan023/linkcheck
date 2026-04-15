@@ -1,0 +1,547 @@
+{
+  "logId": "5fe13652-3dfe-44fd-958f-28f8f0fcde88",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "table",
+              "block_content": "<table><tr><td>Part 1</td><td>Part 2</td><td>Part 3</td><td>Part 4</td></tr></table>",
+              "block_bbox": [
+                106,
+                0,
+                1503,
+                70
+              ],
+              "block_id": 0,
+              "block_order": null,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  106.0,
+                  0.0
+                ],
+                [
+                  1503.0,
+                  0.0
+                ],
+                [
+                  1503.0,
+                  70.0
+                ],
+                [
+                  106.0,
+                  70.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "在获取优惠信息方面，消费者主要依靠直接搜索商品或前往大促会场",
+              "block_bbox": [
+                71,
+                102,
+                2224,
+                186
+              ],
+              "block_id": 1,
+              "block_order": 1,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  71.0,
+                  102.0
+                ],
+                [
+                  2224.0,
+                  102.0
+                ],
+                [
+                  2224.0,
+                  186.0
+                ],
+                [
+                  71.0,
+                  186.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "在购物节优惠活动营销时，消费者发现优惠的习惯几乎没有变化，主要在大促会场领到优惠券以及直奔想要的商品继而得知优惠信息",
+              "block_bbox": [
+                76,
+                228,
+                2748,
+                372
+              ],
+              "block_id": 2,
+              "block_order": 2,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  76.0,
+                  228.0
+                ],
+                [
+                  2748.0,
+                  228.0
+                ],
+                [
+                  2748.0,
+                  372.0
+                ],
+                [
+                  76.0,
+                  372.0
+                ]
+              ]
+            },
+            {
+              "block_label": "figure_title",
+              "block_content": "消费者获得优惠信息的途经",
+              "block_bbox": [
+                1519,
+                365,
+                2100,
+                423
+              ],
+              "block_id": 3,
+              "block_order": null,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  1519,
+                  365
+                ],
+                [
+                  1519,
+                  422
+                ],
+                [
+                  2099,
+                  422
+                ],
+                [
+                  2099,
+                  365
+                ]
+              ]
+            },
+            {
+              "block_label": "chart",
+              "block_content": "",
+              "block_bbox": [
+                97,
+                376,
+                2758,
+                1408
+              ],
+              "block_id": 4,
+              "block_order": null,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  97,
+                  409
+                ],
+                [
+                  112,
+                  1407
+                ],
+                [
+                  2757,
+                  1407
+                ],
+                [
+                  2714,
+                  385
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "KANTAR MARKETPLACE",
+              "block_bbox": [
+                72,
+                1499,
+                854,
+                1567
+              ],
+              "block_id": 5,
+              "block_order": null,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  72.0,
+                  1499.0
+                ],
+                [
+                  854.0,
+                  1499.0
+                ],
+                [
+                  854.0,
+                  1567.0
+                ],
+                [
+                  72.0,
+                  1567.0
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "数据来源：凯度2023.5月数据 / 凯度2022 ART 后疫情时代消费者数据",
+              "block_bbox": [
+                1451,
+                1526,
+                2201,
+                1560
+              ],
+              "block_id": 6,
+              "block_order": null,
+              "group_id": 6,
+              "block_polygon_points": [
+                [
+                  1451.0,
+                  1526.0
+                ],
+                [
+                  2201.0,
+                  1526.0
+                ],
+                [
+                  2201.0,
+                  1560.0
+                ],
+                [
+                  1451.0,
+                  1560.0
+                ]
+              ]
+            },
+            {
+              "block_label": "number",
+              "block_content": "11",
+              "block_bbox": [
+                2763,
+                1519,
+                2800,
+                1552
+              ],
+              "block_id": 7,
+              "block_order": null,
+              "group_id": 7,
+              "block_polygon_points": [
+                [
+                  2763.0,
+                  1519.0
+                ],
+                [
+                  2799.0,
+                  1519.0
+                ],
+                [
+                  2799.0,
+                  1551.0
+                ],
+                [
+                  2763.0,
+                  1551.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.43693241477012634,
+                "coordinate": [
+                  106,
+                  0,
+                  1503,
+                  70
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    106.0,
+                    0.0
+                  ],
+                  [
+                    1503.0,
+                    0.0
+                  ],
+                  [
+                    1503.0,
+                    70.0
+                  ],
+                  [
+                    106.0,
+                    70.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8642299175262451,
+                "coordinate": [
+                  71,
+                  102,
+                  2224,
+                  186
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    71.0,
+                    102.0
+                  ],
+                  [
+                    2224.0,
+                    102.0
+                  ],
+                  [
+                    2224.0,
+                    186.0
+                  ],
+                  [
+                    71.0,
+                    186.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9126547574996948,
+                "coordinate": [
+                  76,
+                  228,
+                  2748,
+                  372
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    76.0,
+                    228.0
+                  ],
+                  [
+                    2748.0,
+                    228.0
+                  ],
+                  [
+                    2748.0,
+                    372.0
+                  ],
+                  [
+                    76.0,
+                    372.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.35289695858955383,
+                "coordinate": [
+                  1519,
+                  365,
+                  2100,
+                  423
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1519,
+                    365
+                  ],
+                  [
+                    1519,
+                    422
+                  ],
+                  [
+                    2099,
+                    422
+                  ],
+                  [
+                    2099,
+                    365
+                  ]
+                ]
+              },
+              {
+                "cls_id": 3,
+                "label": "chart",
+                "score": 0.8925254940986633,
+                "coordinate": [
+                  97,
+                  376,
+                  2758,
+                  1408
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    97,
+                    409
+                  ],
+                  [
+                    112,
+                    1407
+                  ],
+                  [
+                    2757,
+                    1407
+                  ],
+                  [
+                    2714,
+                    385
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8257918357849121,
+                "coordinate": [
+                  72,
+                  1499,
+                  854,
+                  1567
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    72.0,
+                    1499.0
+                  ],
+                  [
+                    854.0,
+                    1499.0
+                  ],
+                  [
+                    854.0,
+                    1567.0
+                  ],
+                  [
+                    72.0,
+                    1567.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.7056880593299866,
+                "coordinate": [
+                  1451,
+                  1526,
+                  2201,
+                  1560
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1451.0,
+                    1526.0
+                  ],
+                  [
+                    2201.0,
+                    1526.0
+                  ],
+                  [
+                    2201.0,
+                    1560.0
+                  ],
+                  [
+                    1451.0,
+                    1560.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6660932898521423,
+                "coordinate": [
+                  2763,
+                  1519,
+                  2800,
+                  1552
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    2763.0,
+                    1519.0
+                  ],
+                  [
+                    2799.0,
+                    1519.0
+                  ],
+                  [
+                    2799.0,
+                    1551.0
+                  ],
+                  [
+                    2763.0,
+                    1551.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n## 在获取优惠信息方面，消费者主要依靠直接搜索商品或前往大促会场\n\n在购物节优惠活动营销时，消费者发现优惠的习惯几乎没有变化，主要在大促会场领到优惠券以及直奔想要的商品继而得知优惠信息\n\n<div style=\"text-align: center;\">消费者获得优惠信息的途经</div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_97_376_2758_1408.jpg\" alt=\"Image\" width=\"92%\" /></div>\n",
+          "images": {
+            "imgs/img_in_chart_box_97_376_2758_1408.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//1c189564-9bf5-4501-8186-b27d13aeefc5/markdown_0/imgs/img_in_chart_box_97_376_2758_1408.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A43%3A02Z%2F-1%2F%2F89ff64945bd22b2899fa283c4af580366022536403b54849dff9e71005d5b226"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//1c189564-9bf5-4501-8186-b27d13aeefc5/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A43%3A03Z%2F-1%2F%2F56eadd7b298c1a5904437ca6210103581fa2bfb25aaba7b61e1d983b0e0f9f9d"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//1c189564-9bf5-4501-8186-b27d13aeefc5/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A43%3A03Z%2F-1%2F%2F6ebf2bf93724f21a6252c73f220ca35d323d189c70486092ea2e9ace92924ca7"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//1c189564-9bf5-4501-8186-b27d13aeefc5/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A43%3A03Z%2F-1%2F%2F2ba1db271d287443acce11aab85c90af8d9d172756734c496357ed0defea8feb"
+    ]
+  }
+}

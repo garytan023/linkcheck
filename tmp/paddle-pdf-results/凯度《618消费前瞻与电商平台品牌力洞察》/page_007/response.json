@@ -1,0 +1,486 @@
+{
+  "logId": "298ab903-72fa-4530-b078-a079057a48b4",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "table",
+              "block_content": "<table><tr><td>Part 1</td><td>Part 2</td><td>Part 3</td><td>Part 4</td></tr></table>",
+              "block_bbox": [
+                103,
+                0,
+                1504,
+                69
+              ],
+              "block_id": 0,
+              "block_order": null,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  103.0,
+                  0.0
+                ],
+                [
+                  1504.0,
+                  0.0
+                ],
+                [
+                  1504.0,
+                  69.0
+                ],
+                [
+                  103.0,
+                  69.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "年轻人更爱买买买，而成熟人群消费更加谨慎",
+              "block_bbox": [
+                73,
+                102,
+                1512,
+                185
+              ],
+              "block_id": 1,
+              "block_order": 1,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  73.0,
+                  102.0
+                ],
+                [
+                  1512.0,
+                  102.0
+                ],
+                [
+                  1512.0,
+                  185.0
+                ],
+                [
+                  73.0,
+                  185.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "34岁以下的消费者更具消费欲望，60%的年轻消费者的预算超千元；而35岁+人群消费会更加谨慎，但也有40%的消费者的预算超千元",
+              "block_bbox": [
+                74,
+                218,
+                2795,
+                362
+              ],
+              "block_id": 2,
+              "block_order": 2,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  74.0,
+                  218.0
+                ],
+                [
+                  2795.0,
+                  218.0
+                ],
+                [
+                  2795.0,
+                  362.0
+                ],
+                [
+                  74.0,
+                  362.0
+                ]
+              ]
+            },
+            {
+              "block_label": "chart",
+              "block_content": "",
+              "block_bbox": [
+                72,
+                478,
+                2630,
+                1379
+              ],
+              "block_id": 3,
+              "block_order": null,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  72.0,
+                  478.0
+                ],
+                [
+                  2630.0,
+                  478.0
+                ],
+                [
+                  2630.0,
+                  1379.0
+                ],
+                [
+                  72.0,
+                  1379.0
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "KANTAR MARKETPLACE",
+              "block_bbox": [
+                71,
+                1499,
+                855,
+                1568
+              ],
+              "block_id": 4,
+              "block_order": null,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  71.0,
+                  1499.0
+                ],
+                [
+                  855.0,
+                  1499.0
+                ],
+                [
+                  855.0,
+                  1568.0
+                ],
+                [
+                  71.0,
+                  1568.0
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "数据来源：凯度2023.5月数据",
+              "block_bbox": [
+                1453,
+                1517,
+                1784,
+                1551
+              ],
+              "block_id": 5,
+              "block_order": null,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  1453.0,
+                  1517.0
+                ],
+                [
+                  1784.0,
+                  1517.0
+                ],
+                [
+                  1784.0,
+                  1551.0
+                ],
+                [
+                  1453.0,
+                  1551.0
+                ]
+              ]
+            },
+            {
+              "block_label": "number",
+              "block_content": "6",
+              "block_bbox": [
+                2769,
+                1518,
+                2802,
+                1550
+              ],
+              "block_id": 6,
+              "block_order": null,
+              "group_id": 6,
+              "block_polygon_points": [
+                [
+                  2769.0,
+                  1518.0
+                ],
+                [
+                  2801.0,
+                  1518.0
+                ],
+                [
+                  2801.0,
+                  1549.0
+                ],
+                [
+                  2769.0,
+                  1549.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.3015381097793579,
+                "coordinate": [
+                  103,
+                  0,
+                  1504,
+                  69
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    103.0,
+                    0.0
+                  ],
+                  [
+                    1504.0,
+                    0.0
+                  ],
+                  [
+                    1504.0,
+                    69.0
+                  ],
+                  [
+                    103.0,
+                    69.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.645776093006134,
+                "coordinate": [
+                  73,
+                  102,
+                  1512,
+                  185
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    73.0,
+                    102.0
+                  ],
+                  [
+                    1512.0,
+                    102.0
+                  ],
+                  [
+                    1512.0,
+                    185.0
+                  ],
+                  [
+                    73.0,
+                    185.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9333453178405762,
+                "coordinate": [
+                  74,
+                  218,
+                  2795,
+                  362
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    74.0,
+                    218.0
+                  ],
+                  [
+                    2795.0,
+                    218.0
+                  ],
+                  [
+                    2795.0,
+                    362.0
+                  ],
+                  [
+                    74.0,
+                    362.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 3,
+                "label": "chart",
+                "score": 0.9289137125015259,
+                "coordinate": [
+                  72,
+                  478,
+                  2630,
+                  1379
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    72.0,
+                    478.0
+                  ],
+                  [
+                    2630.0,
+                    478.0
+                  ],
+                  [
+                    2630.0,
+                    1379.0
+                  ],
+                  [
+                    72.0,
+                    1379.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.7469837665557861,
+                "coordinate": [
+                  71,
+                  1499,
+                  855,
+                  1568
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    71.0,
+                    1499.0
+                  ],
+                  [
+                    855.0,
+                    1499.0
+                  ],
+                  [
+                    855.0,
+                    1568.0
+                  ],
+                  [
+                    71.0,
+                    1568.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.6112738847732544,
+                "coordinate": [
+                  1453,
+                  1517,
+                  1784,
+                  1551
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1453.0,
+                    1517.0
+                  ],
+                  [
+                    1784.0,
+                    1517.0
+                  ],
+                  [
+                    1784.0,
+                    1551.0
+                  ],
+                  [
+                    1453.0,
+                    1551.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.645579993724823,
+                "coordinate": [
+                  2769,
+                  1518,
+                  2802,
+                  1550
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    2769.0,
+                    1518.0
+                  ],
+                  [
+                    2801.0,
+                    1518.0
+                  ],
+                  [
+                    2801.0,
+                    1549.0
+                  ],
+                  [
+                    2769.0,
+                    1549.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n## 年轻人更爱买买买，而成熟人群消费更加谨慎\n\n34岁以下的消费者更具消费欲望，60%的年轻消费者的预算超千元；而35岁+人群消费会更加谨慎，但也有40%的消费者的预算超千元\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_72_478_2630_1379.jpg\" alt=\"Image\" width=\"88%\" /></div>\n",
+          "images": {
+            "imgs/img_in_chart_box_72_478_2630_1379.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//b617ee03-eb97-4617-9ce0-51b35f8c7af3/markdown_0/imgs/img_in_chart_box_72_478_2630_1379.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A30Z%2F-1%2F%2Fac9b85dde58cc3622e34c90e076af1aa1bdc5f03fc59b5f487940de49c38aa31"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//b617ee03-eb97-4617-9ce0-51b35f8c7af3/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A31Z%2F-1%2F%2Fc002a89861fe5ddce6b2876edfecf6c43c23406de04134450189ef8f7a839a2e"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//b617ee03-eb97-4617-9ce0-51b35f8c7af3/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A31Z%2F-1%2F%2F56aa25f62409fb55e8fef482c0c09f89f7c927e2b1be644f3786cca0d470239e"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//b617ee03-eb97-4617-9ce0-51b35f8c7af3/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A31Z%2F-1%2F%2Fe1ce0432bc2e302d4ea69feb69cb90c04440b553d1c2b1bd2a7d732dc6da607f"
+    ]
+  }
+}

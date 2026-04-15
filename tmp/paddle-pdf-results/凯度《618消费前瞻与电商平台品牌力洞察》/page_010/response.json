@@ -1,0 +1,486 @@
+{
+  "logId": "9364e7f5-bfa0-4a1c-bf2f-375ee653ee2c",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "table",
+              "block_content": "<table><tr><td>Part 1</td><td>Part 2</td><td>Part 3</td><td>Part 4</td></tr></table>",
+              "block_bbox": [
+                103,
+                0,
+                1499,
+                70
+              ],
+              "block_id": 0,
+              "block_order": null,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  103.0,
+                  0.0
+                ],
+                [
+                  1499.0,
+                  0.0
+                ],
+                [
+                  1499.0,
+                  70.0
+                ],
+                [
+                  103.0,
+                  70.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "优惠与补货是今年618消费者的主要购物目的",
+              "block_bbox": [
+                76,
+                103,
+                1495,
+                185
+              ],
+              "block_id": 1,
+              "block_order": 1,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  76.0,
+                  103.0
+                ],
+                [
+                  1495.0,
+                  103.0
+                ],
+                [
+                  1495.0,
+                  185.0
+                ],
+                [
+                  76.0,
+                  185.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "对比2022双十一多样的购物目的，促销活动和补货是消费者618购物的主要目的。并且消费者对618优惠活动的感知和认可度更高",
+              "block_bbox": [
+                77,
+                228,
+                2744,
+                374
+              ],
+              "block_id": 2,
+              "block_order": 2,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  77.0,
+                  228.0
+                ],
+                [
+                  2744.0,
+                  228.0
+                ],
+                [
+                  2744.0,
+                  374.0
+                ],
+                [
+                  77.0,
+                  374.0
+                ]
+              ]
+            },
+            {
+              "block_label": "chart",
+              "block_content": "",
+              "block_bbox": [
+                81,
+                473,
+                2757,
+                1437
+              ],
+              "block_id": 3,
+              "block_order": null,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  81.0,
+                  473.0
+                ],
+                [
+                  2757.0,
+                  473.0
+                ],
+                [
+                  2757.0,
+                  1437.0
+                ],
+                [
+                  81.0,
+                  1437.0
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "KANTAR MARKETPLACE",
+              "block_bbox": [
+                71,
+                1498,
+                854,
+                1568
+              ],
+              "block_id": 4,
+              "block_order": null,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  71.0,
+                  1498.0
+                ],
+                [
+                  854.0,
+                  1498.0
+                ],
+                [
+                  854.0,
+                  1568.0
+                ],
+                [
+                  71.0,
+                  1568.0
+                ]
+              ]
+            },
+            {
+              "block_label": "vision_footnote",
+              "block_content": "数据来源：凯度2023.5月数据 / 凯度2022 ART 后疫情时代消费者数据",
+              "block_bbox": [
+                1450,
+                1517,
+                2202,
+                1553
+              ],
+              "block_id": 5,
+              "block_order": null,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  1450.0,
+                  1517.0
+                ],
+                [
+                  2202.0,
+                  1517.0
+                ],
+                [
+                  2202.0,
+                  1553.0
+                ],
+                [
+                  1450.0,
+                  1553.0
+                ]
+              ]
+            },
+            {
+              "block_label": "number",
+              "block_content": "9",
+              "block_bbox": [
+                2768,
+                1518,
+                2799,
+                1551
+              ],
+              "block_id": 6,
+              "block_order": null,
+              "group_id": 6,
+              "block_polygon_points": [
+                [
+                  2768.0,
+                  1518.0
+                ],
+                [
+                  2798.0,
+                  1518.0
+                ],
+                [
+                  2798.0,
+                  1550.0
+                ],
+                [
+                  2768.0,
+                  1550.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.35892677307128906,
+                "coordinate": [
+                  103,
+                  0,
+                  1499,
+                  70
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    103.0,
+                    0.0
+                  ],
+                  [
+                    1499.0,
+                    0.0
+                  ],
+                  [
+                    1499.0,
+                    70.0
+                  ],
+                  [
+                    103.0,
+                    70.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.879284143447876,
+                "coordinate": [
+                  76,
+                  103,
+                  1495,
+                  185
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    76.0,
+                    103.0
+                  ],
+                  [
+                    1495.0,
+                    103.0
+                  ],
+                  [
+                    1495.0,
+                    185.0
+                  ],
+                  [
+                    76.0,
+                    185.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9348663091659546,
+                "coordinate": [
+                  77,
+                  228,
+                  2744,
+                  374
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    77.0,
+                    228.0
+                  ],
+                  [
+                    2744.0,
+                    228.0
+                  ],
+                  [
+                    2744.0,
+                    374.0
+                  ],
+                  [
+                    77.0,
+                    374.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 3,
+                "label": "chart",
+                "score": 0.9408757090568542,
+                "coordinate": [
+                  81,
+                  473,
+                  2757,
+                  1437
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    81.0,
+                    473.0
+                  ],
+                  [
+                    2757.0,
+                    473.0
+                  ],
+                  [
+                    2757.0,
+                    1437.0
+                  ],
+                  [
+                    81.0,
+                    1437.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.763581395149231,
+                "coordinate": [
+                  71,
+                  1498,
+                  854,
+                  1568
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    71.0,
+                    1498.0
+                  ],
+                  [
+                    854.0,
+                    1498.0
+                  ],
+                  [
+                    854.0,
+                    1568.0
+                  ],
+                  [
+                    71.0,
+                    1568.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.6715990304946899,
+                "coordinate": [
+                  1450,
+                  1517,
+                  2202,
+                  1553
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1450.0,
+                    1517.0
+                  ],
+                  [
+                    2202.0,
+                    1517.0
+                  ],
+                  [
+                    2202.0,
+                    1553.0
+                  ],
+                  [
+                    1450.0,
+                    1553.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6362184882164001,
+                "coordinate": [
+                  2768,
+                  1518,
+                  2799,
+                  1551
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    2768.0,
+                    1518.0
+                  ],
+                  [
+                    2798.0,
+                    1518.0
+                  ],
+                  [
+                    2798.0,
+                    1550.0
+                  ],
+                  [
+                    2768.0,
+                    1550.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n## 优惠与补货是今年618消费者的主要购物目的\n\n对比2022双十一多样的购物目的，促销活动和补货是消费者618购物的主要目的。并且消费者对618优惠活动的感知和认可度更高\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_81_473_2757_1437.jpg\" alt=\"Image\" width=\"92%\" /></div>\n\n\n数据来源：凯度2023.5月数据 / 凯度2022 ART 后疫情时代消费者数据",
+          "images": {
+            "imgs/img_in_chart_box_81_473_2757_1437.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//af8fe304-6e3b-4b34-b4cd-682d686775eb/markdown_0/imgs/img_in_chart_box_81_473_2757_1437.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A53Z%2F-1%2F%2F0b5511a0f4bf030e93fdecc253982aec35c39b90cdd5e77249c8be21cfda4964"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//af8fe304-6e3b-4b34-b4cd-682d686775eb/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A54Z%2F-1%2F%2F95d6c29f1710cdd68f2d1198de300b0b9f2b2752ce5a3e5418d8958977bc42a2"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//af8fe304-6e3b-4b34-b4cd-682d686775eb/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A54Z%2F-1%2F%2F1d67f8ae1d937c21ee134511e9372b9474f27b87caba0ac6ab07530f020b8945"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//af8fe304-6e3b-4b34-b4cd-682d686775eb/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A54Z%2F-1%2F%2Fe63711aa18a305b436b1aa5076be1a9102077edcf0ce9d17019f850af1fb324f"
+    ]
+  }
+}

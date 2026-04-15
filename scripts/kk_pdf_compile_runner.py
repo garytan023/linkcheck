@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 import json
+import os
 import re
 import subprocess
 import tempfile
@@ -10,6 +11,8 @@ from pathlib import Path
 WORKSPACE = Path('/Users/garytan/Documents/garytan/宇先生/知识库/karpathy-pkm')
 MANIFEST_DIR = WORKSPACE / 'manifests' / 'sources'
 LOG_FILE = WORKSPACE / 'log.md'
+LOCAL_OCR_URL = os.environ.get('LOCAL_OCR_URL', 'http://127.0.0.1:8111')
+LOCAL_OCR_CLIENT = Path('/Users/garytan/.openclaw/workspace-dev/scripts/local_paddleocr_vl_client.py')
 
 
 def clean_text(text: str) -> str:
@@ -75,20 +78,21 @@ def render_pdf_preview(pdf_path: Path) -> Path | None:
         return None
 
 
-def extract_with_llm_ocr(pdf_path: Path) -> str:
+def extract_with_local_ocr(pdf_path: Path) -> str:
     preview = render_pdf_preview(pdf_path)
-    if not preview:
+    if not preview or not LOCAL_OCR_CLIENT.exists():
         return ''
+    cmd = [
+        'python3',
+        str(LOCAL_OCR_CLIENT),
+        str(preview),
+        '--url', LOCAL_OCR_URL,
+        '--prompt', '请执行 OCR，提取图片中所有可读文字，尽量保持原有结构。只返回纯文本或 markdown，不要解释。',
+        '--max-tokens', '4096'
+    ]
     try:
-        import os, json as _json, subprocess as _sp
-        payload = {
-            'prompt': '提取这页PDF预览图里的可读文字。只返回纯文本，不要解释。',
-            'image': str(preview),
-            'model': 'openai-codex/gpt-5.4'
-        }
-        # 通过 openclaw 当前环境不便直接调工具，这里保留本地 CLI/脚本兜底位，失败则空。
-        _ = os.environ.get('OPENCLAW_SESSION_KEY')
-        return ''
+        res = subprocess.run(cmd, check=True, capture_output=True, text=True, timeout=180)
+        return clean_text(res.stdout)
     except Exception:
         return ''
 
@@ -111,10 +115,10 @@ def main():
         text = extract_with_pypdf(p)
         extraction_mode = 'pypdf-text'
         if len(text) < 120:
-            ocr_text = extract_with_llm_ocr(p)
+            ocr_text = extract_with_local_ocr(p)
             if ocr_text:
                 text = clean_text(ocr_text)
-                extraction_mode = 'preview-ocr'
+                extraction_mode = 'local-paddleocr-vl'
         if not text:
             data['compiled_summary'] = f"来源《{data.get('title') or p.stem}》PDF 摘要：\n- 一句话摘要：{one_line}\n- [TODO: 待验证] 当前环境缺少可用 OCR 能力，本轮只完成 PDF 入库与 compile 占位。"
             data['concepts'] = sorted(set((data.get('concepts') or []) + ['PDF入库']))

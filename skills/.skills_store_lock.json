@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "skills": {
+    "hot-topic-ideator": {
+      "name": "hot-topic-ideator",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=hot-topic-ideator",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "agent-reach": {
+      "name": "Agent Reach",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-reach",
+      "source": "skillhub",
+      "version": "1.1.0"
+    },
+    "agent-reach-setup": {
+      "name": "Agent Reach Setup",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-reach-setup",
+      "source": "skillhub",
+      "version": "1.0.0"
+    }
+  }
+}

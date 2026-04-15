@@ -1,0 +1,586 @@
+{
+  "logId": "55282194-a462-4625-a259-efbd37932bab",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "header",
+              "block_content": "背景诠释 企业背景 行业背景与挑战",
+              "block_bbox": [
+                133,
+                130,
+                1056,
+                208
+              ],
+              "block_id": 0,
+              "block_order": null,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  133,
+                  130
+                ],
+                [
+                  133,
+                  207
+                ],
+                [
+                  1055,
+                  200
+                ],
+                [
+                  1055,
+                  138
+                ],
+                [
+                  840,
+                  146
+                ]
+              ]
+            },
+            {
+              "block_label": "header_image",
+              "block_content": "",
+              "block_bbox": [
+                2691,
+                47,
+                2838,
+                225
+              ],
+              "block_id": 1,
+              "block_order": null,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  2691.0,
+                  47.0
+                ],
+                [
+                  2838.0,
+                  47.0
+                ],
+                [
+                  2838.0,
+                  225.0
+                ],
+                [
+                  2691.0,
+                  225.0
+                ]
+              ]
+            },
+            {
+              "block_label": "paragraph_title",
+              "block_content": "安慕希",
+              "block_bbox": [
+                200,
+                413,
+                787,
+                629
+              ],
+              "block_id": 2,
+              "block_order": 1,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  200.0,
+                  413.0
+                ],
+                [
+                  787.0,
+                  413.0
+                ],
+                [
+                  787.0,
+                  629.0
+                ],
+                [
+                  200.0,
+                  629.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "安慕希，作为常温酸奶领军者，曾摘取“中国乳业最大单品”桂冠，对集团生意增长贡献率高达66%以上，是伊利集团的重要增长引擎及“明星品牌”。",
+              "block_bbox": [
+                213,
+                692,
+                1633,
+                825
+              ],
+              "block_id": 3,
+              "block_order": 2,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  213.0,
+                  692.0
+                ],
+                [
+                  1633.0,
+                  692.0
+                ],
+                [
+                  1633.0,
+                  825.0
+                ],
+                [
+                  213.0,
+                  825.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "但随着食饮健康心智的升起，常温酸奶行业消费总量增速放缓，市场竞争白热化，作为行业TOP市占力趋于饱和，如何通过产品与营销升级，突破品类增长困境，成为了安慕希品牌面临的重要课题。",
+              "block_bbox": [
+                213,
+                919,
+                1619,
+                1128
+              ],
+              "block_id": 4,
+              "block_order": 3,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  213.0,
+                  919.0
+                ],
+                [
+                  1619.0,
+                  919.0
+                ],
+                [
+                  1619.0,
+                  1128.0
+                ],
+                [
+                  213.0,
+                  1128.0
+                ]
+              ]
+            },
+            {
+              "block_label": "image",
+              "block_content": "",
+              "block_bbox": [
+                1705,
+                361,
+                2387,
+                923
+              ],
+              "block_id": 5,
+              "block_order": null,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  1705.0,
+                  361.0
+                ],
+                [
+                  2387.0,
+                  361.0
+                ],
+                [
+                  2387.0,
+                  923.0
+                ],
+                [
+                  1705.0,
+                  923.0
+                ]
+              ]
+            },
+            {
+              "block_label": "image",
+              "block_content": "",
+              "block_bbox": [
+                2047,
+                948,
+                2728,
+                1474
+              ],
+              "block_id": 6,
+              "block_order": null,
+              "group_id": 6,
+              "block_polygon_points": [
+                [
+                  2047.0,
+                  948.0
+                ],
+                [
+                  2728.0,
+                  948.0
+                ],
+                [
+                  2728.0,
+                  1474.0
+                ],
+                [
+                  2047.0,
+                  1474.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.6451166272163391,
+                "coordinate": [
+                  139,
+                  131,
+                  433,
+                  209
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    139.0,
+                    131.0
+                  ],
+                  [
+                    433.0,
+                    131.0
+                  ],
+                  [
+                    433.0,
+                    209.0
+                  ],
+                  [
+                    139.0,
+                    209.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.3112146258354187,
+                "coordinate": [
+                  133,
+                  130,
+                  1056,
+                  208
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    133,
+                    130
+                  ],
+                  [
+                    133,
+                    207
+                  ],
+                  [
+                    1055,
+                    200
+                  ],
+                  [
+                    1055,
+                    138
+                  ],
+                  [
+                    840,
+                    146
+                  ]
+                ]
+              },
+              {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.5618208646774292,
+                "coordinate": [
+                  520,
+                  149,
+                  675,
+                  196
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    520,
+                    149
+                  ],
+                  [
+                    520,
+                    195
+                  ],
+                  [
+                    674,
+                    195
+                  ],
+                  [
+                    674,
+                    149
+                  ]
+                ]
+              },
+              {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.5955142378807068,
+                "coordinate": [
+                  788,
+                  148,
+                  1053,
+                  196
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    788.0,
+                    148.0
+                  ],
+                  [
+                    1053.0,
+                    148.0
+                  ],
+                  [
+                    1053.0,
+                    196.0
+                  ],
+                  [
+                    788.0,
+                    196.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.8859581351280212,
+                "coordinate": [
+                  2691,
+                  47,
+                  2838,
+                  225
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2691.0,
+                    47.0
+                  ],
+                  [
+                    2838.0,
+                    47.0
+                  ],
+                  [
+                    2838.0,
+                    225.0
+                  ],
+                  [
+                    2691.0,
+                    225.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.9173464179039001,
+                "coordinate": [
+                  200,
+                  413,
+                  787,
+                  629
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    200.0,
+                    413.0
+                  ],
+                  [
+                    787.0,
+                    413.0
+                  ],
+                  [
+                    787.0,
+                    629.0
+                  ],
+                  [
+                    200.0,
+                    629.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9327462911605835,
+                "coordinate": [
+                  213,
+                  692,
+                  1633,
+                  825
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    213.0,
+                    692.0
+                  ],
+                  [
+                    1633.0,
+                    692.0
+                  ],
+                  [
+                    1633.0,
+                    825.0
+                  ],
+                  [
+                    213.0,
+                    825.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.953864336013794,
+                "coordinate": [
+                  213,
+                  919,
+                  1619,
+                  1128
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    213.0,
+                    919.0
+                  ],
+                  [
+                    1619.0,
+                    919.0
+                  ],
+                  [
+                    1619.0,
+                    1128.0
+                  ],
+                  [
+                    213.0,
+                    1128.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.946476936340332,
+                "coordinate": [
+                  1705,
+                  361,
+                  2387,
+                  923
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1705.0,
+                    361.0
+                  ],
+                  [
+                    2387.0,
+                    361.0
+                  ],
+                  [
+                    2387.0,
+                    923.0
+                  ],
+                  [
+                    1705.0,
+                    923.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.9245736002922058,
+                "coordinate": [
+                  2047,
+                  948,
+                  2728,
+                  1474
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    2047.0,
+                    948.0
+                  ],
+                  [
+                    2728.0,
+                    948.0
+                  ],
+                  [
+                    2728.0,
+                    1474.0
+                  ],
+                  [
+                    2047.0,
+                    1474.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## 安慕希\n\n安慕希，作为常温酸奶领军者，曾摘取“中国乳业最大单品”桂冠，对集团生意增长贡献率高达66%以上，是伊利集团的重要增长引擎及“明星品牌”。\n\n但随着食饮健康心智的升起，常温酸奶行业消费总量增速放缓，市场竞争白热化，作为行业TOP市占力趋于饱和，如何通过产品与营销升级，突破品类增长困境，成为了安慕希品牌面临的重要课题。\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_1705_361_2387_923.jpg\" alt=\"Image\" width=\"23%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_image_box_2047_948_2728_1474.jpg\" alt=\"Image\" width=\"23%\" /></div>\n",
+          "images": {
+            "imgs/img_in_header_image_box_2691_47_2838_225.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//b6bd2826-e4cf-4c94-85db-4fcdeca220b4/markdown_0/imgs/img_in_header_image_box_2691_47_2838_225.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A12Z%2F-1%2F%2Fe2be99df0e8c29feadb662682aa2bf411646fa24c2f96ce7da618517011a4a1d",
+            "imgs/img_in_image_box_1705_361_2387_923.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//b6bd2826-e4cf-4c94-85db-4fcdeca220b4/markdown_0/imgs/img_in_image_box_1705_361_2387_923.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A12Z%2F-1%2F%2F2aee4598d31267852c98a72e5860b80cea295f7c710b6e8a8478c8f6b5fcf7c0",
+            "imgs/img_in_image_box_2047_948_2728_1474.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//b6bd2826-e4cf-4c94-85db-4fcdeca220b4/markdown_0/imgs/img_in_image_box_2047_948_2728_1474.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A12Z%2F-1%2F%2F8fc53241fa13d01fdfa75d00818070e495ef369793b36f05a5e6759be08eb0ae"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//b6bd2826-e4cf-4c94-85db-4fcdeca220b4/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A13Z%2F-1%2F%2Fa0c730ee1d97dd4584cd51ebf41c726ea1fff18e5fb3e7944af319165263d60f"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//b6bd2826-e4cf-4c94-85db-4fcdeca220b4/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A13Z%2F-1%2F%2F75bd6489acea99012eb4fdf6b19854bd2dffd4f0b0dfbb28c6a89a2630669a69"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//b6bd2826-e4cf-4c94-85db-4fcdeca220b4/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A35%3A13Z%2F-1%2F%2F742bf1d9575b5a59c858f0d7e1fa2e75fdec17bc5c2473cb8d624f5846177678"
+    ]
+  }
+}

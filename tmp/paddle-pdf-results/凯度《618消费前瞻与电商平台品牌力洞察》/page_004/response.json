@@ -1,0 +1,547 @@
+{
+  "logId": "cb73df96-5058-4e04-8f63-8cd520701599",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "table",
+              "block_content": "<table><tr><td>Part 1</td><td>Part 2</td><td>Part 3</td><td>Part 4</td></tr></table>",
+              "block_bbox": [
+                68,
+                1,
+                1502,
+                70
+              ],
+              "block_id": 0,
+              "block_order": null,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  68.0,
+                  1.0
+                ],
+                [
+                  1502.0,
+                  1.0
+                ],
+                [
+                  1502.0,
+                  70.0
+                ],
+                [
+                  68.0,
+                  70.0
+                ]
+              ]
+            },
+            {
+              "block_label": "figure_title",
+              "block_content": "618消费预算（元）",
+              "block_bbox": [
+                1833,
+                217,
+                2228,
+                282
+              ],
+              "block_id": 1,
+              "block_order": null,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  1833.0,
+                  217.0
+                ],
+                [
+                  2228.0,
+                  217.0
+                ],
+                [
+                  2228.0,
+                  282.0
+                ],
+                [
+                  1833.0,
+                  282.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "95%的消费者表示618有消费预算，",
+              "block_bbox": [
+                162,
+                406,
+                1397,
+                576
+              ],
+              "block_id": 2,
+              "block_order": 1,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  162.0,
+                  406.0
+                ],
+                [
+                  1397.0,
+                  406.0
+                ],
+                [
+                  1397.0,
+                  576.0
+                ],
+                [
+                  162.0,
+                  576.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "其中 30% 左右的消费者预算超2000元",
+              "block_bbox": [
+                158,
+                735,
+                1470,
+                908
+              ],
+              "block_id": 3,
+              "block_order": 2,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  158.0,
+                  744.0
+                ],
+                [
+                  1469.0,
+                  744.0
+                ],
+                [
+                  1469.0,
+                  907.0
+                ],
+                [
+                  158.0,
+                  907.0
+                ]
+              ]
+            },
+            {
+              "block_label": "chart",
+              "block_content": "",
+              "block_bbox": [
+                1528,
+                317,
+                2777,
+                1254
+              ],
+              "block_id": 4,
+              "block_order": null,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  1528.0,
+                  317.0
+                ],
+                [
+                  2777.0,
+                  317.0
+                ],
+                [
+                  2777.0,
+                  1254.0
+                ],
+                [
+                  1528.0,
+                  1254.0
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "KANTAR MARKETPLACE",
+              "block_bbox": [
+                71,
+                1497,
+                855,
+                1569
+              ],
+              "block_id": 5,
+              "block_order": null,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  71.0,
+                  1497.0
+                ],
+                [
+                  855.0,
+                  1497.0
+                ],
+                [
+                  855.0,
+                  1569.0
+                ],
+                [
+                  71.0,
+                  1569.0
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "数据来源：凯度2023.5月数据",
+              "block_bbox": [
+                1452,
+                1516,
+                1784,
+                1551
+              ],
+              "block_id": 6,
+              "block_order": null,
+              "group_id": 6,
+              "block_polygon_points": [
+                [
+                  1452.0,
+                  1516.0
+                ],
+                [
+                  1784.0,
+                  1516.0
+                ],
+                [
+                  1784.0,
+                  1551.0
+                ],
+                [
+                  1452.0,
+                  1551.0
+                ]
+              ]
+            },
+            {
+              "block_label": "number",
+              "block_content": "3",
+              "block_bbox": [
+                2769,
+                1516,
+                2801,
+                1551
+              ],
+              "block_id": 7,
+              "block_order": null,
+              "group_id": 7,
+              "block_polygon_points": [
+                [
+                  2769.0,
+                  1516.0
+                ],
+                [
+                  2800.0,
+                  1516.0
+                ],
+                [
+                  2800.0,
+                  1550.0
+                ],
+                [
+                  2769.0,
+                  1550.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.3046087324619293,
+                "coordinate": [
+                  68,
+                  1,
+                  1502,
+                  70
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    68.0,
+                    1.0
+                  ],
+                  [
+                    1502.0,
+                    1.0
+                  ],
+                  [
+                    1502.0,
+                    70.0
+                  ],
+                  [
+                    68.0,
+                    70.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.7816020250320435,
+                "coordinate": [
+                  1833,
+                  217,
+                  2228,
+                  282
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1833.0,
+                    217.0
+                  ],
+                  [
+                    2228.0,
+                    217.0
+                  ],
+                  [
+                    2228.0,
+                    282.0
+                  ],
+                  [
+                    1833.0,
+                    282.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6084113717079163,
+                "coordinate": [
+                  162,
+                  406,
+                  1397,
+                  576
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    162.0,
+                    406.0
+                  ],
+                  [
+                    1397.0,
+                    406.0
+                  ],
+                  [
+                    1397.0,
+                    576.0
+                  ],
+                  [
+                    162.0,
+                    576.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5246741771697998,
+                "coordinate": [
+                  158,
+                  735,
+                  1470,
+                  908
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    158.0,
+                    744.0
+                  ],
+                  [
+                    1469.0,
+                    744.0
+                  ],
+                  [
+                    1469.0,
+                    907.0
+                  ],
+                  [
+                    158.0,
+                    907.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 3,
+                "label": "chart",
+                "score": 0.8230099678039551,
+                "coordinate": [
+                  1528,
+                  317,
+                  2777,
+                  1254
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1528.0,
+                    317.0
+                  ],
+                  [
+                    2777.0,
+                    317.0
+                  ],
+                  [
+                    2777.0,
+                    1254.0
+                  ],
+                  [
+                    1528.0,
+                    1254.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8408260345458984,
+                "coordinate": [
+                  71,
+                  1497,
+                  855,
+                  1569
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    71.0,
+                    1497.0
+                  ],
+                  [
+                    855.0,
+                    1497.0
+                  ],
+                  [
+                    855.0,
+                    1569.0
+                  ],
+                  [
+                    71.0,
+                    1569.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8053529858589172,
+                "coordinate": [
+                  1452,
+                  1516,
+                  1784,
+                  1551
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1452.0,
+                    1516.0
+                  ],
+                  [
+                    1784.0,
+                    1516.0
+                  ],
+                  [
+                    1784.0,
+                    1551.0
+                  ],
+                  [
+                    1452.0,
+                    1551.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6225789785385132,
+                "coordinate": [
+                  2769,
+                  1516,
+                  2801,
+                  1551
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    2769.0,
+                    1516.0
+                  ],
+                  [
+                    2800.0,
+                    1516.0
+                  ],
+                  [
+                    2800.0,
+                    1550.0
+                  ],
+                  [
+                    2769.0,
+                    1550.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>Part 1</td><td style='text-align: center; word-wrap: break-word;'>Part 2</td><td style='text-align: center; word-wrap: break-word;'>Part 3</td><td style='text-align: center; word-wrap: break-word;'>Part 4</td></tr></table>\n\n<div style=\"text-align: center;\">618消费预算（元）</div>\n\n\n95%的消费者表示618有消费预算，\n\n其中 30% 左右的消费者预算超2000元\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_1528_317_2777_1254.jpg\" alt=\"Image\" width=\"43%\" /></div>\n",
+          "images": {
+            "imgs/img_in_chart_box_1528_317_2777_1254.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//ebe51129-7d22-4967-8b23-f0bcc40d2bf6/markdown_0/imgs/img_in_chart_box_1528_317_2777_1254.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A52Z%2F-1%2F%2F32ae74573135df4472648e848b3a9be46b7c242a0de17fbb2f468052198fbaeb"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//ebe51129-7d22-4967-8b23-f0bcc40d2bf6/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A52Z%2F-1%2F%2F83f6e08c674830aeafa4466eafedcbe520a9e4cec3256038e4e4e751f7882f72"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//ebe51129-7d22-4967-8b23-f0bcc40d2bf6/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A52Z%2F-1%2F%2F8dca4ffaf7654d811c50b020798542b36d5c23e9739c6be8ef1c9550027c1ef9"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//ebe51129-7d22-4967-8b23-f0bcc40d2bf6/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A40%3A53Z%2F-1%2F%2Ff1a2e8a73b0232faea2ac2f714cbba0b68e6bc45a99b3ecaceb23deffa0d6769"
+    ]
+  }
+}

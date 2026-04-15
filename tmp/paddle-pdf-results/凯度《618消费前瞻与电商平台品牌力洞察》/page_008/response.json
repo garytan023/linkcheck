@@ -1,0 +1,425 @@
+{
+  "logId": "c15c7891-53b4-4b43-8c0c-7a28d30789bb",
+  "errorCode": 0,
+  "errorMsg": "Success",
+  "result": {
+    "layoutParsingResults": [
+      {
+        "prunedResult": {
+          "page_count": null,
+          "width": 2880,
+          "height": 1620,
+          "model_settings": {
+            "use_doc_preprocessor": false,
+            "use_layout_detection": true,
+            "use_chart_recognition": false,
+            "use_seal_recognition": false,
+            "use_ocr_for_image_block": false,
+            "format_block_content": false,
+            "merge_layout_blocks": true,
+            "markdown_ignore_labels": [
+              "number",
+              "footnote",
+              "header",
+              "header_image",
+              "footer",
+              "footer_image",
+              "aside_text"
+            ],
+            "return_layout_polygon_points": true
+          },
+          "parsing_res_list": [
+            {
+              "block_label": "paragraph_title",
+              "block_content": "一线城市有望释放强劲消费力，超七成预计在今年618花费千元以上",
+              "block_bbox": [
+                76,
+                102,
+                2204,
+                185
+              ],
+              "block_id": 0,
+              "block_order": 1,
+              "group_id": 0,
+              "block_polygon_points": [
+                [
+                  76.0,
+                  102.0
+                ],
+                [
+                  2204.0,
+                  102.0
+                ],
+                [
+                  2204.0,
+                  185.0
+                ],
+                [
+                  76.0,
+                  185.0
+                ]
+              ]
+            },
+            {
+              "block_label": "text",
+              "block_content": "一线城市消费者准备大买特买，74%的消费者预算超千元，其中43%预算在2000以上。而低线人群虽然预算偏低，但四成的消费者准备花费超1000元",
+              "block_bbox": [
+                74,
+                218,
+                2764,
+                364
+              ],
+              "block_id": 1,
+              "block_order": 2,
+              "group_id": 1,
+              "block_polygon_points": [
+                [
+                  74.0,
+                  218.0
+                ],
+                [
+                  2764.0,
+                  218.0
+                ],
+                [
+                  2764.0,
+                  364.0
+                ],
+                [
+                  74.0,
+                  364.0
+                ]
+              ]
+            },
+            {
+              "block_label": "chart",
+              "block_content": "",
+              "block_bbox": [
+                114,
+                479,
+                2630,
+                1397
+              ],
+              "block_id": 2,
+              "block_order": null,
+              "group_id": 2,
+              "block_polygon_points": [
+                [
+                  114.0,
+                  479.0
+                ],
+                [
+                  2630.0,
+                  479.0
+                ],
+                [
+                  2630.0,
+                  1397.0
+                ],
+                [
+                  114.0,
+                  1397.0
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "KANTAR MARKETPLACE",
+              "block_bbox": [
+                72,
+                1499,
+                854,
+                1567
+              ],
+              "block_id": 3,
+              "block_order": null,
+              "group_id": 3,
+              "block_polygon_points": [
+                [
+                  72.0,
+                  1499.0
+                ],
+                [
+                  854.0,
+                  1499.0
+                ],
+                [
+                  854.0,
+                  1567.0
+                ],
+                [
+                  72.0,
+                  1567.0
+                ]
+              ]
+            },
+            {
+              "block_label": "footer",
+              "block_content": "数据来源：凯度2023.5月数据",
+              "block_bbox": [
+                1453,
+                1517,
+                1784,
+                1550
+              ],
+              "block_id": 4,
+              "block_order": null,
+              "group_id": 4,
+              "block_polygon_points": [
+                [
+                  1453.0,
+                  1517.0
+                ],
+                [
+                  1784.0,
+                  1517.0
+                ],
+                [
+                  1784.0,
+                  1550.0
+                ],
+                [
+                  1453.0,
+                  1550.0
+                ]
+              ]
+            },
+            {
+              "block_label": "number",
+              "block_content": "7",
+              "block_bbox": [
+                2770,
+                1517,
+                2802,
+                1549
+              ],
+              "block_id": 5,
+              "block_order": null,
+              "group_id": 5,
+              "block_polygon_points": [
+                [
+                  2770.0,
+                  1517.0
+                ],
+                [
+                  2801.0,
+                  1517.0
+                ],
+                [
+                  2801.0,
+                  1548.0
+                ],
+                [
+                  2770.0,
+                  1548.0
+                ]
+              ]
+            }
+          ],
+          "layout_det_res": {
+            "boxes": [
+              {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.841657817363739,
+                "coordinate": [
+                  76,
+                  102,
+                  2204,
+                  185
+                ],
+                "order": 1,
+                "polygon_points": [
+                  [
+                    76.0,
+                    102.0
+                  ],
+                  [
+                    2204.0,
+                    102.0
+                  ],
+                  [
+                    2204.0,
+                    185.0
+                  ],
+                  [
+                    76.0,
+                    185.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9274695515632629,
+                "coordinate": [
+                  74,
+                  218,
+                  2764,
+                  364
+                ],
+                "order": 2,
+                "polygon_points": [
+                  [
+                    74.0,
+                    218.0
+                  ],
+                  [
+                    2764.0,
+                    218.0
+                  ],
+                  [
+                    2764.0,
+                    364.0
+                  ],
+                  [
+                    74.0,
+                    364.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 3,
+                "label": "chart",
+                "score": 0.932328999042511,
+                "coordinate": [
+                  114,
+                  479,
+                  2630,
+                  1397
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    114.0,
+                    479.0
+                  ],
+                  [
+                    2630.0,
+                    479.0
+                  ],
+                  [
+                    2630.0,
+                    1397.0
+                  ],
+                  [
+                    114.0,
+                    1397.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.7769262790679932,
+                "coordinate": [
+                  72,
+                  1499,
+                  854,
+                  1567
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    72.0,
+                    1499.0
+                  ],
+                  [
+                    854.0,
+                    1499.0
+                  ],
+                  [
+                    854.0,
+                    1567.0
+                  ],
+                  [
+                    72.0,
+                    1567.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.7445909380912781,
+                "coordinate": [
+                  1453,
+                  1517,
+                  1784,
+                  1550
+                ],
+                "order": null,
+                "polygon_points": [
+                  [
+                    1453.0,
+                    1517.0
+                  ],
+                  [
+                    1784.0,
+                    1517.0
+                  ],
+                  [
+                    1784.0,
+                    1550.0
+                  ],
+                  [
+                    1453.0,
+                    1550.0
+                  ]
+                ]
+              },
+              {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6243930459022522,
+                "coordinate": [
+                  2770,
+                  1517,
+                  2802,
+                  1549
+                ],
+                "order": 3,
+                "polygon_points": [
+                  [
+                    2770.0,
+                    1517.0
+                  ],
+                  [
+                    2801.0,
+                    1517.0
+                  ],
+                  [
+                    2801.0,
+                    1548.0
+                  ],
+                  [
+                    2770.0,
+                    1548.0
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        "markdown": {
+          "text": "## 一 线城市有望释放强劲消费力，超七成预计在今年618花费千元以上\n\n一线城市消费者准备大买特买，74%的消费者预算超千元，其中43%预算在2000以上。而低线人群虽然预算偏低，但四成的消费者准备花费超1000元\n\n<div style=\"text-align: center;\"><img src=\"imgs/img_in_chart_box_114_479_2630_1397.jpg\" alt=\"Image\" width=\"87%\" /></div>\n",
+          "images": {
+            "imgs/img_in_chart_box_114_479_2630_1397.jpg": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d78b938f-3836-4022-baae-35ec307e78d6/markdown_0/imgs/img_in_chart_box_114_479_2630_1397.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A39Z%2F-1%2F%2Fba818c68bd69292096ddf8ecd762df5b11b06306f759acf6672b3e8fd1d0380b"
+          }
+        },
+        "outputImages": {
+          "layout_det_res": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d78b938f-3836-4022-baae-35ec307e78d6/layout_det_res_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A39Z%2F-1%2F%2F6b8fb8e6116e3be991a0999064e4ac2bb676af45998a0f3d5c8ce5ff6c8b432f"
+        },
+        "inputImage": "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d78b938f-3836-4022-baae-35ec307e78d6/input_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A39Z%2F-1%2F%2Ff10162d02f2868793ee1b51999ed3c70cc94fc0090d860c8280b98ce2071ed56"
+      }
+    ],
+    "dataInfo": {
+      "width": 2880,
+      "height": 1620,
+      "type": "image"
+    },
+    "preprocessedImages": [
+      "https://pplines-online.bj.bcebos.com/deploy/official/paddleocr/pp-ocr-vl-15//d78b938f-3836-4022-baae-35ec307e78d6/preprocessed_img_0.jpg?authorization=bce-auth-v1%2FALTAKzReLNvew3ySINYJ0fuAMN%2F2026-04-15T13%3A41%3A39Z%2F-1%2F%2F5777cbde0ad62b3ef566a442b9b98465ed5687ee67c29ff5443f94daf7e37ec2"
+    ]
+  }
+}
