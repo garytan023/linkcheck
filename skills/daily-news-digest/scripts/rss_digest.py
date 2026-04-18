@@ -33,9 +33,9 @@ CONTENT_NS = 'http://purl.org/rss/1.0/modules/content/'
 
 CAT_EMOJI = {
     '京东': '🟣', '字节': '🔵', '小红书': '🔴', '腾讯': '🟢', '百度': '⚪',
-    '营销+AI': '🤖', '电商零售': '🛒', '营销增长': '📈'
+    '阿里妈妈': '🟠', '营销+AI': '🤖', '电商零售': '🛒', '营销增长': '📈'
 }
-CAT_ORDER = ['京东', '字节', '小红书', '腾讯', '百度', '营销+AI', '电商零售', '营销增长']
+CAT_ORDER = ['京东', '字节', '阿里妈妈', '小红书', '腾讯', '百度', '营销+AI', '电商零售', '营销增长']
 
 # 来源账号 → 平台分类（优先级最高）
 SOURCE_PLATFORM_MAP = {
@@ -59,6 +59,8 @@ SOURCE_PLATFORM_MAP = {
     "腾讯广告": "腾讯",
     # 百度
     "百度营销观": "百度",
+    # 阿里妈妈
+    "阿里妈妈数字营销": "阿里妈妈",
 }
 
 
@@ -180,7 +182,8 @@ def score_article(title, content):
 
     # ★ 满分关键词：直接返回10，不走常规打分
     满分_kw = ['白皮书', '案例拆解', '实战案例', '案例精解', '完整案例', '案例分析',
-                '电商白皮书', '行业白皮书', '平台白皮书']
+                '电商白皮书', '行业白皮书', '平台白皮书',
+                '618', '618大促', '618抢先看', '品牌广告玩法升级', '大促玩法']
     if any(k in t for k in 满分_kw):
         return 10
 
@@ -205,19 +208,25 @@ def score_article(title, content):
         score += 1
     # 噪音惩罚
     noise_kw = ['被抓', '被调查', '震惊', '热招', '招聘', '亿级卖家交流会', '峰会', '论坛',
+                  'Meta', 'Facebook', '亚马逊', 'Amazon', 'TikTok', 'YouTube', 'Google', 'Instagram',
                  '沙龙', '活动报名', '扫码抢位', '席位紧张', '免费领取', '限时报名',
-                 '转发', '收藏', '点在看', '阅读原文']
+                 '转发', '收藏', '点在看', '阅读原文', '私享会', '创享会', '私董会',
+                 '俄罗斯', 'wildberries', '中东', '东南亚电商', '海外市场']
     score -= sum(2 for k in noise_kw if k in t)
     # 低质指标惩罚
     if any(k in t for k in ['马斯克', '特朗普', '普京', '拜登', '关税']):
         score -= 1
+    # 国外/出海内容降分
+    if any(k in t for k in ['出海', '全球', '海外', '跨境', '进口', '出口']) and \
+       any(k in t for k in ['俄罗斯', '欧洲', '美国', '日本', '韩国', '东南亚']):
+        score -= 2
     if title and len(title) < 12:
         score -= 1
     return max(0, score)
 
 def is_noise(title):
     t = (title or '')
-    noise = ['招聘', '诚聘', '猎头', '免费领', '限时抢', '立即购买', '优惠码',
+    noise = ['招聘', '诚聘', '猎头', '免费领', '限时抢', '立即购买', '优惠码', '直招', '赋能会',
              '满减', '0元', '转给朋友', '扩散', '建议收藏', '朋友圈', '求职']
     return any(k in t for k in noise)
 
@@ -524,4 +533,44 @@ size = os.path.getsize(OUTPUT_FILE)
 qualified_total = len(capped)
 print(f"\n完成！\n文件: {OUTPUT_FILE}\n大小: {size} bytes")
 print(f"总条数: {len(recent)}条 | 精选(≥{MIN_SCORE}分): {qualified_total}条")
+
+
+# ==============================================================================
+# AI Scoring Step: Save candidates to JSON for subagent processing
+# ==============================================================================
+def save_candidates_for_ai(recent_items):
+    """Save all candidates to JSON for AI scoring."""
+    candidates = []
+    for it in recent_items:
+        pub_str = it['pub'].strftime('%Y-%m-%d %H:%M') if it['pub'] else ''
+        candidates.append({
+            'id': len(candidates) + 1,
+            'title': it['title'],
+            'link': it['link'],
+            'source': it['source'],
+            'pub': pub_str,
+            'cat': it['cat'],
+            'score_kw': it['score'],
+            'text': (it['text'] or '')[:2000],
+            'snippet': first_sentence(it['text']) if it.get('text') else '',
+        })
+    
+    json_path = os.path.join(os.path.dirname(OUTPUT_FILE), f'rss_daily_{YD_STR}_candidates.json')
+    with open(json_path, 'w', encoding='utf-8') as f:
+        json.dump({
+            'date': YD_STR,
+            'total': len(candidates),
+            'candidates': candidates,
+        }, f, ensure_ascii=False, indent=2)
+    print(f"[AI Scoring] Saved {len(candidates)} candidates to {json_path}")
+    return json_path
+
+
+# Save candidates for AI scoring
+if recent:
+    candidates_json = save_candidates_for_ai(recent)
+    print(f"[AI Scoring] To score with AI, run: openclaw sessions spawn --task 'score_and_generate_markdown(\"{candidates_json}\")'")
+    print(f"[AI Scoring] Or check {candidates_json} for manual review")
+
+
 
