@@ -67,11 +67,11 @@ python3 ~/.openclaw/workspace-dev/skills/daily-news-digest/scripts/rss_digest.py
 
 `CAT_ORDER = ['京东', '字节', '阿里妈妈', '小红书', '腾讯', '百度', '营销+AI', '电商零售', '营销增长']`
 
-## Cron 调度（6:30 AM 每日）
+## Cron 调度（9:00 AM 每日）
 
 Job ID: `47ab2b45-8094-48a4-97ab-3d782bcfb740`
 ```
-30 6 * * * python3 ~/.openclaw/workspace-dev/skills/daily-news-digest/scripts/rss_digest.py
+0 9 * * * python3 ~/.openclaw/workspace-dev/skills/daily-news-digest/scripts/rss_digest.py
 ```
 
 ## 发送通知
