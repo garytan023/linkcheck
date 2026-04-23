@@ -1,140 +1,98 @@
 # 每日资讯同步 skill
 
 ## 目标
-每日9点自动抓取微信公众号RSS资讯，同步到飞书文档
+每日9点自动抓取微信公众号RSS资讯 → AI评分精选40条 → 脚本直发飞书IM + 创建飞书文档存档
+
+## 全自动流程（彻底固化）
+
+cron job "每日资讯精选 09:00" 每天9:00运行：
+1. Agent 执行 `python3 ~/.openclaw/workspace-dev/scripts/daily_news_sync_v4.py`
+2. 脚本自动完成：抓取 → AI分类 → 精选40条 → 发飞书IM + 创飞书文档
+3. Agent 检查脚本输出中的 `[Feishu IM]` 和 `[Feishu Doc]` 结果
+
+**无需 Agent 介入发送环节**（脚本自己调用飞书API）
 
 ---
 
-## 输入
-- RSS服务器: `http://8.138.40.155:9001/feed`
-- 公众号列表（25个核心源）:
-  ```
-  营销+AI: SocialBeta, TopDigital
-  电商零售: 天下网商, 老高电商, 手淘集团
-  营销增长: 虎嗅APP, 腾讯广告, 寻空, Marteker, 刀法, 胖鲸
-  小红书: REDtech, 商业动态, 种草学
-  京东: 黑板报, 研究院, 京麦
-  抖音: 抖音电商营销观察
-  阿里妈妈: 数字营销, 万堂书院
-  ```
+## 脚本输出格式
 
----
-
-## 处理流程
-
-### Step 1: 连接RSS服务器抓取
-```python
-# 正确方式：用XML解析器（不是正则！）
-from xml.etree import ElementTree
-root = ElementTree.fromstring(resp.text)
-ns = {'atom': 'http://www.w3.org/2005/Atom'}
-entries = root.findall('atom:entry', ns)
-for entry in entries:
-    title = entry.find('atom:title', ns)
-    link = entry.find('atom:link', ns)
-    updated = entry.find('atom:updated', ns)
+### 飞书IM消息（全部40条，一条消息）
 ```
+📋 每日资讯精选 2026-04-22 | 完整40条
 
-### Step 2: 日期过滤
-- **只取昨日内容**（今日9点同步昨日资讯）
-- 日期格式: `2026-03-09`
-
-### Step 3: 关键词分类（不是按公众号分类！）
-```python
-def classify(title):
-    t = title
-    if any(k in t.lower() for k in ['ai', 'gpt', 'openclaw', 'kimi', '大模型', 'agent', '智能', '机器人']):
-        return '营销+AI'
-    if '京东' in t: return '京东'
-    if any(k in t for k in ['抖音', '字节']): return '抖音'
-    if any(k in t for k in ['阿里妈妈', '万堂书院']): return '阿里妈妈'
-    if '小红书' in t: return '小红书'
-    if any(k in t.lower() for k in ['电商', '零售', '店铺', '销量', '直播', '爆卖', 'gmv', '商家', '天猫', '淘宝']):
-        return '电商零售'
-    if any(k in t.lower() for k in ['营销', '增长', '投放', '广告', '案例', '品牌', '趋势']):
-        return '营销增长'
-    return '其他'
-```
-
-### Step 4: 输出数量
-- 按昨日实际数量输出，不硬凑
-- 分类: 营销+AI、电商零售、营销增长、小红书、京东、抖音、阿里妈妈
-
-### Step 5: 飞书文档
-- 标题格式: `每日精选资讯 | YYYY年MM月DD日`
-- 每条: 标题 + 原文链接（分开两行）
-- 分类带emoji: 🤖🛒📈📱🎵💰
-
-### Step 6: 权限
-- 立即开放 full_access 给 Gary (openid: ou_d635f4f3d20ac474cf8575038b5d2b33)
-
----
-
-## 输出格式
-```
-📰 微信公众号精选摘要 | 2026年3月10日
-（昨日3月9日内容）
-
-🤖 营销+AI (9条)
-标题1
-链接1
-标题2
-链接2
+🟣 京东（6条）
+京东广告2026三大升级：引领营销迈入"品牌全方位建设"新时代
+https://mp.weixin.qq.com/s/K3jaKT0D6pRU2tfsQHEVyQ
+京东大药房发布新十年蓝图：AI助力打造100个十亿级品牌
+https://mp.weixin.qq.com/s/e6mdAUoyvtjrjnInhZeUvA
 ...
 
-🛒 电商零售 (6条)
+🔵 字节（3条）
 ...
+
+🟠 阿里妈妈（1条）
+...
+
+🔴 小红书（3条）
+...
+
+🟢 腾讯（2条）
+...
+
+⚪ 百度（3条）
+...
+
+🤖 营销+AI（8条）
+...
+
+🛒 电商零售（10条）
+...
+
+📈 营销增长（22条）
+...
+
+📄 完整版（40条全文）：https://www.feishu.cn/docx/xxx
 ```
 
----
+**格式规则**：
+- 每条新闻：标题一行 + 链接下一行（Gary要求）
+- 不省略任何一条，全部40条一口气发出
+- 消息末尾附飞书文档链接
 
-## 常见问题
-1. **RSS服务器挂了** → 等15分钟重试
-2. **标题链接对不上** → 用XML解析器，不是正则
-3. **内容不够** → 放宽到3天，但要在文档中注明
-4. **Discord发不出去** → Token失效，需要更新
-
----
-
-## ⚠️ 已知问题
-
-### 飞书文档创建后内容为空
-**原因**: APP缺少 `docx.content:writer` 权限，写入API返回404
-
-**解决方案**:
-1. 创建文档后，用 `feishu_update_doc` 工具写入内容:
-   ```json
-   {
-     "doc_id": "文档ID",
-     "markdown": "内容...",
-     "mode": "overwrite"
-   }
-   ```
-2. 或者在飞书开放平台给APP添加 `docx.content:writer` 权限
-
-### 权限设置成功但文档无内容
-- 脚本已能创建文档 + 设置权限
-- 需要用 feishu_update_doc 工具补充写入内容
+### 分类emoji
+- 🟣 京东  🔵 字节  🟠 阿里妈妈  🔴 小红书  🟢 腾讯  ⚪ 百度
+- 🤖 营销+AI  🛒 电商零售  📈 营销增长
 
 ---
 
-## ✅ 最终方案（2026-03-10确认）
+## 脚本关键文件
+- 主脚本：`~/.openclaw/workspace-dev/scripts/daily_news_sync_v4.py`
+- RSS源列表：`~/.openclaw/workspace-dev/data/wechat_rss_subscriptions.opml`
+- RSS代理：`http://s.ztso.xyz:11211/feed/`
+- 输出目录：`~/.openclaw/workspace-dev/output/rss_daily_YYYY-MM-DD.md`
 
-### 流程
-1. **脚本** (`daily_news_sync_v2.py`): 创建飞书文档 + 设置权限 + 输出内容
-2. **feishu_doc工具**: 写入内容（用用户token，绕过APP权限限制）
+## 分类体系（9类）
+`CAT_ORDER = ['京东', '字节', '阿里妈妈', '小红书', '腾讯', '百度', '营销+AI', '电商零售', '营销增长']`
 
-### 关键点
-- 脚本创建文档后，打印 `doc_id` 和 `===CONTENT_START===...===CONTENT_END===`
-- 用 `feishu_update_doc` 工具写入:
-  ```json
-  {
-    "doc_id": "文档ID",
-    "markdown": "内容...",
-    "mode": "overwrite"
-  }
-  ```
+### Python粗分类（平台账号映射）
+京东/字节/阿里妈妈/小红书/腾讯/百度 账号直接映射到对应分类
 
-### 自动运行
-- 定时任务会在9点自动运行
-- 脚本输出后，自动调用 feishu_doc 工具写入
+### AI智能重分类
+其余文章按内容分入：
+- **营销+AI**：AI工具在营销/广告/投放中的实际应用（AI辅助投放工具、AI生成广告素材、Agent落地案例）
+- **电商零售**：电商平台运营、选品、供应链、直播带货、货架电商、跨境出口
+- **营销增长**：营销案例/洞察/策略/趋势/数据/报告/白皮书
+
+---
+
+## 手动测试
+```bash
+python3 ~/.openclaw/workspace-dev/scripts/daily_news_sync_v4.py
+```
+观察输出中的 `[Feishu IM] 发送成功` 和 `[Feishu Doc] 创建成功`
+
+## 故障排查
+1. **RSS抓取全挂** → 检查代理 `http://s.ztso.xyz:11211/feed/` 是否恢复
+2. **Feishu IM发送失败** → 检查 `FEISHU_APP_ID`, `FEISHU_APP_SECRET`, `FEISHU_USER_OPENID` 环境变量
+3. **Feishu Doc创建失败** → 同上，检查飞书API权限
+4. **超时** → cron已改为脚本直发，不再走Agent超时路径
