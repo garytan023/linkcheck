@@ -181,3 +181,156 @@
 - ISV 目录剩余文件 ingest（路径编码问题阻塞）
 - 小风/小诊每日日记 cron 持续 timeout（8次/5次consecutive errors）
 - AI Builders Digest 应改为 current session
+
+---
+
+## 2026-04-24（每日整理）
+
+### Ontology 重大格式修复
+- **问题发现**：graph.jsonl 中 993 条旧格式 entries（`{"op": "relate"...}` shorthand，缺少 entity.id）混入 326 条新格式，导致 validator 报 MISSING ID 错误
+- **修复**：全部 993 条转换为标准 `{"op": "create", "entity": {"id": ..., "type": "Relation", ...}}` 格式
+- **额外修复**：2条 relation reference 错误（`agent_ecom-vision-gemini31` → `agent_ecom_vision_gemini31`）
+- **当前 ontology**：**1465 entities** / 0 errors / 0 warnings ✅
+  - Session: 321 | Relation: 1066 | SummaryNote: 26 | Agent: 14 | Rule: 9 | Topic: 9 | ...
+
+### Session 注册（幂等）
+- 新注册 73 sessions（cron=39, active_work=12, dev=16, assistant=5, creative=1）
+- Gary 回归（04-23 22:36），10天沉默打破，主 session 537KB
+- RSS 资讯精选改用 interactive card 格式（21个可点击按钮）
+
+---
+
+## 2026-04-24（每周整理）——04-17~04-24
+
+### 本周最大事件
+- **Gary 10天沉默打破（04-22~04-23）**：04-22 22:36 主 session 突现6.6MB，涉及抖音618营销图片素材分发；04-23 22:36 Gary 继续活跃（537KB），完成 PPT Slide 10；la_xiao_chuang 同日结束10天休眠，收到 Claude Design 30条准则并生成 WPP 图片
+
+### Ontology 重大进展
+- **格式修复（04-24）**：993条旧格式 entries 全部转换为标准 entity.id 格式；2条错误 relation reference 修正；验证：1465 entities / 0 errors / 0 orphans ✅（历史最佳）
+- **持续净增**：从 04-16 的 518 entities 增长到 04-24 的 1465 entities（+947，含 session 注册）
+
+### karpathy-pkm / ISV 进展
+- **新批次入库（04-17）**：SRC-0102（京东广告产品手册）+ SRC-0103（618大促营销指南）
+- **Manifest 编号漂移**：SRC-0097~0103 编号漂移待 Gary 清理
+- **Obsidian sync 脚本**：`obsidian_doc_sync_to_kk.py` 打通（raw/obsidian-docs + inbox/obsidian-docs）
+- **小红书商业产品全景手册 75页 OCR（04-17）**：Subagent 完成，60KB/1283行文本
+
+### xhs-ad-analyst skill（04-16）
+- commit `6df1b9b`：接入飞书 Spreadsheet 数据源（`WeZosdIg4hWvWMt0qj5cBqeUnvb`）+ 6个 sheet ID + 实际基准值（Content Type/CPC/CPUV）
+
+### RSS 代理（间续故障）
+- **04-18~04-19**：s.ztso.xyz:11211 全挂，daily news 空转
+- **04-20 恢复**：34条精选（1337→48→34）成功推送
+- **04-21~04-22 再次空转**：7天去重窗口把孤岛内容误判为重复（非代理问题本身）
+
+### 系统稳定性
+- **晨间 cron 全部幂等完成**：无重大故障
+- **AI Builders Digest**：持续稳定发送
+- **重复 cron 并行**：`memory-weekly-review` vs `weekly-memory-review` 仍未合并
+- **Git sync 缺口**：weekly-backup 2.0G tar.gz 未完成 git sync
+
+### 跨账号线索
+- **dafeng（04-16~04-17）**：Gary 讨论 Claude Code 桌面端、Levie FDE 观点
+- **la_xiao_chuang（04-22）**：结束10天休眠，Claude Design 30条准则整合，WPP 图片产出
+- **la_xiao_* 全员**：日记 cron 正常完成，系统自运转健康
+
+### 待闭环问题（截至 04-24）
+- 🔴 ISV Topic 库 0319 → 飞书文档（Gary 04-13 需求，已11天）
+- 🔴 karpathy-pkm reference compile runner（04-11 起，已13天）
+- 🔴 Session entity ID 格式统一（271个 legacy underscore 格式）
+- 🔴 Manifest 编号漂移（SRC-0097~0103）
+- 🔴 RSS 代理稳定性（s.ztso.xyz:11211 持续 Connection refused）
+- 🟡 Power BI 远程访问（需 Gary 开启 Chrome CDP）
+- 🟡 重复 cron 并行合并（`memory-weekly-review` vs `weekly-memory-review`）
+- 🟡 daily-rollup cron 死锁根因
+
+---
+
+## 每周整理（2026-04-25）
+
+### Ontology 重大修复
+- **4个重复 session entity IDs 已清除**：4个 session UUID 在 graph 中存在2~3个副本；删除副本保留最早记录；修复后 1517 entries / 424 domain entities / 1093 relations / 0 duplicates / 0 orphans ✅
+- **备份**：`graph.jsonl.bak_04_25` / `.bak_04_25b` / `.bak_04_25c`
+
+### 本周事件（04-19~04-25）
+- **Gary 沉默规律**：04-19~04-21（3天）、04-24~04-25（2天）两次沉默；沉默=工作节奏，系统保持自转
+- **RSS 代理**：持续7天+全挂（s.ztso.xyz:11211 Connection refused）；必须推动 IT 解决
+- **Ontology 验证**：424 entities / 1093 relations / 0 orphans / 0 errors ✅（历史最佳）
+- **dafeng**：本周无新会话
+- **la_xiao_chuang**：design-standards skill 升入主库
+
+### 待闭环问题（截至 04-25）
+- 🔴 ISV Topic 库 0319 → 飞书文档（Gary 04-13 需求，**12天**）
+- 🔴 karpathy-pkm reference compile runner（04-11 起，**14天**）
+- 🔴 RSS 代理稳定性（s.ztso.xyz:11211 **7天+** 持续 Connection refused）
+- 🔴 Manifest 编号漂移（SRC-0097~0103）
+- 🟡 Power BI 远程访问（需 Gary 开启 Chrome CDP）
+- 🟡 重复 cron 并行合并
+- 🟡 daily-rollup cron 死锁根因
+- 🟢 4个重复 session entity IDs ✅（04-25 修复）
+
+## 2026-04-26（每周整理）
+
+### 系统稳定性
+- **Ontology Dedup 完成**：4个重复 session entity IDs 已修复（04-25）；当前 424 entities / 1093 relations / 0 orphans / 0 duplicates ✅
+- **RSS 精选三重故障**：04-25 飞书 token / MiniMax 503 / JSON 序列化三环全崩；数据采集成功但未送达 Gary
+- **RSS 代理持续故障**：s.ztso.xyz:11211 已 8天+ Connection refused
+
+### Gary 工作流
+- **la_xiao_chuang 恢复产出**：04-22 整合 30条 Claude Design 准则，生成 WPP 图片
+- **RSS Feishu card 验证成功**：21个可点击按钮格式用户体验良好
+- **Gary 沉默规律确认**：04-19~04/21 和 04/24~04/25 两次沉默；沉默是工作节奏，系统保持自转
+
+### 待闭环（多周积压）
+- ISV Topic 库 0319 → 飞书文档（04-13 起，13天）
+- karpathy-pkm reference compile runner（04-11 起，15天）
+- RSS 精选三重故障隔离（04-25 新增）
+
+## 2026-04-27（每周整理 Week 20）
+
+### Ontology 重大进展
+- **1个重复 SummaryNote 已清理（04-27）**：`note_session_la_xiao_chuang_4c4c8e09_6320_4cd3_866c_157c76bda727`（underscore，无 created 时间戳）与 canonical dash 版本重复；删除 underscore 版本；SummaryNote 27→26 ✅；备份：graph.jsonl.bak_04_27_weekly
+- **141 条 old-format `relate` 条目仍存在**：04-24 修复 993 条后仍有 141 条；不影响功能，建议下次 ontology 大规模刷新时统一迁移
+- **当前状态**：1841 entries / 464 Sessions / 1091 Relations / 26 SummaryNotes / 0 orphans ✅
+
+### Gary 沉默（本周 7 天）
+- 04-19~04-21（3天）+ 04-24~04-27（4天）= 本周沉默 7 天
+- Gary 沉默是工作节奏已成常态，系统自转完全正常，无需干预
+
+### ISV 入库
+- **本周首次完整闭环（04-25）**：SRC-0104/0105 7步全通过（raw→文本提取→Manifest→MiniMax摘要→kk_compile→Feishu DM→isv_last_run）
+- SIGKILL 偶发但未阻断本次闭环
+
+### 系统稳定性
+- **RSS 代理已死 9天+**：s.ztso.xyz:11211 Connection refused 持续；04-25/04-26 精选均缺口；必须推动 IT 解决
+- **RSS 三重故障**：飞书 token + MiniMax 503 + JSON 序列化三环全崩；修复方向：拆分错误处理，任何一步失败只影响自己
+
+### 跨账号（dafeng / la_xiao_*）
+- **dafeng 本周 0 新 session**：最后活跃 04-16~04-17
+- **la_xiao_* 全员实质沉默**：24个 cron session，全部空内容
+
+### 待闭环（截至 04-27）
+- 🔴 ISV Topic 库 0319 → 飞书文档（04-13 起，**~16天**）
+- 🔴 karpathy-pkm reference compile runner（04-11 起，**~18天**）
+- 🔴 RSS 代理死掉（04-18 起，**9天+**）
+- 🔴 RSS 精选三重故障隔离（04-25 新增）
+- 🟡 141 条 old-format entries（格式迁移）
+- 🟡 重复 cron 并行（memory-weekly vs weekly-memory，12天未合并）
+- 🟢 重复 SummaryNote ✅（04-27 修复）
+
+## Promoted From Short-Term Memory (2026-04-27)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-19.md:15:15 -->
+- **Ontology 质量稳定**：567 entities / 1274 relations / 0 orphans，经过 04-18 周整理后 malform entries 已修复。 [score=0.855 recalls=0 avg=0.620 source=memory/2026-04-19.md:15-15]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-19.md:5:5 -->
+- 今天是系统低效运转日，RSS 代理（s.ztso.xyz:11211）持续故障导致每日资讯精选空转已至少 2 天。晨间 cron 批次基本正常完成，下午 Gary 主 session 介入评估并推进了 RSS 脚本升级（v3 → v4，AI 批量分类）。Ontology 维持历史高位（567 entities / 1274 relations / 0 orphans）。 [score=0.807 recalls=0 avg=0.620 source=memory/2026-04-19.md:5-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-19.md:11:11 -->
+- **RSS 脚本升级 v4 完成**：评估并创建 `daily_news_sync_v4.py`，从逐条分类改为 12AI API 一次批量处理全部文章，速度和稳定性都有提升。HEARTBEAT.md crontab 路径已更新为 `v4.py`。 [score=0.807 recalls=0 avg=0.620 source=memory/2026-04-19.md:11-11]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-19.md:13:13 -->
+- **晨间批次全部完成**：ISV 每日入库发现 2 个新文件（京东广告产品手册、618大促营销指南），Weekly memory review 确认 Ontology 历史高位无异常，Obsidian Inbox 整理空。 [score=0.807 recalls=0 avg=0.620 source=memory/2026-04-19.md:13-13]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-19.md:21:21 -->
+- **RSS 代理持续中断**：s.ztso.xyz:11211 Connection refused，每日资讯精选已空转 2 天，output/ 目录最新 RSS 文件停留在 04-14/04-15，断档 4–5 天。备用代理方案未落地。 [score=0.807 recalls=0 avg=0.620 source=memory/2026-04-19.md:21-21]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-19.md:23:23 -->
+- **Git sync 中断**：weekly-backup 因 SIGKILL 被中断，2.0G tar.gz 备份文件存在于本地但 git sync 未完成，workspace 无新内容同步。 [score=0.807 recalls=0 avg=0.620 source=memory/2026-04-19.md:23-23]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-20.md:4:4 -->
+- RSS 每日资讯精选在中断2天后于今日恢复，34条精选（1337条→去重48条→精选34条，≥4分）成功推送至 Gary。全天各 Agent 运行平稳，心跳5次均正常响应，无 git commit，无 workspace 改动。Gary 晚间询问了 xhs-ad-analyst skill 安装情况。 [score=0.807 recalls=0 avg=0.620 source=memory/2026-04-20.md:4-4]

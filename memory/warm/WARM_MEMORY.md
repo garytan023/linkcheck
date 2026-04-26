@@ -1,6 +1,6 @@
 # WARM Memory - 用户偏好与稳定规则
 
-**最后更新**: 2026-04-15 06:08（每周整理）
+**最后更新**: 2026-04-25 21:20（每周整理）
 
 ## Gary 特点
 - 拒绝废话和讨好
@@ -152,6 +152,29 @@
 - **【04-14 确认】daily-rollups/2026-04-13.md 成功生成**:rollup cron 死锁短暂缓解,但根因未修复(cron 不应在 rollup 不存在时等待,应自行兜底)
 - **【04-14 确认】Cron 迁移效果持续稳定**:current session cron 04-10~04-14 持续正常,isolated session 网络故障未再触发
 
+## 本周新增规则(2026-04-24 每周整理)
+
+### Gary 工作流
+- **【04-22 新增】la_xiao_chuang 结束10天休眠**：Gary 14:58 向 la_xiao_chuang 发送 Claude Design 进阶审美与设计准则30条，要求整合进 `bggg-ppt-design` 系统；la_xiao_chuang 据此生成"广州AI大赛&生日会"WPP 图片，发送飞书群组。设计原则已沉淀到创意 Agent
+- **【04-22 新增】抖音618营销活动**：Gary 主 session（6.6MB）涉及抖音618营销活动图片素材分发（page3_category、page6_requirements、page4/5_creatives），通过飞书群组发送。性质：媒介协调/创意分发
+- **【04-20 新增】xhs-ad-analyst skill 真实化**：commit `6df1b9b` 接入飞书 Spreadsheet 数据源（`WeZosdIg4hWvWMt0qj5cBqeUnvb`）+ 实际基准值（Content Type / 平台 / CPC / CPUV），真正可复用的自动化工具
+
+### karpathy-pkm 项目状态
+- **【04-17 新增】新批次入库**：SRC-0102（京东广告产品手册）+ SRC-0103（618大促营销指南）；Manifest 编号漂移待 Gary 清理
+- **【04-17 新增】Obsidian sync 脚本完成**：`obsidian_doc_sync_to_kk.py` 打通（raw/obsidian-docs + inbox/obsidian-docs）；reference-only 策略切换完成
+
+### 系统稳定性
+- **【04-24 确认】Ontology 格式问题已修复**：993条旧格式 entries 全部转换为标准 entity.id 格式；验证：1465 entities / 0 errors / 0 orphans ✅（历史最佳）
+- **【04-22 确认】RSS 代理持续故障**：s.ztso.xyz:11211 Connection refused，04-18~04-22 连续5天空转；备用代理方案未落地
+- **【04-20 确认】RSS 恢复后再次空转**：04-20 恢复34条精选后，04-21~04-22 连续0条；根因：7天去重窗口把孤岛内容误判为重复（非代理问题本身，是去重逻辑边界 case）
+
+### 跨账号线索（dafeng / xiaofeng / la_xiao_xxx）
+- **【04-16 新增】dafeng 线活跃**：Gary 通过 dafeng 账号（ou_2b61cfc2e4c54c32e1734a48458b1d76）讨论 Claude Code 桌面端、Levie FDE 观点
+- **【04-22 新增】la_xiao_* 全员正常**：la_xiao_zhi/su/tou/zhen/ma 日记 cron 正常完成；la_xiao_chuang 结束10天休眠恢复产出
+- **【04-24 确认】Gary 回归**：04-22~04-23 Gary 打破10天沉默，主 session 恢复活跃（6.6MB + 537KB）
+
+---
+
 ## 本周新增规则(2026-04-15 每周整理)
 
 ### karpathy-pkm / Obsidian 工作流
@@ -176,3 +199,60 @@
 - 🟡 ISV Daily Sync 中文路径编码(`宇先生/Documents/ISV`,04-11 起持续)
 - 🟡 Cron 调度器重复触发根因(幂等 guard 缓解,调度器层面待查)
 - 🟡 memory-daily-cleanup 改为 current session(isolated 偶 timeout)
+
+---
+
+## 本周新增规则(2026-04-25 每周整理)
+
+### Ontology 维护
+- **【04-25 新增】4个重复 session entity IDs 已修复**:graph.jsonl 中4个 session entity 存在2~3个副本(来自跨 refresh 周期的重复注册);已删除副本,保留最早记录;修复后验证:1517 entries / 424 domain entities / 1093 relations / 0 duplicates / 0 orphans / 0 errors ✅;备份:graph.jsonl.bak_04_25 系列
+- **【04-25 新增】daily-memory-refresh 跨日重复注册根因**:同一 session UUID 在跨日时被重复注册;修复方向:在注册前检查 entity ID 是否已存在(is_idempotent check)
+- **【04-25 确认】Topic/Rule/SummaryNote 全部 unique ID**:10 Topics / 9 Rules / 27 SummaryNotes,全部无重复ID ✅
+
+### Gary 工作流
+- **【04-25 新增】Gary 沉默是工作节奏,不是系统问题**:04-19~04-21(3天沉默)和 04-24~04-25(2天沉默,全天合计仅5字)两次观察到;系统应在 Gary 沉默时正常自转,不需要主动干预;沉默后首次回归时主动汇报本周系统状态
+- **【04-25 新增】RSS Feishu card 格式已验证可行**:04-23 interactive card(21个可点击按钮)用户体验良好;后续 RSS 精选统一使用此格式
+
+### 系统稳定性
+- **【04-25 新增】RSS 代理已到必须推动解决的节点**:s.ztso.xyz:11211 持续7天+ Connection refused;04-20 短暂恢复后再次死亡;去重逻辑边界 case 也已失效;不能再靠"跳过digest"维持,必须主动联系 IT 或切换替代来源
+- **【04-25 确认】Gary 全天沉默时系统正常自转**:04-24~04-25 Gary 沉默2天,全 Agent 每日日志正常完成(cost=$2.47),WhatsApp Gateway 偶发抖动后自动恢复,ISV Daily Sync 正常运行;系统自转能力已验证
+
+### 跨账号线索
+- **【04-25 确认】la_xiao_chuang design-standards skill 已升入主库**:30条 Claude Design 准则已整合进 bggg-ppt-design 系统;skill 从 agent-private 升入 workspace-dev/skills 主库,可供其他创意 Agent 复用
+- **【04-25 确认】dafeng 本周无新会话**:04-19~04-25 dafeng 账号无主动消息;Gary 主要通过 xiaofeng(主账号)互动
+
+## 本周新增规则(2026-04-26 整理)
+
+### 系统稳定性
+- **【04-25 新增】RSS 精选三重故障隔离缺失**：飞书 IM/Doc token 失败 + MiniMax-Text-01 模型 503 + JSON 序列化崩溃，三环全崩但数据采集本身成功；修复方向：将各环节拆分错误处理，任何一步失败只影响自己，不死整条链路
+- **【04-23 新增】RSS Feishu card 格式验证成功**：21个可点击按钮 interactive card 用户体验良好；后续 RSS 精选统一使用此格式
+- **【04-25 新增】ISV 入库本周首次完整闭环**：SRC-0104/0105 7步全通过，久违的成就感；但 SIGKILL 问题仍在（04-25 ISV Daily Sync）
+
+### Gary 工作流
+- **【04-25 新增】Gary 沉默规律确认**：04-19~04-21（3天）+ 04-24~04-25（2天）两次沉默观察；沉默是工作节奏，系统保持自转；沉默后首次回归时主动汇报本周系统状态
+- **【04-22~04-23 新增】la_xiao_chuang 恢复产出**：30条 Claude Design 准则整合，WPP 图片成功生成发送；创意 Agent 能力升级
+
+### 记忆系统
+- **【04-23 新增】agent_tips_summary.md**：10条精华实战经验，Gary 04-23 请求生成
+- **【04-25 新增】重复 session entity ID 跨日注册根因**：daily-memory-refresh 在跨日时对已存在的 entity 未做幂等检查；修复：在注册前检查 entity 是否已存在
+
+## 本周新增规则(2026-04-27 整理)
+
+### Ontology 维护
+- **【04-27 新增】1个重复 SummaryNote 已清理**：`note_session_la_xiao_chuang_4c4c8e09_6320_4cd3_866c_157c76bda727`（underscore，无 created 时间戳）与 canonical dash 版本重复；删除 underscore 版本；SummaryNote 27→26 ✅；备份：graph.jsonl.bak_04_27_weekly
+- **【04-27 新增】141 条 old-format `relate` 条目仍存在**：04-24 修复 993 条后仍有 141 条（来自后续 cron）；不影响功能，建议下次 ontology 大规模刷新时统一迁移
+- **【04-27 确认】Ontology 状态**：1841 entries / 464 Sessions / 1091 Relations / 26 SummaryNotes / 0 orphans ✅
+
+### Gary 工作流
+- **【04-27 新增】Gary 沉默已成常态**：04-19~04-21（3天）+ 04-24~04-27（4天）= 本周沉默 7 天；系统自转完全正常，无需主动干预；沉默后首次回归时主动汇报本周系统状态
+- **【04-27 新增】ISV 入库本周首次完整闭环（04-25）**：SRC-0104/0105 7步全通过（raw→文本提取→Manifest→MiniMax摘要→kk_compile→Feishu DM→isv_last_run）；SIGKILL 偶发但未阻断本次闭环
+
+### 系统稳定性
+- **【04-27 确认】RSS 代理已死 9天+**：s.ztso.xyz:11211 Connection refused 持续；04-25/04-26 精选均缺口；必须推动 IT 解决，不能再靠跳过维持
+- **【04-27 新增】RSS 三重故障修复方向**：将 Feishu token 获取、MiniMax 调用、JSON 序列化拆开处理；任何一步失败只影响自己，不死整条链路
+
+### 跨账号线索
+- **【04-27 确认】dafeng 本周 0 新 session**：最后活跃 04-16~04-17；账号完全沉默
+- **【04-27 确认】la_xiao_* 全员实质沉默**：24个 cron session，全部空内容；无实质 Agent 产出
+- **【04-27 确认】重复 cron 并行仍未合并**：`memory-weekly-review` vs `weekly-memory-review` 仍两套并行（自 04-15 起已 12 天）；建议：禁用 `weekly-memory-review`，保留 `memory-weekly-review`（python-script 版本更稳定）
+
