@@ -13,9 +13,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import defaultdict
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
+from pathlib import Path
 import re, html, os, json
 
 OPML_FILE = os.path.expanduser('~/.openclaw/workspace-dev/data/wechat_rss_subscriptions.opml')
+OPENCLAW_CONFIG = os.path.expanduser('~/.openclaw/openclaw.json')
 TIMEOUT = 12
 DEDUP_DAYS = 7
 STATE_DIR = os.path.expanduser('~/.openclaw/workspace-dev/state')
@@ -36,6 +38,27 @@ CAT_EMOJI = {
     '阿里妈妈': '🟠', '营销+AI': '🤖', '电商零售': '🛒', '营销增长': '📈'
 }
 CAT_ORDER = ['京东', '字节', '阿里妈妈', '小红书', '腾讯', '百度', '营销+AI', '电商零售', '营销增长']
+
+
+def load_runtime_config():
+    env = {
+        'TWELVEAI_API_KEY': os.environ.get('TWELVEAI_API_KEY', ''),
+    }
+    try:
+        cfg = json.loads(Path(OPENCLAW_CONFIG).read_text(encoding='utf-8'))
+    except Exception:
+        cfg = {}
+    if not env['TWELVEAI_API_KEY']:
+        env['TWELVEAI_API_KEY'] = (((cfg.get('models') or {}).get('providers') or {}).get('12ai') or {}).get('apiKey', '')
+    return env
+
+
+RUNTIME = load_runtime_config()
+AI_API_KEY = RUNTIME.get('TWELVEAI_API_KEY', '')
+AI_API_URL = 'https://cdn.12ai.org/v1/chat/completions'
+AI_MODEL = 'MiniMax-M2.5'
+AI_SHORTLIST_MIN_SCORE = 3
+AI_SHORTLIST_MAX = 80
 
 # 来源账号 → 平台分类（优先级最高）
 SOURCE_PLATFORM_MAP = {
@@ -328,6 +351,95 @@ def first_sentence(text, max_len=120):
             return s[:max_len]
     return (text[:max_len] + '…') if len(text) > max_len else text
 
+
+def build_ai_shortlist(items):
+    platform_items = [it for it in items if it.get('source') in SOURCE_PLATFORM_MAP]
+    scored_items = [it for it in items if it.get('source') not in SOURCE_PLATFORM_MAP and it.get('score', 0) >= AI_SHORTLIST_MIN_SCORE]
+    scored_items.sort(key=lambda x: x.get('score', 0), reverse=True)
+
+    shortlist = []
+    seen_links = set()
+    for it in platform_items + scored_items[:AI_SHORTLIST_MAX]:
+        link = it.get('link')
+        if not link or link in seen_links:
+            continue
+        seen_links.add(link)
+        shortlist.append(it)
+    return shortlist
+
+
+def batch_ai_rescore(items, max_tokens=12000):
+    """规则初筛后，对候选做 LLM 精筛/重评分。失败则完全回退到规则分。"""
+    if not items or not AI_API_KEY:
+        return {}
+
+    article_lines = []
+    for i, it in enumerate(items):
+        snippet = first_sentence(it.get('text', ''), 100)
+        article_lines.append(
+            f"[{i}] 标题：{it['title']} | 来源：{it['source']} | 规则分类：{it.get('cat', '营销增长')} | 规则分：{it.get('score', 0)}/10 | 摘要：{snippet}"
+        )
+
+    prompt = f"""你是电商媒介总监的资讯精选助手。现在不是做泛新闻分类，而是做“是否值得 Gary 今天看”的精筛。
+
+任务：
+1. 对每篇文章判断最终分类
+2. 给出最终分数（0-10整数）
+3. 判断是否推荐进入今日精选 recommend=true/false
+4. 给一句极短理由
+
+分类只允许使用：京东、字节、阿里妈妈、小红书、腾讯、百度、营销+AI、电商零售、营销增长
+
+硬规则：
+- 标题/内容明显属于平台官方动态，优先归平台分类，不要乱归营销+AI
+- 真正“营销+AI”必须是 AI 直接用于投放/素材/自动化/营销提效，不是泛 AI 新闻
+- 纯招聘、活动报名、峰会宣传、空泛行业快讯，不推荐
+- 电商经营、转化链路、平台打法、案例拆解、白皮书、618玩法，优先推荐
+
+评分参考：
+- 8-10：强相关，今天值得看
+- 6-7：有用，可入选
+- 4-5：一般，除非分类缺内容否则不推荐
+- 0-3：噪音，不推荐
+
+输出格式：
+只返回 JSON 对象，key 为文章序号，value 为：
+{{"cat":"分类名","score":0-10整数,"recommend":true/false,"reason":"不超过18字"}}
+
+文章列表：
+{chr(10).join(article_lines)}
+"""
+
+    try:
+        headers = {
+            'Authorization': f'Bearer {AI_API_KEY}',
+            'Content-Type': 'application/json'
+        }
+        payload = {
+            'model': AI_MODEL,
+            'messages': [
+                {'role': 'system', 'content': '你是专业资讯精选助手，只返回合法JSON。'},
+                {'role': 'user', 'content': prompt}
+            ],
+            'max_tokens': max_tokens,
+            'temperature': 0.1
+        }
+        resp = requests.post(AI_API_URL, headers=headers, json=payload, timeout=120)
+        if resp.status_code != 200:
+            print(f"[WARN] AI rescoring API error: {resp.status_code} - {resp.text[:200]}")
+            return {}
+        content = resp.json()['choices'][0]['message']['content'].strip()
+        match = re.search(r'\{[\s\S]*\}', content)
+        if not match:
+            print(f"[WARN] AI rescoring returned non-JSON: {content[:200]}")
+            return {}
+        result = json.loads(match.group())
+        print(f"[AI Rescoring] 返回 {len(result)} 条结果")
+        return result
+    except Exception as e:
+        print(f"[ERR] AI rescoring failed: {type(e).__name__}: {e}")
+        return {}
+
 # === 主流程 ===
 print("Step 1: 解析 OPML...")
 tree = ET.parse(OPML_FILE)
@@ -377,6 +489,8 @@ for it in recent:
     it['text'] = plain
     it['score'] = score_article(it['title'], plain)
     it['cat'] = classify(it['title'], plain, it['source'])
+    it['rule_score'] = it['score']
+    it['rule_cat'] = it['cat']
     it['engagement'] = extract_engagement(plain)
 
 # 再次去重（排他性分类后，同链接不重复）
@@ -447,6 +561,37 @@ for it in recent:
 for cat in by_cat:
     by_cat[cat].sort(key=lambda x: x['score'], reverse=True)
 
+# 规则初筛后，再做一轮 LLM 精筛/重评分（失败自动回退规则版）
+ai_shortlist = build_ai_shortlist(recent)
+ai_results = batch_ai_rescore(ai_shortlist)
+if ai_results:
+    for idx, it in enumerate(ai_shortlist):
+        ai_data = ai_results.get(str(idx)) or ai_results.get(idx)
+        if not isinstance(ai_data, dict):
+            continue
+        ai_cat = ai_data.get('cat')
+        if ai_cat in CAT_ORDER:
+            it['cat_ai'] = ai_cat
+        ai_score = ai_data.get('score')
+        if isinstance(ai_score, (int, float)):
+            it['score_ai'] = max(0, min(10, int(ai_score)))
+        it['recommend_ai'] = bool(ai_data.get('recommend', True))
+        it['ai_reason'] = (ai_data.get('reason') or '').strip()
+
+    for it in recent:
+        if 'cat_ai' in it:
+            it['cat'] = it['cat_ai']
+        if 'score_ai' in it:
+            it['score'] = it['score_ai']
+
+    by_cat = defaultdict(list)
+    for it in recent:
+        if it.get('recommend_ai', True) or it.get('source') in SOURCE_PLATFORM_MAP:
+            by_cat[it['cat']].append(it)
+    for cat in by_cat:
+        by_cat[cat].sort(key=lambda x: x['score'], reverse=True)
+    print(f"[AI Rescoring] shortlist={len(ai_shortlist)} usable={sum(len(v) for v in by_cat.values())}")
+
 print("\n各分类条数：")
 for cat in CAT_ORDER:
     if cat not in by_cat:
@@ -460,6 +605,7 @@ lines = [
     f'# 每日资讯精选 | {YD_STR}（昨日）\n',
     f"\n> 共抓取 **{len(all_items)}** 条 \\| 当日去重后 **{len(recent)}** 条 \\| 跨{DEDUP_DAYS}天过滤 **{cross_day_dropped}** 条\n",
     "> 评分：营销洞察/案例(0-3) + 媒介投放(0-2) + 电商运营(0-2) + AI营销(0-2) + 内容质量(0-1)\n",
+    f"> 精筛：规则初筛{' + LLM精筛' if ai_results else '（LLM未启用/失败，当前仅规则版）'}\n",
     "> 注：微信 RSS 不暴露阅读量等指标；若有数据均为文章正文中显式提及\n",
     "\n---\n",
 ]
@@ -504,8 +650,19 @@ for cat in CAT_ORDER:
         if eng:
             parts = [f"{k}：{v}" for k, v in eng.items()]
             eng_str = ' | ' + ' '.join(parts)
+        score_parts = []
+        if 'rule_score' in it:
+            score_parts.append(f"规则：**{it['rule_score']}/10**")
+        if 'score_ai' in it:
+            score_parts.append(f"AI：**{it['score_ai']}/10**")
+        score_parts.append(f"最终：**{it['score']}/10**")
+        score_str = ' ｜ '.join(score_parts)
         lines.append(f"### [{it['title']}]({it['link']})")
-        lines.append(f"\n来源：{it['source']} \\| {pub_str} \\| 评分：**{it['score']}/10**{eng_str}\n")
+        lines.append(f"\n来源：{it['source']} \\| {pub_str} \\| {score_str}{eng_str}\n")
+        if it.get('rule_cat') and it.get('cat') != it.get('rule_cat'):
+            lines.append(f"\n> 分类修正：规则={it['rule_cat']} → 最终={it['cat']}\n")
+        if it.get('ai_reason'):
+            lines.append(f"\n> AI判断：{it['ai_reason']}\n")
         sent = first_sentence(it['text'])
         if sent:
             lines.append(f"\n> {sent}\n")
@@ -571,6 +728,3 @@ if recent:
     candidates_json = save_candidates_for_ai(recent)
     print(f"[AI Scoring] To score with AI, run: openclaw sessions spawn --task 'score_and_generate_markdown(\"{candidates_json}\")'")
     print(f"[AI Scoring] Or check {candidates_json} for manual review")
-
-
-
