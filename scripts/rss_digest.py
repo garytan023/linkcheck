@@ -106,64 +106,204 @@ def classify(title, content, source):
 
 
 def score_article(title, content):
-    """评分系统：0-10分
-    维度：营销洞察/案例(0-3) + 媒介投放(0-2) + 电商运营(0-2) + AI营销(0-2) + 内容质量(0-1)
+    """评分系统：0-10分（优化版 v2）
+    加权维度：
+      媒介竞价投放(0-4) + 电商投放内容(0-3) + 案例/模式(0-2) + AI营销(0-1)
+    核心聚焦：竞价投放技巧、电商投放策略、实战案例、商业模式
+    关键改进：用 (关键词, 权重) 元组 + 计数上限，避免小数累加不到门槛
     """
     t = (title or '').lower()
     c = ((content or '')[:3000]).lower()
     score = 0
 
-    # 营销洞察/案例: 0-3分
-    case_kw = ['案例', '实战', '方法论', '数据', 'gmv', 'roi', '转化率', '投放效果',
-               '销售额', '增长', '操盘', '策略', '复盘', '分析报告', '洞察', '拆解',
-               '全链路', '种草', '收割', '同比增长', '突破', '暴跌', '首破', '新高',
-               '周报', '周刊', '月报', '季报', '年报', '榜单', '趋势', '报告']
-    score += min(3, sum(1 for k in case_kw if k in t or k in c))
+    # ========== 1. 媒介竞价投放（核心加权）: 0-4分 ==========
+    # 核心竞价关键词（高权重，最多计2个命中）
+    bidding_core = [
+        ('竞价', 2.0), ('出价', 1.8), ('出价策略', 2.0), ('智能出价', 1.8),
+        ('cpm', 1.8), ('cpc', 1.8), ('ocpm', 1.8), ('ocpc', 1.8), ('ecpm', 1.8),
+        ('千次展现', 1.5), ('点击成本', 1.5), ('转化成本', 1.5), ('获客成本', 1.5),
+        ('投放消耗', 1.5), ('日耗', 1.5), ('消耗', 1.2),
+        ('预算分配', 1.5), ('预算控制', 1.5), ('账户余额', 1.2), ('账户结构', 1.5),
+    ]
+    core_count = 0
+    for kw, w in bidding_core:
+        if core_count >= 2:
+            break
+        if kw in t:
+            score += w
+            core_count += 1
+        elif kw in c:
+            score += w * 0.5
 
-    # 媒介投放: 0-2分
-    media_kw = ['投放', '广告', '信息流', '关键词', '出价', '预算', '竞价', 'cpm', 'cpc',
-                 'ocpm', '达播', '品牌自播', '投放策略', '代理商', '媒介', '广告主']
-    score += min(2, sum(1 for k in media_kw if k in t or k in c))
+    # 投放优化/效果关键词（中权重，最多计3个命中）
+    bidding_opt = [
+        ('投放优化', 1.2), ('降成本', 1.2), ('降低成本', 1.2),
+        ('提roi', 1.2), ('提升roi', 1.2), ('roi提升', 1.2),
+        ('ctr优化', 1.0), ('点击率优化', 1.0), ('转化率提升', 1.0),
+        ('放量', 0.8), ('缩窄', 0.8),
+        ('定向优化', 1.0), ('人群包', 0.8), ('dmp', 0.8), ('人群定向', 1.0), ('重定向', 0.8),
+        ('ab测试', 0.8), ('a/b测试', 0.8), ('多账户', 0.8), ('计划结构', 0.8),
+        ('投放复盘', 1.0), ('投放数据', 0.8), ('投放效果', 0.8), ('投放案例', 0.8),
+    ]
+    opt_count = 0
+    for kw, w in bidding_opt:
+        if opt_count >= 3:
+            break
+        if kw in t:
+            score += w
+            opt_count += 1
+        elif kw in c:
+            score += w * 0.5
 
-    # 电商运营: 0-2分
-    ec_kw = ['电商', '零售', '选品', '供应链', '直播带货', '天猫', '淘宝', '跨境',
-             '亚马逊', 'shopify', '私域', '复购', '客单价', '电商平台', '拼多多',
-             '京东', '外卖', '即时零售', '货架电商']
-    score += min(2, sum(1 for k in ec_kw if k in t or k in c))
+    # 基础投放/平台工具词汇（低权重，可累加多个）
+    bidding_base = [
+        '信息流', '竞价广告', '效果广告', '搜索广告', '展示广告',
+        '广告投放', '媒介投放', '投放策略', '投放技巧', '投流',
+        '付费流量', '买量', '投手', '优化师', '投流团队',
+        '千川', '巨量', '聚光', '京准通', '直通车', '万相台', '引力魔方',
+        '抖音投放', '小红书投放', '腾讯广告', '淘宝投放', '京东投放',
+    ]
+    base_count = 0
+    for kw in bidding_base:
+        if base_count >= 3:
+            break
+        if kw in t:
+            score += 0.5
+            base_count += 1
+        elif kw in c:
+            score += 0.3
 
-    # AI营销: 0-2分
-    ai_kw = ['ai', '人工智能', 'gpt', '大模型', '自动化', 'aigc', '数字人',
-              '智能投放', 'geo', 'ai营销', 'deepseek', 'claude', 'chatgpt',
-              'genai', 'llm', 'agent', '智能体', '工作流']
-    score += min(2, sum(1 for k in ai_kw if k in t or k in c))
+    score = min(4, score)  # 封顶4分
 
-    # 内容质量: 0-1分
-    if len(content or '') > 500 and '。' in c:
-        score += 1
+    # ========== 2. 电商投放内容（加权）: 0-3分 ==========
+    ec_ads_core = [
+        ('电商投放', 1.2), ('店铺推广', 1.0), ('商品推广', 1.0),
+        ('直播间投流', 1.2), ('短视频投流', 1.2), ('带货投放', 1.2),
+        ('roi', 1.0), ('gmv', 1.0), ('投产比', 1.0),
+    ]
+    ec_count = 0
+    for kw, w in ec_ads_core:
+        if ec_count >= 2:
+            break
+        if kw in t:
+            score += w
+            ec_count += 1
+        elif kw in c:
+            score += w * 0.5
 
-    # 噪音惩罚: -2/条
-    noise_kw = ['被抓', '被调查', '震惊', '热招', '招聘', '亿级卖家交流会', '峰会', '论坛',
-                 '沙龙', '活动报名', '扫码抢位', '席位紧张', '免费领取', '限时报名',
-                 '转发', '收藏', '点在看', '阅读原文',
-                 'Meta', 'Facebook', '亚马逊', 'Amazon', 'TikTok', 'YouTube', 'Google', 'Instagram']
-    score -= sum(2 for k in noise_kw if k in t)
+    ec_base = ['直播带货', '种草', '收割', '私域', '复购', '客单价', '选品',
+               '货架电商', '直播电商', '内容电商']
+    for kw in ec_base:
+        if kw in t:
+            score += 0.5
+        elif kw in c:
+            score += 0.3
 
-    # 低质指标惩罚: -1
-    if any(k in t for k in ['马斯克', '特朗普', '普京', '拜登', '关税']):
+    score = min(3, score)  # 封顶3分
+
+    # ========== 3. 案例与商业模式: 0-2分 ==========
+    case_kw = [
+        ('案例', 0.8), ('实战', 0.8), ('方法论', 0.8), ('操盘', 0.8),
+        ('复盘', 0.8), ('拆解', 0.8), ('打法', 0.8),
+        ('模式', 0.6), ('商业模式', 0.6), ('盈利模型', 0.6), ('变现', 0.6),
+        ('冷启动', 0.8), ('起量', 0.8), ('爆量', 0.8), ('日销', 0.6),
+        ('实操', 0.8), ('全链路', 0.6),
+    ]
+    case_count = 0
+    for kw, w in case_kw:
+        if case_count >= 2:
+            break
+        if kw in t:
+            score += w
+            case_count += 1
+        elif kw in c:
+            score += w * 0.4
+
+    score = min(2, score)  # 封顶2分
+
+    # ========== 4. AI营销（辅助）: 0-1分 ==========
+    ai_kw = ['智能投放', '自动化投放', '智能出价', 'ai优化', '算法推荐',
+             'aigc素材', '数字人直播', 'ai投手', '智能定向']
+    if any(k in t or k in c for k in ai_kw):
+        score += 0.5
+
+    ai_general = ['ai', '人工智能', '大模型', 'chatgpt', 'deepseek', 'genai']
+    if any(k in t for k in ai_general):
+        score += 0.3
+
+    score = min(1, score)  # 封顶1分
+
+    # ========== 5. 内容质量: 0-1分 ==========
+    content_len = len(content or '')
+    if content_len > 2000 and '。' in c:
+        score += 0.5
+    if content_len > 3000 and ('案例' in c or '数据' in c or 'roi' in c):
+        score += 0.5
+
+    # ========== 6. 低质指标惩罚 ==========
+    foreign = ['meta', 'facebook', '亚马逊', 'amazon', 'tiktok', 'youtube',
+               'google', 'instagram', 'snapchat', 'twitter', 'linkedin']
+    if any(k in t for k in foreign):
+        score -= 2
+
+    if any(k in t for k in ['马斯克', '特朗普', '普京', '拜登', '权谈']):
         score -= 1
+
     if title and len(title) < 12:
-        score -= 1
+        score -= 0.5
 
-    return max(0, score)
+    return max(0, round(score, 1))
 
 
 def is_noise(title):
+    """识别广告软文 / 招聘内容 / 活动营销，排除噪音"""
     t = (title or '')
-    noise = ['招聘', '诚聘', '猎头', '免费领', '限时抢', '立即购买', '优惠码',
-             '满减', '0元', '转给朋友', '扩散', '建议收藏', '朋友圈', '求职',
-             '直招', '赋能会', '交流会', '招商会', '发布会', '大会',
-             'Meta', 'TikTok', 'YouTube', 'Instagram', '20亿月活', '月活20亿']
-    return any(k in t for k in noise)
+    lower_t = t.lower()
+
+    # ========== 严格过滤：招聘类 ==========
+    hiring_kw = ['诚聘', '招聘', '急招', '加入我们', '猎头', 'hr诚聘', '高薪诚聘',
+                 '薪资面议', '跳槽', 'offer直达', 'offer', '面试', '入职', '简历投递',
+                 '简历', '内推', '全职', '兼职', '实习', '岗位', '职位', '招人',
+                 '【诚聘】', '【招聘】', '【急招】']
+    if any(k in t for k in hiring_kw):
+        return True
+
+    # ========== 严格过滤：活动/会议/峰会/交流类 ==========
+    event_kw = ['峰会', '论坛', '沙龙', '大会', '交流会', '分享会', '研讨会', '闭门会',
+                '圆桌', '活动', '报名', '扫码', '席位', '门票', '参会', '到场',
+                '现场', '线下', '直播预约', '预约报名', '名额有限', '先到先得',
+                '亿级卖家', '赋能会', '招商会', '发布会', '答谢会', '周年庆',
+                '【活动】', '【峰会】', '【大会】', '【沙龙】', '【论坛】']
+    if any(k in t for k in event_kw):
+        return True
+
+    # ========== 严格过滤：促销/广告类 ==========
+    promo_kw = ['免费领', '限时抢', '立即购买', '优惠码', '满减', '0元购', '1元购',
+                '惊喜价', '优惠价', '全网首发', '限时优惠', '0门槛', '福利', '特价',
+                '特惠', '秒杀', '折扣', '优惠', '大促', '618', '双11', '双十一',
+                '双12', '双十二', '年货节', '品牌日', '超级品牌日']
+    if any(k in t for k in promo_kw):
+        return True
+
+    # ========== 严格过滤：转发/互动类 ==========
+    social_kw = ['转给朋友', '扩散', '建议收藏', '朋友圈', '求求了', '救命',
+                 '转发', '分享', '在看', '点赞', '评论', '收藏', '转发给']
+    if any(k in t for k in social_kw):
+        return True
+
+    # ========== 严格过滤：纯工具/介绍类 ==========
+    tool_kw = ['功能上线', '功能更新', '产品更新', '版本更新', '系统升级', '新功能',
+               '操作指南', '使用说明', '新手入门', '入门教程', '产品手册']
+    if any(k in t for k in tool_kw):
+        return True
+
+    # ========== 严格过滤：海外平台 ==========
+    foreign_kw = ['meta', 'facebook', '亚马逊', 'amazon', 'tiktok', 'youtube',
+                  'google', 'instagram', 'snapchat', 'twitter', 'linkedin']
+    if any(k in lower_t for k in foreign_kw):
+        return True
+
+    return False
 
 
 def normalize_text(text):
